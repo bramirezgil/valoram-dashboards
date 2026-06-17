@@ -7,57 +7,133 @@
     "phone": "(512) 555-0142",
     "email": "hello@cornerstone-la.com",
     "address": "Austin, TX",
-    "bookingUrl": "https://your-ghl-calendar-link.example.com",
     "industry": "Life insurance & annuities"
   },
-  "theme": {
-    "brandColor": "#1B3A6B",
-    "accentColor": "#F0891A",
-    "font": "Montserrat"
+  "theme": { "brandColor": "#1B3A6B", "accentColor": "#F0891A", "font": "Montserrat" },
+
+  "hero": {
+    "eyebrow": "◆ Free Family Protection Review",
+    "headline": "Discover How We Help *High-Earning Families* Protect Their Income and Retire on Their Terms",
+    "subhead": "Through our Protection & Income Review we uncover coverage gaps and tax-smart strategies — on average identifying $1,200+ a year in better-structured premiums for our clients.",
+    "cta": "Get My Free Review"
   },
-  "copy": {
-    "heroEyebrow": "Trusted local advisors",
-    "heroHeadline": "Confident protection for the people who matter most",
-    "heroSubhead": "Personalized life insurance and annuity planning from advisors who explain every option in plain English — no jargon, no pressure.",
-    "heroCta": "Get My Free Quote",
-    "valueProps": [
-      { "title": "Independent & unbiased", "body": "We shop top-rated carriers for you, so you get the right coverage at the right price — not a one-size-fits-all pitch." },
-      { "title": "Plain-English guidance", "body": "Every recommendation comes with a clear explanation of what it covers, what it costs, and why it fits your goals." },
-      { "title": "Built for the long run", "body": "From term life to fixed annuities, we design plans that protect today and grow with you for decades." },
-      { "title": "Real people, real fast", "body": "Talk to a licensed advisor — usually the same day. No call-center runaround." }
+
+  "problem": {
+    "eyebrow": "Why This Exists",
+    "title": "Most Families Don't Have A *Coverage* Problem. They Have A *Planning* Problem.",
+    "items": [
+      { "title": "Your Policy Is Set And Forgotten", "body": "Most policies are sold once and never revisited — even as your income, family, and goals change. What fit five years ago may be leaving you exposed or overpaying today." },
+      { "title": "You're Paying More Than Necessary", "body": "Term, whole life, and annuities each carry costs that the right structure can reduce. Most households never learn what a side-by-side comparison would save them." },
+      { "title": "Nobody Is Connecting The Dots", "body": "Insurance, retirement accounts, and tax planning operate in silos. Without coordination, each creates gaps and inefficiencies nobody is actively engineering away." }
     ],
-    "aboutTitle": "A local team that treats you like family",
-    "aboutBody": "Cornerstone Life & Annuity was founded on a simple belief: financial protection should be clear, honest, and built around your life — not a sales quota. Our licensed advisors take the time to understand your goals, walk you through every option, and stay with you long after the policy is signed.",
-    "finalCtaHeadline": "Let's build your plan together",
-    "finalCtaSub": "Schedule a free, no-obligation consultation today and see how simple protecting your family's future can be."
+    "transition": "The biggest protection and income wins happen *before* you need the coverage — not after."
   },
-  "services": [
-    { "icon": "🛡️", "name": "Term Life Insurance", "description": "Affordable coverage that protects your family's income during the years they depend on it most." },
-    { "icon": "🏛️", "name": "Whole & Universal Life", "description": "Permanent protection with cash value you can borrow against — coverage that lasts a lifetime." },
-    { "icon": "📈", "name": "Fixed & Indexed Annuities", "description": "Turn savings into guaranteed, predictable retirement income you can't outlive." },
-    { "icon": "👪", "name": "Final Expense Plans", "description": "Simple, guaranteed-acceptance coverage so loved ones are never left with the bill." },
-    { "icon": "💼", "name": "Retirement Income Planning", "description": "A clear roadmap that coordinates your policies, savings, and Social Security." },
-    { "icon": "🔎", "name": "Free Policy Review", "description": "Already covered? We'll review your existing policy and find gaps or savings — at no cost." }
-  ],
+
+  "results": {
+    "eyebrow": "What You Can Achieve",
+    "title": "Keep More, *Protect More*, and Finally Have a Plan That Works",
+    "intro": "Here's what our clients consistently walk away with after the Protection & Income Review.",
+    "items": [
+      { "icon": "💵", "title": "More Value Per Dollar", "body": "Right-size your coverage so you're never overpaying for protection you don't need — or underinsured where it counts." },
+      { "icon": "📅", "title": "A Clear Year-Round Plan", "body": "Know exactly what to review and when, so your coverage keeps pace with your life instead of falling behind." },
+      { "icon": "🔗", "title": "Everything Working Together", "body": "Life insurance, annuities, and retirement accounts finally coordinated as one strategy — not separate pieces." },
+      { "icon": "🛡️", "title": "Confidence In Every Decision", "body": "No more guessing. Operate from a documented plan built around your income, family, and goals." }
+    ],
+    "stats": [
+      { "num": "$1,200+", "label": "Average Annual Premium Savings Identified", "desc": "What families typically discover once someone reviews their coverage as a strategy — not a one-time purchase." },
+      { "num": "30 Min", "label": "Time To Surface Your Top 3 Moves", "desc": "The review is designed to surface your highest-impact opportunities fast." },
+      { "num": "100%", "label": "Independent & Carrier-Neutral", "desc": "We compare top-rated carriers for you — the recommendation fits you, not a quota." }
+    ]
+  },
+
+  "distinction": {
+    "eyebrow": "The Core Distinction",
+    "title": "The Biggest Insurance Myth *Families Believe*",
+    "left": {
+      "label": "Typical Agent",
+      "heading": "Selling A Policy",
+      "points": ["Sells one product, one time", "Reactive — only calls at renewal", "Tied to a single carrier's lineup", "Engagement ends once the policy is issued", "No coordination with your other accounts"]
+    },
+    "right": {
+      "label": "Coordinated Advisor",
+      "heading": "Building A Plan",
+      "points": ["Reviews your full picture proactively", "Year-round guidance as life changes", "Compares top-rated carriers for you", "Documented, reviewable, and adjustable", "Coordinates insurance, retirement & taxes"]
+    },
+    "close": "You don't need another policy pitch. *You need a coordinated plan* connecting protection, income, and retirement — so nothing is decided in isolation."
+  },
+
+  "audience": {
+    "eyebrow": "Is This Right For You?",
+    "title": "Who This Review *Is Built For*",
+    "items": [
+      { "icon": "👪", "title": "Growing Families", "body": "Households with kids, a mortgage, and income to protect — who want to know their family is covered if the unexpected happens." },
+      { "icon": "💼", "title": "Business Owners", "body": "Owners who need key-person, buy-sell, or income-replacement coverage but have never had it properly structured." },
+      { "icon": "📈", "title": "Pre-Retirees (50+)", "body": "Families approaching retirement who want guaranteed income they can't outlive and a tax-smart withdrawal strategy." },
+      { "icon": "🔎", "title": "Already Covered", "body": "Anyone with existing policies who wants an unbiased second opinion to check for gaps, overlaps, or savings." }
+    ],
+    "notFor": "This isn't the right fit if you're looking for the cheapest possible policy with no guidance, or you're fully confident your current advisor is running a proactive, coordinated plan on your behalf."
+  },
+
+  "offer": {
+    "eyebrow": "The Free Review",
+    "title": "What You Get When You *Book Your Review*",
+    "intro": "This isn't a generic quote. It's a personalized review of your protection and income picture — built around your family, income, and goals.",
+    "tag": "Complimentary",
+    "offerTitle": "Protection & Income Review + Specialist Session",
+    "offerDesc": "A 30-minute review surfaces where your coverage may be leaving money or protection on the table. You finish with a ranked \"Top 3 Moves\" list and a session with a licensed specialist who maps your options across top-rated carriers.",
+    "deliverables": [
+      { "title": "Coverage Gap Scorecard", "desc": "A ranked list of your highest-impact protection and income opportunities." },
+      { "title": "Carrier Comparison", "desc": "Side-by-side options from top-rated carriers — not a single-company pitch." },
+      { "title": "Retirement Income Snapshot", "desc": "A clear look at guaranteed-income options you can't outlive." },
+      { "title": "Policy Review Summary", "desc": "An honest read on your existing coverage — gaps, overlaps, and potential savings." }
+    ],
+    "stepsTitle": "How It Works",
+    "steps": [
+      { "title": "Share Your Details", "body": "Fill out the short form with your basic situation." },
+      { "title": "Book Your Review", "body": "Schedule your 30-minute session with a specialist." },
+      { "title": "Get Your Scorecard", "body": "Receive your personalized coverage scorecard." },
+      { "title": "Leave With A Plan", "body": "Walk away with ranked, implementable next steps." }
+    ]
+  },
+
   "testimonials": [
     { "quote": "They explained our options without a single confusing term. We finally feel confident our kids are protected.", "name": "Maria & Daniel R.", "detail": "Round Rock, TX" },
     { "quote": "I rolled an old 401(k) into an annuity and now I know exactly what my retirement income will be. Total peace of mind.", "name": "James T.", "detail": "Retired, Austin TX" },
     { "quote": "Same-day callback, honest advice, and they saved me money on coverage I already had. Couldn't recommend more.", "name": "Priya S.", "detail": "Cedar Park, TX" }
   ],
+
   "faqs": [
-    { "q": "How much does a consultation cost?", "a": "Nothing. Your initial consultation and quote are completely free, with zero obligation to buy." },
-    { "q": "Do you work with multiple insurance carriers?", "a": "Yes. We're independent, so we compare top-rated carriers to find the best fit and price for your situation." },
-    { "q": "How long does it take to get covered?", "a": "Some plans offer same-day approval. Most applications are completed within a week, and we handle the paperwork for you." },
-    { "q": "What if I already have a policy?", "a": "We offer a free policy review to check for coverage gaps or potential savings — no pressure to switch." }
+    { "q": "I already have a policy. Why do I need this?", "a": "Most clients do. A review checks whether your current coverage still fits your life and budget — and whether top-rated carriers now offer something better. There's no obligation to switch." },
+    { "q": "Is this going to be a high-pressure sales pitch?", "a": "No. The review is educational. We show you your options and the trade-offs; the decision is always yours, on your timeline." },
+    { "q": "How long does the review take?", "a": "About 30 minutes. You'll leave with a clear, ranked list of your top opportunities." },
+    { "q": "Is there a cost?", "a": "The review and your scorecard are completely free. Our business is built on long-term relationships, not one-time sales." },
+    { "q": "How quickly will someone follow up?", "a": "A licensed specialist typically reaches out within one business day to confirm details and schedule your session." }
   ],
+
+  "finalCta": {
+    "eyebrow": "One Step Away",
+    "headline": "Discover What May Be *Missing From Your Plan*",
+    "subhead": "If you're protecting a family or planning for retirement, this free review may uncover coverage gaps and savings you didn't know were there.",
+    "scarcity": "Limited review sessions available each week"
+  },
+
   "lead": {
     "mode": "webhook",
     "webhookUrl": "https://services.leadconnectorhq.com/hooks/REPLACE_WITH_YOUR_GHL_INBOUND_WEBHOOK",
-    "ghlFormEmbed": "",
-    "successMessage": "Thanks! A licensed advisor will reach out shortly."
+    "successMessage": "Thanks! A licensed specialist will reach out within one business day.",
+    "formEyebrow": "Take The First Step",
+    "formTitle": "Book Your *Free Protection & Income Review*",
+    "formIntro": "Share a few details and we'll prepare your personalized scorecard before your session.",
+    "includes": [
+      "Coverage Gap Scorecard + Top 3 Moves",
+      "Side-by-side carrier comparison",
+      "Retirement income snapshot",
+      "Honest review of your existing policies"
+    ]
   },
+
   "seo": {
-    "title": "Cornerstone Life & Annuity — Life Insurance & Retirement Planning in Austin, TX",
-    "description": "Independent, plain-English life insurance and annuity advice in Austin, TX. Free quotes, top-rated carriers, no pressure."
+    "title": "Cornerstone Life & Annuity — Free Protection & Income Review (Austin, TX)",
+    "description": "Independent, plain-English life insurance and annuity guidance in Austin, TX. Free review, top-rated carriers, no pressure."
   }
 }

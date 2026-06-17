@@ -10,9 +10,19 @@ brief.json ──(ai-copy.js)──▶ client.json ──(generate.js)──▶ 
 ```
 
 Pages are **self-contained** (HTML + CSS + a little JS in one file), fully
-responsive, themed to each client's brand color/logo, and conversion-focused:
-hero + lead capture, services, "why us", testimonials, about, FAQ, and a final
-call-to-action.
+responsive, and themed entirely from each client's brand/accent color. They
+follow a proven **long-form sales structure** with alternating light/dark
+sections:
+
+```
+hero → problem ("why this exists") → results + stats → distinction (us vs them)
+     → audience ("who it's for") → offer + how-it-works → testimonials
+     → opt-in form → FAQ → final CTA
+```
+
+Every section is optional — omit a block in the config and it isn't rendered.
+In any headline/title, wrap words in `*asterisks*` to accent them in the brand
+color.
 
 ---
 

@@ -8,6 +8,10 @@
  * Merges a client config (JSON) into template/landing.html and writes a single
  * self-contained landing page to dist/<slug>.html — ready to paste into a
  * GoHighLevel funnel/website "Custom Code / HTML" element (see GHL-DEPLOY.md).
+ *
+ * The page follows a long-form sales structure (alternating light/dark sections):
+ *   hero → problem → results+stats → distinction → audience → offer/how-it-works
+ *   → testimonials → opt-in form → FAQ → final CTA. Every section is optional.
  */
 'use strict';
 const fs = require('fs');
@@ -19,8 +23,8 @@ const CLIENTS = path.join(ROOT, 'clients');
 const DIST = path.join(ROOT, 'dist');
 
 // ───────────────────────── tiny mustache-ish template engine ─────────────────
-// Supports: {{path}} (HTML-escaped), {{{path}}} (raw), {{#if path}}…{{else}}…{{/if}},
-// {{#each path}}…{{this.field}}…{{/each}}. Blocks may nest. `this` = current item.
+// {{path}} HTML-escaped · {{{path}}} raw · {{#if path}}…{{else}}…{{/if}} ·
+// {{#each path}}…{{this.field}}…{{/each}} (blocks nest; `this` = current item)
 
 const TAG = /\{\{\{\s*([^}]+?)\s*\}\}\}|\{\{\s*([#/][a-z]+|else)?\s*([^}]*?)\s*\}\}/g;
 
@@ -30,9 +34,8 @@ function tokenize(tpl) {
   TAG.lastIndex = 0;
   while ((m = TAG.exec(tpl))) {
     if (m.index > last) out.push({ t: 'text', v: tpl.slice(last, m.index) });
-    if (m[1] !== undefined) {
-      out.push({ t: 'raw', v: m[1].trim() });
-    } else {
+    if (m[1] !== undefined) out.push({ t: 'raw', v: m[1].trim() });
+    else {
       const ctrl = m[2], arg = (m[3] || '').trim();
       if (ctrl === '#if') out.push({ t: 'if', v: arg });
       else if (ctrl === '#each') out.push({ t: 'each', v: arg });
@@ -55,9 +58,8 @@ function parse(tokens) {
       const tk = tokens[i];
       if (stop && (tk.t === stop || tk.t === 'else')) return nodes;
       i++;
-      if (tk.t === 'text' || tk.t === 'var' || tk.t === 'raw') {
-        nodes.push(tk);
-      } else if (tk.t === 'if') {
+      if (tk.t === 'text' || tk.t === 'var' || tk.t === 'raw') nodes.push(tk);
+      else if (tk.t === 'if') {
         const cons = block('/if');
         let alt = [];
         if (tokens[i] && tokens[i].t === 'else') { i++; alt = block('/if'); }
@@ -81,11 +83,10 @@ function esc(s) {
 }
 
 function resolve(pathStr, scopes) {
-  // scopes: array of context objects, innermost last. `this` -> innermost.
   if (pathStr === 'this') return scopes[scopes.length - 1];
   const parts = pathStr.split('.');
-  let key = parts[0], rest = parts;
-  if (key === 'this') { rest = parts.slice(1); }
+  const key = parts[0];
+  const rest = key === 'this' ? parts.slice(1) : parts;
   for (let s = scopes.length - 1; s >= 0; s--) {
     let cur = scopes[s];
     if (key !== 'this' && (cur == null || !(key in cur))) continue;
@@ -117,23 +118,33 @@ function render(nodes, scopes) {
   return out;
 }
 
+// emphasis: HTML-escape, then *word* → <em>word</em> (the accent style). Rendered raw.
+function markEm(s) {
+  if (!s) return '';
+  return esc(s).replace(/\*([^*]+)\*/g, '<em>$1</em>');
+}
+
 // ───────────────────────── config normalization ──────────────────────────────
 const FONT_FALLBACK = { Montserrat: 'sans-serif', Poppins: 'sans-serif', Inter: 'sans-serif',
-  'DM Sans': 'sans-serif', Lora: 'serif', Fraunces: 'serif' };
+  'DM Sans': 'sans-serif', Lora: 'serif', Fraunces: 'serif', Marcellus: 'serif', Playfair: 'serif' };
 
 function normalize(cfg) {
   const c = JSON.parse(JSON.stringify(cfg));
   c.business = c.business || {};
   c.theme = c.theme || {};
-  c.copy = c.copy || {};
+  c.hero = c.hero || {};
+  c.problem = c.problem || {};
+  c.results = c.results || {};
+  c.distinction = c.distinction || {};
+  c.audience = c.audience || {};
+  c.offer = c.offer || {};
+  c.finalCta = c.finalCta || {};
   c.lead = c.lead || {};
   c.seo = c.seo || {};
-  c.services = c.services || [];
   c.testimonials = c.testimonials || [];
   c.faqs = c.faqs || [];
-  c.copy.valueProps = c.copy.valueProps || [];
 
-  // theme derived
+  // theme
   c.theme.brandColor = c.theme.brandColor || '#101820';
   c.theme.accentColor = c.theme.accentColor || '#F0891A';
   const font = c.theme.font || 'Montserrat';
@@ -145,33 +156,63 @@ function normalize(cfg) {
     `<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>` +
     `<link href="https://fonts.googleapis.com/css2?family=${famParam}:wght@400;500;600;700;800&display=swap" rel="stylesheet">`;
 
-  // business derived
+  // business
   c.business.phoneHref = (c.business.phone || '').replace(/[^\d+]/g, '');
   c.business.hasContactBar = !!(c.business.phone || c.business.email || c.business.address);
 
-  // lead mode flags
+  // cta text reused on every button
+  c.ctaText = c.hero.cta || 'Get Started';
+
+  // lead modes
   const mode = c.lead.mode || (c.business.bookingUrl ? 'booking' : 'webhook');
   c.lead.isForm = mode === 'ghl-form' && !!c.lead.ghlFormEmbed;
   c.lead.isWebhook = mode === 'webhook' && !!c.lead.webhookUrl;
   c.lead.isBooking = mode === 'booking' || (!c.lead.isForm && !c.lead.isWebhook);
   c.lead.successMessage = c.lead.successMessage || "Thanks! We'll be in touch shortly.";
-  c.lead.ctaUrl = c.lead.isBooking ? (c.business.bookingUrl || '#lead') : '#lead';
+  c.lead.formEyebrow = c.lead.formEyebrow || 'Take the first step';
+  c.lead.formTitle = c.lead.formTitle || 'Request your *free consultation*';
+  c.lead.formIntro = c.lead.formIntro || 'Share a few details and a specialist will reach out shortly — no obligation.';
+  c.lead.includes = c.lead.includes || [];
+  c.lead.ctaUrl = c.lead.isBooking ? (c.lead.bookingUrl || c.business.bookingUrl || '#optin') : '#optin';
   c.leadWebhookJson = JSON.stringify(c.lead.webhookUrl || '');
+  c.leadFormTitleHtml = markEm(c.lead.formTitle);
+
+  // emphasis-rendered titles (*word* → <em>word</em>)
+  c.hero.headlineHtml = markEm(c.hero.headline);
+  c.problem.titleHtml = markEm(c.problem.title);
+  c.results.titleHtml = markEm(c.results.title);
+  c.distinction.titleHtml = markEm(c.distinction.title);
+  c.audience.titleHtml = markEm(c.audience.title);
+  c.offer.titleHtml = markEm(c.offer.title);
+  c.finalCta.headlineHtml = markEm(c.finalCta.headline);
+
+  // numbering
+  (c.problem.items || []).forEach((it, i) => { it.num = String(i + 1).padStart(2, '0'); });
+  (c.offer.steps || []).forEach((it, i) => { it.n = i + 1; });
 
   // testimonial avatars
   c.testimonials.forEach(t => {
     t.initials = (t.name || '?').split(/\s+/).filter(Boolean).map(w => w[0]).slice(0, 2).join('').toUpperCase();
   });
 
-  // seo derived
+  // seo
   c.seo.title = c.seo.title || `${c.business.name || 'Welcome'}${c.business.tagline ? ' — ' + c.business.tagline : ''}`;
-  c.seo.description = c.seo.description || c.copy.heroSubhead || '';
+  c.seo.description = c.seo.description || c.hero.subhead || '';
 
+  // section flags
   c.year = new Date().getFullYear();
-  c.hasServices = c.services.length > 0;
+  c.offer.stepsTitle = c.offer.stepsTitle || 'How It Works';
+  c.hasProblem = !!(c.problem.items && c.problem.items.length);
+  c.hasResults = !!((c.results.items && c.results.items.length) || (c.results.stats && c.results.stats.length));
+  c.hasResultCards = !!(c.results.items && c.results.items.length);
+  c.hasStats = !!(c.results.stats && c.results.stats.length);
+  c.hasDistinction = !!(c.distinction.left || c.distinction.right);
+  c.hasAudience = !!(c.audience.items && c.audience.items.length);
+  c.hasOffer = !!((c.offer.deliverables && c.offer.deliverables.length) || (c.offer.steps && c.offer.steps.length));
+  c.hasDeliverables = !!(c.offer.deliverables && c.offer.deliverables.length);
+  c.hasSteps = !!(c.offer.steps && c.offer.steps.length);
   c.hasTestimonials = c.testimonials.length > 0;
   c.hasFaqs = c.faqs.length > 0;
-  c.hasValueProps = c.copy.valueProps.length > 0;
   return c;
 }
 
@@ -179,8 +220,7 @@ function normalize(cfg) {
 function build(configPath) {
   const cfg = normalize(JSON.parse(fs.readFileSync(configPath, 'utf8')));
   const tpl = fs.readFileSync(TEMPLATE, 'utf8');
-  const ast = parse(tokenize(tpl));
-  const html = render(ast, [cfg]);
+  const html = render(parse(tokenize(tpl)), [cfg]);
   const slug = cfg.slug || path.basename(configPath, '.json');
   if (!fs.existsSync(DIST)) fs.mkdirSync(DIST, { recursive: true });
   const out = path.join(DIST, `${slug}.html`);
@@ -204,4 +244,4 @@ function main() {
 }
 
 if (require.main === module) main();
-module.exports = { build, normalize, tokenize, parse, render };
+module.exports = { build, normalize, tokenize, parse, render, markEm };

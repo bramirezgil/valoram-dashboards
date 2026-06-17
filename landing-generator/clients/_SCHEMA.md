@@ -1,75 +1,103 @@
 # Client config reference
 
-One JSON file per client in `clients/`. Only `business.name` is truly required —
-everything else has sensible defaults, and any section you omit is simply not
-rendered. Run `node generate.js clients/<file>.json` to build it.
+One JSON file per client in `clients/`. The page is a **long-form sales layout**
+with alternating light/dark sections, in this order:
+
+```
+hero → problem → results (+stats) → distinction → audience → offer (+how-it-works)
+     → testimonials → opt-in form → FAQ → final CTA
+```
+
+**Every section is optional** — omit a block and it simply isn't rendered.
+Colors come entirely from `theme`. Run `node generate.js clients/<file>.json`.
+
+### Emphasis accent
+In any **headline/title** field, wrap 2–4 words in `*asterisks*` to render them
+in the accent color: `"Keep More, *Protect More*, and Have a Plan"`.
 
 ```jsonc
 {
-  "slug": "acme-insurance",          // output filename → dist/acme-insurance.html (defaults to file name)
+  "slug": "acme",                    // → dist/acme.html
 
   "business": {
-    "name": "Acme Insurance Group",  // required
-    "logoUrl": "",                   // optional image URL; falls back to a text wordmark
-    "tagline": "Short positioning line shown in the footer/about panel",
-    "phone": "(555) 123-4567",       // shows a click-to-call button
-    "email": "hello@acme.com",
-    "address": "Austin, TX",
-    "bookingUrl": "https://...",     // GHL calendar link (used when lead.mode = booking)
-    "industry": "Life insurance"     // used by the AI copywriter
+    "name": "Cornerstone Life",      // required
+    "logoUrl": "",                   // optional image; else a text wordmark
+    "tagline": "…", "phone": "(512) 555-0142", "email": "…",
+    "address": "Austin, TX", "bookingUrl": "https://…", "industry": "Insurance"
   },
 
-  "theme": {
-    "brandColor": "#1B3A6B",         // headers, panels, dark accents
-    "accentColor": "#F0891A",        // buttons, highlights, focus rings
-    "font": "Montserrat"             // any Google font (Montserrat, Poppins, Inter, Lora, …)
+  "theme": { "brandColor": "#1B3A6B", "accentColor": "#F0891A", "font": "Montserrat" },
+
+  "hero": {                          // light
+    "eyebrow": "◆ Free Review",
+    "headline": "Discover How We Help *High-Earning Families* Retire on Their Terms",
+    "subhead": "1–2 supporting sentences.",
+    "cta": "Get My Free Review"      // button text reused on EVERY button + header
   },
 
-  "copy": {
-    "heroEyebrow": "Small label above the headline",
-    "heroHeadline": "Big promise — the main H1",
-    "heroSubhead": "1–2 supporting sentences.",
-    "heroCta": "Get My Free Quote",  // button text used everywhere
-    "valueProps": [                  // "Why choose us" — 3–4 recommended
-      { "title": "Independent", "body": "One sentence of benefit." }
-    ],
-    "aboutTitle": "About section heading",
-    "aboutBody": "2–3 sentence story.",
-    "finalCtaHeadline": "Closing call-to-action heading",
-    "finalCtaSub": "One supporting sentence."
+  "problem": {                       // dark — "why this exists"
+    "eyebrow": "Why This Exists",
+    "title": "Most Families Have A *Planning* Problem",
+    "items": [ { "title": "≤5 words", "body": "1–2 sentences." } ],   // numbered 01,02,03…
+    "transition": "One punchy line (may use *asterisks*)."
   },
 
-  "services": [                      // omit to hide the services + stats section
-    { "icon": "🛡️", "name": "Term Life", "description": "One sentence." }
+  "results": {                       // light — "what you can achieve"
+    "eyebrow": "What You Can Achieve", "title": "Keep More, *Protect More*",
+    "intro": "Optional intro sentence.",
+    "items": [ { "icon": "💵", "title": "…", "body": "…" } ],          // icon = emoji/glyph
+    "stats": [ { "num": "$1,200+", "label": "…", "desc": "…" } ]       // num = short
+  },
+
+  "distinction": {                   // dark — "us vs them" comparison
+    "eyebrow": "The Core Distinction", "title": "The Biggest Myth *Families Believe*",
+    "left":  { "label": "Typical Agent",      "heading": "Selling A Policy",  "points": ["…","…"] },
+    "right": { "label": "Coordinated Advisor", "heading": "Building A Plan",   "points": ["…","…"] },
+    "close": "1–2 sentence takeaway (may use *asterisks*)."
+  },
+
+  "audience": {                      // light — "who this is for"
+    "eyebrow": "Is This Right For You?", "title": "Who This Is *Built For*",
+    "items": [ { "icon": "👪", "title": "…", "body": "…" } ],
+    "notFor": "One sentence on who it's NOT for."
+  },
+
+  "offer": {                         // dark — "what you get" + how-it-works
+    "eyebrow": "The Free Review", "title": "What You Get When You *Book*",
+    "intro": "Optional intro.",
+    "tag": "Complimentary", "offerTitle": "…", "offerDesc": "…",
+    "deliverables": [ { "title": "…", "desc": "…" } ],
+    "stepsTitle": "How It Works",
+    "steps": [ { "title": "…", "body": "…" } ]                         // numbered 1,2,3,4
+  },
+
+  "testimonials": [                  // light — omit to hide; initials auto-derived
+    { "quote": "…", "name": "Maria R.", "detail": "Austin, TX" }
   ],
 
-  "testimonials": [                  // omit to hide; avatar initials are auto-derived
-    { "quote": "What the client said.", "name": "Maria R.", "detail": "Austin, TX" }
-  ],
+  "faqs": [ { "q": "…", "a": "…" } ],// dark — omit to hide
 
-  "faqs": [                          // omit to hide
-    { "q": "How much does it cost?", "a": "Honest 1–2 sentence answer." }
-  ],
+  "finalCta": {                      // dark
+    "eyebrow": "One Step Away", "headline": "What May Be *Missing*",
+    "subhead": "…", "scarcity": "Limited sessions available each week"
+  },
 
-  "lead": {
+  "lead": {                          // the conversion section (#optin) — always rendered
     "mode": "webhook",               // "booking" | "ghl-form" | "webhook"  (see GHL-DEPLOY.md)
-    "bookingUrl": "",                // for booking mode (or use business.bookingUrl)
-    "ghlFormEmbed": "<iframe …>",    // for ghl-form mode: paste GHL iframe snippet
-    "webhookUrl": "https://…",       // for webhook mode: GHL inbound webhook URL
-    "successMessage": "Thanks! We'll be in touch shortly."
+    "bookingUrl": "", "ghlFormEmbed": "<iframe …>", "webhookUrl": "https://…",
+    "successMessage": "…",
+    "formEyebrow": "Take The First Step", "formTitle": "Book Your *Free Review*",
+    "formIntro": "…",
+    "includes": [ "What they get when they submit", "…" ]
   },
 
-  "seo": {
-    "title": "Page <title> (defaults to name — tagline)",
-    "description": "Meta description (defaults to heroSubhead)"
-  }
+  "seo": { "title": "≤60 chars", "description": "≤155 chars" }
 }
 ```
 
 ## Brief files (`*.brief.json`) — for the AI copywriter
 
-A brief is a *smaller* input: fill in the facts, let `ai-copy.js` write `copy`,
-`services`, and `faqs` for you. Fields: `slug`, `tone`, `serviceNames` (array of
-plain names), `notes`, plus the same `business`, `theme`, `lead`, and optional
-`testimonials` objects as above. The output is a full config written to
+Fill in only the facts; `ai-copy.js` writes every section above for you. Fields:
+`slug`, `tone`, `serviceNames` (array of plain names), `notes`, plus `business`,
+`theme`, `lead`, and optional `testimonials`. Output is a full config at
 `clients/<slug>.json`.

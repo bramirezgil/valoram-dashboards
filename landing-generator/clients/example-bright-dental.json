@@ -14,61 +14,173 @@
     "accentColor": "#2BB7A3",
     "font": "Poppins"
   },
-  "copy": {
-    "heroEyebrow": "TODO — review AI/placeholder copy",
-    "heroHeadline": "Expert Family & cosmetic dentistry you can trust",
-    "heroSubhead": "Brightline Dental Studio help people in Denver, CO make confident decisions — with clear advice and no pressure.",
-    "heroCta": "Get Started",
-    "valueProps": [
+  "hero": {
+    "eyebrow": "◆ Free Consultation",
+    "headline": "Expert *Family & cosmetic dentistry* You Can Actually Trust",
+    "subhead": "Brightline Dental Studio help people in Denver, CO make confident decisions — with clear advice and no pressure.",
+    "cta": "Get Started"
+  },
+  "problem": {
+    "eyebrow": "Why This Exists",
+    "title": "Most People Have A *Planning* Problem",
+    "items": [
       {
-        "title": "Personalized advice",
-        "body": "Recommendations built around your specific goals and situation."
+        "title": "Set And Forgotten",
+        "body": "Decisions get made once and never revisited, even as your needs change."
       },
       {
-        "title": "Clear & honest",
-        "body": "Plain-English explanations of every option, cost, and trade-off."
+        "title": "Paying Too Much",
+        "body": "Without a comparison, most people never learn what the right structure would save them."
       },
       {
-        "title": "Fast response",
-        "body": "Talk to a real person quickly — usually the same day."
-      },
-      {
-        "title": "Long-term partner",
-        "body": "We stay with you well beyond the first conversation."
+        "title": "Nobody Connects It",
+        "body": "The pieces operate in silos, so nobody is actively optimizing the whole picture."
       }
     ],
-    "aboutTitle": "A local team that puts you first",
-    "aboutBody": "Brightline Dental Studio was built on clear, honest guidance. We take time to understand your goals, walk you through your options, and stay with you for the long run.",
-    "finalCtaHeadline": "Let's talk",
-    "finalCtaSub": "Schedule a free, no-obligation consultation today."
+    "transition": "The biggest wins happen *before* you need them — not after."
   },
-  "services": [
-    {
-      "icon": "★",
-      "name": "Teeth Cleaning & Checkups",
-      "description": "Professional teeth cleaning & checkups tailored to your needs."
+  "results": {
+    "eyebrow": "What You Can Achieve",
+    "title": "Keep More And *Worry Less*",
+    "intro": "Here is what clients consistently walk away with.",
+    "items": [
+      {
+        "icon": "◈",
+        "title": "Teeth Cleaning & Checkups",
+        "body": "Professional teeth cleaning & checkups built around your specific situation."
+      },
+      {
+        "icon": "◎",
+        "title": "Cosmetic Whitening",
+        "body": "Professional cosmetic whitening built around your specific situation."
+      },
+      {
+        "icon": "⬡",
+        "title": "Invisalign",
+        "body": "Professional invisalign built around your specific situation."
+      },
+      {
+        "icon": "◇",
+        "title": "Emergency Dental Care",
+        "body": "Professional emergency dental care built around your specific situation."
+      }
+    ],
+    "stats": [
+      {
+        "num": "Fast",
+        "label": "Same-Day Response",
+        "desc": "Talk to a real person quickly."
+      },
+      {
+        "num": "100%",
+        "label": "Personalized",
+        "desc": "Advice built around your goals."
+      },
+      {
+        "num": "Local",
+        "label": "In Your Community",
+        "desc": "Proudly serving Denver, CO."
+      }
+    ]
+  },
+  "distinction": {
+    "eyebrow": "The Core Distinction",
+    "title": "The Old Way vs *A Real Plan*",
+    "left": {
+      "label": "Typical",
+      "heading": "One-Time Transaction",
+      "points": [
+        "Sold once and forgotten",
+        "Reactive, not proactive",
+        "Limited options",
+        "Ends after the sale",
+        "No coordination"
+      ]
     },
-    {
-      "icon": "★",
-      "name": "Cosmetic Whitening",
-      "description": "Professional cosmetic whitening tailored to your needs."
+    "right": {
+      "label": "Coordinated",
+      "heading": "An Ongoing Plan",
+      "points": [
+        "Reviewed proactively",
+        "Year-round guidance",
+        "Best fit for you",
+        "Documented and adjustable",
+        "Everything works together"
+      ]
     },
-    {
-      "icon": "★",
-      "name": "Invisalign",
-      "description": "Professional invisalign tailored to your needs."
-    },
-    {
-      "icon": "★",
-      "name": "Emergency Dental Care",
-      "description": "Professional emergency dental care tailored to your needs."
-    },
-    {
-      "icon": "★",
-      "name": "Dental Implants",
-      "description": "Professional dental implants tailored to your needs."
-    }
-  ],
+    "close": "You do not need another pitch. *You need a plan* built around your goals."
+  },
+  "audience": {
+    "eyebrow": "Is This Right For You?",
+    "title": "Who This Is *Built For*",
+    "items": [
+      {
+        "icon": "◈",
+        "title": "Busy Families",
+        "body": "People who want clear guidance without the runaround."
+      },
+      {
+        "icon": "◎",
+        "title": "Business Owners",
+        "body": "Owners who need strategy nobody is currently bringing them."
+      },
+      {
+        "icon": "⬡",
+        "title": "Planners",
+        "body": "Anyone preparing for an important decision or milestone."
+      },
+      {
+        "icon": "◇",
+        "title": "Second Opinions",
+        "body": "People who want an honest, unbiased review."
+      }
+    ],
+    "notFor": "This is not the right fit if you only want the cheapest option with no guidance."
+  },
+  "offer": {
+    "eyebrow": "The Free Review",
+    "title": "What You Get When You *Reach Out*",
+    "intro": "A personalized review built around your situation.",
+    "tag": "Free",
+    "offerTitle": "Personalized Consultation",
+    "offerDesc": "A short session that surfaces your highest-impact opportunities and gives you a clear set of next steps.",
+    "deliverables": [
+      {
+        "title": "Teeth Cleaning & Checkups",
+        "desc": "Tailored teeth cleaning & checkups for your needs."
+      },
+      {
+        "title": "Cosmetic Whitening",
+        "desc": "Tailored cosmetic whitening for your needs."
+      },
+      {
+        "title": "Invisalign",
+        "desc": "Tailored invisalign for your needs."
+      },
+      {
+        "title": "Emergency Dental Care",
+        "desc": "Tailored emergency dental care for your needs."
+      }
+    ],
+    "steps": [
+      {
+        "title": "Share Your Details",
+        "body": "Fill out the short form."
+      },
+      {
+        "title": "Book Your Session",
+        "body": "Pick a time that works."
+      },
+      {
+        "title": "Get Your Plan",
+        "body": "Receive personalized recommendations."
+      },
+      {
+        "title": "Take Action",
+        "body": "Leave with clear next steps."
+      }
+    ]
+  },
   "testimonials": [
     {
       "quote": "I used to dread the dentist. The team here made it genuinely relaxing — and my smile has never looked better.",
@@ -87,6 +199,10 @@
       "a": "Your initial consultation is free with no obligation."
     },
     {
+      "q": "Is this a high-pressure sales pitch?",
+      "a": "No. We explain your options; the decision is always yours."
+    },
+    {
       "q": "How quickly can we talk?",
       "a": "We typically respond the same business day."
     },
@@ -95,12 +211,24 @@
       "a": "We proudly serve Denver, CO and the surrounding area."
     },
     {
-      "q": "What should I bring?",
+      "q": "What should I prepare?",
       "a": "Just your questions — we handle the rest."
     }
   ],
+  "finalCta": {
+    "eyebrow": "One Step Away",
+    "headline": "Ready To *Get Started?*",
+    "subhead": "Reach out today for a free, no-pressure conversation in Denver, CO.",
+    "scarcity": "Limited consultations available each week"
+  },
   "lead": {
-    "mode": "booking"
+    "mode": "booking",
+    "includes": [
+      "A personalized review of your situation",
+      "Your top opportunities, ranked",
+      "Honest, unbiased guidance",
+      "A clear set of next steps"
+    ]
   },
   "seo": {
     "title": "Brightline Dental Studio — Denver, CO",
