@@ -81,17 +81,24 @@
   .mgr-avatar{width:44px;height:44px;border-radius:var(--radius-sm);background:var(--orange);display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;color:#fff;flex-shrink:0;box-shadow:0 2px 6px rgba(240,137,26,0.35)}
   .mgr-name{font-size:17px;font-weight:700;color:var(--navy)}
   .mgr-meta{font-size:13px;color:var(--text3);margin-top:3px}
-  .totals-row{display:flex;gap:0;align-items:stretch;flex-wrap:wrap}
+  .totals-row{display:flex;gap:0;align-items:stretch;flex-wrap:wrap;row-gap:8px}
+  .summary-tiles{display:flex;gap:8px;align-items:stretch;padding-left:16px;margin-left:auto}
   .tot-col{text-align:right;padding:0 20px;border-left:1px solid var(--border2)}
   .tot-col:first-child{border-left:none}
   .tot-lbl{font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:var(--text4);margin-bottom:5px;font-weight:600}
   .tot-val{font-size:19px;font-weight:700;font-family:'DM Mono',monospace;line-height:1}
   .tot-sub{font-size:12px;font-family:'DM Mono',monospace;margin-top:4px;color:var(--text3);white-space:nowrap}
   .tot-sub span{color:var(--text2);font-weight:600}
-  .total-ip{text-align:right;padding:0 20px;border-left:2px solid var(--blue);background:rgba(27,58,107,0.04)}
-  .total-ip-lbl{font-size:9px;letter-spacing:0.09em;text-transform:uppercase;color:var(--blue);margin-bottom:5px;font-weight:700}
-  .total-ip-val{font-size:21px;font-weight:800;font-family:'DM Mono',monospace;line-height:1;color:var(--blue)}
-  .total-ip-sub{font-size:12px;font-family:'DM Mono',monospace;margin-top:4px;color:var(--text3)}
+  .total-ip{display:flex;flex-direction:column;justify-content:center;text-align:right;padding:10px 22px 10px 18px;border-left:none;border-radius:8px;background:linear-gradient(135deg,rgba(27,58,107,0.08) 0%,rgba(27,58,107,0.03) 100%);box-shadow:inset 0 0 0 1px rgba(27,58,107,0.18);position:relative;overflow:hidden;min-width:130px}
+  .total-ip::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--navy);border-radius:8px 8px 0 0}
+  .total-ip-lbl{font-size:8.5px;letter-spacing:0.13em;text-transform:uppercase;color:var(--navy);margin-bottom:6px;font-weight:700;opacity:0.75}
+  .total-ip-val{font-size:22px;font-weight:800;font-family:'DM Mono',monospace;line-height:1;color:var(--navy)}
+  .total-ip-sub{display:none}
+  .total-sub{display:flex;flex-direction:column;justify-content:center;text-align:right;padding:10px 22px 10px 18px;border-left:none;border-radius:8px;background:linear-gradient(135deg,rgba(240,137,26,0.08) 0%,rgba(240,137,26,0.03) 100%);box-shadow:inset 0 0 0 1px rgba(240,137,26,0.18);position:relative;overflow:hidden;min-width:130px}
+  .total-sub::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--orange);border-radius:8px 8px 0 0}
+  .total-sub-lbl{font-size:8.5px;letter-spacing:0.13em;text-transform:uppercase;color:var(--orange);margin-bottom:6px;font-weight:700;opacity:0.85}
+  .total-sub-val{font-size:22px;font-weight:800;font-family:'DM Mono',monospace;line-height:1;color:var(--orange)}
+  .total-sub-sub{display:none}
   .v-orange{color:var(--orange)}
   .v-blue{color:var(--blue)}
   .v-dim{color:var(--text4);font-weight:400}
@@ -139,6 +146,123 @@
     .search-container input{width:180px;}
     .header-stats{display:none;}
   }
+
+/* ══════════════════════════════════════════════════════════════════════════
+   VISUAL ENHANCEMENT LAYER  ·  Valoram Solutions
+   Appended last so it refines the existing design without altering layout,
+   markup, ids or behaviour. Same structure — richer finish.
+   ══════════════════════════════════════════════════════════════════════════ */
+@media (prefers-reduced-motion:no-preference){
+  @keyframes vx-rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+  @keyframes vx-shimmer{to{background-position:200% 0}}
+  @keyframes vx-sheen{0%{transform:translateX(-120%)}60%,100%{transform:translateX(220%)}}
+}
+:root{
+  --vx-ease:cubic-bezier(.22,.61,.36,1);
+  --shadow:0 1px 2px rgba(16,24,32,.05),0 2px 6px rgba(16,24,32,.05);
+  --shadow-md:0 10px 30px rgba(16,24,32,.10),0 3px 8px rgba(16,24,32,.06);
+}
+html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility;scroll-behavior:smooth}
+
+/* Ambient, depth-giving backdrop (kept very subtle) */
+body{
+  background:
+    radial-gradient(1100px 560px at 100% -8%, rgba(240,137,26,.06), transparent 60%),
+    radial-gradient(900px 520px at -8% 4%, rgba(27,58,107,.05), transparent 58%),
+    var(--bg);
+  background-attachment:fixed;
+}
+
+/* Tabular figures for every numeric readout — columns line up perfectly */
+.kpi-val,.kpi-sub,.lb-ip,.drawer-val,.tot-val,.tot-sub,.total-ip-val,.total-sub-val,
+.gt-val,.hstat-val,.sum-val,.qs-val,.fval,.fpct,.tp-val,.team-tot-val,.mgr-cell,
+.agent-sub-cell,.drawer-cases,td.num,td.mono{font-variant-numeric:tabular-nums;font-feature-settings:"tnum" 1}
+
+/* ── HEADER ─────────────────────────────────────────────────────────────── */
+.page-header{position:relative;border-bottom-color:transparent;box-shadow:0 1px 0 rgba(16,24,32,.05),0 6px 20px rgba(16,24,32,.05)}
+.page-header::after{content:"";position:absolute;left:0;right:0;bottom:-3px;height:3px;
+  background:linear-gradient(90deg,var(--orange),var(--orange-light),var(--orange));
+  background-size:200% 100%;animation:vx-shimmer 7s linear infinite}
+.logo-img{filter:drop-shadow(0 1px 2px rgba(0,0,0,.10))}
+
+/* ── NAV ────────────────────────────────────────────────────────────────── */
+.page-nav{background:linear-gradient(180deg,#17222d 0%,var(--navy) 100%);box-shadow:inset 0 -1px 0 rgba(255,255,255,.05)}
+.page-nav a{position:relative;transition:color .2s var(--vx-ease),background .2s var(--vx-ease)}
+.page-nav a:hover{background:rgba(255,255,255,.045)}
+.page-nav a.act::after{content:"";position:absolute;left:16px;right:16px;bottom:0;height:2px;border-radius:2px;
+  background:var(--orange);box-shadow:0 0 12px var(--orange),0 0 4px var(--orange)}
+
+/* ── CARDS: entrance + lift ─────────────────────────────────────────────── */
+.kpi-card,.section-card,.manager-block,.table-wrap{transition:transform .28s var(--vx-ease),box-shadow .28s var(--vx-ease)}
+.kpi-card{animation:vx-rise .5s var(--vx-ease) both}
+.section-card,.manager-block{animation:vx-rise .6s var(--vx-ease) both}
+.kpi-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}
+.section-card:hover,.manager-block:hover{box-shadow:var(--shadow-md)}
+.kpi-grid .kpi-card:nth-child(2){animation-delay:.05s}
+.kpi-grid .kpi-card:nth-child(3){animation-delay:.10s}
+.kpi-grid .kpi-card:nth-child(4){animation-delay:.15s}
+.kpi-grid .kpi-card:nth-child(5){animation-delay:.20s}
+.kpi-grid .kpi-card:nth-child(6){animation-delay:.25s}
+.kpi-card::before{height:4px;filter:saturate(1.12)}
+.kpi-val{letter-spacing:-.018em}
+.section-title{letter-spacing:-.01em}
+
+/* ── LEADERBOARD ────────────────────────────────────────────────────────── */
+.lb-row{transition:background .16s var(--vx-ease),box-shadow .16s var(--vx-ease)}
+.lb-avatar{background:linear-gradient(135deg,var(--orange),var(--orange-light));box-shadow:0 3px 9px rgba(240,137,26,.34)}
+.lb-rank.r1{box-shadow:0 3px 12px rgba(245,158,11,.55)}
+.lb-rank.r2{box-shadow:0 3px 10px rgba(100,116,139,.4)}
+.lb-rank.r3{box-shadow:0 3px 10px rgba(160,90,44,.4)}
+
+/* ── PILLS / PERIOD ─────────────────────────────────────────────────────── */
+.pill{transition:transform .18s var(--vx-ease),background .18s var(--vx-ease),color .18s var(--vx-ease),box-shadow .18s var(--vx-ease)}
+.pill:hover{transform:translateY(-1px)}
+.pill.active{box-shadow:0 5px 14px rgba(240,137,26,.34);transform:translateY(-1px)}
+
+/* ── BUTTONS ────────────────────────────────────────────────────────────── */
+.refresh-btn{position:relative;overflow:hidden;background:linear-gradient(135deg,var(--orange),var(--orange-light));box-shadow:0 4px 12px rgba(240,137,26,.30)}
+.refresh-btn::after{content:"";position:absolute;top:0;bottom:0;width:35%;left:0;transform:translateX(-120%);
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.45),transparent);pointer-events:none}
+.refresh-btn:hover::after{animation:vx-sheen .9s var(--vx-ease)}
+.refresh-btn:active{transform:translateY(1px)}
+.mbtn.primary{background:linear-gradient(135deg,var(--orange),var(--orange-light));box-shadow:0 3px 10px rgba(240,137,26,.28)}
+.mbtn{transition:all .15s var(--vx-ease)}
+.clear-btn:hover,.btn-cfg:hover{transform:translateY(-1px)}
+
+/* ── INPUTS: focus rings ────────────────────────────────────────────────── */
+.filter-select:focus,.filter-input:focus,.filter-sel:focus,.search-input:focus,
+.date-in:focus,.form-field input:focus,.search-container input:focus{
+  border-color:var(--orange)!important;box-shadow:0 0 0 3px var(--orange-dim)}
+
+/* ── TABLES ─────────────────────────────────────────────────────────────── */
+.mgr-main-row,.agent-sub-row,tbody tr{transition:background .14s var(--vx-ease)}
+thead tr{background:linear-gradient(180deg,#17222d,var(--navy))}
+.status-pill{box-shadow:inset 0 0 0 1px rgba(0,0,0,.05)}
+
+/* ── TOTALS TILES (agent / manager) ─────────────────────────────────────── */
+.total-ip,.total-sub{transition:transform .2s var(--vx-ease),box-shadow .2s var(--vx-ease)}
+.manager-block:hover .total-ip,.manager-block:hover .total-sub{transform:translateY(-1px)}
+.mgr-avatar{background:linear-gradient(135deg,var(--orange),var(--orange-light))}
+
+/* ── MISC POLISH ────────────────────────────────────────────────────────── */
+.top-producer-box{transition:transform .2s var(--vx-ease),box-shadow .2s var(--vx-ease)}
+.top-producer-box:hover{transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.toast{box-shadow:0 12px 34px rgba(16,24,32,.28)}
+.section-chevron{transition:transform .25s var(--vx-ease)}
+
+/* ── CUSTOM SCROLLBARS ──────────────────────────────────────────────────── */
+*{scrollbar-width:thin;scrollbar-color:rgba(16,24,32,.22) transparent}
+*::-webkit-scrollbar{width:11px;height:11px}
+*::-webkit-scrollbar-track{background:transparent}
+*::-webkit-scrollbar-thumb{background:rgba(16,24,32,.20);border-radius:9px;border:3px solid transparent;background-clip:content-box}
+*::-webkit-scrollbar-thumb:hover{background:rgba(16,24,32,.34);background-clip:content-box}
+
+/* Honour reduced-motion */
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;scroll-behavior:auto!important}
+  .kpi-card,.section-card,.manager-block{opacity:1!important;transform:none!important}
+}
+
 </style></head>
 <body>
 <div class="toast" id="toast"></div>
@@ -156,6 +280,13 @@
     <button class="refresh-btn" id="loadBtn" onclick="loadData()"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M13.5 2.5A7 7 0 1 0 14.5 8"/><path d="M14.5 2v3h-3"/></svg> Load Data</button>
   </div>
 </header>
+<nav class="page-nav">
+  <a href="executive-overview.html">Executive Overview</a>
+  <a href="agent-production.html" class="act">Agent Production</a>
+  <a href="manager-personal-production.html">Personal Production</a>
+  <a href="manager-team-production.html">Team Production</a>
+  <a href="policy-ledger.html">Policy Ledger</a>
+</nav>
 <div class="filter-bar">
   <div class="filter-group"><label>From</label><input type="date" class="filter-input" id="fFrom" onchange="applyFilters()" style="width:150px"></div>
   <div class="filter-group"><label>To</label><input type="date" class="filter-input" id="fTo" onchange="applyFilters()" style="width:150px"></div>
@@ -287,7 +418,7 @@ function clearFilters(){['fFrom','fTo'].forEach(id=>document.getElementById(id).
 
 function buildStatCols(s){
   function col(lbl,total,count,isIP){const vc=total>0?(isIP?'v-blue':'v-orange'):'v-dim';return`<div class="tot-col"><div class="tot-lbl">${lbl}</div><div class="tot-val ${vc}">${fmt(total)}</div><div class="tot-sub">Avg: <span>${fmtAvg(total,count)}</span> &middot; <span>${count}</span> case${count!==1?'s':''}</div></div>`;}
-  return col('Life Submit',s.tLS,s.cLS,false)+col('Life Issued',s.tLP,s.cLP,true)+col('Ann. Submit',s.tAS,s.cAS,false)+col('Ann. Issued',s.tAP,s.cAP,true)+`<div class="total-ip"><div class="total-ip-lbl">Total IP</div><div class="total-ip-val">${fmt(s.tLP+s.tAP)}</div><div class="total-ip-sub">Life + Ann. Issued</div></div>`;
+  return col('Life Submit',s.tLS,s.cLS,false)+col('Life Issued',s.tLP,s.cLP,true)+col('Ann. Submit',s.tAS,s.cAS,false)+col('Ann. Issued',s.tAP,s.cAP,true)+`<div class="summary-tiles"><div class="total-sub"><div class="total-sub-lbl">Total Submit</div><div class="total-sub-val">${fmt(s.tLS+(s.tAS*0.05))}</div></div><div class="total-ip"><div class="total-ip-lbl">Total IP</div><div class="total-ip-val">${fmt(s.tLP+(s.tAP*0.05))}</div></div></div>`;
 }
 const CK='val_a';
 let cfg=JSON.parse(localStorage.getItem(CK)||'{"ep":"https://agencieshq.com/graphql","key":"0843a3f571d3075c445d1b70c774b7b2"}');
@@ -333,7 +464,7 @@ function applyFilters(){
     // Exclude if all buckets are zero after status filter
     const s=calcStats(a.frecs);
     return(s.tLS+s.tLP+s.tAS+s.tAP)>0;
-  }).sort((a,b)=>{const sa=calcStats(a.frecs),sb=calcStats(b.frecs);if(fStatus==='sub')return(sb.tLS+sb.tAS)-(sa.tLS+sa.tAS);return(sb.tLP+sb.tAP)-(sa.tLP+sa.tAP);});
+  }).sort((a,b)=>{const sa=calcStats(a.frecs),sb=calcStats(b.frecs);if(fStatus==='sub')return(sb.tLS+sb.tAS)-(sa.tLS+sa.tAS);return(sb.tLP+(sb.tAP*0.05))-(sa.tLP+(sa.tAP*0.05));});
   const totalRecs=filtered.reduce((s,a)=>s+a.frecs.length,0);
   document.getElementById('hStat1').textContent=filtered.length;
   document.getElementById('hStat2').textContent=totalRecs.toLocaleString();
