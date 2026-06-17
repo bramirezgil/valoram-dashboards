@@ -1,0 +1,15 @@
+{
+  "name": "valoram-landing-generator",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Config-driven, plug-and-play landing page generator for client marketing — outputs self-contained pages for GoHighLevel.",
+  "bin": { "landing-generate": "generate.js", "landing-copy": "ai-copy.js" },
+  "scripts": {
+    "build": "node generate.js --all",
+    "copy": "node ai-copy.js"
+  },
+  "optionalDependencies": {
+    "@anthropic-ai/sdk": "^0.40.0"
+  },
+  "engines": { "node": ">=18" }
+}

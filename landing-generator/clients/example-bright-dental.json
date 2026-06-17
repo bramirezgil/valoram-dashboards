@@ -1,0 +1,109 @@
+{
+  "slug": "example-bright-dental",
+  "business": {
+    "name": "Brightline Dental Studio",
+    "industry": "Family & cosmetic dentistry",
+    "address": "Denver, CO",
+    "tagline": "Modern dentistry with a gentle touch.",
+    "phone": "(303) 555-0188",
+    "email": "smile@brightlinedental.com",
+    "bookingUrl": "https://your-ghl-calendar-link.example.com"
+  },
+  "theme": {
+    "brandColor": "#0E5B6B",
+    "accentColor": "#2BB7A3",
+    "font": "Poppins"
+  },
+  "copy": {
+    "heroEyebrow": "TODO — review AI/placeholder copy",
+    "heroHeadline": "Expert Family & cosmetic dentistry you can trust",
+    "heroSubhead": "Brightline Dental Studio help people in Denver, CO make confident decisions — with clear advice and no pressure.",
+    "heroCta": "Get Started",
+    "valueProps": [
+      {
+        "title": "Personalized advice",
+        "body": "Recommendations built around your specific goals and situation."
+      },
+      {
+        "title": "Clear & honest",
+        "body": "Plain-English explanations of every option, cost, and trade-off."
+      },
+      {
+        "title": "Fast response",
+        "body": "Talk to a real person quickly — usually the same day."
+      },
+      {
+        "title": "Long-term partner",
+        "body": "We stay with you well beyond the first conversation."
+      }
+    ],
+    "aboutTitle": "A local team that puts you first",
+    "aboutBody": "Brightline Dental Studio was built on clear, honest guidance. We take time to understand your goals, walk you through your options, and stay with you for the long run.",
+    "finalCtaHeadline": "Let's talk",
+    "finalCtaSub": "Schedule a free, no-obligation consultation today."
+  },
+  "services": [
+    {
+      "icon": "★",
+      "name": "Teeth Cleaning & Checkups",
+      "description": "Professional teeth cleaning & checkups tailored to your needs."
+    },
+    {
+      "icon": "★",
+      "name": "Cosmetic Whitening",
+      "description": "Professional cosmetic whitening tailored to your needs."
+    },
+    {
+      "icon": "★",
+      "name": "Invisalign",
+      "description": "Professional invisalign tailored to your needs."
+    },
+    {
+      "icon": "★",
+      "name": "Emergency Dental Care",
+      "description": "Professional emergency dental care tailored to your needs."
+    },
+    {
+      "icon": "★",
+      "name": "Dental Implants",
+      "description": "Professional dental implants tailored to your needs."
+    }
+  ],
+  "testimonials": [
+    {
+      "quote": "I used to dread the dentist. The team here made it genuinely relaxing — and my smile has never looked better.",
+      "name": "Alyssa M.",
+      "detail": "Denver, CO"
+    },
+    {
+      "quote": "Got me in same-day for a cracked tooth and fixed it painlessly. Lifesaver.",
+      "name": "Kevin O.",
+      "detail": "Aurora, CO"
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How much does it cost to get started?",
+      "a": "Your initial consultation is free with no obligation."
+    },
+    {
+      "q": "How quickly can we talk?",
+      "a": "We typically respond the same business day."
+    },
+    {
+      "q": "What areas do you serve?",
+      "a": "We proudly serve Denver, CO and the surrounding area."
+    },
+    {
+      "q": "What should I bring?",
+      "a": "Just your questions — we handle the rest."
+    }
+  ],
+  "lead": {
+    "mode": "booking"
+  },
+  "seo": {
+    "title": "Brightline Dental Studio — Denver, CO",
+    "description": "Family & cosmetic dentistry in Denver, CO. Free consultation, honest advice, no pressure."
+  }
+}

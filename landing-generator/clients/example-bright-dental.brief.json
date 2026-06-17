@@ -1,0 +1,21 @@
+{
+  "slug": "example-bright-dental",
+  "tone": "warm, reassuring, modern",
+  "serviceNames": ["Teeth Cleaning & Checkups", "Cosmetic Whitening", "Invisalign", "Emergency Dental Care", "Dental Implants"],
+  "notes": "Family-friendly practice, accepts most insurance, gentle with anxious patients.",
+  "business": {
+    "name": "Brightline Dental Studio",
+    "industry": "Family & cosmetic dentistry",
+    "address": "Denver, CO",
+    "tagline": "Modern dentistry with a gentle touch.",
+    "phone": "(303) 555-0188",
+    "email": "smile@brightlinedental.com",
+    "bookingUrl": "https://your-ghl-calendar-link.example.com"
+  },
+  "theme": { "brandColor": "#0E5B6B", "accentColor": "#2BB7A3", "font": "Poppins" },
+  "lead": { "mode": "booking" },
+  "testimonials": [
+    { "quote": "I used to dread the dentist. The team here made it genuinely relaxing — and my smile has never looked better.", "name": "Alyssa M.", "detail": "Denver, CO" },
+    { "quote": "Got me in same-day for a cracked tooth and fixed it painlessly. Lifesaver.", "name": "Kevin O.", "detail": "Aurora, CO" }
+  ]
+}

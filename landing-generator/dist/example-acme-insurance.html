@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Cornerstone Life &amp; Annuity — Life Insurance &amp; Retirement Planning in Austin, TX</title>
+<meta name="description" content="Independent, plain-English life insurance and annuity advice in Austin, TX. Free quotes, top-rated carriers, no pressure.">
+<meta property="og:title" content="Cornerstone Life &amp; Annuity — Life Insurance &amp; Retirement Planning in Austin, TX">
+<meta property="og:description" content="Independent, plain-English life insurance and annuity advice in Austin, TX. Free quotes, top-rated carriers, no pressure.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --brand:#1B3A6B;
+  --accent:#F0891A;
+  --accent-soft:color-mix(in srgb, var(--accent) 12%, #fff);
+  --accent-ring:color-mix(in srgb, var(--accent) 22%, transparent);
+  --ink:#10151c;--ink2:#39424e;--ink3:#697483;--ink4:#9aa6b2;
+  --bg:#fbfbfc;--surface:#ffffff;--surface2:#f5f7f9;--line:#e7ebef;
+  --font:&#39;Montserrat&#39;, sans-serif;
+  --radius:16px;--radius-sm:10px;
+  --shadow:0 1px 2px rgba(16,21,28,.05),0 4px 14px rgba(16,21,28,.06);
+  --shadow-lg:0 18px 50px rgba(16,21,28,.14),0 6px 16px rgba(16,21,28,.07);
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --max:1140px;
+}
+html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility;scroll-behavior:smooth}
+body{font-family:var(--font);color:var(--ink);background:var(--bg);line-height:1.6;font-size:17px;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+.eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
+h1,h2,h3{line-height:1.12;letter-spacing:-.02em;font-weight:800;color:var(--ink)}
+h1{font-size:clamp(34px,5.4vw,58px)}
+h2{font-size:clamp(27px,3.6vw,40px)}
+.lead{font-size:clamp(17px,2.1vw,21px);color:var(--ink2);font-weight:400}
+.section{padding:clamp(56px,8vw,104px) 0}
+.section.alt{background:var(--surface2)}
+.center{text-align:center}
+.section-head{max-width:680px;margin:0 auto clamp(36px,5vw,56px)}
+.section.center .section-head{margin-left:auto;margin-right:auto}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:9px;font-family:var(--font);font-weight:700;font-size:16px;
+  padding:15px 28px;border-radius:999px;border:0;cursor:pointer;transition:transform .2s var(--ease),box-shadow .2s var(--ease),background .2s var(--ease);position:relative;overflow:hidden}
+.btn-primary{background:var(--accent);color:#fff;box-shadow:0 8px 22px var(--accent-ring)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 30px var(--accent-ring)}
+.btn-primary::after{content:"";position:absolute;inset:0 auto 0 0;width:40%;transform:translateX(-150%);
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.4),transparent)}
+.btn-primary:hover::after{animation:sheen .9s var(--ease)}
+@keyframes sheen{to{transform:translateX(320%)}}
+.btn-ghost{background:transparent;color:var(--brand);border:1.5px solid var(--line)}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px)}
+.btn-lg{padding:18px 36px;font-size:17px}
+
+/* header */
+header.site{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--surface) 86%,transparent);
+  backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.brandmark{display:flex;align-items:center;gap:12px;font-weight:800;font-size:20px;letter-spacing:-.02em;color:var(--brand)}
+.brandmark img{height:38px;width:auto}
+.brandmark .dot{width:30px;height:30px;border-radius:9px;background:var(--accent);display:flex;align-items:center;justify-content:center;color:#fff;font-size:15px;font-weight:800}
+.nav-right{display:flex;align-items:center;gap:18px}
+.nav-phone{font-weight:700;color:var(--brand);font-size:15px}
+.nav-phone:hover{color:var(--accent)}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:clamp(56px,8vw,96px) 0 clamp(48px,7vw,84px)}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;
+  background:
+    radial-gradient(60% 80% at 88% -10%, color-mix(in srgb,var(--accent) 16%,transparent), transparent 70%),
+    radial-gradient(55% 70% at -8% 10%, color-mix(in srgb,var(--brand) 12%,transparent), transparent 65%),
+    var(--bg)}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,4vw,56px);align-items:center}
+.hero h1{margin-bottom:20px}
+.hero .lead{margin-bottom:30px;max-width:33ch}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.hero-assure{margin-top:20px;font-size:14px;color:var(--ink3);display:flex;align-items:center;gap:8px}
+.hero-assure svg{width:18px;height:18px;color:var(--accent);flex-shrink:0}
+.lead-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow-lg);padding:30px;position:relative}
+.lead-card::before{content:"";position:absolute;top:0;left:28px;right:28px;height:4px;border-radius:0 0 4px 4px;background:linear-gradient(90deg,var(--accent),color-mix(in srgb,var(--accent) 55%,#fff))}
+.lead-card h3{font-size:21px;margin-bottom:6px}
+.lead-card p.sub{font-size:14px;color:var(--ink3);margin-bottom:18px}
+.field{margin-bottom:13px}
+.field label{display:block;font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--ink3);margin-bottom:6px}
+.field input,.field textarea,.field select{width:100%;font-family:var(--font);font-size:15px;color:var(--ink);
+  background:var(--surface2);border:1.5px solid var(--line);border-radius:var(--radius-sm);padding:12px 14px;outline:none;transition:border-color .15s,box-shadow .15s}
+.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-ring);background:#fff}
+.lead-card .btn-primary{width:100%;justify-content:center;margin-top:6px}
+.form-note{font-size:12px;color:var(--ink4);text-align:center;margin-top:12px}
+.form-success{display:none;text-align:center;padding:26px 8px}
+.form-success svg{width:54px;height:54px;color:var(--accent);margin:0 auto 14px}
+.form-success.show{display:block}
+.lead-card form.hide{display:none}
+.embed-wrap{border-radius:var(--radius-sm);overflow:hidden;min-height:420px}
+.embed-wrap iframe{width:100%!important;min-height:420px;border:0;display:block}
+
+/* trust bar */
+.trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--surface)}
+.trust-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;padding:26px 0;text-align:center}
+.trust-stat .n{font-size:clamp(26px,3vw,34px);font-weight:800;color:var(--brand);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.trust-stat .l{font-size:13px;color:var(--ink3);font-weight:600;letter-spacing:.02em}
+
+/* services */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px;box-shadow:var(--shadow);
+  transition:transform .26s var(--ease),box-shadow .26s var(--ease),border-color .26s var(--ease)}
+.card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:color-mix(in srgb,var(--accent) 30%,var(--line))}
+.card .ic{width:54px;height:54px;border-radius:14px;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;font-size:26px;margin-bottom:18px}
+.card h3{font-size:20px;margin-bottom:9px}
+.card p{font-size:15px;color:var(--ink2)}
+
+/* value props */
+.props{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:30px 36px}
+.prop{display:flex;gap:16px;align-items:flex-start}
+.prop .chk{flex-shrink:0;width:40px;height:40px;border-radius:11px;background:var(--brand);display:flex;align-items:center;justify-content:center}
+.prop .chk svg{width:20px;height:20px;color:#fff}
+.prop h3{font-size:18px;margin-bottom:5px}
+.prop p{font-size:15px;color:var(--ink2)}
+
+/* testimonials */
+.quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
+.quote{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:30px;box-shadow:var(--shadow);position:relative}
+.quote .stars{color:var(--accent);font-size:16px;letter-spacing:2px;margin-bottom:14px}
+.quote blockquote{font-size:17px;color:var(--ink);line-height:1.55;margin-bottom:18px}
+.quote .who{display:flex;align-items:center;gap:12px}
+.quote .av{width:42px;height:42px;border-radius:50%;background:var(--brand);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px}
+.quote .nm{font-weight:700;font-size:15px}
+.quote .dt{font-size:13px;color:var(--ink3)}
+
+/* about */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,64px);align-items:center}
+.about .panel{background:linear-gradient(150deg,var(--brand),color-mix(in srgb,var(--brand) 70%,#000));border-radius:var(--radius);padding:44px;color:#fff;box-shadow:var(--shadow-lg);position:relative;overflow:hidden}
+.about .panel::after{content:"";position:absolute;width:240px;height:240px;border-radius:50%;right:-80px;bottom:-90px;background:color-mix(in srgb,var(--accent) 40%,transparent);filter:blur(10px)}
+.about .panel h3{color:#fff;font-size:24px;margin-bottom:14px}
+.about .panel p{color:rgba(255,255,255,.85);font-size:16px}
+.about-copy h2{margin-bottom:16px}
+.about-copy p{color:var(--ink2);margin-bottom:14px}
+
+/* faq */
+.faq{max-width:780px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
+.qa{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-sm);overflow:hidden;transition:box-shadow .2s var(--ease)}
+.qa[open]{box-shadow:var(--shadow)}
+.qa summary{list-style:none;cursor:pointer;padding:18px 22px;font-weight:700;font-size:17px;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary .pm{flex-shrink:0;width:24px;height:24px;border-radius:50%;border:1.5px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--accent);font-size:18px;transition:transform .2s var(--ease),background .2s}
+.qa[open] summary .pm{transform:rotate(45deg);background:var(--accent-soft)}
+.qa .ans{padding:0 22px 20px;color:var(--ink2);font-size:15px}
+
+/* final cta */
+.final{position:relative;overflow:hidden;background:var(--brand);color:#fff;border-radius:clamp(18px,3vw,28px);padding:clamp(40px,6vw,72px);text-align:center;box-shadow:var(--shadow-lg)}
+.final::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(50% 70% at 80% 0%, color-mix(in srgb,var(--accent) 45%,transparent), transparent 60%),
+  radial-gradient(55% 75% at 10% 100%, color-mix(in srgb,var(--accent) 28%,transparent), transparent 60%)}
+.final>*{position:relative}
+.final h2{color:#fff;margin-bottom:14px}
+.final p{color:rgba(255,255,255,.86);max-width:540px;margin:0 auto 28px;font-size:18px}
+.final .btn-primary{background:#fff;color:var(--brand);box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.final .btn-primary:hover{background:#fff}
+
+/* footer */
+footer.site{padding:40px 0;border-top:1px solid var(--line);background:var(--surface)}
+.foot{display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center;color:var(--ink3);font-size:14px}
+.foot .brandmark{font-size:17px}
+.foot-contact{display:flex;flex-wrap:wrap;gap:18px}
+.foot-contact a:hover{color:var(--accent)}
+
+/* reveal on scroll */
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+
+@media(max-width:860px){
+  .hero-grid,.about{grid-template-columns:1fr}
+  .hero .lead{max-width:none}
+  .nav-phone{display:none}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;scroll-behavior:auto!important}
+  .reveal{opacity:1;transform:none;transition:none}
+}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brandmark" href="#top">
+      <span class="dot">Cornerstone Life &amp; Annuity</span><span>Cornerstone Life &amp; Annuity</span>
+    </a>
+    <div class="nav-right">
+      <a class="nav-phone" href="tel:5125550142">(512) 555-0142</a>
+      <a class="btn btn-primary" href="#lead">Get My Free Quote</a>
+    </div>
+  </div>
+</header>
+
+<span id="top"></span>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <span class="eyebrow">Trusted local advisors</span>
+      <h1>Confident protection for the people who matter most</h1>
+      <p class="lead">Personalized life insurance and annuity planning from advisors who explain every option in plain English — no jargon, no pressure.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary btn-lg" href="#lead">Get My Free Quote</a>
+        <a class="btn btn-ghost btn-lg" href="tel:5125550142">Call (512) 555-0142</a>
+      </div>
+      <div class="hero-assure">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+        No obligation · Fast, friendly response
+      </div>
+    </div>
+
+    <div class="reveal" id="lead">
+      <div class="lead-card">
+        
+        
+          <h3>Request your free consultation</h3>
+          <p class="sub">Tell us a bit about you — we'll do the rest.</p>
+          <form id="leadForm" novalidate>
+            <div class="field"><label>Full name</label><input name="name" type="text" autocomplete="name" required placeholder="Jane Smith"></div>
+            <div class="field"><label>Email</label><input name="email" type="email" autocomplete="email" required placeholder="jane@email.com"></div>
+            <div class="field"><label>Phone</label><input name="phone" type="tel" autocomplete="tel" placeholder="(555) 123-4567"></div>
+            <div class="field"><label>How can we help?</label><textarea name="message" rows="3" placeholder="I'm interested in…"></textarea></div>
+            <button class="btn btn-primary" type="submit">Get My Free Quote</button>
+            <p class="form-note">🔒 Your information is kept private and secure.</p>
+          </form>
+          <div class="form-success" id="leadSuccess">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg>
+            <h3>Thanks! A licensed advisor will reach out shortly.</h3>
+          </div>
+        
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- TRUST / STATS -->
+<div class="trust"><div class="wrap"><div class="trust-grid reveal">
+  <div class="trust-stat"><div class="n">A+</div><div class="l">Rated service</div></div>
+  <div class="trust-stat"><div class="n">Fast</div><div class="l">Same-day response</div></div>
+  <div class="trust-stat"><div class="n">100%</div><div class="l">Personalized</div></div>
+  <div class="trust-stat"><div class="n">Local</div><div class="l">Austin, TX</div></div>
+</div></div></div>
+
+<!-- SERVICES -->
+<section class="section center">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">What we offer</span>
+      <h2>Services built around your needs</h2>
+    </div>
+    <div class="cards" style="text-align:left">
+      
+      <div class="card reveal">
+        <div class="ic">🛡️</div>
+        <h3>Term Life Insurance</h3>
+        <p>Affordable coverage that protects your family&#39;s income during the years they depend on it most.</p>
+      </div>
+      
+      <div class="card reveal">
+        <div class="ic">🏛️</div>
+        <h3>Whole &amp; Universal Life</h3>
+        <p>Permanent protection with cash value you can borrow against — coverage that lasts a lifetime.</p>
+      </div>
+      
+      <div class="card reveal">
+        <div class="ic">📈</div>
+        <h3>Fixed &amp; Indexed Annuities</h3>
+        <p>Turn savings into guaranteed, predictable retirement income you can&#39;t outlive.</p>
+      </div>
+      
+      <div class="card reveal">
+        <div class="ic">👪</div>
+        <h3>Final Expense Plans</h3>
+        <p>Simple, guaranteed-acceptance coverage so loved ones are never left with the bill.</p>
+      </div>
+      
+      <div class="card reveal">
+        <div class="ic">💼</div>
+        <h3>Retirement Income Planning</h3>
+        <p>A clear roadmap that coordinates your policies, savings, and Social Security.</p>
+      </div>
+      
+      <div class="card reveal">
+        <div class="ic">🔎</div>
+        <h3>Free Policy Review</h3>
+        <p>Already covered? We&#39;ll review your existing policy and find gaps or savings — at no cost.</p>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+
+
+<!-- VALUE PROPS -->
+<section class="section alt">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Why choose Cornerstone Life &amp; Annuity</span>
+      <h2>The difference is in the details</h2>
+    </div>
+    <div class="props">
+      
+      <div class="prop reveal">
+        <div class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
+        <div><h3>Independent &amp; unbiased</h3><p>We shop top-rated carriers for you, so you get the right coverage at the right price — not a one-size-fits-all pitch.</p></div>
+      </div>
+      
+      <div class="prop reveal">
+        <div class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
+        <div><h3>Plain-English guidance</h3><p>Every recommendation comes with a clear explanation of what it covers, what it costs, and why it fits your goals.</p></div>
+      </div>
+      
+      <div class="prop reveal">
+        <div class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
+        <div><h3>Built for the long run</h3><p>From term life to fixed annuities, we design plans that protect today and grow with you for decades.</p></div>
+      </div>
+      
+      <div class="prop reveal">
+        <div class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
+        <div><h3>Real people, real fast</h3><p>Talk to a licensed advisor — usually the same day. No call-center runaround.</p></div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+
+
+<!-- TESTIMONIALS -->
+<section class="section center">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Client stories</span>
+      <h2>People we're proud to serve</h2>
+    </div>
+    <div class="quotes" style="text-align:left">
+      
+      <figure class="quote reveal">
+        <div class="stars">★★★★★</div>
+        <blockquote>"They explained our options without a single confusing term. We finally feel confident our kids are protected."</blockquote>
+        <figcaption class="who">
+          <div class="av">M&amp;</div>
+          <div><div class="nm">Maria &amp; Daniel R.</div><div class="dt">Round Rock, TX</div></div>
+        </figcaption>
+      </figure>
+      
+      <figure class="quote reveal">
+        <div class="stars">★★★★★</div>
+        <blockquote>"I rolled an old 401(k) into an annuity and now I know exactly what my retirement income will be. Total peace of mind."</blockquote>
+        <figcaption class="who">
+          <div class="av">JT</div>
+          <div><div class="nm">James T.</div><div class="dt">Retired, Austin TX</div></div>
+        </figcaption>
+      </figure>
+      
+      <figure class="quote reveal">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Same-day callback, honest advice, and they saved me money on coverage I already had. Couldn&#39;t recommend more."</blockquote>
+        <figcaption class="who">
+          <div class="av">PS</div>
+          <div><div class="nm">Priya S.</div><div class="dt">Cedar Park, TX</div></div>
+        </figcaption>
+      </figure>
+      
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ABOUT -->
+<section class="section alt">
+  <div class="wrap about">
+    <div class="about-copy reveal">
+      <span class="eyebrow">About us</span>
+      <h2>A local team that treats you like family</h2>
+      <p>Cornerstone Life &amp; Annuity was founded on a simple belief: financial protection should be clear, honest, and built around your life — not a sales quota. Our licensed advisors take the time to understand your goals, walk you through every option, and stay with you long after the policy is signed.</p>
+      <a class="btn btn-primary" href="#lead">Get My Free Quote</a>
+    </div>
+    <div class="reveal">
+      <div class="panel">
+        <h3>Cornerstone Life &amp; Annuity</h3>
+        <p>Protecting families and growing retirements across Texas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- FAQ -->
+<section class="section center">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Good to know</span>
+      <h2>Frequently asked questions</h2>
+    </div>
+    <div class="faq" style="text-align:left">
+      
+      <details class="qa reveal"><summary>How much does a consultation cost?<span class="pm">+</span></summary><div class="ans">Nothing. Your initial consultation and quote are completely free, with zero obligation to buy.</div></details>
+      
+      <details class="qa reveal"><summary>Do you work with multiple insurance carriers?<span class="pm">+</span></summary><div class="ans">Yes. We&#39;re independent, so we compare top-rated carriers to find the best fit and price for your situation.</div></details>
+      
+      <details class="qa reveal"><summary>How long does it take to get covered?<span class="pm">+</span></summary><div class="ans">Some plans offer same-day approval. Most applications are completed within a week, and we handle the paperwork for you.</div></details>
+      
+      <details class="qa reveal"><summary>What if I already have a policy?<span class="pm">+</span></summary><div class="ans">We offer a free policy review to check for coverage gaps or potential savings — no pressure to switch.</div></details>
+      
+    </div>
+  </div>
+</section>
+
+
+<!-- FINAL CTA -->
+<section class="section">
+  <div class="wrap">
+    <div class="final reveal">
+      <h2>Let&#39;s build your plan together</h2>
+      <p>Schedule a free, no-obligation consultation today and see how simple protecting your family&#39;s future can be.</p>
+      <a class="btn btn-primary btn-lg" href="#lead">Get My Free Quote</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap foot">
+    <a class="brandmark" href="#top"><span class="dot">Cornerstone Life &amp; Annuity</span><span>Cornerstone Life &amp; Annuity</span></a>
+    
+    <div class="foot-contact">
+      <a href="tel:5125550142">(512) 555-0142</a>
+      <a href="mailto:hello@cornerstone-la.com">hello@cornerstone-la.com</a>
+      <span>Austin, TX</span>
+    </div>
+    
+    <div>© 2026 Cornerstone Life &amp; Annuity. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // scroll reveal
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el,i){el.style.transitionDelay=(Math.min(i,6)*40)+'ms';io.observe(el);});
+
+  // native lead form -> GHL inbound webhook
+  var form=document.getElementById('leadForm');
+  if(form){
+    var WEBHOOK="https://services.leadconnectorhq.com/hooks/REPLACE_WITH_YOUR_GHL_INBOUND_WEBHOOK";
+    form.addEventListener('submit',function(ev){
+      ev.preventDefault();
+      var btn=form.querySelector('button[type=submit]');btn.disabled=true;btn.textContent='Sending…';
+      var data={};new FormData(form).forEach(function(v,k){data[k]=v;});
+      data.source=location.href;data.submittedAt=new Date().toISOString();
+      fetch(WEBHOOK,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)})
+        .then(function(){done();}).catch(function(){done();});
+      function done(){form.classList.add('hide');var s=document.getElementById('leadSuccess');if(s)s.classList.add('show');}
+    });
+  }
+})();
+</script>
+</body></html>

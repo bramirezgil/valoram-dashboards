@@ -1,0 +1,63 @@
+{
+  "slug": "example-acme-insurance",
+  "business": {
+    "name": "Cornerstone Life & Annuity",
+    "logoUrl": "",
+    "tagline": "Protecting families and growing retirements across Texas.",
+    "phone": "(512) 555-0142",
+    "email": "hello@cornerstone-la.com",
+    "address": "Austin, TX",
+    "bookingUrl": "https://your-ghl-calendar-link.example.com",
+    "industry": "Life insurance & annuities"
+  },
+  "theme": {
+    "brandColor": "#1B3A6B",
+    "accentColor": "#F0891A",
+    "font": "Montserrat"
+  },
+  "copy": {
+    "heroEyebrow": "Trusted local advisors",
+    "heroHeadline": "Confident protection for the people who matter most",
+    "heroSubhead": "Personalized life insurance and annuity planning from advisors who explain every option in plain English — no jargon, no pressure.",
+    "heroCta": "Get My Free Quote",
+    "valueProps": [
+      { "title": "Independent & unbiased", "body": "We shop top-rated carriers for you, so you get the right coverage at the right price — not a one-size-fits-all pitch." },
+      { "title": "Plain-English guidance", "body": "Every recommendation comes with a clear explanation of what it covers, what it costs, and why it fits your goals." },
+      { "title": "Built for the long run", "body": "From term life to fixed annuities, we design plans that protect today and grow with you for decades." },
+      { "title": "Real people, real fast", "body": "Talk to a licensed advisor — usually the same day. No call-center runaround." }
+    ],
+    "aboutTitle": "A local team that treats you like family",
+    "aboutBody": "Cornerstone Life & Annuity was founded on a simple belief: financial protection should be clear, honest, and built around your life — not a sales quota. Our licensed advisors take the time to understand your goals, walk you through every option, and stay with you long after the policy is signed.",
+    "finalCtaHeadline": "Let's build your plan together",
+    "finalCtaSub": "Schedule a free, no-obligation consultation today and see how simple protecting your family's future can be."
+  },
+  "services": [
+    { "icon": "🛡️", "name": "Term Life Insurance", "description": "Affordable coverage that protects your family's income during the years they depend on it most." },
+    { "icon": "🏛️", "name": "Whole & Universal Life", "description": "Permanent protection with cash value you can borrow against — coverage that lasts a lifetime." },
+    { "icon": "📈", "name": "Fixed & Indexed Annuities", "description": "Turn savings into guaranteed, predictable retirement income you can't outlive." },
+    { "icon": "👪", "name": "Final Expense Plans", "description": "Simple, guaranteed-acceptance coverage so loved ones are never left with the bill." },
+    { "icon": "💼", "name": "Retirement Income Planning", "description": "A clear roadmap that coordinates your policies, savings, and Social Security." },
+    { "icon": "🔎", "name": "Free Policy Review", "description": "Already covered? We'll review your existing policy and find gaps or savings — at no cost." }
+  ],
+  "testimonials": [
+    { "quote": "They explained our options without a single confusing term. We finally feel confident our kids are protected.", "name": "Maria & Daniel R.", "detail": "Round Rock, TX" },
+    { "quote": "I rolled an old 401(k) into an annuity and now I know exactly what my retirement income will be. Total peace of mind.", "name": "James T.", "detail": "Retired, Austin TX" },
+    { "quote": "Same-day callback, honest advice, and they saved me money on coverage I already had. Couldn't recommend more.", "name": "Priya S.", "detail": "Cedar Park, TX" }
+  ],
+  "faqs": [
+    { "q": "How much does a consultation cost?", "a": "Nothing. Your initial consultation and quote are completely free, with zero obligation to buy." },
+    { "q": "Do you work with multiple insurance carriers?", "a": "Yes. We're independent, so we compare top-rated carriers to find the best fit and price for your situation." },
+    { "q": "How long does it take to get covered?", "a": "Some plans offer same-day approval. Most applications are completed within a week, and we handle the paperwork for you." },
+    { "q": "What if I already have a policy?", "a": "We offer a free policy review to check for coverage gaps or potential savings — no pressure to switch." }
+  ],
+  "lead": {
+    "mode": "webhook",
+    "webhookUrl": "https://services.leadconnectorhq.com/hooks/REPLACE_WITH_YOUR_GHL_INBOUND_WEBHOOK",
+    "ghlFormEmbed": "",
+    "successMessage": "Thanks! A licensed advisor will reach out shortly."
+  },
+  "seo": {
+    "title": "Cornerstone Life & Annuity — Life Insurance & Retirement Planning in Austin, TX",
+    "description": "Independent, plain-English life insurance and annuity advice in Austin, TX. Free quotes, top-rated carriers, no pressure."
+  }
+}
