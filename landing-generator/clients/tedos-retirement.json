@@ -1,0 +1,183 @@
+{
+  "slug": "tedos-retirement",
+  "business": {
+    "name": "Valoram Solutions",
+    "logoUrl": "",
+    "tagline": "Fiduciary retirement income planning for high earners.",
+    "email": "hello@valoramsolutions.com",
+    "address": "United States",
+    "bookingUrl": "https://your-ghl-calendar-link.example.com",
+    "industry": "Fiduciary retirement & investment planning"
+  },
+  "theme": { "brandColor": "#0E2742", "accentColor": "#B57614", "font": "Montserrat" },
+
+  "hero": {
+    "eyebrow": "◆ Free Retirement Confidence Assessment",
+    "headline": "Turn Your Nest Egg Into a *Reliable Retirement Paycheck* — Without Guessing or Hoping the Market Cooperates",
+    "subhead": "For high-earning professionals 3–10 years from retirement: a fiduciary plan that stress-tests your income, cuts hidden fees and taxes, and coordinates everything into one strategy.",
+    "cta": "See If You Qualify"
+  },
+
+  "problem": {
+    "eyebrow": "Why This Exists",
+    "title": "You've Built the Wealth. You Just Don't Have a *Real Income Plan.*",
+    "items": [
+      { "title": "A Pile Of Accounts", "body": "Your retirement \"plan\" is a stack of 401(k)s, IRAs, and brokerage accounts with a vague target date — no real income strategy and no proof it survives a downturn." },
+      { "title": "Sequence-Of-Returns Risk", "body": "If a major market drop hits right as you retire, you could be forced to sell low. Most people have no idea how much risk they're actually carrying." },
+      { "title": "Fees, Taxes & No Coordination", "body": "You suspect you're overpaying in fees and taxes — getting generic portfolio management with zero coordination across tax, insurance, estate, and income." }
+    ],
+    "transition": "The biggest retirement risks show up *over years, not weeks* — and they're decided before you retire, not after."
+  },
+
+  "results": {
+    "eyebrow": "What You Can Achieve",
+    "title": "Keep More, Lower Your Risk, and Finally Have a *Plan That Holds Up*",
+    "intro": "Here's what our clients consistently walk away with after the Fiduciary Retirement Confidence System.",
+    "items": [
+      { "icon": "💵", "title": "A Reliable Retirement Paycheck", "body": "A clear, written plan for what to pull from where, and when — so your income stays steady even through down markets." },
+      { "icon": "📉", "title": "Lower Fees & Smarter Risk", "body": "Cut hidden fees and unnecessary risk with diversification and guardrails you can actually understand — without giving up growth." },
+      { "icon": "🔗", "title": "One Coordinated Strategy", "body": "Investments, taxes, insurance, and estate planning tied together, so you stop managing a financial \"group project.\"" },
+      { "icon": "🛡️", "title": "Confidence In Any Market", "body": "A plan stress-tested for a bad market early in retirement — so you're never forced to react to headlines." }
+    ],
+    "stats": [
+      { "num": "$2M–$10M", "label": "Investable Assets We Plan Around", "desc": "Built for households with real complexity — taxable, 401(k)/IRA, and equity comp." },
+      { "num": "7-Step", "label": "Fiduciary Confidence System", "desc": "A proven blueprint, from stress test to ongoing monitoring." },
+      { "num": "Fiduciary", "label": "Always In Your Corner", "desc": "Advice held to a fiduciary standard — coordinated, not commission-driven." }
+    ]
+  },
+
+  "distinction": {
+    "eyebrow": "The Core Distinction",
+    "title": "The Difference Between *Managing Money* and Managing Your Retirement",
+    "left": {
+      "label": "Typical Advisor",
+      "heading": "Managing Money",
+      "points": ["Generic portfolio management", "Reacts to market headlines", "No written retirement income plan", "Fees and taxes go unchecked", "Five pros giving five different answers"]
+    },
+    "right": {
+      "label": "The Confidence System",
+      "heading": "Coordinating Your Plan",
+      "points": ["Income plan stress-tested for bad markets", "Fee & risk X-ray on every account", "Tax-smart withdrawal & Roth strategy", "Investments, insurance & estate aligned", "One fiduciary quarterback for everything"]
+    },
+    "close": "You don't need another hot fund or a market forecast. *You need a fiduciary plan* that reduces risk, cuts hidden fees, and turns your portfolio into dependable income."
+  },
+
+  "audience": {
+    "eyebrow": "Is This Right For You?",
+    "title": "Who the Confidence System *Is Built For*",
+    "items": [
+      { "icon": "🎯", "title": "3–10 Years From Retirement", "body": "Professionals 52–67 moving from building wealth to replacing their paycheck — who want proof their plan actually works." },
+      { "icon": "💼", "title": "High-Earning Leaders", "body": "VPs, directors, partners, physicians, and tech execs earning $300k–$900k who are tired of fragmented advice." },
+      { "icon": "📊", "title": "$2M–$10M In Assets", "body": "Households with taxable, 401(k)/IRA, and equity comp — willing to move $1M+ to a fiduciary if the plan is clear." },
+      { "icon": "🧭", "title": "Recently Retired (0–5 yrs)", "body": "Already retired and realizing you need an income strategy and real risk controls — not just \"managed money.\"" }
+    ],
+    "notFor": "This isn't a fit if you're more than 10 years from retirement, have under $1M to plan around, or you're certain your current advisor already coordinates your income, tax, insurance, and estate strategy."
+  },
+
+  "offer": {
+    "eyebrow": "The System",
+    "title": "The Fiduciary Retirement *Confidence System*",
+    "intro": "A coordinated, 7-step blueprint that turns a pile of accounts into a stress-tested retirement income plan.",
+    "tag": "7-Step Blueprint",
+    "offerTitle": "Your Retirement, Stress-Tested and Coordinated",
+    "offerDesc": "From a Retirement Red Zone Stress Test to ongoing monitoring, every step is designed to reduce unnecessary risk, cut fees and taxes, and produce dependable income you can count on.",
+    "deliverables": [
+      { "title": "1 · Red Zone Stress Test", "desc": "See how your plan holds up in real bear markets — a clear pass/fail on retirement readiness." },
+      { "title": "2 · Fee & Risk X-Ray", "desc": "Uncover hidden fees, fund overlap, and concentration risk across every account." },
+      { "title": "3 · Retirement Paycheck Map", "desc": "A written income plan: what to pull from where, when, to stay steady in down markets." },
+      { "title": "4 · Tax-Smart Withdrawal Order", "desc": "A withdrawal and Roth-conversion plan to lower lifetime taxes and boost after-tax income." },
+      { "title": "5 · Portfolio Rebuild With Guardrails", "desc": "Fiduciary management and risk controls that pursue growth while controlling downside." },
+      { "title": "6 · Insurance & Legacy Alignment", "desc": "Coordinate insurance and estate priorities so your family is protected and nothing is left to chance." },
+      { "title": "7 · Ongoing Monitoring & Adjustments", "desc": "Regular reviews and rebalancing so markets, taxes, and life don't knock you off course." }
+    ],
+    "stepsTitle": "How It Works",
+    "steps": [
+      { "title": "Take the Assessment", "body": "Answer a few questions so we understand your situation and goals." },
+      { "title": "Book Your Strategy Session", "body": "Meet with a fiduciary specialist to review your results." },
+      { "title": "Get Your Stress Test & Map", "body": "Receive your personalized readiness score and income roadmap." },
+      { "title": "Implement With Confidence", "body": "Put a coordinated plan in place — and keep it on track." }
+    ]
+  },
+
+  "faqs": [
+    { "q": "I already have a financial advisor. Why do I need this?", "a": "Most clients do. The difference is coordination: we stress-test your income, audit fees and taxes, and tie investments, insurance, and estate together — the questions a \"money manager\" rarely answers." },
+    { "q": "Is this a sales pitch for products?", "a": "No. We're fiduciaries. The assessment and review are educational; any recommendation is based on what's right for your plan, never a commission." },
+    { "q": "What is the Retirement Red Zone Stress Test?", "a": "It shows how your accounts and withdrawal plan would hold up if a major market drop hit early in retirement — so you understand your real risk before it matters." },
+    { "q": "How much do I need to get started?", "a": "We typically work with households with $2M–$10M in investable assets, though the right fit always depends on your specific situation and goals." },
+    { "q": "What does being a fiduciary mean?", "a": "We're legally and ethically required to act in your best interest — coordinating your full plan rather than selling products." },
+    { "q": "How quickly will someone follow up?", "a": "If you qualify, a fiduciary specialist typically reaches out within one business day to schedule your strategy session." }
+  ],
+
+  "finalCta": {
+    "eyebrow": "One Step Away",
+    "headline": "Find Out If Your Plan Can *Survive a Down Market*",
+    "subhead": "If you're 3–10 years from retirement with $2M+ in assets, this assessment shows where your income plan is exposed — and the moves that can fix it.",
+    "scarcity": "Limited fiduciary strategy sessions available each week"
+  },
+
+  "lead": {
+    "mode": "ghl-form",
+    "ghlFormEmbed": "<div style=\"border:2px dashed var(--line);border-radius:10px;padding:44px 24px;text-align:center;color:var(--ink3);background:var(--off)\"><strong style=\"display:block;color:var(--ink);font-size:16px;margin-bottom:6px\">⟶ Your GHL Survey Embeds Here</strong>Build the qualification survey in GoHighLevel (see tedos-retirement.SURVEY.md), copy its inline embed code, and paste it into <code>lead.ghlFormEmbed</code> in this config — then re-run the generator.</div>",
+    "successMessage": "Thanks! Check your results on the next page.",
+    "formEyebrow": "Take the First Step",
+    "formTitle": "Take the 2-Minute *Retirement Confidence Assessment*",
+    "formIntro": "Answer a few quick questions to get your personalized readiness snapshot and see if the Confidence System is right for you.",
+    "includes": [
+      "Your Retirement Red Zone readiness snapshot",
+      "Your top risks across fees, taxes & income",
+      "A personalized next step based on your answers",
+      "No cost and no obligation"
+    ]
+  },
+
+  "resultsPage": {
+    "default": "qualified",
+    "segments": {
+      "priority": {
+        "eyebrow": "Priority Candidate",
+        "headline": "You're a *Priority Fit* — Let's Talk This Week",
+        "subhead": "Your answers point to a time-sensitive opportunity — an upcoming retirement date, a liquidity event, or significant assets. Let's get you in with a senior fiduciary specialist right away.",
+        "points": [
+          "A senior fiduciary specialist will personally review your situation",
+          "Priority scheduling — often within 48 hours",
+          "We'll focus first on the moves that are most time-sensitive"
+        ],
+        "ctaText": "Book My Priority Session",
+        "ctaSub": "Priority scheduling · Virtual · No cost",
+        "note": "Time-sensitive event coming up? Email hello@valoramsolutions.com and mention your assessment."
+      },
+      "qualified": {
+        "eyebrow": "You're a Strong Fit",
+        "headline": "Your Results Are In — Let's Build Your *Retirement Paycheck Plan*",
+        "subhead": "Based on your answers, you're an excellent candidate for the Fiduciary Retirement Confidence System. Your next step is a complimentary strategy session with a fiduciary specialist.",
+        "points": [
+          "We'll review your Retirement Red Zone readiness together",
+          "You'll see personalized fee, tax, and income opportunities",
+          "You'll leave with clear, ranked next steps — no obligation"
+        ],
+        "ctaText": "Book My Strategy Session",
+        "ctaSub": "30 minutes · Virtual · No cost",
+        "note": "Prefer to talk first? Email hello@valoramsolutions.com and mention your assessment."
+      },
+      "nurture": {
+        "eyebrow": "Thanks for Completing Your Assessment",
+        "headline": "Here's Your *Next Step*",
+        "subhead": "Based on your answers, a full fiduciary engagement may not be the right fit just yet — but you don't have to navigate this alone. Here are resources to help you prepare for the years ahead.",
+        "points": [
+          "A clear picture of where your plan stands today",
+          "Plain-English education on sequence-of-returns risk and income planning",
+          "An open door whenever your situation changes"
+        ],
+        "ctaText": "Get the Free Retirement Guide",
+        "ctaUrl": "https://your-resource-link.example.com",
+        "ctaSub": "Instant access · No cost",
+        "note": "Questions in the meantime? Email hello@valoramsolutions.com — we're glad to help when you're ready."
+      }
+    }
+  },
+
+  "seo": {
+    "title": "Valoram Solutions — Free Retirement Confidence Assessment",
+    "description": "Fiduciary retirement income planning for high earners 3–10 years from retirement. Stress-test your plan, cut fees and taxes, and build a reliable paycheck."
+  }
+}

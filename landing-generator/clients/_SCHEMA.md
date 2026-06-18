@@ -91,9 +91,25 @@ in the accent color: `"Keep More, *Protect More*, and Have a Plan"`.
     "includes": [ "What they get when they submit", "…" ]
   },
 
-  "seo": { "title": "≤60 chars", "description": "≤155 chars" }
+  "seo": { "title": "≤60 chars", "description": "≤155 chars" },
+
+  "resultsPage": {                   // OPTIONAL — builds dist/<slug>-results.html
+    "default": "qualified",          // segment shown when no ?segment= param is present
+    "segments": {                    // each key = a ?segment= value your survey redirects to
+      "priority":  { "eyebrow":"…", "headline":"You're a *Priority Fit*", "subhead":"…",
+                     "points":["…"], "ctaText":"Book My Session", "ctaUrl":"", "ctaSub":"…", "note":"…" },
+      "qualified": { "headline":"Let's Build Your *Plan*", "points":["…"], "ctaText":"Book My Session" },
+      "nurture":   { "headline":"Here's Your *Next Step*", "ctaText":"Get the Free Guide", "ctaUrl":"https://…" }
+    }
+  }
 }
 ```
+
+When `resultsPage` is present the generator emits a second page,
+`dist/<slug>-results.html`, that reads `?segment=` from the URL and shows the
+matching block (falling back to `default`). Point your GHL survey's per-answer
+redirects at `…-results?segment=priority|qualified|nurture`. Each segment's
+`ctaUrl` defaults to `business.bookingUrl`. See `*.SURVEY.md` for the full flow.
 
 ## Brief files (`*.brief.json`) — for the AI copywriter
 

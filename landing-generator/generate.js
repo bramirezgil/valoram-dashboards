@@ -19,6 +19,7 @@ const path = require('path');
 
 const ROOT = __dirname;
 const TEMPLATE = path.join(ROOT, 'template', 'landing.html');
+const RESULTS_TEMPLATE = path.join(ROOT, 'template', 'results.html');
 const CLIENTS = path.join(ROOT, 'clients');
 const DIST = path.join(ROOT, 'dist');
 
@@ -213,20 +214,49 @@ function normalize(cfg) {
   c.hasSteps = !!(c.offer.steps && c.offer.steps.length);
   c.hasTestimonials = c.testimonials.length > 0;
   c.hasFaqs = c.faqs.length > 0;
+
+  // optional results page (post-survey redirect, branches by ?segment=)
+  c.hasResultsPage = !!(c.resultsPage && c.resultsPage.segments);
+  if (c.hasResultsPage) {
+    const rp = c.resultsPage;
+    rp.defaultKey = rp.default || Object.keys(rp.segments)[0];
+    rp.segmentList = Object.entries(rp.segments).map(([key, s]) => ({
+      key,
+      headlineHtml: markEm(s.headline),
+      eyebrow: s.eyebrow || '',
+      subhead: s.subhead || '',
+      points: s.points || [],
+      ctaText: s.ctaText || c.ctaText,
+      ctaUrl: s.ctaUrl || c.business.bookingUrl || '#',
+      ctaSub: s.ctaSub || '',
+      note: s.note || ''
+    }));
+  }
   return c;
 }
 
 // ───────────────────────── build ─────────────────────────────────────────────
+function renderTemplate(file, cfg) {
+  return render(parse(tokenize(fs.readFileSync(file, 'utf8'))), [cfg]);
+}
+
 function build(configPath) {
   const cfg = normalize(JSON.parse(fs.readFileSync(configPath, 'utf8')));
-  const tpl = fs.readFileSync(TEMPLATE, 'utf8');
-  const html = render(parse(tokenize(tpl)), [cfg]);
   const slug = cfg.slug || path.basename(configPath, '.json');
   if (!fs.existsSync(DIST)) fs.mkdirSync(DIST, { recursive: true });
-  const out = path.join(DIST, `${slug}.html`);
-  fs.writeFileSync(out, html);
-  console.log(`✓ ${path.relative(ROOT, out)}  (${(html.length / 1024).toFixed(1)} KB)  ← ${path.basename(configPath)}`);
-  return out;
+
+  const landing = path.join(DIST, `${slug}.html`);
+  const html = renderTemplate(TEMPLATE, cfg);
+  fs.writeFileSync(landing, html);
+  console.log(`✓ ${path.relative(ROOT, landing)}  (${(html.length / 1024).toFixed(1)} KB)  ← ${path.basename(configPath)}`);
+
+  if (cfg.hasResultsPage) {
+    const resultsOut = path.join(DIST, `${slug}-results.html`);
+    const rhtml = renderTemplate(RESULTS_TEMPLATE, cfg);
+    fs.writeFileSync(resultsOut, rhtml);
+    console.log(`✓ ${path.relative(ROOT, resultsOut)}  (${(rhtml.length / 1024).toFixed(1)} KB)  ← results page`);
+  }
+  return landing;
 }
 
 function main() {
