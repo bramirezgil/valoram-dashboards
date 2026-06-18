@@ -90,7 +90,7 @@ footer.site{background:var(--dark);color:rgba(243,245,248,.72);text-align:center
   </div>
 </main>
 
-<footer class="site">© {{year}} {{business.name}}. All rights reserved.</footer>
+<footer class="site">© {{year}} {{business.name}}. All rights reserved.{{#if business.disclaimer}}<br><span style="display:inline-block;max-width:760px;margin-top:12px;opacity:.8;line-height:1.55">{{business.disclaimer}}</span>{{/if}}</footer>
 
 <script>
 (function(){

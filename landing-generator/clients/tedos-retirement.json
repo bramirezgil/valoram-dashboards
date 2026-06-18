@@ -7,7 +7,8 @@
     "email": "hello@valoramsolutions.com",
     "address": "United States",
     "bookingUrl": "https://api.leadconnectorhq.com/widget/booking/PwP2fpbubtsvdSAe1Cf3",
-    "industry": "Fiduciary retirement & investment planning"
+    "industry": "Fiduciary retirement & investment planning",
+    "disclaimer": "Valoram Solutions provides advisory services through licensed fiduciary advisors. All figures, examples, and case studies are illustrative, are not a guarantee of future results, and do not constitute financial, tax, or legal advice. Investing involves risk, including the possible loss of principal. Guarantees are subject to the claims-paying ability of the issuing insurance company."
   },
   "theme": {
     "brandColor": "#0E2742",
@@ -17,7 +18,7 @@
   "hero": {
     "eyebrow": "◆ Free Retirement Confidence Assessment",
     "headline": "Turn Your Nest Egg Into a *Reliable Retirement Paycheck* — Without Guessing or Hoping the Market Cooperates",
-    "subhead": "For high-earning professionals 3–10 years from retirement: a fiduciary plan that stress-tests your income, cuts hidden fees and taxes, and coordinates everything into one strategy.",
+    "subhead": "For high-earning professionals 3–10 years from retirement: a fiduciary plan designed to cut your risk, lower your fees, and increase your guaranteed income — coordinated into one strategy.",
     "cta": "See If You Qualify"
   },
   "problem": {
@@ -30,7 +31,7 @@
       },
       {
         "title": "Sequence-Of-Returns Risk",
-        "body": "If a major market drop hits right as you retire, you could be forced to sell low. Most people have no idea how much risk they're actually carrying."
+        "body": "If a major market drop hits right as you retire, you could be forced to sell low — and a 50% loss needs a 100% gain just to recover. Most people have no idea how much risk they are actually carrying."
       },
       {
         "title": "Fees, Taxes & No Coordination",
@@ -42,44 +43,44 @@
   "results": {
     "eyebrow": "What You Can Achieve",
     "title": "Keep More, Lower Your Risk, and Finally Have a *Plan That Holds Up*",
-    "intro": "Here's what our clients consistently walk away with after the Fiduciary Retirement Confidence System.",
+    "intro": "Here is what our clients consistently walk away with after the Fiduciary Retirement Confidence System. In one client case study, we reduced a portfolio’s maximum drawdown from roughly 50% to 15% — while improving returns.",
     "items": [
       {
         "icon": "💵",
         "title": "A Reliable Retirement Paycheck",
-        "body": "A clear, written plan for what to pull from where, and when — so your income stays steady even through down markets."
+        "body": "A clear “paycheck vs. playcheck” plan — guaranteed income for your essentials and flexible income for the extras — designed to stay steady even in down markets."
       },
       {
         "icon": "📉",
         "title": "Lower Fees & Smarter Risk",
-        "body": "Cut hidden fees and unnecessary risk with diversification and guardrails you can actually understand — without giving up growth."
+        "body": "Cut hidden fees and aim to reduce unnecessary risk by roughly half, using true diversification and guardrails you can actually understand — without giving up growth."
       },
       {
         "icon": "🔗",
         "title": "One Coordinated Strategy",
-        "body": "Investments, taxes, insurance, and estate planning tied together, so you stop managing a financial \"group project.\""
+        "body": "A team of specialists across tax, estate, insurance, and investments — coordinated, so you stop running a financial “group project.”"
       },
       {
         "icon": "🛡️",
         "title": "Confidence In Any Market",
-        "body": "A plan stress-tested for a bad market early in retirement — so you're never forced to react to headlines."
+        "body": "Access to options like principal-protected structured notes and non-correlated assets, with your plan stress-tested for a bad market early in retirement."
       }
     ],
     "stats": [
       {
-        "num": "$2M–$10M",
-        "label": "Investable Assets We Plan Around",
-        "desc": "Built for households with real complexity — taxable, 401(k)/IRA, and equity comp."
+        "num": "~50%",
+        "label": "Less Portfolio Risk",
+        "desc": "We aim to cut unnecessary risk roughly in half while keeping growth potential."
       },
       {
-        "num": "7-Step",
-        "label": "Fiduciary Confidence System",
-        "desc": "A proven blueprint, from stress test to ongoing monitoring."
+        "num": "~50%",
+        "label": "More Guaranteed Income",
+        "desc": "By layering annuities and income notes on top of Social Security and pension income."
       },
       {
         "num": "Fiduciary",
-        "label": "Always In Your Corner",
-        "desc": "Advice held to a fiduciary standard — coordinated, not commission-driven."
+        "label": "Fee-Based, In Your Corner",
+        "desc": "Held to a fiduciary standard — coordinated advice, never commission-driven."
       }
     ]
   },
@@ -102,10 +103,10 @@
       "heading": "Coordinating Your Plan",
       "points": [
         "Income plan stress-tested for bad markets",
-        "Fee & risk X-ray on every account",
+        "Risk & true-drawdown analysis on every account",
         "Tax-smart withdrawal & Roth strategy",
-        "Investments, insurance & estate aligned",
-        "One fiduciary quarterback for everything"
+        "A team across tax, estate, insurance & investments",
+        "Fee-based fiduciary — never commission-driven"
       ]
     },
     "close": "You don't need another hot fund or a market forecast. *You need a fiduciary plan* that reduces risk, cuts hidden fees, and turns your portfolio into dependable income."
@@ -147,15 +148,15 @@
     "deliverables": [
       {
         "title": "1 · Red Zone Stress Test",
-        "desc": "See how your plan holds up in real bear markets — a clear pass/fail on retirement readiness."
+        "desc": "See how your plan holds up in real bear markets — with a portfolio risk score (1–100) and your true maximum drawdown, not just average returns."
       },
       {
         "title": "2 · Fee & Risk X-Ray",
-        "desc": "Uncover hidden fees, fund overlap, and concentration risk across every account."
+        "desc": "Uncover hidden fees, fund overlap, concentration risk, and real downside exposure across every account."
       },
       {
         "title": "3 · Retirement Paycheck Map",
-        "desc": "A written income plan: what to pull from where, when, to stay steady in down markets."
+        "desc": "A written “paycheck vs. playcheck” income plan — guaranteed income for essentials, flexible income for extras — built to reduce sequence-of-returns risk."
       },
       {
         "title": "4 · Tax-Smart Withdrawal Order",
@@ -163,7 +164,7 @@
       },
       {
         "title": "5 · Portfolio Rebuild With Guardrails",
-        "desc": "Fiduciary management and risk controls that pursue growth while controlling downside."
+        "desc": "Fiduciary management with true diversification — non-correlated assets and, when appropriate, principal-protected structured notes — to pursue growth while controlling downside."
       },
       {
         "title": "6 · Insurance & Legacy Alignment",
@@ -218,12 +219,20 @@
     {
       "q": "How quickly will someone follow up?",
       "a": "If you qualify, a fiduciary specialist typically reaches out within one business day to schedule your strategy session."
+    },
+    {
+      "q": "How can you reduce risk without giving up growth?",
+      "a": "Through true diversification — combining non-correlated assets and, when appropriate, options like principal-protected structured notes — paired with risk analysis that targets your portfolio’s real drawdown, not just its average return."
+    },
+    {
+      "q": "What is the “paycheck vs. playcheck” approach?",
+      "a": "We split your retirement income into a guaranteed “paycheck” for essentials (from sources like annuities and income notes layered on Social Security and pensions) and a flexible “playcheck” for discretionary spending — so your core lifestyle is protected in any market."
     }
   ],
   "finalCta": {
     "eyebrow": "One Step Away",
     "headline": "Find Out If Your Plan Can *Survive a Down Market*",
-    "subhead": "If you're 3–10 years from retirement with $2M+ in assets, this assessment shows where your income plan is exposed — and the moves that can fix it.",
+    "subhead": "If you are 3–10 years from retirement with $2M+ in assets, this assessment shows where your plan is exposed — and how to reduce risk, lower fees, and increase guaranteed income.",
     "scarcity": "Limited fiduciary strategy sessions available each week"
   },
   "lead": {

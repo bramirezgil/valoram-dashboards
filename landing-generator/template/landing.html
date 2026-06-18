@@ -426,6 +426,7 @@ footer.site{padding:40px 0;background:var(--dark);border-top:1px solid var(--lin
     {{#if business.hasContactBar}}<div class="foot-contact">{{#if business.phone}}<a href="tel:{{business.phoneHref}}">{{business.phone}}</a>{{/if}}{{#if business.email}}<a href="mailto:{{business.email}}">{{business.email}}</a>{{/if}}{{#if business.address}}<span>{{business.address}}</span>{{/if}}</div>{{/if}}
     <div>© {{year}} {{business.name}}. All rights reserved.</div>
   </div>
+  {{#if business.disclaimer}}<p class="foot-disc">{{business.disclaimer}}</p>{{/if}}
 </footer>
 
 <script>
