@@ -160,6 +160,7 @@ function normalize(cfg) {
   // business
   c.business.phoneHref = (c.business.phone || '').replace(/[^\d+]/g, '');
   c.business.hasContactBar = !!(c.business.phone || c.business.email || c.business.address);
+  c.business.initial = (c.business.name || '?').trim().charAt(0).toUpperCase();
 
   // cta text reused on every button
   c.ctaText = c.hero.cta || 'Get Started';
@@ -229,7 +230,8 @@ function normalize(cfg) {
       ctaText: s.ctaText || c.ctaText,
       ctaUrl: s.ctaUrl || c.business.bookingUrl || '#',
       ctaSub: s.ctaSub || '',
-      note: s.note || ''
+      note: s.note || '',
+      embed: s.embed || ''
     }));
   }
   return c;
