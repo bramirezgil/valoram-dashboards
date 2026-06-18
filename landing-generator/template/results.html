@@ -11,17 +11,19 @@
   --brand:{{theme.brandColor}};
   --accent:{{theme.accentColor}};
   --accent-2:color-mix(in srgb, var(--accent) 70%, #fff);
+  --accent-ink:color-mix(in srgb, var(--accent) 80%, #000);
+  --btn-ink:{{theme.btnInk}};
   --accent-ring:color-mix(in srgb, var(--accent) 24%, transparent);
   --dark:color-mix(in srgb, var(--brand) 20%, #0b0d11);
   --ink:#11161d;--ink2:#3a4350;--ink3:#69727f;
   --bg:#ffffff;--off:#f7f5f1;--line:#e6e9ee;
-  --font:{{theme.fontStack}};--radius:16px;--radius-sm:10px;
+  --font:{{{theme.fontStack}}};--radius:16px;--radius-sm:10px;
   --shadow-lg:0 22px 56px rgba(16,21,28,.16);--ease:cubic-bezier(.22,.61,.36,1);
 }
 html{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 body{font-family:var(--font);background:var(--off);color:var(--ink2);font-size:17px;line-height:1.68;min-height:100vh;display:flex;flex-direction:column}
 a{color:inherit;text-decoration:none}img{max-width:100%;display:block}
-em{font-style:italic;color:var(--accent)}
+em{font-style:italic;color:var(--accent-ink)}
 .wrap{max-width:760px;margin:0 auto;padding:0 22px;width:100%}
 header.site{background:var(--bg);border-bottom:1px solid var(--line)}
 .nav{max-width:1120px;margin:0 auto;padding:0 22px;display:flex;align-items:center;justify-content:space-between;height:66px}
@@ -38,7 +40,7 @@ header.site{background:var(--bg);border-bottom:1px solid var(--line)}
 .card::before{content:"";position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,var(--accent),var(--accent-2))}
 .badge{width:64px;height:64px;border-radius:50%;margin:0 auto 22px;display:flex;align-items:center;justify-content:center;background:color-mix(in srgb,var(--accent) 14%,transparent);color:var(--accent)}
 .badge svg{width:32px;height:32px}
-.eyebrow{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
+.eyebrow{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent-ink);margin-bottom:14px}
 h1{font-size:clamp(28px,4.6vw,44px);line-height:1.12;letter-spacing:-.015em;font-weight:800;color:var(--ink);margin-bottom:16px}
 .sub{font-size:clamp(16px,2.2vw,20px);color:var(--ink2);max-width:560px;margin:0 auto 28px}
 .points{list-style:none;text-align:left;max-width:520px;margin:0 auto 30px;display:flex;flex-direction:column;gap:12px}
@@ -47,7 +49,7 @@ h1{font-size:clamp(28px,4.6vw,44px);line-height:1.12;letter-spacing:-.015em;font
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6L9 17l-5-5'/%3E%3C/svg%3E");
   background-repeat:no-repeat;background-position:center;background-size:13px;filter:none}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-weight:700;font-size:15px;letter-spacing:.06em;text-transform:uppercase;
-  padding:18px 40px;border-radius:999px;border:0;cursor:pointer;background:var(--accent);color:#fff;box-shadow:0 10px 28px var(--accent-ring);
+  padding:18px 40px;border-radius:999px;border:0;cursor:pointer;background:var(--accent);color:var(--btn-ink);box-shadow:0 10px 28px var(--accent-ring);
   transition:transform .2s var(--ease),box-shadow .2s var(--ease)}
 .btn:hover{transform:translateY(-2px);box-shadow:0 16px 36px var(--accent-ring)}
 .cta-sub{font-size:13px;color:var(--ink3);margin-top:14px}

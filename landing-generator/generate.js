@@ -148,6 +148,16 @@ function normalize(cfg) {
   // theme
   c.theme.brandColor = c.theme.brandColor || '#101820';
   c.theme.accentColor = c.theme.accentColor || '#F0891A';
+  // pick legible button-text color (dark vs white) by contrast against the accent
+  const lum = (hex) => {
+    let h = String(hex || '').replace('#', '');
+    if (h.length === 3) h = h.split('').map(c => c + c).join('');
+    if (h.length !== 6) return 0.5;
+    const v = [0, 2, 4].map(i => { const c = parseInt(h.slice(i, i + 2), 16) / 255; return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4); });
+    return 0.2126 * v[0] + 0.7152 * v[1] + 0.0722 * v[2];
+  };
+  const L = lum(c.theme.accentColor);
+  c.theme.btnInk = ((L + 0.05) / 0.05) >= (1.05 / (L + 0.05)) ? '#0b0d0d' : '#ffffff';
   const font = c.theme.font || 'Montserrat';
   c.theme.font = font;
   c.theme.fontStack = `'${font}', ${FONT_FALLBACK[font] || 'sans-serif'}`;
