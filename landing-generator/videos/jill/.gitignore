@@ -1,2 +1,6 @@
 frames/
 renders/*-draft.mp4
+renders/work-*/
+vo/*.wav
+vo/fonts.css
+vo/concat.txt
