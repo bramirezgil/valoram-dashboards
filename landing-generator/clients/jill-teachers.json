@@ -7,9 +7,11 @@
     "email": "",
     "address": "Texas",
     "bookingUrl": "https://your-ghl-calendar-link.example.com",
-    "industry": "Retirement income planning for educators"
+    "industry": "Retirement income planning for educators",
+    "disclaimer": "Valoram Solutions provides advisory services through licensed professionals. All figures and examples are illustrative, are not a guarantee of future results, and do not constitute financial, tax, or legal advice. TRS benefits are determined by the Teacher Retirement System of Texas. Investing involves risk, including the possible loss of principal; guarantees are subject to the claims-paying ability of the issuing insurance company."
   },
-  "theme": { "brandColor": "#123A5E", "accentColor": "#E0922A", "font": "Poppins" },
+  "brand": "valoram",
+  "theme": {},
 
   "hero": {
     "eyebrow": "◆ Free Financial Certainty Review for Texas Teachers",

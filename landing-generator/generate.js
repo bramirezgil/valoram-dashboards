@@ -23,6 +23,16 @@ const RESULTS_TEMPLATE = path.join(ROOT, 'template', 'results.html');
 const CLIENTS = path.join(ROOT, 'clients');
 const DIST = path.join(ROOT, 'dist');
 
+// Valoram brand preset (logo + colors + font) — applied when a config sets
+// "brand": "valoram". The logo is a transparent PNG data URI stored alongside.
+const VALORAM_LOGO = (() => {
+  try { return fs.readFileSync(path.join(ROOT, 'assets', 'valoram-logo-datauri.txt'), 'utf8').trim(); }
+  catch { return ''; }
+})();
+const BRAND_PRESETS = {
+  valoram: { brandColor: '#0B0D0D', accentColor: '#FF7428', font: 'Poppins', logo: VALORAM_LOGO }
+};
+
 // ───────────────────────── tiny mustache-ish template engine ─────────────────
 // {{path}} HTML-escaped · {{{path}}} raw · {{#if path}}…{{else}}…{{/if}} ·
 // {{#each path}}…{{this.field}}…{{/each}} (blocks nest; `this` = current item)
@@ -144,6 +154,15 @@ function normalize(cfg) {
   c.seo = c.seo || {};
   c.testimonials = c.testimonials || [];
   c.faqs = c.faqs || [];
+
+  // brand preset (e.g. "brand":"valoram") fills colors/font/logo unless overridden
+  const preset = BRAND_PRESETS[String(c.brand || '').toLowerCase()];
+  if (preset) {
+    c.theme.brandColor = c.theme.brandColor || preset.brandColor;
+    c.theme.accentColor = c.theme.accentColor || preset.accentColor;
+    c.theme.font = c.theme.font || preset.font;
+    if (!c.business.logoUrl && preset.logo) c.business.logoUrl = preset.logo;
+  }
 
   // theme
   c.theme.brandColor = c.theme.brandColor || '#101820';
