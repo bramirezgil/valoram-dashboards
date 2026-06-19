@@ -47,10 +47,11 @@
 </style>
 </head>
 <body>
-<div id="root" data-composition-id="main" data-start="0" data-width="1080" data-height="1080" data-duration="18">
+<div id="root" data-composition-id="main" data-start="0" data-width="1080" data-height="1080" data-duration="32">
+  <audio id="vo" src="final_audio.wav" data-start="0" data-duration="32" data-volume="1"></audio>
 
   <!-- S1 Intro 0-3 -->
-  <section class="clip" id="sc1" data-start="0" data-duration="3" data-track-index="1">
+  <section class="clip" id="sc1" data-start="0.5" data-duration="4.895" data-track-index="1">
     <span class="logo-chip s1"><img src="valoram-logo.png" alt="Valoram"></span>
     <span class="divider s1"></span>
     <span class="eyebrow s1">Free Financial Certainty Review</span>
@@ -58,13 +59,13 @@
   </section>
 
   <!-- S2 Hook 3-6 -->
-  <section class="clip" id="sc2" data-start="3" data-duration="3" data-track-index="1">
+  <section class="clip" id="sc2" data-start="5.395" data-duration="4.788" data-track-index="1">
     <h1 class="s2">Will TRS Really<br>Replace Your <span class="o">Paycheck?</span></h1>
     <p class="sub s2">For many Texas teachers, retirement means a pay cut — and taxes and inflation make it worse.</p>
   </section>
 
   <!-- S3 Value 6-9 -->
-  <section class="clip" id="sc3" data-start="6" data-duration="3" data-track-index="1">
+  <section class="clip" id="sc3" data-start="10.183" data-duration="6.708" data-track-index="1">
     <span class="kicker s3">Here's What You Get</span>
     <div class="bullets">
       <div class="bullet b3"><span class="ic">🔢</span><span class="t">Know your real income number</span></div>
@@ -74,7 +75,7 @@
   </section>
 
   <!-- S4 System 9-12 -->
-  <section class="clip" id="sc4" data-start="9" data-duration="3" data-track-index="1">
+  <section class="clip" id="sc4" data-start="16.891" data-duration="4.681" data-track-index="1">
     <span class="sys-tag s4">7-Step Blueprint</span>
     <h2 class="s4">The Financial Certainty<br>for <span style="color:var(--accent)">Teachers</span> System</h2>
     <div class="step-row">
@@ -86,14 +87,14 @@
   </section>
 
   <!-- S5 Who 12-15 -->
-  <section class="clip" id="sc5" data-start="12" data-duration="3" data-track-index="1">
+  <section class="clip" id="sc5" data-start="21.572" data-duration="6.239" data-track-index="1">
     <span class="kicker s5">Is This You?</span>
     <p class="who s5">Texas educators <span class="o">47–58</span>,<br>8–15 years from retirement</p>
     <span class="pill s5">Built around your life — never a template</span>
   </section>
 
   <!-- S6 CTA 15-18 -->
-  <section class="clip" id="sc6" data-start="15" data-duration="3" data-track-index="1">
+  <section class="clip" id="sc6" data-start="27.811" data-duration="4.189" data-track-index="1">
     <span class="eyebrow s6">One Step Away</span>
     <h2 class="s6" style="margin:18px 0 6px">See Your Real <span style="color:var(--accent)">Retirement Number</span></h2>
     <div class="cta-btn s6">Get My Free Review</div>
@@ -109,21 +110,21 @@
   window.__timelines = window.__timelines || {};
   const tl = gsap.timeline({ paused: true });
   const E = "power3.out";
-  const scenes = ["#sc1","#sc2","#sc3","#sc4","#sc5","#sc6"];
-  scenes.forEach((id,i)=>{
-    const start = i*3;
-    tl.fromTo(id,{opacity:0},{opacity:1,duration:.35,ease:"none"},start);
-    if(i < scenes.length-1) tl.to(id,{opacity:0,duration:.35,ease:"none"},start+2.8);
+  const S = [0.5,5.395,10.183,16.891,21.572,27.811];
+  const L = [4.895,4.788,6.708,4.681,6.239,4.189];
+  S.forEach((st,i)=>{
+    tl.fromTo("#sc"+(i+1),{opacity:0},{opacity:1,duration:.4,ease:"none"},st);
+    if(i < S.length-1) tl.to("#sc"+(i+1),{opacity:0,duration:.4,ease:"none"},st+L[i]-0.4);
   });
-  tl.from(".s1", { y: 36, opacity: 0, duration: .6, ease: E, stagger: .18 }, 0.2);
-  tl.from(".s2", { y: 44, opacity: 0, duration: .7, ease: E, stagger: .22 }, 3.2);
-  tl.from(".s3", { y: 24, opacity: 0, duration: .5, ease: E }, 6.15);
-  tl.from(".b3", { x: -40, opacity: 0, duration: .55, ease: E, stagger: .2 }, 6.4);
-  tl.from(".s4", { y: 36, opacity: 0, duration: .6, ease: E, stagger: .18 }, 9.2);
-  tl.from(".st4", { y: 30, opacity: 0, scale: .8, duration: .5, ease: "back.out(1.6)", stagger: .14 }, 9.75);
-  tl.from(".s5", { y: 38, opacity: 0, duration: .6, ease: E, stagger: .2 }, 12.2);
-  tl.from(".s6", { y: 40, opacity: 0, duration: .6, ease: E, stagger: .18 }, 15.2);
-  tl.from(".cta-btn", { scale: .82, duration: .5, ease: "back.out(1.8)" }, 15.75);
+  tl.from(".s1", { y: 36, opacity: 0, duration: .6, ease: E, stagger: .18 }, S[0]+0.05);
+  tl.from(".s2", { y: 44, opacity: 0, duration: .7, ease: E, stagger: .22 }, S[1]+0.05);
+  tl.from(".s3", { y: 24, opacity: 0, duration: .5, ease: E }, S[2]+0.05);
+  tl.from(".b3", { x: -40, opacity: 0, duration: .55, ease: E, stagger: .25 }, S[2]+0.35);
+  tl.from(".s4", { y: 36, opacity: 0, duration: .6, ease: E, stagger: .18 }, S[3]+0.05);
+  tl.from(".st4", { y: 30, opacity: 0, scale: .8, duration: .5, ease: "back.out(1.6)", stagger: .16 }, S[3]+0.6);
+  tl.from(".s5", { y: 38, opacity: 0, duration: .6, ease: E, stagger: .2 }, S[4]+0.05);
+  tl.from(".s6", { y: 40, opacity: 0, duration: .6, ease: E, stagger: .18 }, S[5]+0.05);
+  tl.from(".cta-btn", { scale: .82, duration: .5, ease: "back.out(1.8)" }, S[5]+0.55);
   window.__timelines["main"] = tl;
 </script>
 </body>
