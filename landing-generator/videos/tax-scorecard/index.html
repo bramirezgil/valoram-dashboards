@@ -104,8 +104,8 @@
 </style>
 </head>
 <body>
-<div id="root" data-composition-id="main" data-start="0" data-width="1080" data-height="1080" data-duration="51.772">
-  <audio id="vo" src="vo/maximum_audio.wav" data-start="0" data-duration="51.772" data-volume="1"></audio>
+<div id="root" data-composition-id="main" data-start="0" data-width="1080" data-height="1080" data-duration="45.009">
+  <audio id="vo" src="vo/maximum_audio.wav" data-start="0" data-duration="45.009" data-volume="1"></audio>
 
   <!-- SCENE 1 — results in -->
   <section class="clip" id="sc1">
@@ -130,8 +130,8 @@
     <div class="vs-row">
       <div class="vs-card bad b3">
         <div class="vs-lbl">Reactive CPA</div>
-        <div class="vs-head">Files &amp; Complies</div>
-        <p>Accurate returns — but rarely proactive strategy unless you ask.</p>
+        <div class="vs-head">Files Your Return</div>
+        <p>Handles filing — but rarely proactive strategy unless you ask.</p>
       </div>
       <div class="vs-card good b3">
         <div class="vs-lbl">Coordinated Strategy</div>
@@ -159,13 +159,8 @@
   <!-- SCENE 5 — reassurance -->
   <section class="clip" id="sc5">
     <div class="kicker s5">No Catch</div>
-    <div class="tag-row">
-      <div class="tag s5"><span class="dot">◆</span>Legal</div>
-      <div class="tag s5"><span class="dot">◆</span>Documented</div>
-      <div class="tag s5"><span class="dot">◆</span>Defensible</div>
-    </div>
     <div class="big-line s5"><em>$0 cost</em> &nbsp;·&nbsp; No obligation</div>
-    <div class="sub s5">Just a clear plan built around your numbers.</div>
+    <div class="sub s5">Just a friendly, no-pressure plan built around your numbers.</div>
   </section>
 
   <!-- SCENE 6 — CTA -->
@@ -177,7 +172,7 @@
     <div class="logo-chip s6"><img src="valoram-logo.png" alt="Valoram Solutions"></div>
   </section>
 
-  <div class="compliance">Illustrative estimates, not guaranteed outcomes. Not tax or legal advice.</div>
+  <div class="compliance">Illustrative estimates, not guaranteed outcomes.</div>
   <div class="vig"></div>
   <div class="topbar"></div>
 </div>
@@ -186,8 +181,8 @@
   window.__timelines = window.__timelines || {};
   const tl = gsap.timeline({ paused: true });
   const E = "power3.out";
-  const S = [0.0, 6.589, 17.116, 27.152, 36.804, 45.304];   // scene start times
-  const L = [6.589, 10.527, 10.036, 9.652, 8.5, 6.468];   // scene lengths
+  const S = [0.0, 5.949, 16.028, 25.083, 34.031, 39.139];   // scene start times
+  const L = [5.949, 10.079, 9.055, 8.948, 5.108, 5.871];   // scene lengths
   // scene fades
   S.forEach((st,i)=>{
     tl.fromTo("#sc"+(i+1),{opacity:0},{opacity:1,duration:.4,ease:"none"},st);
@@ -202,7 +197,6 @@
   tl.from(".s4",{y:30,opacity:0,duration:.6,ease:E,stagger:.16}, S[3]+0.05);
   tl.from(".m4",{x:-36,opacity:0,duration:.55,ease:E,stagger:.22}, S[3]+0.5);
   tl.from(".s5",{y:30,opacity:0,duration:.6,ease:E,stagger:.16}, S[4]+0.05);
-  tl.from(".tag",{scale:.8,opacity:0,duration:.5,ease:"back.out(1.6)",stagger:.14}, S[4]+0.15);
   tl.from(".s6",{y:32,opacity:0,duration:.6,ease:E,stagger:.16}, S[5]+0.05);
   tl.from(".cta-btn",{scale:.82,duration:.5,ease:"back.out(1.8)"}, S[5]+0.5);
   window.__timelines["main"] = tl;
