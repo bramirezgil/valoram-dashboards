@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1080, height=1080" />
+<title>Valoram — Tax Elimination Scorecard (Booking VSL)</title>
+<script src="gsap.min.js"></script>
+<link rel="stylesheet" href="vo/fonts.css" />
+<style>
+  :root{
+    --bg:#0a0a0a; --accent:#F8964C; --accent2:#f97316; --accent-d:#e8621a;
+    --ink:#fff; --mut:rgba(255,255,255,.74); --dim:rgba(255,255,255,.46);
+    --card:rgba(255,255,255,.05); --line:rgba(255,255,255,.12);
+    --og:rgba(248,150,76,.10); --ob:rgba(248,150,76,.26);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Poppins',system-ui,sans-serif;background:#000}
+  #root{position:relative;width:1080px;height:1080px;overflow:hidden;color:var(--ink);
+    background:
+      radial-gradient(60% 52% at 85% 6%, rgba(248,150,76,.16), transparent 60%),
+      radial-gradient(54% 48% at 6% 96%, rgba(248,150,76,.09), transparent 60%),
+      var(--bg)}
+  #root::before{content:'';position:absolute;inset:0;pointer-events:none;opacity:.5;
+    background-image:
+      linear-gradient(rgba(248,150,76,.035) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(248,150,76,.035) 1px,transparent 1px);
+    background-size:90px 90px}
+  .vig{position:absolute;inset:0;pointer-events:none;box-shadow:inset 0 0 240px rgba(0,0,0,.6)}
+  .topbar{position:absolute;top:0;left:0;right:0;height:6px;
+    background:linear-gradient(90deg,var(--accent),var(--accent-d),transparent);z-index:5}
+
+  .clip{position:absolute;inset:0;opacity:0;display:flex;flex-direction:column;
+    align-items:center;justify-content:center;text-align:center;padding:120px 100px 150px}
+
+  .eyebrow{font-family:'Poppins';font-size:25px;font-weight:700;letter-spacing:.2em;
+    text-transform:uppercase;color:var(--accent);display:inline-flex;align-items:center;gap:12px}
+  .eyebrow.box{border:1px solid var(--ob);background:var(--og);padding:9px 20px}
+  .divider{width:84px;height:4px;background:var(--accent);margin:30px 0}
+
+  h1{font-family:'Marcellus',serif;font-size:84px;line-height:1.08;font-weight:400;
+    letter-spacing:-.01em;max-width:880px}
+  h2{font-family:'Marcellus',serif;font-size:62px;line-height:1.12;font-weight:400;max-width:860px}
+  .o{color:var(--accent);font-style:italic}
+  .sub{font-family:'Poppins';font-size:30px;color:var(--mut);margin-top:28px;max-width:780px;line-height:1.5}
+
+  /* Scene 1 */
+  .chip-tier{margin-top:38px;font-family:'Poppins';font-size:28px;font-weight:700;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--accent);
+    border:1px solid var(--ob);background:var(--og);padding:14px 30px}
+
+  /* Scene 2 — savings reveal */
+  .kicker{font-family:'Poppins';font-size:26px;font-weight:700;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--accent);margin-bottom:18px}
+  .figure{font-family:'Marcellus',serif;font-size:200px;line-height:.95;color:var(--accent);
+    letter-spacing:-.02em;white-space:nowrap}
+  .fig-suffix{font-family:'Poppins';font-size:36px;font-weight:500;color:var(--ink);margin-top:18px}
+  .disc-chip{margin-top:40px;font-family:'Poppins';font-size:22px;color:var(--dim);
+    border:1px solid var(--line);border-radius:999px;padding:11px 26px;background:rgba(255,255,255,.03)}
+
+  /* Scene 3 — compare */
+  .vs-row{display:flex;gap:26px;margin-top:48px;max-width:880px}
+  .vs-card{flex:1;border:1px solid var(--line);background:var(--card);padding:34px 30px;text-align:left;position:relative}
+  .vs-card.bad{border-top:3px solid rgba(200,80,80,.7)}
+  .vs-card.good{border-top:3px solid var(--accent);background:rgba(248,150,76,.05);border-color:var(--ob)}
+  .vs-lbl{font-family:'Poppins';font-size:21px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;margin-bottom:14px}
+  .vs-card.bad .vs-lbl{color:rgba(255,120,120,.95)}
+  .vs-card.good .vs-lbl{color:var(--accent)}
+  .vs-head{font-family:'Marcellus',serif;font-size:38px;margin-bottom:14px}
+  .vs-card p{font-family:'Poppins';font-size:25px;color:var(--mut);line-height:1.45}
+
+  /* Scene 4 — top 3 moves */
+  .card{margin-top:46px;width:780px;background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.03));
+    border:1px solid var(--ob);padding:14px 0;overflow:hidden}
+  .card-head{display:flex;align-items:center;justify-content:space-between;padding:18px 34px 22px;border-bottom:1px solid var(--line)}
+  .card-title{font-family:'Marcellus',serif;font-size:38px}
+  .card-badge{font-family:'Poppins';font-size:20px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+  .move{display:flex;align-items:center;gap:24px;padding:24px 34px;text-align:left}
+  .move + .move{border-top:1px dashed rgba(255,255,255,.12)}
+  .move .n{width:58px;height:58px;flex:0 0 58px;border-radius:50%;background:var(--accent);color:#0a0a0a;
+    font-family:'Marcellus',serif;font-size:34px;display:flex;align-items:center;justify-content:center}
+  .move .t{font-family:'Poppins';font-size:30px;font-weight:600;color:var(--ink)}
+
+  /* Scene 5 — reassurance */
+  .tag-row{display:flex;gap:18px;margin-top:6px;flex-wrap:wrap;justify-content:center}
+  .tag{font-family:'Poppins';font-size:30px;font-weight:600;color:var(--ink);
+    border:1px solid var(--ob);background:var(--og);padding:16px 34px}
+  .tag .dot{color:var(--accent);margin-right:12px}
+  .big-line{font-family:'Marcellus',serif;font-size:74px;color:var(--ink);margin-top:46px}
+  .big-line em{font-style:normal;color:var(--accent)}
+
+  /* Scene 6 — CTA */
+  .cta-btn{margin-top:42px;font-family:'Poppins';font-weight:700;font-size:34px;letter-spacing:.06em;
+    text-transform:uppercase;color:#0a0a0a;background:var(--accent);padding:30px 70px;border-radius:6px;
+    box-shadow:0 16px 60px rgba(248,150,76,.34)}
+  .scarcity{margin-top:40px;font-family:'Poppins';font-size:23px;font-weight:600;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--dim);display:flex;align-items:center;gap:16px}
+  .scarcity::before,.scarcity::after{content:'';width:40px;height:1px;background:rgba(248,150,76,.45)}
+  .logo-chip{margin-top:46px;background:#fff;border-radius:14px;padding:16px 26px;display:inline-flex}
+  .logo-chip img{height:48px;display:block}
+
+  /* persistent compliance line */
+  .compliance{position:absolute;left:0;right:0;bottom:46px;text-align:center;z-index:6;
+    font-family:'Poppins';font-size:20px;color:var(--dim);letter-spacing:.02em}
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-width="1080" data-height="1080" data-duration="51.772">
+  <audio id="vo" src="vo/maximum_audio.wav" data-start="0" data-duration="51.772" data-volume="1"></audio>
+
+  <!-- SCENE 1 — results in -->
+  <section class="clip" id="sc1">
+    <div class="eyebrow box s1">◆&nbsp; Your Results Are In</div>
+    <div class="divider s1"></div>
+    <h1 class="s1">There's Real Money<br><span class="o">On the Table</span></h1>
+    <div class="sub s1">Your Tax Opportunity Score points to savings hiding in plain sight.</div>
+  </section>
+
+  <!-- SCENE 2 — opportunity (tier-specific) -->
+  <section class="clip" id="sc2">
+    <div class="kicker s2">Maximum Tax Opportunity</div>
+    <div class="figure">$44,000+</div>
+    <div class="fig-suffix s2">in potential annual tax savings</div>
+    <div class="disc-chip s2">Illustrative estimate &mdash; not a guarantee</div>
+  </section>
+
+  <!-- SCENE 3 — planning problem -->
+  <section class="clip" id="sc3">
+    <div class="kicker s3">Why It's There</div>
+    <h1 class="s3">Not a Tax Problem.<br>A <span class="o">Planning</span> Problem.</h1>
+    <div class="vs-row">
+      <div class="vs-card bad b3">
+        <div class="vs-lbl">Reactive CPA</div>
+        <div class="vs-head">Files &amp; Complies</div>
+        <p>Accurate returns — but rarely proactive strategy unless you ask.</p>
+      </div>
+      <div class="vs-card good b3">
+        <div class="vs-lbl">Coordinated Strategy</div>
+        <div class="vs-head">Plans Year-Round</div>
+        <p>Decisions structured before income hits — nothing left behind.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCENE 4 — the session -->
+  <section class="clip" id="sc4">
+    <div class="kicker s4">Your Free Strategy Session</div>
+    <h2 class="s4">A Forensic Review of Your<br><span class="o">Actual Returns</span></h2>
+    <div class="card">
+      <div class="card-head">
+        <div class="card-title">Your Top 3 Moves</div>
+        <div class="card-badge">Ranked For You</div>
+      </div>
+      <div class="move m4"><div class="n">1</div><div class="t">Your highest-impact tax move</div></div>
+      <div class="move m4"><div class="n">2</div><div class="t">The strategy your filing misses</div></div>
+      <div class="move m4"><div class="n">3</div><div class="t">What to do before the next deadline</div></div>
+    </div>
+  </section>
+
+  <!-- SCENE 5 — reassurance -->
+  <section class="clip" id="sc5">
+    <div class="kicker s5">No Catch</div>
+    <div class="tag-row">
+      <div class="tag s5"><span class="dot">◆</span>Legal</div>
+      <div class="tag s5"><span class="dot">◆</span>Documented</div>
+      <div class="tag s5"><span class="dot">◆</span>Defensible</div>
+    </div>
+    <div class="big-line s5"><em>$0 cost</em> &nbsp;·&nbsp; No obligation</div>
+    <div class="sub s5">Just a clear plan built around your numbers.</div>
+  </section>
+
+  <!-- SCENE 6 — CTA -->
+  <section class="clip" id="sc6">
+    <div class="kicker s6">One Step Away</div>
+    <h1 class="s6">Book Your Free<br><span class="o">Strategy Session</span></h1>
+    <div class="cta-btn s6">Pick a Time Below</div>
+    <div class="scarcity s6">Limited review spots each week</div>
+    <div class="logo-chip s6"><img src="valoram-logo.png" alt="Valoram Solutions"></div>
+  </section>
+
+  <div class="compliance">Illustrative estimates, not guaranteed outcomes. Not tax or legal advice.</div>
+  <div class="vig"></div>
+  <div class="topbar"></div>
+</div>
+
+<script>
+  window.__timelines = window.__timelines || {};
+  const tl = gsap.timeline({ paused: true });
+  const E = "power3.out";
+  const S = [0.0, 6.589, 17.116, 27.152, 36.804, 45.304];   // scene start times
+  const L = [6.589, 10.527, 10.036, 9.652, 8.5, 6.468];   // scene lengths
+  // scene fades
+  S.forEach((st,i)=>{
+    tl.fromTo("#sc"+(i+1),{opacity:0},{opacity:1,duration:.4,ease:"none"},st);
+    if(i < S.length-1) tl.to("#sc"+(i+1),{opacity:0,duration:.4,ease:"none"},st+L[i]-0.4);
+  });
+  // entrance animations
+  tl.from(".s1",{y:34,opacity:0,duration:.6,ease:E,stagger:.16}, S[0]+0.05);
+  tl.from("#sc2 .s2",{y:38,opacity:0,duration:.7,ease:E,stagger:.18}, S[1]+0.05);
+  tl.from("#sc2 .figure",{scale:.8,opacity:0,duration:.7,ease:"back.out(1.5)"}, S[1]+0.3);
+  tl.from(".s3",{y:30,opacity:0,duration:.6,ease:E,stagger:.16}, S[2]+0.05);
+  tl.from(".b3",{y:34,opacity:0,duration:.6,ease:E,stagger:.2}, S[2]+0.45);
+  tl.from(".s4",{y:30,opacity:0,duration:.6,ease:E,stagger:.16}, S[3]+0.05);
+  tl.from(".m4",{x:-36,opacity:0,duration:.55,ease:E,stagger:.22}, S[3]+0.5);
+  tl.from(".s5",{y:30,opacity:0,duration:.6,ease:E,stagger:.16}, S[4]+0.05);
+  tl.from(".tag",{scale:.8,opacity:0,duration:.5,ease:"back.out(1.6)",stagger:.14}, S[4]+0.15);
+  tl.from(".s6",{y:32,opacity:0,duration:.6,ease:E,stagger:.16}, S[5]+0.05);
+  tl.from(".cta-btn",{scale:.82,duration:.5,ease:"back.out(1.8)"}, S[5]+0.5);
+  window.__timelines["main"] = tl;
+</script>
+</body>
+</html>
