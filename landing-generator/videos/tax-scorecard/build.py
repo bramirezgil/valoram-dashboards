@@ -42,9 +42,9 @@ SCENE2_LINE = {
 }
 COMMON = {
     1: "Your Tax Opportunity Score is in. And based on your answers, there's real money on the table.",
-    3: "Most high earners don't have a tax problem. They have a planning problem. Your C P A files accurately, but rarely engineers a proactive, year round strategy.",
+    3: "Most high earners don't have a tax problem. They have a planning problem. Your see pee ay files your return, but rarely builds a proactive, year round strategy.",
     4: "On your free strategy session, a Valoram specialist runs a forensic review of your actual returns, and hands you your top three highest impact moves.",
-    5: "Every strategy is legal, documented, and defensible. No cost, no obligation. Just a clear plan built around your numbers.",
+    5: "There's no cost, and no obligation. Just a clear plan built around your numbers.",
     6: "Spots are limited each week. Pick a time on the calendar below, and book your free review now.",
 }
 
