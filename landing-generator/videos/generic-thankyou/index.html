@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1080, height=1080" />
+<title>Valoram — Thank You / Book a Call</title>
+<script src="gsap.min.js"></script>
+<link rel="stylesheet" href="vo/fonts.css" />
+<style>
+  :root{
+    --bg:#0a0a0a; --accent:#F8964C; --accent2:#f97316; --accent-d:#e8621a;
+    --ink:#fff; --mut:rgba(255,255,255,.74); --dim:rgba(255,255,255,.46);
+    --card:rgba(255,255,255,.05); --line:rgba(255,255,255,.12);
+    --og:rgba(248,150,76,.10); --ob:rgba(248,150,76,.26);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Poppins',system-ui,sans-serif;background:#000}
+  #root{position:relative;width:1080px;height:1080px;overflow:hidden;color:var(--ink);
+    background:
+      radial-gradient(60% 52% at 85% 6%, rgba(248,150,76,.16), transparent 60%),
+      radial-gradient(54% 48% at 6% 96%, rgba(248,150,76,.09), transparent 60%),
+      var(--bg)}
+  #root::before{content:'';position:absolute;inset:0;pointer-events:none;opacity:.5;
+    background-image:
+      linear-gradient(rgba(248,150,76,.035) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(248,150,76,.035) 1px,transparent 1px);
+    background-size:90px 90px}
+  .vig{position:absolute;inset:0;pointer-events:none;box-shadow:inset 0 0 240px rgba(0,0,0,.6)}
+  .topbar{position:absolute;top:0;left:0;right:0;height:6px;
+    background:linear-gradient(90deg,var(--accent),var(--accent-d),transparent);z-index:5}
+
+  .clip{position:absolute;inset:0;opacity:0;display:flex;flex-direction:column;
+    align-items:center;justify-content:center;text-align:center;padding:120px 110px}
+
+  .eyebrow{font-family:'Poppins';font-size:26px;font-weight:700;letter-spacing:.2em;
+    text-transform:uppercase;color:var(--accent);display:inline-flex;align-items:center;gap:12px}
+  .eyebrow.box{border:1px solid var(--ob);background:var(--og);padding:10px 22px}
+  .kicker{font-family:'Poppins';font-size:26px;font-weight:700;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--accent);margin-bottom:22px}
+  .divider{width:84px;height:4px;background:var(--accent);margin:30px 0}
+
+  h1{font-family:'Marcellus',serif;font-size:90px;line-height:1.08;font-weight:400;
+    letter-spacing:-.01em;max-width:900px}
+  h2{font-family:'Marcellus',serif;font-size:78px;line-height:1.1;font-weight:400;max-width:880px}
+  .o{color:var(--accent);font-style:italic}
+  .sub{font-family:'Poppins';font-size:32px;color:var(--mut);margin-top:30px;max-width:800px;line-height:1.5}
+
+  .tag-row{display:flex;gap:18px;margin-top:48px;flex-wrap:wrap;justify-content:center}
+  .tag{font-family:'Poppins';font-size:30px;font-weight:600;color:var(--ink);
+    border:1px solid var(--ob);background:var(--og);padding:16px 34px}
+  .tag .dot{color:var(--accent);margin-right:12px}
+
+  .check{width:120px;height:120px;border-radius:50%;background:var(--og);border:2px solid var(--ob);
+    display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+  .check svg{width:62px;height:62px}
+
+  .cta-btn{margin-top:44px;font-family:'Poppins';font-weight:700;font-size:36px;letter-spacing:.06em;
+    text-transform:uppercase;color:#0a0a0a;background:var(--accent);padding:32px 74px;border-radius:6px;
+    box-shadow:0 16px 60px rgba(248,150,76,.34)}
+  .scarcity{margin-top:40px;font-family:'Poppins';font-size:23px;font-weight:600;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--dim);display:flex;align-items:center;gap:16px}
+  .scarcity::before,.scarcity::after{content:'';width:40px;height:1px;background:rgba(248,150,76,.45)}
+  .logo-chip{margin-top:48px;background:#fff;border-radius:14px;padding:16px 26px;display:inline-flex}
+  .logo-chip img{height:50px;display:block}
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-width="1080" data-height="1080" data-duration="22.612">
+  <audio id="vo" src="vo/audio.wav" data-start="0" data-duration="22.612" data-volume="1"></audio>
+
+  <!-- SCENE 1 — thank you -->
+  <section class="clip" id="sc1">
+    <div class="check s1">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#F8964C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 L9 17 l-5 -5"/></svg>
+    </div>
+    <div class="eyebrow box s1">Thank You</div>
+    <div class="divider s1"></div>
+    <h1 class="s1">Thanks for Completing<br>Your <span class="o">Survey</span></h1>
+    <div class="sub s1">We truly appreciate you taking the time.</div>
+  </section>
+
+  <!-- SCENE 2 — why it helps -->
+  <section class="clip" id="sc2">
+    <div class="kicker s2">What Happens Now</div>
+    <h1 class="s2">Your Answers Help Us<br>Help You <span class="o">Properly</span></h1>
+    <div class="tag-row">
+      <div class="tag s2"><span class="dot">◆</span>Your goals</div>
+      <div class="tag s2"><span class="dot">◆</span>Your situation</div>
+      <div class="tag s2"><span class="dot">◆</span>Your priorities</div>
+    </div>
+  </section>
+
+  <!-- SCENE 3 — next step -->
+  <section class="clip" id="sc3">
+    <div class="kicker s3">Your Next Step</div>
+    <h2 class="s3">Book a Quick Call<br><span class="o">Below</span></h2>
+    <div class="sub s3">We'll walk through your situation and exactly how we can help.</div>
+  </section>
+
+  <!-- SCENE 4 — CTA -->
+  <section class="clip" id="sc4">
+    <div class="kicker s4">Let's Talk</div>
+    <h1 class="s4">Book Your <span class="o">Call</span></h1>
+    <div class="cta-btn s4">Pick a Time Below</div>
+    <div class="scarcity s4">A few spots open each week</div>
+    <div class="logo-chip s4"><img src="valoram-logo.png" alt="Valoram Solutions"></div>
+  </section>
+
+  <div class="vig"></div>
+  <div class="topbar"></div>
+</div>
+
+<script>
+  window.__timelines = window.__timelines || {};
+  const tl = gsap.timeline({ paused: true });
+  const E = "power3.out";
+  const S = [0.0, 5.352, 11.676, 17.851];
+  const L = [5.352, 6.324, 6.175, 4.761];
+  S.forEach((st,i)=>{
+    tl.fromTo("#sc"+(i+1),{opacity:0},{opacity:1,duration:.4,ease:"none"},st);
+    if(i < S.length-1) tl.to("#sc"+(i+1),{opacity:0,duration:.4,ease:"none"},st+L[i]-0.4);
+  });
+  tl.from("#sc1 .check",{scale:.6,opacity:0,duration:.6,ease:"back.out(1.7)"}, S[0]+0.05);
+  tl.from(".s1",{y:34,opacity:0,duration:.6,ease:E,stagger:.16}, S[0]+0.2);
+  tl.from(".s2",{y:34,opacity:0,duration:.6,ease:E,stagger:.16}, S[1]+0.05);
+  tl.from(".tag",{scale:.8,opacity:0,duration:.5,ease:"back.out(1.6)",stagger:.16}, S[1]+0.5);
+  tl.from(".s3",{y:34,opacity:0,duration:.6,ease:E,stagger:.16}, S[2]+0.05);
+  tl.from(".s4",{y:32,opacity:0,duration:.6,ease:E,stagger:.16}, S[3]+0.05);
+  tl.from(".cta-btn",{scale:.82,duration:.5,ease:"back.out(1.8)"}, S[3]+0.5);
+  window.__timelines["main"] = tl;
+</script>
+</body>
+</html>
