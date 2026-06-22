@@ -12,70 +12,129 @@
   },
   "brand": "valoram",
   "theme": {},
-
   "hero": {
     "eyebrow": "◆ Free Financial Certainty Review for Texas Teachers",
     "headline": "Will TRS Really Replace Your Paycheck? Build *Tax-Free Retirement Income* to Close the Gap",
     "subhead": "For Texas public school educators 8–15 years from retirement: get real numbers on paper and a tax-smart plan to retire with confidence — without working extra years or hoping the market behaves.",
     "cta": "Get My Free Review"
   },
-
   "problem": {
     "eyebrow": "Why This Exists",
     "title": "Most Texas Teachers Don't Have a *Savings* Problem. They Have a *Clarity* Problem.",
     "items": [
-      { "title": "TRS Won't Replace Your Paycheck", "body": "When you finally run the math, TRS often means a pay cut in retirement — and inflation, healthcare, and taxes squeeze it even more." },
-      { "title": "Exposed Right Before Retirement", "body": "A bad sequence of returns in your first 5–10 years can derail everything, right when you can least afford it." },
-      { "title": "Too Many Levers, Generic Advice", "body": "403(b)/457 choices, taxes, Social Security rules, legacy basics — and you're tired of one-size-fits-all answers that don't fit your life." }
+      {
+        "title": "TRS Won't Replace Your Paycheck",
+        "body": "When you finally run the math, TRS often means a pay cut in retirement — and inflation, healthcare, and taxes squeeze it even more."
+      },
+      {
+        "title": "Exposed Right Before Retirement",
+        "body": "A bad sequence of returns in your first 5–10 years can derail everything, right when you can least afford it."
+      },
+      {
+        "title": "Too Many Levers, Generic Advice",
+        "body": "403(b)/457 choices, taxes, Social Security rules, legacy basics — and you're tired of one-size-fits-all answers that don't fit your life."
+      }
     ],
     "transition": "The biggest retirement wins come from *clarity on your real income gap* — not from throwing more into a 403(b) and hoping."
   },
-
   "results": {
     "eyebrow": "What You Can Achieve",
     "title": "Know Your Number, *Close the Gap*, and Retire on Your Terms",
     "intro": "Here's what Texas educators consistently walk away with after the Financial Certainty Review.",
     "items": [
-      { "icon": "🔢", "title": "A Clear Income Number", "body": "Know exactly what TRS covers, what you'll actually need, and the precise gap to fill — no more guessing." },
-      { "icon": "🛡️", "title": "Tax-Free Income to Fill It", "body": "A tax-smart strategy that supplements TRS so taxes don't quietly shrink your retirement income year after year." },
-      { "icon": "📉", "title": "Protection From Bad Markets", "body": "Guardrails that keep a rough first 5–10 years of retirement from wrecking your plan." },
-      { "icon": "👪", "title": "A Family-Ready Plan", "body": "Beneficiaries handled, legacy organized, and fewer financial loose ends for the people you love." }
+      {
+        "icon": "🔢",
+        "title": "A Clear Income Number",
+        "body": "Know exactly what TRS covers, what you'll actually need, and the precise gap to fill — no more guessing."
+      },
+      {
+        "icon": "🛡️",
+        "title": "Tax-Free Income to Fill It",
+        "body": "A tax-smart strategy that supplements TRS so taxes don't quietly shrink your retirement income year after year."
+      },
+      {
+        "icon": "📉",
+        "title": "Protection From Bad Markets",
+        "body": "Guardrails that keep a rough first 5–10 years of retirement from wrecking your plan."
+      },
+      {
+        "icon": "👪",
+        "title": "A Family-Ready Plan",
+        "body": "Beneficiaries handled, legacy organized, and fewer financial loose ends for the people you love."
+      }
     ],
     "stats": [
-      { "num": "Your Gap", "label": "TRS Number On Paper", "desc": "See exactly how much of your paycheck TRS replaces — and how much it doesn't." },
-      { "num": "Tax-Free", "label": "Income Strategy", "desc": "Designed to supplement TRS and reduce the bite of taxes in retirement." },
-      { "num": "1-on-1", "label": "Personalized, Never Generic", "desc": "A plan built around your life, accounts, and timeline — never a template." }
+      {
+        "num": "Your Gap",
+        "label": "TRS Number On Paper",
+        "desc": "See exactly how much of your paycheck TRS replaces — and how much it doesn't."
+      },
+      {
+        "num": "Tax-Free",
+        "label": "Income Strategy",
+        "desc": "Designed to supplement TRS and reduce the bite of taxes in retirement."
+      },
+      {
+        "num": "1-on-1",
+        "label": "Personalized, Never Generic",
+        "desc": "A plan built around your life, accounts, and timeline — never a template."
+      }
     ]
   },
-
   "distinction": {
     "eyebrow": "The Core Distinction",
     "title": "Generic Retirement Advice vs *A Plan Built for Teachers*",
     "left": {
       "label": "Generic Advice",
       "heading": "One-Size-Fits-All",
-      "points": ["“Just put more in your 403(b)”", "Ignores your real TRS income gap", "No tax strategy for retirement income", "No protection for a bad market", "Cookie-cutter, not built around your life"]
+      "points": [
+        "“Just put more in your 403(b)”",
+        "Ignores your real TRS income gap",
+        "No tax strategy for retirement income",
+        "No protection for a bad market",
+        "Cookie-cutter, not built around your life"
+      ]
     },
     "right": {
       "label": "Financial Certainty Review",
       "heading": "Built Around You",
-      "points": ["Your real TRS gap, on paper", "A tax-free income strategy to close it", "Guardrails for sequence-of-returns risk", "403(b)/457/IRA aligned on purpose", "A clear, step-by-step plan with dates"]
+      "points": [
+        "Your real TRS gap, on paper",
+        "A tax-free income strategy to close it",
+        "Guardrails for sequence-of-returns risk",
+        "403(b)/457/IRA aligned on purpose",
+        "A clear, step-by-step plan with dates"
+      ]
     },
     "close": "You don't need another generic product. *You need clarity on your gap* and a tax-smart income plan built around your TRS benefits and your life."
   },
-
   "audience": {
     "eyebrow": "Is This Right For You?",
     "title": "Who the Certainty Review *Is Built For*",
     "items": [
-      { "icon": "🍎", "title": "Veteran Texas Educators (47–58)", "body": "Teachers and campus leaders 8–15 years from retirement who want to lock in an income plan now." },
-      { "icon": "💵", "title": "Feeling the TRS Gap", "body": "Educators with $150k–$600k across 403(b)/457/IRA/brokerage who can redirect $600–$2,000/mo toward a plan." },
-      { "icon": "👨‍👩‍👧", "title": "Family-Focused", "body": "Married or supporting a child or aging parent — who want retirement secure without becoming a burden." },
-      { "icon": "🧭", "title": "Ready for a Real Plan", "body": "Decisive once they trust you; they want clarity, checklists, and a clean path — not guesswork." }
+      {
+        "icon": "🍎",
+        "title": "Veteran Texas Educators (47–58)",
+        "body": "Teachers and campus leaders 8–15 years from retirement who want to lock in an income plan now."
+      },
+      {
+        "icon": "💵",
+        "title": "Feeling the TRS Gap",
+        "body": "Educators with $150k–$600k across 403(b)/457/IRA/brokerage who can redirect $600–$2,000/mo toward a plan."
+      },
+      {
+        "icon": "👨‍👩‍👧",
+        "title": "Family-Focused",
+        "body": "Married or supporting a child or aging parent — who want retirement secure without becoming a burden."
+      },
+      {
+        "icon": "🧭",
+        "title": "Ready for a Real Plan",
+        "body": "Decisive once they trust you; they want clarity, checklists, and a clean path — not guesswork."
+      }
     ],
     "notFor": "This may not be a fit if you're early in your career with no retirement savings to work with yet, or you already have a clear, tax-smart plan that closes your TRS gap."
   },
-
   "offer": {
     "eyebrow": "The System",
     "title": "The Financial Certainty *for Teachers* System",
@@ -84,39 +143,87 @@
     "offerTitle": "Your Retirement Paycheck, Mapped and Protected",
     "offerDesc": "From a TRS Gap Snapshot to ongoing reviews, every step is built to show your real number, close the gap with tax-free income, and protect it from bad markets.",
     "deliverables": [
-      { "title": "1 · TRS Gap Snapshot", "desc": "Map your TRS estimate, savings, and real spending to see your exact retirement paycheck gap." },
-      { "title": "2 · Income Timeline Plan", "desc": "A simple timeline showing when each income source turns on and how much it pays." },
-      { "title": "3 · Tax-Free Income Design", "desc": "A tax-smart strategy to supplement TRS using the accounts and tools that fit your situation." },
-      { "title": "4 · Market Risk Guardrails", "desc": "Stress-test your plan for down markets so a bad first 5–10 years doesn't wreck your retirement." },
-      { "title": "5 · Account Lever Cleanup", "desc": "Align your 403(b)/457/IRA choices, fees, and contributions with your income timeline." },
-      { "title": "6 · Legacy & Beneficiaries", "desc": "Get beneficiaries and basic estate needs organized so nothing is left to chance." },
-      { "title": "7 · Ongoing Certainty Reviews", "desc": "Regular reviews to track progress, adjust for life, and keep your plan on course." }
+      {
+        "title": "1 · TRS Gap Snapshot",
+        "desc": "Map your TRS estimate, savings, and real spending to see your exact retirement paycheck gap."
+      },
+      {
+        "title": "2 · Income Timeline Plan",
+        "desc": "A simple timeline showing when each income source turns on and how much it pays."
+      },
+      {
+        "title": "3 · Tax-Free Income Design",
+        "desc": "A tax-smart strategy to supplement TRS using the accounts and tools that fit your situation."
+      },
+      {
+        "title": "4 · Market Risk Guardrails",
+        "desc": "Stress-test your plan for down markets so a bad first 5–10 years doesn't wreck your retirement."
+      },
+      {
+        "title": "5 · Account Lever Cleanup",
+        "desc": "Align your 403(b)/457/IRA choices, fees, and contributions with your income timeline."
+      },
+      {
+        "title": "6 · Legacy & Beneficiaries",
+        "desc": "Get beneficiaries and basic estate needs organized so nothing is left to chance."
+      },
+      {
+        "title": "7 · Ongoing Certainty Reviews",
+        "desc": "Regular reviews to track progress, adjust for life, and keep your plan on course."
+      }
     ],
     "stepsTitle": "How It Works",
     "steps": [
-      { "title": "Book Your Review", "body": "Grab a time for your free Financial Certainty Review." },
-      { "title": "Get Your TRS Gap Snapshot", "body": "See your real number and where the gaps are." },
-      { "title": "Get Your Income Plan", "body": "Receive a tax-smart, step-by-step path to close the gap." },
-      { "title": "Retire With Confidence", "body": "Implement with guidance and ongoing reviews." }
+      {
+        "title": "Book Your Review",
+        "body": "Grab a time for your free Financial Certainty Review."
+      },
+      {
+        "title": "Get Your TRS Gap Snapshot",
+        "body": "See your real number and where the gaps are."
+      },
+      {
+        "title": "Get Your Income Plan",
+        "body": "Receive a tax-smart, step-by-step path to close the gap."
+      },
+      {
+        "title": "Retire With Confidence",
+        "body": "Implement with guidance and ongoing reviews."
+      }
     ]
   },
-
   "faqs": [
-    { "q": "Won't my TRS pension be enough?", "a": "For many Texas teachers, TRS replaces only part of your paycheck — and inflation, healthcare, and taxes squeeze it further. The review shows your real number so you can see the gap clearly." },
-    { "q": "Is this a sales pitch for a product?", "a": "No. We start with a Financial Certainty Review to find the gaps and map a plan. Any strategy is built around your TRS benefits and your life — never a cookie-cutter product." },
-    { "q": "What exactly is the Financial Certainty Review?", "a": "A one-on-one deep dive that maps your TRS estimate, savings, and spending to show where you stand today, what could derail the plan, and a clear path to tax-smart income." },
-    { "q": "What does “tax-free” retirement income mean?", "a": "Strategies designed so the income you draw in retirement isn't eroded by taxes the way traditional withdrawals can be — used to supplement TRS and help close your gap." },
-    { "q": "I'm close to retirement — is it too late?", "a": "Often, no. Many teachers 8–15 years out (and even closer) can still meaningfully close the gap with the right plan. The review tells you what's realistic for your timeline." },
-    { "q": "How much does the review cost?", "a": "Your initial Financial Certainty Review is free, with no obligation." }
+    {
+      "q": "Won't my TRS pension be enough?",
+      "a": "For many Texas teachers, TRS replaces only part of your paycheck — and inflation, healthcare, and taxes squeeze it further. The review shows your real number so you can see the gap clearly."
+    },
+    {
+      "q": "Is this a sales pitch for a product?",
+      "a": "No. We start with a Financial Certainty Review to find the gaps and map a plan. Any strategy is built around your TRS benefits and your life — never a cookie-cutter product."
+    },
+    {
+      "q": "What exactly is the Financial Certainty Review?",
+      "a": "A one-on-one deep dive that maps your TRS estimate, savings, and spending to show where you stand today, what could derail the plan, and a clear path to tax-smart income."
+    },
+    {
+      "q": "What does “tax-free” retirement income mean?",
+      "a": "Strategies designed so the income you draw in retirement isn't eroded by taxes the way traditional withdrawals can be — used to supplement TRS and help close your gap."
+    },
+    {
+      "q": "I'm close to retirement — is it too late?",
+      "a": "Often, no. Many teachers 8–15 years out (and even closer) can still meaningfully close the gap with the right plan. The review tells you what's realistic for your timeline."
+    },
+    {
+      "q": "How much does the review cost?",
+      "a": "Your initial Financial Certainty Review is free, with no obligation."
+    }
   ],
-
   "finalCta": {
     "eyebrow": "One Step Away",
     "headline": "See Your *Real Retirement Number* — and How to Close the Gap",
     "subhead": "If you're a Texas educator 8–15 years from retirement, the Financial Certainty Review shows exactly where you stand and a tax-smart path forward.",
     "scarcity": "Limited one-on-one reviews available each month"
   },
-
   "lead": {
     "mode": "ghl-form",
     "ghlFormEmbed": "<div style=\"border:2px dashed var(--line);border-radius:10px;padding:44px 24px;text-align:center;color:var(--ink3);background:var(--off)\"><strong style=\"display:block;color:var(--ink);font-size:16px;margin-bottom:6px\">⟶ Your GHL Opt-In Form Embeds Here</strong>Build the lead opt-in form in GoHighLevel, copy its inline embed code, and paste it into <code>lead.ghlFormEmbed</code> in this config — then re-run the generator.</div>",
@@ -131,9 +238,13 @@
       "No cost and no obligation"
     ]
   },
-
   "seo": {
     "title": "Jill Espino — Free Financial Certainty Review for Texas Teachers",
     "description": "Tax-free retirement income strategies that supplement TRS for Texas public school educators. See your real income gap and a clear, tax-smart path forward."
+  },
+  "video": {
+    "eyebrow": "Watch",
+    "heading": "See How It *Works* — In Under a Minute",
+    "url": "https://assets.cdn.filesafe.space/NPH9fcfnGaTAH4Xqh2dM/media/6a395ecb28e2dab9ea3c10d9.mp4"
   }
 }

@@ -85,6 +85,8 @@ header.site{position:sticky;top:0;z-index:60;background:color-mix(in srgb,var(--
 .hero-inner{max-width:840px;margin:0 auto}
 .hero h1{margin-bottom:22px}
 .hero .lead{max-width:640px;margin:0 auto 30px}
+.vsl{max-width:600px;margin:0 auto;border-radius:18px;overflow:hidden;background:#000;border:1px solid var(--line);box-shadow:var(--shadow-lg),0 0 0 6px var(--accent-ring)}
+.vsl video{width:100%;height:auto;display:block}
 
 /* generic grids/cards */
 .cards-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
@@ -249,6 +251,17 @@ footer.site{padding:40px 0;background:var(--dark);border-top:1px solid var(--lin
     <a class="btn btn-lg" href="{{lead.ctaUrl}}">{{ctaText}}</a>
   </div>
 </section>
+
+{{#if hasVideo}}
+<!-- VSL VIDEO (light) -->
+<section class="light">
+  <div class="wrap center">
+    {{#if video.eyebrow}}<div class="section-head reveal" style="margin-bottom:24px"><span class="eyebrow">{{video.eyebrow}}</span>{{#if video.heading}}<h2 class="section-title">{{{video.headingHtml}}}</h2>{{/if}}</div>{{/if}}
+    <div class="vsl reveal"><video src="{{video.url}}" controls playsinline preload="metadata"{{#if video.poster}} poster="{{video.poster}}"{{/if}}></video></div>
+    <div class="cta-row reveal"><a class="btn" href="{{lead.ctaUrl}}">{{ctaText}}</a></div>
+  </div>
+</section>
+{{/if}}
 
 {{#if hasProblem}}
 <!-- PROBLEM (dark) -->

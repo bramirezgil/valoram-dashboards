@@ -230,6 +230,12 @@ function normalize(cfg) {
   c.seo.title = c.seo.title || `${c.business.name || 'Welcome'}${c.business.tagline ? ' — ' + c.business.tagline : ''}`;
   c.seo.description = c.seo.description || c.hero.subhead || '';
 
+  // optional VSL / video section (renders under the hero when video.url is set)
+  c.video = c.video || {};
+  c.hasVideo = !!c.video.url;
+  c.video.eyebrow = c.video.eyebrow || (c.hasVideo ? 'Watch' : '');
+  c.video.headingHtml = markEm(c.video.heading);
+
   // section flags
   c.year = new Date().getFullYear();
   c.offer.stepsTitle = c.offer.stepsTitle || 'How It Works';
