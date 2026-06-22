@@ -29,13 +29,12 @@ one `PASTE_GMAX_MP4_URL_HERE` placeholder with the URL from step 1.
 
 That's it — responsive 1:1 box, branded border, plays on click with sound.
 
-## 3. (Optional) Autoplay muted
-If you'd rather it autoplay silently and loop (browsers block sound-on
-autoplay), swap the `<video ...>` attributes:
+## 3. Full page (recommended)
+`gmax-landing-page.html` in this folder is the complete GHL page with the
+VSL already embedded in the hero — **autoplay muted + loop, with a
+"Tap for sound" toggle**. Just open it, replace the single
+`PASTE_GMAX_MP4_URL_HERE` placeholder with your hosted MP4 URL (step 1),
+and paste the whole file into the GHL code editor.
 
-```html
-autoplay muted loop playsinline preload="auto"
-```
-
-Keep `muted` — without it autoplay is blocked. A "Tap for sound" overlay can
-be added if you want sound-on engagement.
+The snippet in step 2 above is click-to-play with sound; the full page uses
+the autoplay-muted variant. Either works — pick per placement.
