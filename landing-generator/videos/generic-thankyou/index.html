@@ -120,10 +120,10 @@
     tl.fromTo("#sc"+(i+1),{opacity:0},{opacity:1,duration:.4,ease:"none"},st);
     if(i < S.length-1) tl.to("#sc"+(i+1),{opacity:0,duration:.4,ease:"none"},st+L[i]-0.4);
   });
-  tl.from("#sc1 .check",{scale:.6,opacity:0,duration:.6,ease:"back.out(1.7)"}, S[0]+0.05);
+  tl.from("#sc1 .check",{scale:.6,duration:.6,ease:"back.out(1.7)"}, S[0]+0.05);
   tl.from(".s1",{y:34,opacity:0,duration:.6,ease:E,stagger:.16}, S[0]+0.2);
   tl.from(".s2",{y:34,opacity:0,duration:.6,ease:E,stagger:.16}, S[1]+0.05);
-  tl.from(".tag",{scale:.8,opacity:0,duration:.5,ease:"back.out(1.6)",stagger:.16}, S[1]+0.5);
+  tl.from(".tag",{scale:.8,duration:.5,ease:"back.out(1.6)",stagger:.16}, S[1]+0.5);
   tl.from(".s3",{y:34,opacity:0,duration:.6,ease:E,stagger:.16}, S[2]+0.05);
   tl.from(".s4",{y:32,opacity:0,duration:.6,ease:E,stagger:.16}, S[3]+0.05);
   tl.from(".cta-btn",{scale:.82,duration:.5,ease:"back.out(1.8)"}, S[3]+0.5);
