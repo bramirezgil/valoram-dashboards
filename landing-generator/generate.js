@@ -236,6 +236,11 @@ function normalize(cfg) {
   c.video.eyebrow = c.video.eyebrow || (c.hasVideo ? 'Watch' : '');
   c.video.headingHtml = markEm(c.video.heading);
 
+  // optional advisor bio (renders after the opt-in section)
+  c.bio = c.bio || {};
+  c.hasBio = !!(c.bio.text || c.bio.photo);
+  c.bio.nameHtml = markEm(c.bio.name);
+
   // section flags
   c.year = new Date().getFullYear();
   c.offer.stepsTitle = c.offer.stepsTitle || 'How It Works';
