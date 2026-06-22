@@ -27,14 +27,14 @@ Drop this just above the calendar embed inside `.calendar-inner`
 
 ```html
 <script>
-  // tierKey -> hosted MP4 URL  (replace with your CDN/GHL URLs)
+  // tierKey -> hosted MP4 URL  (GHL media library — confirmed mapping)
   const VSL_BY_TIER = {
-    maximum:      "https://YOUR-CDN/tax-maximum.mp4",
-    very_high:    "https://YOUR-CDN/tax-very_high.mp4",
-    high:         "https://YOUR-CDN/tax-high.mp4",
-    moderate:     "https://YOUR-CDN/tax-moderate.mp4",
-    moderate_low: "https://YOUR-CDN/tax-moderate_low.mp4",
-    low:          "https://YOUR-CDN/tax-low.mp4",
+    maximum:      "https://assets.cdn.filesafe.space/NPH9fcfnGaTAH4Xqh2dM/media/6a38e4f66a6dd1b69a8e2173.mp4", // $44,000+
+    very_high:    "https://assets.cdn.filesafe.space/NPH9fcfnGaTAH4Xqh2dM/media/6a38e4f6c50697c411dec035.mp4", // $25,000+
+    high:         "https://assets.cdn.filesafe.space/NPH9fcfnGaTAH4Xqh2dM/media/6a38e4f66a6dd1b69a8e216e.mp4", // $10,000+
+    moderate:     "https://assets.cdn.filesafe.space/NPH9fcfnGaTAH4Xqh2dM/media/6a38e4f6f0b512e0d60721ad.mp4", // $3,000+
+    moderate_low: "https://assets.cdn.filesafe.space/NPH9fcfnGaTAH4Xqh2dM/media/6a38e4f6f2131051b84716ea.mp4", // $1,500+
+    low:          "https://assets.cdn.filesafe.space/NPH9fcfnGaTAH4Xqh2dM/media/6a38e4f6c50697c411dec030.mp4", // limited
   };
 
   function mountVSL(tierKey) {
