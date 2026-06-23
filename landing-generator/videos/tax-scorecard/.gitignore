@@ -3,3 +3,5 @@ vo/music.wav
 vo/*_s*.wav
 vo/marcellus.woff2
 renders/*-draft.mp4
+index.html
+renders/work-*/
