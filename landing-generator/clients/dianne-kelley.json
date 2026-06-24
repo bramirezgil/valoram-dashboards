@@ -133,6 +133,65 @@
     ]
   },
 
+  "resultsPage": {
+    "default": "qualified",
+    "segments": {
+      "priority": {
+        "eyebrow": "Priority Candidate",
+        "headline": "You're a *Priority Fit* — Let's Map Your Exit This Week",
+        "subhead": "Your answers point to a time-sensitive opportunity — a near-term sale or transition with significant enterprise value on the table. Let's get you in with a senior exit strategist right away, before the irreversible decisions come due.",
+        "points": [
+          "A senior exit strategist will personally review your situation",
+          "Priority scheduling — often within 48 hours",
+          "We'll focus first on the most time-sensitive tax and deal-structure moves"
+        ],
+        "ctaSub": "Priority scheduling · Virtual · No cost",
+        "embed": "<iframe src=\"https://api.leadconnectorhq.com/widget/booking/dianne-kelley\" style=\"width:100%;border:none;overflow:hidden;min-height:640px;\" scrolling=\"no\"></iframe><script src=\"https://api.leadconnectorhq.com/js/form_embed.js\" type=\"text/javascript\"></script>",
+        "note": "Already have an offer on the table? Mention it when you book and we'll prioritize your session."
+      },
+      "qualified": {
+        "eyebrow": "You're a Strong Fit",
+        "headline": "Your Results Are In — Let's Build Your *Tax-Smart Exit Plan*",
+        "subhead": "Based on your answers, you're an excellent candidate for The Tax-Smart Exit & Retirement Certainty System. Your next step is a complimentary clarity call with an exit specialist.",
+        "points": [
+          "We'll review your defendable valuation range together",
+          "You'll see your real after-tax net-proceeds picture",
+          "You'll leave with clear, ranked next steps — no obligation"
+        ],
+        "ctaSub": "30 minutes · Virtual · No cost",
+        "embed": "<iframe src=\"https://api.leadconnectorhq.com/widget/booking/dianne-kelley\" style=\"width:100%;border:none;overflow:hidden;min-height:640px;\" scrolling=\"no\"></iframe><script src=\"https://api.leadconnectorhq.com/js/form_embed.js\" type=\"text/javascript\"></script>",
+        "note": "Prefer to talk through your situation first? Mention your assessment when you book."
+      },
+      "building": {
+        "eyebrow": "You're Building Toward Your Exit",
+        "headline": "You've Got Real Value to Protect — Let's *Raise It Before You Sell*",
+        "subhead": "Your answers show a solid business with room to increase value and reduce the risks buyers discount. The best exits are built years in advance — starting now keeps more options and more money on the table.",
+        "points": [
+          "Find the value drivers buyers actually pay for",
+          "Fix the gaps that get discounted in diligence — owner dependency, customer concentration, weak financials",
+          "Get a 12–36 month roadmap with milestones and quarterly reviews"
+        ],
+        "ctaSub": "30 minutes · Virtual · No cost",
+        "embed": "<iframe src=\"https://api.leadconnectorhq.com/widget/booking/dianne-kelley\" style=\"width:100%;border:none;overflow:hidden;min-height:640px;\" scrolling=\"no\"></iframe><script src=\"https://api.leadconnectorhq.com/js/form_embed.js\" type=\"text/javascript\"></script>",
+        "note": "Not sure where to start? The call will give you a prioritized first 90 days."
+      },
+      "early": {
+        "eyebrow": "Thanks for Completing Your Assessment",
+        "headline": "Here's Your *Next Step*",
+        "subhead": "Based on your answers, a full exit engagement may not be the right fit just yet — but the best exits are built years in advance. Here are resources to help you prepare for the window ahead.",
+        "points": [
+          "A clear picture of where your business stands today",
+          "Plain-English education on the 8 value drivers buyers reward",
+          "An open door whenever your timeline moves up"
+        ],
+        "ctaText": "Get the Free Exit-Readiness Guide",
+        "ctaUrl": "REPLACE_WITH_LEAD_MAGNET_URL",
+        "ctaSub": "Instant access · No cost",
+        "note": "Questions in the meantime? We're glad to help when you're ready."
+      }
+    }
+  },
+
   "seo": {
     "title": "Dianne Kelley — Free Tax-Smart Exit Clarity Call for Business Owners",
     "description": "Tax-smart exit and retirement planning for US business owners ($3M–$10M revenue). Know your real valuation range, after-tax net proceeds, and a coordinated exit plan."
