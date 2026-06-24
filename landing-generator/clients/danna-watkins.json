@@ -133,6 +133,65 @@
     ]
   },
 
+  "resultsPage": {
+    "default": "qualified",
+    "segments": {
+      "priority": {
+        "eyebrow": "Priority Candidate",
+        "headline": "You're a *Priority Fit* — Let's Talk Before Your Date",
+        "subhead": "Your answers point to a time-sensitive opportunity — an upcoming retirement date with irreversible TSP, survivor, and Social Security decisions coming due. Let's get you in with a retirement specialist right away.",
+        "points": [
+          "A senior retirement specialist will personally review your situation",
+          "Priority scheduling — often within 48 hours",
+          "We'll focus first on the irreversible, time-sensitive elections"
+        ],
+        "ctaSub": "Priority scheduling · Virtual · No cost",
+        "embed": "<iframe src=\"https://api.leadconnectorhq.com/widget/booking/danna-watkins\" style=\"width:100%;border:none;overflow:hidden;min-height:640px;\" scrolling=\"no\"></iframe><script src=\"https://api.leadconnectorhq.com/js/form_embed.js\" type=\"text/javascript\"></script>",
+        "note": "Date locked in soon? Mention it when you book and we'll prioritize your session."
+      },
+      "qualified": {
+        "eyebrow": "You're a Strong Fit",
+        "headline": "Your Results Are In — Let's Build Your *Retirement Paycheck Plan*",
+        "subhead": "Based on your answers, you're an excellent candidate for The Clarity-First Retirement Income Blueprint. Your next step is a complimentary Readiness Snapshot session with a retirement specialist.",
+        "points": [
+          "We'll map your retirement paycheck — pension + Social Security + TSP",
+          "You'll get a plain-English yes/no on retiring by your date",
+          "You'll leave with a clear decision timeline — no obligation"
+        ],
+        "ctaSub": "30 minutes · Virtual · No cost",
+        "embed": "<iframe src=\"https://api.leadconnectorhq.com/widget/booking/danna-watkins\" style=\"width:100%;border:none;overflow:hidden;min-height:640px;\" scrolling=\"no\"></iframe><script src=\"https://api.leadconnectorhq.com/js/form_embed.js\" type=\"text/javascript\"></script>",
+        "note": "Prefer to talk through your numbers first? Mention your assessment when you book."
+      },
+      "building": {
+        "eyebrow": "You're Close — A Few Gaps to Close",
+        "headline": "You've Built the Foundation — Let's *Close the Gaps Before Your Date*",
+        "subhead": "Your answers show you're on your way, with a few time-sensitive gaps worth closing — TSP/rollover timing, tax sequencing, survivor elections, or beneficiaries — before your date is locked in.",
+        "points": [
+          "Build a tax-smart withdrawal order across your accounts",
+          "Lock a decision calendar with guardrails for the irreversible choices",
+          "Align beneficiaries and survivor income so your family is protected"
+        ],
+        "ctaSub": "30 minutes · Virtual · No cost",
+        "embed": "<iframe src=\"https://api.leadconnectorhq.com/widget/booking/danna-watkins\" style=\"width:100%;border:none;overflow:hidden;min-height:640px;\" scrolling=\"no\"></iframe><script src=\"https://api.leadconnectorhq.com/js/form_embed.js\" type=\"text/javascript\"></script>",
+        "note": "Not sure which decision comes first? The session gives you a prioritized timeline."
+      },
+      "early": {
+        "eyebrow": "Thanks for Completing Your Assessment",
+        "headline": "Here's Your *Next Step*",
+        "subhead": "Based on your answers, a full planning engagement may not be the right fit just yet — but the earlier you prepare, the more options you keep. Here are resources to help you get ready for the years ahead.",
+        "points": [
+          "A clear picture of where your plan stands today",
+          "Plain-English education on TSP, FERS, and sequence-of-returns risk",
+          "An open door whenever your date gets closer"
+        ],
+        "ctaText": "Get the Free Retirement Readiness Guide",
+        "ctaUrl": "REPLACE_WITH_LEAD_MAGNET_URL",
+        "ctaSub": "Instant access · No cost",
+        "note": "Questions in the meantime? We're glad to help when you're ready."
+      }
+    }
+  },
+
   "seo": {
     "title": "Danna Watkins — Free Retirement Readiness Snapshot for Federal & Military",
     "description": "Clarity-first retirement income planning for senior federal employees and separating military. Know your retirement paycheck, decision timeline, and tax-smart withdrawal plan."
