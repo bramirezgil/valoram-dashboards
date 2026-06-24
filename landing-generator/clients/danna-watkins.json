@@ -1,0 +1,139 @@
+{
+  "slug": "danna-watkins",
+  "business": {
+    "name": "Danna Watkins",
+    "logoUrl": "",
+    "tagline": "Clarity-first retirement income planning for federal employees and military.",
+    "email": "",
+    "address": "United States",
+    "bookingUrl": "https://your-ghl-calendar-link.example.com",
+    "industry": "Retirement income planning for federal employees & military",
+    "disclaimer": "Valoram Solutions provides advisory services through licensed professionals. All figures and examples are illustrative, are not a guarantee of future results, and do not constitute financial, tax, or legal advice. TSP, FERS/pension, and Social Security benefits are governed by their respective administering agencies. Investing involves risk, including the possible loss of principal; guarantees are subject to the claims-paying ability of the issuing insurance company."
+  },
+  "brand": "valoram",
+  "theme": { "brandColor": "#0A2540", "accentColor": "#C8A24B", "font": "Poppins" },
+
+  "hero": {
+    "eyebrow": "◆ Free Retirement Readiness Snapshot",
+    "headline": "Can You Retire on Your Date — and What Does Your *Paycheck* Look Like After You Stop Working?",
+    "subhead": "For senior federal employees (GS-14/15, SES) and separating military (O-4 to O-6) 12–24 months from your retirement date: get clear, plain-English answers on your TSP, pension, taxes, and survivor decisions — before the irreversible ones come due.",
+    "cta": "Get My Readiness Snapshot"
+  },
+
+  "problem": {
+    "eyebrow": "Why This Exists",
+    "title": "Pre-Retirement Isn't a Savings Problem. It's a *Clarity* Problem.",
+    "items": [
+      { "title": "The Six-Figure Mistake", "body": "TSP/rollover timing, tax sequencing, and survivor-benefit elections are easy to get wrong — and the costliest ones can't be undone." },
+      { "title": "Too Much Noise, Too Little Trust", "body": "Jargon, product pitches, and conflicting opinions from “free dinner” seminars — and no time to sort out what actually applies to you." },
+      { "title": "A Probate Mess Waiting to Happen", "body": "Blended families and caregiving realities create gaps that can leave a spouse or kids exposed when beneficiaries and documents don't line up." }
+    ],
+    "transition": "When you can *see your numbers clearly*, retirement decisions stop feeling like landmines and start feeling like a plan."
+  },
+
+  "results": {
+    "eyebrow": "What You Can Achieve",
+    "title": "Turn What You've Built Into Income You *Can't Outlive*",
+    "intro": "Here's what pre-retirees walk away with inside The Clarity-First Retirement Income Blueprint.",
+    "items": [
+      { "icon": "🧾", "title": "Your Retirement Paycheck", "body": "See your future monthly income from pension + Social Security + TSP/IRA in plain English — a simple, defensible answer to “can I retire on my date?”" },
+      { "icon": "🗓️", "title": "A Decision Timeline", "body": "A 90-day and 12-month calendar for TSP/rollover timing, survivor elections, and Social Security so nothing time-sensitive gets missed." },
+      { "icon": "📉", "title": "Tax-Smart, Downturn-Ready", "body": "A withdrawal order that reduces taxes, plus income guardrails so a bad early market doesn't wreck the plan." },
+      { "icon": "🛡️", "title": "Family Protected", "body": "Beneficiaries aligned, estate plan coordinated, and survivor income handled — fewer “what if something happens” loose ends." }
+    ],
+    "stats": [
+      { "num": "On Your Date", "label": "Retire With Confidence", "desc": "A clear yes/no — and the income number that comes with it." },
+      { "num": "Tax-Smart", "label": "Withdrawal Order", "desc": "Draw income in a smarter sequence and keep more of what you've saved." },
+      { "num": "Education-First", "label": "No Hype, No Pressure", "desc": "You learn your options and choose what fits your family." }
+    ]
+  },
+
+  "distinction": {
+    "eyebrow": "The Core Distinction",
+    "title": "Another Seminar vs *A Plan You Understand*",
+    "left": {
+      "label": "The Usual Path",
+      "heading": "Noise & Product Pitches",
+      "points": ["Jargon and one-size-fits-all rules", "Pressure to buy a product", "No timeline for irreversible decisions", "Guessing on taxes and survivor elections", "Beneficiaries and estate left to chance"]
+    },
+    "right": {
+      "label": "Clarity-First Blueprint",
+      "heading": "Education, Then a Plan",
+      "points": ["Your numbers in plain English", "A decision calendar with guardrails", "Tax-smart withdrawal sequencing", "Downturn income protection", "Aligned beneficiaries and estate plan"]
+    },
+    "close": "You don't need another hot fund or pushy advisor. *You need a clear income and tax plan you actually understand* — and a quarterback to coordinate it."
+  },
+
+  "audience": {
+    "eyebrow": "Is This Right For You?",
+    "title": "Who This Is *Built For*",
+    "items": [
+      { "icon": "🏛️", "title": "Senior Federal Employees", "body": "GS-14/15 or SES who've been the dependable one for 25–30 years and now want a clean, confident retirement plan." },
+      { "icon": "🎖️", "title": "Separating Military (O-4 to O-6)", "body": "Within 12–24 months of filing, with a firm target date and decisions that can't be reversed." },
+      { "icon": "💵", "title": "TSP/401(k)-Heavy Savers", "body": "Household income $220K–$450K and investable assets $900K–$3.5M, plus pension eligibility and Social Security." },
+      { "icon": "👨‍👩‍👧", "title": "Family-Focused", "body": "Often a blended family, an adult child still financially connected, or an aging parent — and a spouse who wants certainty." }
+    ],
+    "notFor": "This isn't for early-career savers far from retirement, or anyone looking for product pitches and generic rules instead of a plan built around their numbers."
+  },
+
+  "offer": {
+    "eyebrow": "The System",
+    "title": "The Clarity-First Retirement *Income Blueprint*",
+    "intro": "A 7-step, education-first blueprint that turns scattered numbers into a retirement paycheck plan and a clear decision timeline.",
+    "tag": "7-Step Blueprint",
+    "offerTitle": "Your Retirement Paycheck, Built to Last",
+    "offerDesc": "From a clean baseline to a probate-resistant legacy, every step replaces guesswork with numbers you can defend — taught in plain English, at your pace.",
+    "deliverables": [
+      { "title": "1 · Retirement Readiness Snapshot", "desc": "Gather your date, benefits, accounts, pension, Social Security, debts, and spending into one clean baseline." },
+      { "title": "2 · Income Paycheck Draft", "desc": "Map your future monthly income from pension + Social Security + TSP/IRA so you can see it in plain English." },
+      { "title": "3 · Decision Timeline Guardrails", "desc": "A 90-day and 12-month calendar for TSP/rollover, survivor, and Social Security timing so nothing is missed." },
+      { "title": "4 · Tax-Smart Withdrawal Order", "desc": "A tax-aware withdrawal sequence — including where Roth conversions may fit — to keep more of your money." },
+      { "title": "5 · Market Downturn Plan", "desc": "Income guardrails that reduce sequence-of-returns risk so you keep paying yourself through volatility." },
+      { "title": "6 · Family Protection Alignment", "desc": "Review beneficiaries and protection needs — survivor income, living benefits, long-term care — to close the gaps." },
+      { "title": "7 · Legacy & Probate Shield", "desc": "Coordinate your estate path so accounts, beneficiaries, and documents all match the plan." }
+    ],
+    "stepsTitle": "How It Works",
+    "steps": [
+      { "title": "Get Your Snapshot", "body": "Start with your free Retirement Readiness Snapshot." },
+      { "title": "See Your Paycheck", "body": "Get a plain-English answer on whether you can retire on your date." },
+      { "title": "Lock Your Timeline", "body": "Map the time-sensitive decisions with clear guardrails." },
+      { "title": "Retire With Clarity", "body": "Execute with guidance and ongoing reviews — no pressure, no hype." }
+    ]
+  },
+
+  "faqs": [
+    { "q": "Will you try to sell me a product?", "a": "No. This is education-first. We start by getting your numbers clear so you can see your options and choose what fits your family — no fear-based pressure." },
+    { "q": "Can I really retire on my target date?", "a": "That's the first thing we answer. The Readiness Snapshot and Income Paycheck Draft give you a simple, defensible yes/no and the income number that comes with it." },
+    { "q": "What about my TSP and rollover timing?", "a": "Timing matters and some choices are hard to reverse. We build a decision calendar with guardrails so TSP/rollover, survivor elections, and Social Security are handled in the right order." },
+    { "q": "How do you reduce taxes in retirement?", "a": "We design a tax-aware withdrawal sequence across your accounts and identify where Roth conversions may fit, so you don't overpay or trigger avoidable brackets." },
+    { "q": "I have a blended family — can you help protect them?", "a": "Yes. We align beneficiaries, review survivor income and protection needs, and coordinate your estate path so your family isn't left with a probate mess." },
+    { "q": "What does the snapshot cost?", "a": "Your initial Retirement Readiness Snapshot is free, with no obligation." }
+  ],
+
+  "finalCta": {
+    "eyebrow": "One Step Away",
+    "headline": "Don't Learn Retirement the *Hard Way*",
+    "subhead": "If you're 12–24 months from your federal or military retirement date, let's map the decisions, the deadlines, and the dollars — in plain English — before the irreversible ones come due.",
+    "scarcity": "Only a few new planning slots open each month"
+  },
+
+  "lead": {
+    "mode": "ghl-form",
+    "ghlFormEmbed": "<div style=\"border:2px dashed var(--line);border-radius:10px;padding:44px 24px;text-align:center;color:var(--ink3);background:var(--off)\"><strong style=\"display:block;color:var(--ink);font-size:16px;margin-bottom:6px\">⟶ Your GHL Opt-In Form Embeds Here</strong>Build the lead opt-in form in GoHighLevel, copy its inline embed code, and paste it into <code>lead.ghlFormEmbed</code> in this config — then re-run the generator.</div>",
+    "successMessage": "Thanks! Check your email to get your Retirement Readiness Snapshot.",
+    "formEyebrow": "Take the First Step",
+    "formTitle": "Get Your *Free Retirement Readiness Snapshot*",
+    "formIntro": "Share a few details and we'll prepare your snapshot before your session — so the conversation is specific to your date, benefits, and family.",
+    "includes": [
+      "A plain-English answer on retiring by your date",
+      "Your projected retirement paycheck",
+      "A timeline for time-sensitive decisions",
+      "No cost, no jargon, no pressure"
+    ]
+  },
+
+  "seo": {
+    "title": "Danna Watkins — Free Retirement Readiness Snapshot for Federal & Military",
+    "description": "Clarity-first retirement income planning for senior federal employees and separating military. Know your retirement paycheck, decision timeline, and tax-smart withdrawal plan."
+  }
+}
