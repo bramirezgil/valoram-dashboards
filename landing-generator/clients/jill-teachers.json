@@ -6,12 +6,13 @@
     "tagline": "Tax-free retirement income strategies for Texas teachers.",
     "email": "",
     "address": "Texas",
-    "bookingUrl": "https://your-ghl-calendar-link.example.com",
+    "bookingUrl": "https://api.leadconnectorhq.com/widget/booking/jill-teachers",
+    "ghlUserId": "UDDVHgDkFy9SQWWBwaHu",
     "industry": "Retirement income planning for educators",
     "disclaimer": "Valoram Solutions provides advisory services through licensed professionals. All figures and examples are illustrative, are not a guarantee of future results, and do not constitute financial, tax, or legal advice. TRS benefits are determined by the Teacher Retirement System of Texas. Investing involves risk, including the possible loss of principal; guarantees are subject to the claims-paying ability of the issuing insurance company."
   },
   "brand": "valoram",
-  "theme": {},
+  "theme": { "brandColor": "#0B0D0D", "accentColor": "#FF7428", "font": "Poppins" },
 
   "hero": {
     "eyebrow": "◆ Free Financial Certainty Review for Texas Teachers",
@@ -130,6 +131,65 @@
       "A clear retirement-income timeline",
       "No cost and no obligation"
     ]
+  },
+
+  "resultsPage": {
+    "default": "qualified",
+    "segments": {
+      "priority": {
+        "eyebrow": "Priority Candidate",
+        "headline": "You're a *Priority Fit* — Let's Talk Before You Retire",
+        "subhead": "Your answers point to a time-sensitive opportunity — a near retirement date with TRS, pension-option, and rollover decisions coming due. Let's get you in with a retirement specialist for educators right away.",
+        "points": [
+          "A specialist who knows TRS and the Texas teacher's situation",
+          "Priority scheduling — often within 48 hours",
+          "We'll focus first on the time-sensitive TRS and pension-option choices"
+        ],
+        "ctaSub": "Priority scheduling · Virtual · No cost",
+        "embed": "<iframe src=\"https://api.leadconnectorhq.com/widget/booking/jill-teachers\" style=\"width:100%;border:none;overflow:hidden;min-height:640px;\" scrolling=\"no\"></iframe><script src=\"https://api.leadconnectorhq.com/js/form_embed.js\" type=\"text/javascript\"></script>",
+        "note": "Retiring from teaching soon? Mention your date when you book and we'll prioritize your session."
+      },
+      "qualified": {
+        "eyebrow": "You're a Strong Fit",
+        "headline": "Your Results Are In — Let's Build Your *Tax-Free Retirement Income Plan*",
+        "subhead": "Based on your answers, you're an excellent candidate for The Financial Certainty for Teachers System. Your next step is a complimentary Financial Certainty Review to close your TRS gap.",
+        "points": [
+          "We'll measure the gap between TRS and the paycheck you'll actually need",
+          "You'll see tax-free income options built for educators",
+          "You'll leave with clear, ranked next steps — no obligation"
+        ],
+        "ctaSub": "30 minutes · Virtual · No cost",
+        "embed": "<iframe src=\"https://api.leadconnectorhq.com/widget/booking/jill-teachers\" style=\"width:100%;border:none;overflow:hidden;min-height:640px;\" scrolling=\"no\"></iframe><script src=\"https://api.leadconnectorhq.com/js/form_embed.js\" type=\"text/javascript\"></script>",
+        "note": "Prefer to talk through your numbers first? Mention your assessment when you book."
+      },
+      "building": {
+        "eyebrow": "You're Building Toward Retirement",
+        "headline": "You've Got a Foundation — Let's *Close Your TRS Gap Before You Retire*",
+        "subhead": "Your answers show savings to work with and room to build the tax-free income TRS alone won't provide. The earlier you start, the more options you keep.",
+        "points": [
+          "See exactly how big your TRS-to-paycheck gap is",
+          "Build tax-free income to fill it",
+          "Protect against taxes and a rough market right before retirement"
+        ],
+        "ctaSub": "30 minutes · Virtual · No cost",
+        "embed": "<iframe src=\"https://api.leadconnectorhq.com/widget/booking/jill-teachers\" style=\"width:100%;border:none;overflow:hidden;min-height:640px;\" scrolling=\"no\"></iframe><script src=\"https://api.leadconnectorhq.com/js/form_embed.js\" type=\"text/javascript\"></script>",
+        "note": "Not sure where to start? The review gives you a prioritized first step."
+      },
+      "early": {
+        "eyebrow": "Thanks for Completing Your Assessment",
+        "headline": "Here's Your *Next Step*",
+        "subhead": "Based on your answers, a full planning engagement may not be the right fit just yet — but the earlier you start, the bigger the difference. Here are resources to help you prepare.",
+        "points": [
+          "A clear picture of where your retirement stands today",
+          "Plain-English education on TRS, 403(b), and tax-free income",
+          "An open door whenever you're ready"
+        ],
+        "ctaText": "Get the Free Teacher's Retirement Guide",
+        "ctaUrl": "REPLACE_WITH_LEAD_MAGNET_URL",
+        "ctaSub": "Instant access · No cost",
+        "note": "Questions in the meantime? We're glad to help when you're ready."
+      }
+    }
   },
 
   "seo": {
