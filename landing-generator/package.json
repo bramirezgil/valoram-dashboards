@@ -6,7 +6,9 @@
   "bin": { "landing-generate": "generate.js", "landing-copy": "ai-copy.js" },
   "scripts": {
     "build": "node generate.js --all",
-    "copy": "node ai-copy.js"
+    "copy": "node ai-copy.js",
+    "provision": "node ghl-calendars.js",
+    "provision:commit": "node ghl-calendars.js --commit --write-config --rebuild"
   },
   "optionalDependencies": {
     "@anthropic-ai/sdk": "^0.40.0"
