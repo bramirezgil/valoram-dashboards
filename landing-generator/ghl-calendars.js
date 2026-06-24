@@ -40,13 +40,13 @@ const { execFileSync } = require('child_process');
 const ROOT = __dirname;
 const CLIENTS = path.join(ROOT, 'clients');
 
-const API_BASE = process.env.GHL_API_BASE || 'https://services.leadconnector.com';
+const API_BASE = process.env.GHL_API_BASE || 'https://services.leadconnectorhq.com';
 const API_VERSION = process.env.GHL_API_VERSION || '2021-04-15';
 const TOKEN = process.env.GHL_TOKEN || '';
 const LOCATION_ID = process.env.GHL_LOCATION_ID || '';
 const DEFAULT_USER_ID = process.env.GHL_DEFAULT_USER_ID || '';
 // Public booking widget base (links render as <base>/widget/booking/<slug>).
-const BOOKING_BASE = process.env.GHL_BOOKING_BASE || 'https://api.leadconnector.com';
+const BOOKING_BASE = process.env.GHL_BOOKING_BASE || 'https://api.leadconnectorhq.com';
 
 // ───────────────────────── args ─────────────────────────
 const argv = process.argv.slice(2);
