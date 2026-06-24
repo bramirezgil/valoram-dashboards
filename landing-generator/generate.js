@@ -20,6 +20,7 @@ const path = require('path');
 const ROOT = __dirname;
 const TEMPLATE = path.join(ROOT, 'template', 'landing.html');
 const RESULTS_TEMPLATE = path.join(ROOT, 'template', 'results.html');
+const RESULTS_SCORED_TEMPLATE = path.join(ROOT, 'template', 'results-scored.html');
 const CLIENTS = path.join(ROOT, 'clients');
 const DIST = path.join(ROOT, 'dist');
 
@@ -245,10 +246,32 @@ function normalize(cfg) {
   c.hasTestimonials = c.testimonials.length > 0;
   c.hasFaqs = c.faqs.length > 0;
 
-  // optional results page (post-survey redirect, branches by ?segment=)
-  c.hasResultsPage = !!(c.resultsPage && c.resultsPage.segments);
-  if (c.hasResultsPage) {
-    const rp = c.resultsPage;
+  // optional results page — scored (?score=, numeric tiers) or segment (?segment=, named)
+  const rp = c.resultsPage;
+  if (rp && Array.isArray(rp.tiers)) {
+    // scored mode: survey redirects with ?score=<n>; the page picks the tier by band
+    c.hasResultsPage = true;
+    rp.scored = true;
+    rp.scoreParam = rp.scoreParam || 'score';
+    rp.tierList = rp.tiers.map((t) => ({
+      id: t.id,
+      min: t.min != null ? t.min : (t.minScore != null ? t.minScore : 0),
+      max: t.max != null ? t.max : (t.maxScore != null ? t.maxScore : 100),
+      label: t.label || '',
+      headlineHtml: markEm(t.headline || ''),
+      subheadline: t.subheadline || t.subhead || '',
+      interpretation: t.interpretation || '',
+      urgencyMessage: t.urgencyMessage || '',
+      nextSteps: t.nextSteps || [t.nextStep1, t.nextStep2, t.nextStep3].filter(Boolean),
+      ctaHeadline: t.ctaHeadline || '',
+      ctaSubtext: t.ctaSubtext || ''
+    }));
+    rp.calendarEmbed = rp.calendarEmbed || '';
+    rp.calendarHeadline = rp.calendarHeadline || '';
+    rp.calendarSubtext = rp.calendarSubtext || '';
+  } else if (rp && rp.segments) {
+    // legacy segment mode (?segment=<name>)
+    c.hasResultsPage = true;
     rp.defaultKey = rp.default || Object.keys(rp.segments)[0];
     rp.segmentList = Object.entries(rp.segments).map(([key, s]) => ({
       key,
@@ -262,6 +285,8 @@ function normalize(cfg) {
       note: s.note || '',
       embed: s.embed || ''
     }));
+  } else {
+    c.hasResultsPage = false;
   }
   return c;
 }
@@ -283,7 +308,8 @@ function build(configPath) {
 
   if (cfg.hasResultsPage) {
     const resultsOut = path.join(DIST, `${slug}-results.html`);
-    const rhtml = renderTemplate(RESULTS_TEMPLATE, cfg);
+    const tmpl = cfg.resultsPage && cfg.resultsPage.scored ? RESULTS_SCORED_TEMPLATE : RESULTS_TEMPLATE;
+    const rhtml = renderTemplate(tmpl, cfg);
     fs.writeFileSync(resultsOut, rhtml);
     console.log(`✓ ${path.relative(ROOT, resultsOut)}  (${(rhtml.length / 1024).toFixed(1)} KB)  ← results page`);
   }

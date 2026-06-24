@@ -134,62 +134,64 @@
   },
 
   "resultsPage": {
-    "default": "qualified",
-    "segments": {
-      "priority": {
-        "eyebrow": "Priority Candidate",
-        "headline": "You're a *Priority Fit* — Let's Talk Before You Retire",
-        "subhead": "Your answers point to a time-sensitive opportunity — a near retirement date with TRS, pension-option, and rollover decisions coming due. Let's get you in with a retirement specialist for educators right away.",
-        "points": [
-          "A specialist who knows TRS and the Texas teacher's situation",
-          "Priority scheduling — often within 48 hours",
-          "We'll focus first on the time-sensitive TRS and pension-option choices"
+    "scored": true,
+    "scoreParam": "score",
+    "tiers": [
+      {
+        "id": "high",
+        "min": 70,
+        "max": 100,
+        "label": "Action Needed Now",
+        "headline": "Your Score Signals It’s *Time to Build a Real Plan*",
+        "subheadline": "The gap between your current situation and a confident retirement is significant — but it’s still closeable with the right steps, starting now.",
+        "interpretation": "Your answers show retirement planning has been on the back burner while you’ve focused on your students and family — assuming TRS would handle the rest. You’re not alone. A Financial Certainty Review is the fastest way to see your real gap and a clear path forward.",
+        "urgencyMessage": "Waiting is the most expensive decision you can make right now. Every year without a plan costs you options, time, and compounding growth.",
+        "nextSteps": [
+          "Book your free Financial Certainty Review now — this is your starting line",
+          "Gather your TRS estimate and most recent 403(b)/457 statements",
+          "Come ready to see your real monthly gap and leave with a written next step"
         ],
-        "ctaSub": "Priority scheduling · Virtual · No cost",
-        "embed": "<iframe src=\"https://api.leadconnectorhq.com/widget/booking/jill-teachers\" style=\"width:100%;border:none;overflow:hidden;min-height:640px;\" scrolling=\"no\"></iframe><script src=\"https://api.leadconnectorhq.com/js/form_embed.js\" type=\"text/javascript\"></script>",
-        "note": "Retiring from teaching soon? Mention your date when you book and we'll prioritize your session."
+        "ctaHeadline": "Book Now — Let’s Build Your Plan",
+        "ctaSubtext": "Free. No obligation. Bring your TRS estimate."
       },
-      "qualified": {
-        "eyebrow": "You're a Strong Fit",
-        "headline": "Your Results Are In — Let's Build Your *Tax-Free Retirement Income Plan*",
-        "subhead": "Based on your answers, you're an excellent candidate for The Financial Certainty for Teachers System. Your next step is a complimentary Financial Certainty Review to close your TRS gap.",
-        "points": [
-          "We'll measure the gap between TRS and the paycheck you'll actually need",
-          "You'll see tax-free income options built for educators",
-          "You'll leave with clear, ranked next steps — no obligation"
+      {
+        "id": "mid",
+        "min": 40,
+        "max": 69,
+        "label": "Gaps to Close",
+        "headline": "Your Score Shows Real Gaps — and Real *Opportunity*",
+        "subheadline": "You’re not in crisis, but you have meaningful retirement income gaps that need a plan now — not later.",
+        "interpretation": "Your answers show you’re aware of the challenges but haven’t built a clear income strategy. This is the most common position for Texas educators 8–15 years from retirement — and this window is exactly when targeted planning makes the biggest difference.",
+        "urgencyMessage": "The gap between where you are and where you need to be is closeable — but only if you act during this window. Every year without a plan narrows your options.",
+        "nextSteps": [
+          "Get your TRS Gap Snapshot to see the exact monthly shortfall",
+          "Identify which levers — 403(b), 457, tax-free strategies — to prioritize",
+          "Build a sequence-of-returns guardrail before the critical 5-year window"
         ],
-        "ctaSub": "30 minutes · Virtual · No cost",
-        "embed": "<iframe src=\"https://api.leadconnectorhq.com/widget/booking/jill-teachers\" style=\"width:100%;border:none;overflow:hidden;min-height:640px;\" scrolling=\"no\"></iframe><script src=\"https://api.leadconnectorhq.com/js/form_embed.js\" type=\"text/javascript\"></script>",
-        "note": "Prefer to talk through your numbers first? Mention your assessment when you book."
+        "ctaHeadline": "Let’s Close Your Gaps — Book Your Review",
+        "ctaSubtext": "Your Financial Certainty Review is free, with no obligation."
       },
-      "building": {
-        "eyebrow": "You're Building Toward Retirement",
-        "headline": "You've Got a Foundation — Let's *Close Your TRS Gap Before You Retire*",
-        "subhead": "Your answers show savings to work with and room to build the tax-free income TRS alone won't provide. The earlier you start, the more options you keep.",
-        "points": [
-          "See exactly how big your TRS-to-paycheck gap is",
-          "Build tax-free income to fill it",
-          "Protect against taxes and a rough market right before retirement"
+      {
+        "id": "low",
+        "min": 0,
+        "max": 39,
+        "label": "Strong Foundation",
+        "headline": "You’re in a *Strong Position* — Let’s Optimize It",
+        "subheadline": "Your score shows solid retirement awareness. Here’s how to turn that foundation into a tax-free income plan.",
+        "interpretation": "Your responses indicate you’ve done meaningful planning and have real awareness of your retirement picture. Most teachers at your level still have 2–3 leverage points they haven’t optimized — usually in tax-free income sequencing or sequence-of-returns protection. A focused review shows exactly where the remaining gaps are.",
+        "urgencyMessage": "Even strong plans drift without a clear income timeline. The next step is turning your awareness into a written, step-by-step action plan before your retirement window closes.",
+        "nextSteps": [
+          "Schedule your Financial Certainty Review to finalize your income timeline",
+          "Review your 403(b)/457 allocation for sequence-of-returns risk",
+          "Confirm beneficiaries and legacy documents are current"
         ],
-        "ctaSub": "30 minutes · Virtual · No cost",
-        "embed": "<iframe src=\"https://api.leadconnectorhq.com/widget/booking/jill-teachers\" style=\"width:100%;border:none;overflow:hidden;min-height:640px;\" scrolling=\"no\"></iframe><script src=\"https://api.leadconnectorhq.com/js/form_embed.js\" type=\"text/javascript\"></script>",
-        "note": "Not sure where to start? The review gives you a prioritized first step."
-      },
-      "early": {
-        "eyebrow": "Thanks for Completing Your Assessment",
-        "headline": "Here's Your *Next Step*",
-        "subhead": "Based on your answers, a full planning engagement may not be the right fit just yet — but the earlier you start, the bigger the difference. Here are resources to help you prepare.",
-        "points": [
-          "A clear picture of where your retirement stands today",
-          "Plain-English education on TRS, 403(b), and tax-free income",
-          "An open door whenever you're ready"
-        ],
-        "ctaText": "Get the Free Teacher's Retirement Guide",
-        "ctaUrl": "REPLACE_WITH_LEAD_MAGNET_URL",
-        "ctaSub": "Instant access · No cost",
-        "note": "Questions in the meantime? We're glad to help when you're ready."
+        "ctaHeadline": "Book Your Complimentary Review",
+        "ctaSubtext": "Let’s map the final optimizations and lock in your plan."
       }
-    }
+    ],
+    "calendarEmbed": "<iframe src=\"https://api.leadconnectorhq.com/widget/booking/jill-teachers\" style=\"width:100%;border:none;overflow:hidden;min-height:640px;\" scrolling=\"no\"></iframe><script src=\"https://api.leadconnectorhq.com/js/form_embed.js\" type=\"text/javascript\"></script>",
+    "calendarHeadline": "Book Your Free Financial Certainty Review",
+    "calendarSubtext": "Choose a time that works. Come with your TRS estimate and most recent account statements."
   },
 
   "seo": {

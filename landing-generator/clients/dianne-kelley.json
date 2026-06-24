@@ -134,62 +134,64 @@
   },
 
   "resultsPage": {
-    "default": "qualified",
-    "segments": {
-      "priority": {
-        "eyebrow": "Priority Candidate",
-        "headline": "You're a *Priority Fit* — Let's Map Your Exit This Week",
-        "subhead": "Your answers point to a time-sensitive opportunity — a near-term sale or transition with significant enterprise value on the table. Let's get you in with a senior exit strategist right away, before the irreversible decisions come due.",
-        "points": [
-          "A senior exit strategist will personally review your situation",
-          "Priority scheduling — often within 48 hours",
-          "We'll focus first on the most time-sensitive tax and deal-structure moves"
+    "scored": true,
+    "scoreParam": "score",
+    "tiers": [
+      {
+        "id": "high",
+        "min": 70,
+        "max": 100,
+        "label": "Action Needed Now",
+        "headline": "Your Score Signals It’s *Time to Build Your Exit Plan*",
+        "subheadline": "The gap between where your business stands and a clean, tax-smart exit is significant — but it’s still closeable with the right moves, starting now.",
+        "interpretation": "Your answers show exit planning has been on the back burner while you run the business. You’re not alone — most owners assume the sale will “work itself out,” then lose six and seven figures to taxes, weak diligence, and rushed deals. A clarity call is the fastest way to see your real number and a path forward.",
+        "urgencyMessage": "Waiting is the most expensive decision you can make. Every year without a plan costs you options, value, and negotiating leverage when a buyer finally shows up.",
+        "nextSteps": [
+          "Book your Tax-Smart Exit Clarity Call now — this is your starting line",
+          "Gather recent financials and any offers or valuations you’ve received",
+          "Come ready to see your defendable valuation range and after-tax net"
         ],
-        "ctaSub": "Priority scheduling · Virtual · No cost",
-        "embed": "<iframe src=\"https://api.leadconnectorhq.com/widget/booking/dianne-kelley\" style=\"width:100%;border:none;overflow:hidden;min-height:640px;\" scrolling=\"no\"></iframe><script src=\"https://api.leadconnectorhq.com/js/form_embed.js\" type=\"text/javascript\"></script>",
-        "note": "Already have an offer on the table? Mention it when you book and we'll prioritize your session."
+        "ctaHeadline": "Book Now — Let’s Build Your Exit Plan",
+        "ctaSubtext": "Free. No obligation. Bring your latest financials."
       },
-      "qualified": {
-        "eyebrow": "You're a Strong Fit",
-        "headline": "Your Results Are In — Let's Build Your *Tax-Smart Exit Plan*",
-        "subhead": "Based on your answers, you're an excellent candidate for The Tax-Smart Exit & Retirement Certainty System. Your next step is a complimentary clarity call with an exit specialist.",
-        "points": [
-          "We'll review your defendable valuation range together",
-          "You'll see your real after-tax net-proceeds picture",
-          "You'll leave with clear, ranked next steps — no obligation"
+      {
+        "id": "mid",
+        "min": 40,
+        "max": 69,
+        "label": "Gaps to Close",
+        "headline": "Your Score Shows Real Gaps — and Real *Opportunity*",
+        "subheadline": "You’re not in crisis, but you have meaningful gaps between today’s business and a defendable, tax-smart exit — and now is the window to close them.",
+        "interpretation": "Your answers show you’re aware of the challenges but haven’t built a coordinated plan yet. This is the most common position for owners 12–36 months from an exit. The good news: this window is exactly when value-building and tax planning make the biggest difference.",
+        "urgencyMessage": "The gap between where you are and a clean exit is closeable — but only if you act during this window. Every year without a plan narrows your options.",
+        "nextSteps": [
+          "Get your defendable valuation range and after-tax net picture",
+          "Identify which value drivers and risk gaps to prioritize first",
+          "Build a 12–36 month roadmap before you go to market"
         ],
-        "ctaSub": "30 minutes · Virtual · No cost",
-        "embed": "<iframe src=\"https://api.leadconnectorhq.com/widget/booking/dianne-kelley\" style=\"width:100%;border:none;overflow:hidden;min-height:640px;\" scrolling=\"no\"></iframe><script src=\"https://api.leadconnectorhq.com/js/form_embed.js\" type=\"text/javascript\"></script>",
-        "note": "Prefer to talk through your situation first? Mention your assessment when you book."
+        "ctaHeadline": "Let’s Close Your Gaps — Book Your Clarity Call",
+        "ctaSubtext": "Your Tax-Smart Exit Clarity Call is free, with no obligation."
       },
-      "building": {
-        "eyebrow": "You're Building Toward Your Exit",
-        "headline": "You've Got Real Value to Protect — Let's *Raise It Before You Sell*",
-        "subhead": "Your answers show a solid business with room to increase value and reduce the risks buyers discount. The best exits are built years in advance — starting now keeps more options and more money on the table.",
-        "points": [
-          "Find the value drivers buyers actually pay for",
-          "Fix the gaps that get discounted in diligence — owner dependency, customer concentration, weak financials",
-          "Get a 12–36 month roadmap with milestones and quarterly reviews"
+      {
+        "id": "low",
+        "min": 0,
+        "max": 39,
+        "label": "Strong Foundation",
+        "headline": "You’re in a *Strong Position* — Let’s Optimize It",
+        "subheadline": "Your score shows solid exit readiness. Here’s how to turn that foundation into a defendable, tax-smart exit on your terms.",
+        "interpretation": "Your responses indicate you’ve done meaningful planning and understand your exit picture. Most owners at your level still have 2–3 leverage points they haven’t optimized — usually in deal structure, tax sequencing, or reducing owner dependency. A focused review shows exactly where the remaining value is.",
+        "urgencyMessage": "Even strong plans drift without a clear timeline. The next step is turning your readiness into a written, milestone-based exit plan before a buyer ever shows up.",
+        "nextSteps": [
+          "Schedule your Clarity Call to finalize your exit timeline",
+          "Pressure-test your valuation and after-tax net assumptions",
+          "Confirm succession, estate, and family-fairness pieces are aligned"
         ],
-        "ctaSub": "30 minutes · Virtual · No cost",
-        "embed": "<iframe src=\"https://api.leadconnectorhq.com/widget/booking/dianne-kelley\" style=\"width:100%;border:none;overflow:hidden;min-height:640px;\" scrolling=\"no\"></iframe><script src=\"https://api.leadconnectorhq.com/js/form_embed.js\" type=\"text/javascript\"></script>",
-        "note": "Not sure where to start? The call will give you a prioritized first 90 days."
-      },
-      "early": {
-        "eyebrow": "Thanks for Completing Your Assessment",
-        "headline": "Here's Your *Next Step*",
-        "subhead": "Based on your answers, a full exit engagement may not be the right fit just yet — but the best exits are built years in advance. Here are resources to help you prepare for the window ahead.",
-        "points": [
-          "A clear picture of where your business stands today",
-          "Plain-English education on the 8 value drivers buyers reward",
-          "An open door whenever your timeline moves up"
-        ],
-        "ctaText": "Get the Free Exit-Readiness Guide",
-        "ctaUrl": "REPLACE_WITH_LEAD_MAGNET_URL",
-        "ctaSub": "Instant access · No cost",
-        "note": "Questions in the meantime? We're glad to help when you're ready."
+        "ctaHeadline": "Book Your Complimentary Clarity Call",
+        "ctaSubtext": "Let’s map the final optimizations and lock in your plan."
       }
-    }
+    ],
+    "calendarEmbed": "<iframe src=\"https://api.leadconnectorhq.com/widget/booking/dianne-kelley\" style=\"width:100%;border:none;overflow:hidden;min-height:640px;\" scrolling=\"no\"></iframe><script src=\"https://api.leadconnectorhq.com/js/form_embed.js\" type=\"text/javascript\"></script>",
+    "calendarHeadline": "Book Your Tax-Smart Exit Clarity Call",
+    "calendarSubtext": "Choose a time that works. Come with your latest financials and any offers or valuations you’ve received."
   },
 
   "seo": {
