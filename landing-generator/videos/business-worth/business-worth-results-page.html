@@ -296,13 +296,16 @@ section { width: 100%; }
 <!-- ══════════════════════════════════════════════════ -->
 <section class="valuation-range">
   <div class="container">
-    <div class="range-label fade-up">Typical Ranges By Tier</div>
-    <h2 class="range-headline fade-up" style="transition-delay:0.06s" id="rangeHeadline">Your Business Valuation Estimate</h2>
+    <div class="range-label fade-up">Where You Rank</div>
+    <h2 class="range-headline fade-up" style="transition-delay:0.06s" id="rangeHeadline">Where Your Business Ranks Today</h2>
     <p class="range-sub fade-up" style="transition-delay:0.10s">
-      Business valuations are typically expressed as a multiple of annual revenue or EBITDA. The ranges below are general reference points for where businesses at each readiness tier tend to land — not a valuation of your business. Your own number isn't calculated from this scorecard; we build it with you on your strategy call. All figures are illustrative only.
+      Each tier reflects how buyers, lenders, and investors would view a business like yours. The one thing this scorecard won't tell you is your exact number — that's what we calculate with you, live, on your free strategy call.
     </p>
     <div class="range-cards fade-up" style="transition-delay:0.14s" id="rangeCards">
       <!-- populated by JS -->
+    </div>
+    <div class="fade-up" style="transition-delay:0.2s; margin-top:40px;">
+      <a href="#calendar" class="hero-book-btn">Book My Call &amp; Get My Number &rarr;</a>
     </div>
   </div>
 </section>
@@ -530,8 +533,10 @@ function renderRangeCards(userTier) {
     html += '<div class="range-card' + (isFeatured ? ' featured' : '') + '">';
     if (isFeatured) html += '<div class="range-card-inner">';
     html += '<div class="range-tier-name">' + t.name + '</div>';
-    html += '<div class="range-value">' + t.val + '</div>';
-    html += '<div class="range-pts">' + t.mult + ' · ' + t.pts + ' pts</div>';
+    if (isFeatured) {
+      html += '<div class="range-value" style="font-size:16px; line-height:1.35;">Your number is<br>revealed on your call</div>';
+    }
+    html += '<div class="range-pts">' + t.pts + ' pts</div>';
     if (isFeatured) html += '</div>';
     html += '</div>';
   });
