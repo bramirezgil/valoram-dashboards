@@ -1,0 +1,54 @@
+=== SURVEY SPEC: Dianne Kelley ===
+Niche: Established Business Owners ($3M–$10M)
+
+Build this survey in GHL → Sites → Surveys → New Survey.
+Enable per-answer scoring with the point values below.
+Set completion redirect to:  https://YOUR-DOMAIN/dianne-kelley-results.html?score={{contact.score}}
+Max possible score: 295  (the results page normalizes this to 0–100)
+
+Q1: How soon do you plan to sell or transition out of your business?
+  A) 5+ years away — 10 pts
+  B) 3–5 years — 25 pts
+  C) 1–3 years — 35 pts
+  D) Under 12 months — 45 pts
+
+Q2: How would you describe your current exit plan?
+  A) A written, tax-smart plan with someone quarterbacking it — 5 pts
+  B) A general idea but nothing written down — 20 pts
+  C) I plan to sell when the time feels right — 35 pts
+  D) No real exit plan yet — 45 pts
+
+Q3: Do you know what your business is actually worth — and what you'd net after taxes and fees?
+  A) Yes — a defendable valuation range and my real after-tax net — 5 pts
+  B) I've done a rough estimate — 15 pts
+  C) Not yet, but I plan to — 30 pts
+  D) No — I really have no idea — 45 pts
+
+Q4: If you went to market tomorrow, how buyer-ready is your business (financials, owner dependency, customer concentration)?
+  A) Diligence-ready — clean financials, runs without me — 5 pts
+  B) Mostly ready, a few items to tidy up — 15 pts
+  C) Some real gaps to close — 25 pts
+  D) Heavily dependent on me day to day — 35 pts
+
+Q5: How much of your net worth is tied up in the business?
+  A) Under 30% — 5 pts
+  B) 30–50% — 20 pts
+  C) 50–70% — 35 pts
+  D) 70% or more — 45 pts
+
+Q6: Do you have a tax strategy for the proceeds when you sell?
+  A) Yes — I work with a pro on deal-and-tax structure — 5 pts
+  B) I know strategies exist but haven't set one up — 20 pts
+  C) I haven't thought much about taxes on the sale — 35 pts
+  D) Taxes on the sale are my biggest worry — 45 pts
+
+Q7: Are succession, estate, and family-fairness plans documented and current?
+  A) Yes — everything is organized and current — 5 pts
+  B) Some things are in order but not everything — 15 pts
+  C) It's on my list but I haven't gotten to it — 25 pts
+  D) This is a real blind spot — nothing is organized — 35 pts
+
+SCORE TIERS (by % of max — high % = more urgency):
+  0–39%:    Strong Foundation (optimization messaging)
+  40–69%:   Gaps to Close (action messaging)
+  70–100%:  Action Needed Now (urgency messaging)

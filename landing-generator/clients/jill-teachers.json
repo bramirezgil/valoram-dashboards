@@ -13,6 +13,15 @@
   },
   "brand": "valoram",
   "theme": { "brandColor": "#101820", "accentColor": "#F8964C", "font": "Poppins" },
+  "survey": {"framework":"retirement"},
+  "niche": {
+    "label": "Texas Public School Educators",
+    "retireFrom": "teaching",
+    "retirementSystem": "TRS",
+    "retirementSystemVs": "your TRS check",
+    "accountTypes": "your 403(b), 457, IRA, and other accounts",
+    "marketWindow": "5–10 years"
+  },
 
   "hero": {
     "eyebrow": "◆ Free Financial Certainty Review for Texas Teachers",

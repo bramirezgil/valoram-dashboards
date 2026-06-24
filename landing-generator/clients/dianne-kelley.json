@@ -13,6 +13,11 @@
   },
   "brand": "valoram",
   "theme": { "brandColor": "#101820", "accentColor": "#F8964C", "font": "Poppins" },
+  "survey": {"framework":"exit"},
+  "niche": {
+    "label": "Established Business Owners ($3M–$10M)",
+    "businessType": "business"
+  },
 
   "hero": {
     "eyebrow": "◆ Free Tax-Smart Exit Clarity Call",

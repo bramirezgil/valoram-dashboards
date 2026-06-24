@@ -1,0 +1,54 @@
+=== SURVEY SPEC: Jill Espino ===
+Niche: Texas Public School Educators
+
+Build this survey in GHL → Sites → Surveys → New Survey.
+Enable per-answer scoring with the point values below.
+Set completion redirect to:  https://YOUR-DOMAIN/jill-teachers-results.html?score={{contact.score}}
+Max possible score: 295  (the results page normalizes this to 0–100)
+
+Q1: How many years until your planned retirement from teaching?
+  A) 15+ years — 10 pts
+  B) 8–15 years — 25 pts
+  C) 3–7 years — 35 pts
+  D) Under 3 years — 45 pts
+
+Q2: How would you describe your current retirement income plan?
+  A) I have a clear written plan with a tax-smart income strategy — 5 pts
+  B) I have a general idea but nothing written down — 20 pts
+  C) I'm mostly counting on TRS and hoping it works out — 35 pts
+  D) I honestly don't know where I stand — 45 pts
+
+Q3: Have you calculated what your TRS check will actually replace vs. your current take-home pay?
+  A) Yes — I know my exact monthly gap — 5 pts
+  B) I've done a rough estimate — 15 pts
+  C) Not yet, but I've been meaning to — 30 pts
+  D) No — and honestly I've been avoiding it — 45 pts
+
+Q4: How much do you have saved across your 403(b), 457, IRA, and other accounts?
+  A) $600,000 or more — 5 pts
+  B) $300,000–$600,000 — 15 pts
+  C) $150,000–$300,000 — 25 pts
+  D) Under $150,000 — 35 pts
+
+Q5: How worried are you about a market drop in the 5–10 years before or after you retire?
+  A) Not worried — I have a plan that doesn't depend on the market — 5 pts
+  B) Somewhat worried — 20 pts
+  C) Very worried — it's a real concern — 35 pts
+  D) It keeps me up at night thinking about bad timing — 45 pts
+
+Q6: Do you have a tax strategy for your retirement income beyond TRS?
+  A) Yes — I work with someone on tax-smart income strategies — 5 pts
+  B) I know strategies exist but haven't set one up — 20 pts
+  C) I haven't thought much about taxes in retirement — 35 pts
+  D) Taxes in retirement are my biggest financial fear — 45 pts
+
+Q7: Are your beneficiaries, estate documents, and legacy plan current and organized?
+  A) Yes — everything is up to date and organized — 5 pts
+  B) Some things are in order but not everything — 15 pts
+  C) It's on my list but I haven't gotten to it — 25 pts
+  D) This is a real blind spot — nothing is organized — 35 pts
+
+SCORE TIERS (by % of max — high % = more urgency):
+  0–39%:    Strong Foundation (optimization messaging)
+  40–69%:   Gaps to Close (action messaging)
+  70–100%:  Action Needed Now (urgency messaging)

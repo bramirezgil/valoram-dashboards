@@ -269,6 +269,11 @@ function normalize(cfg) {
     rp.calendarEmbed = rp.calendarEmbed || '';
     rp.calendarHeadline = rp.calendarHeadline || '';
     rp.calendarSubtext = rp.calendarSubtext || '';
+    // raw survey points get normalized to 0-100 on the results page using scoreMax
+    if (rp.scoreMax == null) {
+      const qs = buildSurveyQuestions(c);
+      rp.scoreMax = qs ? surveyScoreMax(qs) : 100;
+    }
   } else if (rp && rp.segments) {
     // legacy segment mode (?segment=<name>)
     c.hasResultsPage = true;
@@ -296,6 +301,95 @@ function renderTemplate(file, cfg) {
   return render(parse(tokenize(fs.readFileSync(file, 'utf8'))), [cfg]);
 }
 
+// ───────────────────────── survey framework + spec ───────────────────────────
+// Each framework returns the 7 niche-rewritten questions with per-answer points.
+// Categories/point logic are identical across frameworks (per the handoff); only
+// the wording changes by niche. Higher total = more urgency/need.
+const SURVEY_FRAMEWORKS = {
+  retirement(n) {
+    const sys = n.retirementSystem || 'your pension';
+    const sysVs = n.retirementSystemVs || sys;
+    const accts = n.accountTypes || 'your retirement accounts';
+    const win = n.marketWindow || '5–10 years';
+    const from = n.retireFrom ? ` from ${n.retireFrom}` : '';
+    return [
+      { q: `How many years until your planned retirement${from}?`,
+        a: [['15+ years', 10], ['8–15 years', 25], ['3–7 years', 35], ['Under 3 years', 45]] },
+      { q: 'How would you describe your current retirement income plan?',
+        a: [['I have a clear written plan with a tax-smart income strategy', 5], ['I have a general idea but nothing written down', 20], [`I'm mostly counting on ${sys} and hoping it works out`, 35], ["I honestly don't know where I stand", 45]] },
+      { q: `Have you calculated what ${sysVs} will actually replace vs. your current take-home pay?`,
+        a: [['Yes — I know my exact monthly gap', 5], ["I've done a rough estimate", 15], ["Not yet, but I've been meaning to", 30], ["No — and honestly I've been avoiding it", 45]] },
+      { q: `How much do you have saved across ${accts}?`,
+        a: [['$600,000 or more', 5], ['$300,000–$600,000', 15], ['$150,000–$300,000', 25], ['Under $150,000', 35]] },
+      { q: `How worried are you about a market drop in the ${win} before or after you retire?`,
+        a: [["Not worried — I have a plan that doesn't depend on the market", 5], ['Somewhat worried', 20], ["Very worried — it's a real concern", 35], ['It keeps me up at night thinking about bad timing', 45]] },
+      { q: `Do you have a tax strategy for your retirement income beyond ${sys}?`,
+        a: [['Yes — I work with someone on tax-smart income strategies', 5], ["I know strategies exist but haven't set one up", 20], ["I haven't thought much about taxes in retirement", 35], ['Taxes in retirement are my biggest financial fear', 45]] },
+      { q: 'Are your beneficiaries, estate documents, and legacy plan current and organized?',
+        a: [['Yes — everything is up to date and organized', 5], ['Some things are in order but not everything', 15], ["It's on my list but I haven't gotten to it", 25], ['This is a real blind spot — nothing is organized', 35]] },
+    ];
+  },
+  exit(n) {
+    const biz = n.businessType || 'business';
+    return [
+      { q: `How soon do you plan to sell or transition out of your ${biz}?`,
+        a: [['5+ years away', 10], ['3–5 years', 25], ['1–3 years', 35], ['Under 12 months', 45]] },
+      { q: 'How would you describe your current exit plan?',
+        a: [['A written, tax-smart plan with someone quarterbacking it', 5], ['A general idea but nothing written down', 20], ['I plan to sell when the time feels right', 35], ['No real exit plan yet', 45]] },
+      { q: `Do you know what your ${biz} is actually worth — and what you'd net after taxes and fees?`,
+        a: [['Yes — a defendable valuation range and my real after-tax net', 5], ["I've done a rough estimate", 15], ['Not yet, but I plan to', 30], ['No — I really have no idea', 45]] },
+      { q: `If you went to market tomorrow, how buyer-ready is your ${biz} (financials, owner dependency, customer concentration)?`,
+        a: [['Diligence-ready — clean financials, runs without me', 5], ['Mostly ready, a few items to tidy up', 15], ['Some real gaps to close', 25], ['Heavily dependent on me day to day', 35]] },
+      { q: `How much of your net worth is tied up in the ${biz}?`,
+        a: [['Under 30%', 5], ['30–50%', 20], ['50–70%', 35], ['70% or more', 45]] },
+      { q: 'Do you have a tax strategy for the proceeds when you sell?',
+        a: [['Yes — I work with a pro on deal-and-tax structure', 5], ["I know strategies exist but haven't set one up", 20], ["I haven't thought much about taxes on the sale", 35], ['Taxes on the sale are my biggest worry', 45]] },
+      { q: 'Are succession, estate, and family-fairness plans documented and current?',
+        a: [['Yes — everything is organized and current', 5], ['Some things are in order but not everything', 15], ["It's on my list but I haven't gotten to it", 25], ['This is a real blind spot — nothing is organized', 35]] },
+    ];
+  },
+};
+
+function buildSurveyQuestions(cfg) {
+  const fw = cfg.survey && cfg.survey.framework;
+  if (!fw || !SURVEY_FRAMEWORKS[fw]) return null;
+  return SURVEY_FRAMEWORKS[fw](cfg.niche || {});
+}
+
+function surveyScoreMax(questions) {
+  return questions.reduce((sum, q) => sum + Math.max(...q.a.map((o) => o[1])), 0);
+}
+
+function writeSurveySpec(cfg, slug) {
+  const questions = buildSurveyQuestions(cfg);
+  if (!questions) return null;
+  const max = surveyScoreMax(questions);
+  const name = (cfg.business && cfg.business.name) || slug;
+  const niche = (cfg.niche && cfg.niche.label) || (cfg.business && cfg.business.industry) || '';
+  const L = [];
+  L.push(`=== SURVEY SPEC: ${name} ===`);
+  if (niche) L.push(`Niche: ${niche}`);
+  L.push('');
+  L.push('Build this survey in GHL → Sites → Surveys → New Survey.');
+  L.push('Enable per-answer scoring with the point values below.');
+  L.push(`Set completion redirect to:  https://YOUR-DOMAIN/${slug}-results.html?score={{contact.score}}`);
+  L.push(`Max possible score: ${max}  (the results page normalizes this to 0–100)`);
+  L.push('');
+  questions.forEach((q, i) => {
+    L.push(`Q${i + 1}: ${q.q}`);
+    q.a.forEach((o, j) => L.push(`  ${String.fromCharCode(65 + j)}) ${o[0]} — ${o[1]} pts`));
+    L.push('');
+  });
+  L.push('SCORE TIERS (by % of max — high % = more urgency):');
+  L.push('  0–39%:    Strong Foundation (optimization messaging)');
+  L.push('  40–69%:   Gaps to Close (action messaging)');
+  L.push('  70–100%:  Action Needed Now (urgency messaging)');
+  L.push('');
+  const out = path.join(DIST, `${slug}-survey-spec.txt`);
+  fs.writeFileSync(out, L.join('\n'));
+  return { out, max };
+}
+
 function build(configPath) {
   const cfg = normalize(JSON.parse(fs.readFileSync(configPath, 'utf8')));
   const slug = cfg.slug || path.basename(configPath, '.json');
@@ -313,6 +407,9 @@ function build(configPath) {
     fs.writeFileSync(resultsOut, rhtml);
     console.log(`✓ ${path.relative(ROOT, resultsOut)}  (${(rhtml.length / 1024).toFixed(1)} KB)  ← results page`);
   }
+
+  const spec = writeSurveySpec(cfg, slug);
+  if (spec) console.log(`✓ ${path.relative(ROOT, spec.out)}  (survey spec · max ${spec.max} pts)`);
   return landing;
 }
 

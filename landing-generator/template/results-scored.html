@@ -99,8 +99,11 @@ footer.site{background:var(--dark);color:rgba(243,245,248,.72);text-align:center
 <script>
 (function(){
   var param = "{{resultsPage.scoreParam}}" || "score";
+  var scoreMax = parseInt("{{resultsPage.scoreMax}}", 10) || 100;
   var raw = parseInt(new URLSearchParams(location.search).get(param), 10);
-  var score = isNaN(raw) ? 0 : Math.max(0, Math.min(100, raw));
+  raw = isNaN(raw) ? 0 : Math.max(0, raw);
+  // GHL emits the raw point total; normalize to a 0-100 percentage for tiering + display
+  var score = Math.max(0, Math.min(100, Math.round(raw / scoreMax * 100)));
   var tiers = Array.prototype.slice.call(document.querySelectorAll(".tier"));
   var match = null;
   tiers.forEach(function(t){
