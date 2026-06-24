@@ -257,7 +257,7 @@ section { width: 100%; }
   <div class="container">
     <div class="score-eyebrow fade-up">Your Business Worth Results</div>
     <p class="score-intro fade-up" style="transition-delay:0.06s">
-      Here's what your Business Worth Scorecard reveals about your business's current valuation position and exit readiness.
+      Here's a directional estimate of what your business is worth today — and the value drivers behind the number. Your precise valuation comes from a complimentary strategy call.
     </p>
 
     <!-- SCORE RING -->
@@ -299,7 +299,7 @@ section { width: 100%; }
     <div class="range-label fade-up">Estimated Valuation Range</div>
     <h2 class="range-headline fade-up" style="transition-delay:0.06s" id="rangeHeadline">Your Business Valuation Estimate</h2>
     <p class="range-sub fade-up" style="transition-delay:0.10s">
-      Business valuations are typically expressed as a multiple of annual revenue or EBITDA. The ranges below reflect where businesses at each exit-readiness tier typically trade. All figures are illustrative estimates only.
+      Business valuations are typically expressed as a multiple of annual revenue or EBITDA. The ranges below reflect where businesses at each readiness tier typically land. All figures are illustrative estimates only — not a formal appraisal.
     </p>
     <div class="range-cards fade-up" style="transition-delay:0.14s" id="rangeCards">
       <!-- populated by JS -->
@@ -315,7 +315,7 @@ section { width: 100%; }
     <div class="fade-up">
       <div class="section-eyebrow">Value-Building Opportunities</div>
       <h2 class="section-headline" id="oppHeadline">Where to focus to move your number</h2>
-      <p class="section-sub" id="oppSub">Based on your score, these are the highest-impact areas to address before your exit. Each one can meaningfully increase your valuation multiple.</p>
+      <p class="section-sub" id="oppSub">Based on your score, these are the highest-impact areas to work on. Each one can meaningfully increase what your business is worth.</p>
     </div>
     <div class="opp-grid" id="oppGrid">
       <!-- populated by JS based on tier -->
@@ -333,7 +333,7 @@ section { width: 100%; }
         Your score reveals where you stand — now let's map your path forward.
       </h2>
       <p class="bridge-sub">
-        Book a complimentary Business Worth Strategy Call to review your results with an advisor and build your personalized exit roadmap. No cost. No obligation. Just clarity.
+        Book a complimentary Business Worth Strategy Call to get your precise valuation and a personalized roadmap to grow it — whether you're planning to sell, raise capital, bring on a partner, or simply want to know your number. No cost. No obligation. Just clarity.
       </p>
       <a href="#calendar" class="book-btn">Book My Business Worth Strategy Call →</a>
     </div>
@@ -367,8 +367,8 @@ section { width: 100%; }
       </div>
       <div class="next-card fade-up" style="transition-delay:0.14s">
         <div class="next-num">2</div>
-        <h4>Map Your Exit Options</h4>
-        <p>We identify the exit paths that are realistic for your business — sale, succession, PE, or owner buyout — and what each looks like on your timeline.</p>
+        <h4>Map Your Options</h4>
+        <p>Whether your goal is growth, financing, a partner buy-in, succession, or an eventual sale, we identify the paths that are realistic for your business — and what each looks like on your timeline.</p>
       </div>
       <div class="next-card fade-up" style="transition-delay:0.20s">
         <div class="next-num">3</div>
@@ -410,20 +410,20 @@ var TIERS = [
   {
     name: 'Investor Grade',
     min: 95, max: 120,
-    desc: 'Your business is well-positioned for a strong exit. You have documented systems, low owner dependency, and diversified revenue. Minor optimizations could significantly increase your sale price.',
+    desc: 'Your business is genuinely valuable — documented systems, low owner dependency, and diversified revenue. Knowing your number gives you leverage in financing, partnerships, planning, and an eventual sale, and minor optimizations could push it meaningfully higher.',
     rangeHeadline: 'Your business is positioned in the top valuation tier',
     valRange: '$3M – $15M+',
     multiple: '4–8x EBITDA',
     opps: [
       { title: 'Maximize Your Multiple Before Sale', body: 'You\'re already in the top tier — the goal now is squeezing every point of value before going to market. Small improvements in margin and recurring revenue can shift your multiple significantly.', impact: 'High impact' },
-      { title: 'Formalize Your Exit Timeline', body: 'With strong fundamentals in place, the next step is defining your personal exit timeline and choosing between a full sale, PE partnership, or management buyout.', impact: 'Strategic priority' },
+      { title: 'Clarify Your Options', body: 'With strong fundamentals in place, the next step is knowing your precise number and the paths open to you — growth capital, a partner buy-in, succession, or a full sale — on your timeline.', impact: 'Strategic priority' },
       { title: 'Prepare Clean Financials', body: 'Buyers pay a premium for businesses with clean, audited financials going back 3 years. Start that process now if you haven\'t already.', impact: 'Deal-critical' },
     ]
   },
   {
     name: 'Value-Builder',
     min: 65, max: 94,
-    desc: 'Your business has solid fundamentals with clear opportunities to grow your valuation. Targeted improvements in 2–3 key areas could substantially increase your exit value.',
+    desc: 'Your business has solid fundamentals with clear opportunities to grow your valuation. Targeted improvements in 2–3 key areas could substantially increase what your business is worth.',
     rangeHeadline: 'Your business is in a strong position with room to grow',
     valRange: '$1.5M – $6M',
     multiple: '3–5x EBITDA',
@@ -436,12 +436,12 @@ var TIERS = [
   {
     name: 'Foundation Stage',
     min: 35, max: 64,
-    desc: 'Your business has real value, but there are critical gaps that reduce your valuation and exit options. A structured improvement plan now will make a major difference in 2–3 years.',
+    desc: 'Your business has real value, but there are critical gaps that reduce your valuation and your options. A structured improvement plan now will make a major difference in 2–3 years.',
     rangeHeadline: 'Your business has real value — with significant upside available',
     valRange: '$500K – $2.5M',
     multiple: '2–3x EBITDA',
     opps: [
-      { title: 'Address Customer Concentration', body: 'If one client represents a large share of your revenue, it creates deal risk. Diversifying your client base is one of the highest-leverage moves you can make before an exit.', impact: 'Critical' },
+      { title: 'Address Customer Concentration', body: 'If one client represents a large share of your revenue, it creates deal risk. Diversifying your client base is one of the highest-leverage moves you can make — whether you are growing, financing, or eventually selling.', impact: 'Critical' },
       { title: 'Build Recurring Revenue Streams', body: 'Your revenue is likely heavily transactional. Shifting to subscriptions, service contracts, or retainers is the single biggest lever for improving your valuation multiple.', impact: 'High impact' },
       { title: 'Create a Scalable Structure', body: 'Without systems and documented processes, your business is difficult to sell at any price. This is the foundational work that needs to happen first.', impact: 'Foundation priority' },
     ]
@@ -612,9 +612,9 @@ function init() {
   // Opp cards headline
   var oppHEl = document.getElementById('oppHeadline');
   if (oppHEl) {
-    if (tier.name === 'Investor Grade') oppHEl.textContent = 'Fine-tune your business for maximum sale value';
+    if (tier.name === 'Investor Grade') oppHEl.textContent = 'Fine-tune what your business is worth';
     else if (tier.name === 'Value-Builder') oppHEl.textContent = 'Close the gaps that are holding your valuation back';
-    else if (tier.name === 'Foundation Stage') oppHEl.textContent = 'The critical moves that will transform your exit options';
+    else if (tier.name === 'Foundation Stage') oppHEl.textContent = 'The critical moves that will transform what your business is worth';
     else oppHEl.textContent = 'Where to start building real business value';
   }
 
@@ -622,7 +622,7 @@ function init() {
   var oppSEl = document.getElementById('oppSub');
   if (oppSEl) {
     if (tier.name === 'Investor Grade') oppSEl.textContent = 'You\'re in a strong position. These targeted actions could add meaningfully to your final sale price.';
-    else oppSEl.textContent = 'Based on your score, these are the highest-impact areas to address before your exit. Each one can meaningfully increase your valuation multiple.';
+    else oppSEl.textContent = 'Based on your score, these are the highest-impact areas to work on. Each one can meaningfully increase what your business is worth.';
   }
 
   // Opp grid
