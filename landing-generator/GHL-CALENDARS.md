@@ -38,6 +38,32 @@ node ghl-calendars.js --commit --write-config --rebuild
 
 Other flags: `--client <file>` (limit to one), `--type round_robin|event|collective|class_booking|service_booking`, `--include-examples`.
 
+## Running inside Claude Code on the web (proxy gotchas)
+
+A local machine needs nothing extra. But web sessions run behind an egress
+proxy, and two things bite if you forget them:
+
+1. **Allowlist the GHL hosts, then start a _fresh_ session.** Add
+   `services.leadconnectorhq.com` and `api.leadconnectorhq.com` under the
+   environment's *Additional allowed domains*. A session's egress policy is
+   frozen when the session starts, so domains added mid-session don't take
+   effect until you open a new one.
+2. **Node's `fetch` ignores the proxy by default.** Run the script with the
+   proxy + CA env vars or every API call hangs:
+
+   ```bash
+   NODE_USE_ENV_PROXY=1 NODE_EXTRA_CA_CERTS=/root/.ccr/ca-bundle.crt \
+     node ghl-calendars.js                                      # preview
+   NODE_USE_ENV_PROXY=1 NODE_EXTRA_CA_CERTS=/root/.ccr/ca-bundle.crt \
+     node ghl-calendars.js --commit --write-config --rebuild    # for real
+   ```
+
+   (`NODE_USE_ENV_PROXY=1` needs Node ≥ 22.21; check `node --version`.)
+
+If the proxy returns `403` on `CONNECT` for a leadconnectorhq.com host, the
+allowlist hasn't taken effect for this session — open a new one. Diagnose with
+`curl -sS "$HTTPS_PROXY/__agentproxy/status"`.
+
 ## Per-agent overrides
 
 Add to a config's `business` block:
