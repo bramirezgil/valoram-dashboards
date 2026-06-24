@@ -30,7 +30,7 @@ const VALORAM_LOGO = (() => {
   catch { return ''; }
 })();
 const BRAND_PRESETS = {
-  valoram: { brandColor: '#0B0D0D', accentColor: '#FF7428', font: 'Poppins', logo: VALORAM_LOGO }
+  valoram: { brandColor: '#101820', accentColor: '#F8964C', font: 'Poppins', logo: VALORAM_LOGO }
 };
 
 // ───────────────────────── tiny mustache-ish template engine ─────────────────
