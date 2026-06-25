@@ -135,5 +135,51 @@
   "seo": {
     "title": "Dianne Kelley — Free Business Value & Clarity Call for Owners",
     "description": "Business valuation and tax-smart financial planning for US owners ($3M–$10M revenue). Know what your company is worth and the options it opens — clarity, leverage, growth, transition, or sale."
+  },
+
+  "resultsPage": {
+    "default": "qualified",
+    "segments": {
+      "priority": {
+        "eyebrow": "Your Results",
+        "headline": "You're in a *Strong Position* to Put Your Value to Work",
+        "subhead": "Based on your answers, your business has real, defendable value and you're ready to act on the options it opens — growth, leverage, transition, or a future sale.",
+        "points": [
+          "A defendable valuation range to build on",
+          "Clear leverage: financing, growth capital, or rewarding key people",
+          "Your business value mapped to your personal financial goals",
+          "A coordinated team aligned around one plan"
+        ],
+        "ctaText": "Book My Business Value & Clarity Call",
+        "ctaSub": "Complimentary · no obligation",
+        "note": "Bring your latest revenue and profit figures — we'll make the call specific to your numbers."
+      },
+      "qualified": {
+        "eyebrow": "Your Results",
+        "headline": "Let's Turn Your Number Into a *Clear Plan*",
+        "subhead": "You have a valuable business and real options — the next step is connecting that value to your financial picture so every decision is backed by numbers, not guesswork.",
+        "points": [
+          "A defendable valuation range for your company",
+          "The top value and risk drivers to focus on first",
+          "How your value supports growth, financing, retirement, or transition",
+          "A 90-day action plan with clear priorities"
+        ],
+        "ctaText": "Book My Business Value & Clarity Call",
+        "ctaSub": "Complimentary · no obligation"
+      },
+      "nurture": {
+        "eyebrow": "Your Results",
+        "headline": "Start With *Knowing Your Number*",
+        "subhead": "You're earlier in the journey — and that's the perfect time to get clarity. Knowing what your business is worth today gives you leverage and options long before you ever need them.",
+        "points": [
+          "See what your company is worth in today's market",
+          "Understand the 8 drivers that move your value",
+          "Learn how a valuation opens financing and growth options",
+          "No pressure — clarity first"
+        ],
+        "ctaText": "Book a Quick Clarity Call",
+        "ctaSub": "Complimentary · no obligation"
+      }
+    }
   }
 }
