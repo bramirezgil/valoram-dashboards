@@ -3,137 +3,137 @@
   "business": {
     "name": "Dianne Kelley",
     "logoUrl": "",
-    "tagline": "Tax-smart exit and retirement planning for established business owners.",
+    "tagline": "Business valuation and tax-smart financial planning for established owners.",
     "email": "",
     "address": "United States",
     "bookingUrl": "https://your-ghl-calendar-link.example.com",
-    "industry": "Exit & retirement planning for business owners",
-    "disclaimer": "Valoram Solutions provides advisory services through licensed professionals. All figures, valuation ranges, and examples are illustrative, are not a guarantee of future results, and do not constitute financial, tax, or legal advice. Business valuation outcomes depend on market conditions, deal structure, and buyer diligence. Consult your CPA and attorney before acting. Investing involves risk, including the possible loss of principal; guarantees are subject to the claims-paying ability of the issuing insurance company."
+    "industry": "Business valuation & financial planning for owners",
+    "disclaimer": "Valoram Solutions provides advisory services through licensed professionals. All figures, valuation ranges, and examples are illustrative, are not a guarantee of future results, and do not constitute financial, tax, or legal advice. Business valuation outcomes depend on market conditions, financing terms, and buyer diligence. Consult your CPA and attorney before acting. Investing involves risk, including the possible loss of principal; guarantees are subject to the claims-paying ability of the issuing insurance company."
   },
   "brand": "valoram",
   "theme": { "brandColor": "#2D0A4E", "accentColor": "#19B5A6", "font": "Poppins" },
 
   "hero": {
-    "eyebrow": "◆ Free Tax-Smart Exit Clarity Call",
-    "headline": "If You Got an Offer Tomorrow, Would You Know What You'd *Actually Keep*?",
-    "subhead": "For US business owners 52–67 running a $3M–$10M company and thinking about selling or transitioning in the next 12–36 months: get a defendable valuation range, a clear after-tax net-proceeds picture, and one coordinated plan — instead of siloed advisors and vague “you'll be fine” answers.",
+    "eyebrow": "◆ Free Business Value & Clarity Call",
+    "headline": "Do You Really Know What Your Business Is *Worth* — and What That Makes Possible?",
+    "subhead": "For US business owners 52–67 running a $3M–$10M company: get a defendable valuation and a clear view of how that value fits your whole financial picture — so you can grow it, borrow against it, reward key people, plan retirement, transition to family, or one day sell, all from a position of knowledge instead of guesswork.",
     "cta": "Book My Clarity Call"
   },
 
   "problem": {
     "eyebrow": "Why This Exists",
-    "title": "Most Owners Don't Have a Retirement Problem. They Have a *Coordination* Problem.",
+    "title": "Most Owners Can't Confidently Answer One Question: *What's It Worth?*",
     "items": [
-      { "title": "No One Is Quarterbacking", "body": "You have a CPA, attorney, banker, financial advisor, and insurance agent — but they each work their own lane and nobody owns the combined outcome." },
-      { "title": "Your Number Is Fuzzy", "body": "You don't know what the business is really worth, what buyers will scrutinize, or what you'll net after taxes, fees, and deal terms." },
-      { "title": "Succession & Family Fairness", "body": "If one child is in the business and others aren't, “equal” and “fair” aren't the same — and the wrong structure can strain cash flow or fracture the family." }
+      { "title": "Your Number Is Fuzzy", "body": "Without a real valuation, every major move — borrowing, investing, hiring, rewarding a key employee, transitioning, or selling — is a guess." },
+      { "title": "No One Connects the Dots", "body": "You have a CPA, attorney, banker, and financial advisor, but nobody ties your business value to your personal financial picture and goals." },
+      { "title": "Untapped Leverage", "body": "Your company is likely your largest asset — yet without clarity you can't fully use it for financing, growth capital, retirement income, or legacy." }
     ],
-    "transition": "The best exits are *built years in advance* — with a plan that raises value and reduces risk before a buyer ever shows up."
+    "transition": "Knowing your number isn't just for selling — it's the *foundation for every confident financial decision* you make."
   },
 
   "results": {
     "eyebrow": "What You Can Achieve",
-    "title": "Know Your Number, Keep More, and Exit on *Your Terms*",
-    "intro": "Here's what owners walk away with inside The Tax-Smart Exit & Retirement Certainty System.",
+    "title": "Turn a Clear Valuation Into *Clarity, Leverage, and Options*",
+    "intro": "Here's what owners walk away with inside The Tax-Smart Value & Certainty System.",
     "items": [
-      { "icon": "📊", "title": "A Defendable Valuation Range", "body": "See what your company is worth in today's market — and the specific drivers moving that number — using the Value Builder System." },
-      { "icon": "💵", "title": "Your Real After-Tax Net", "body": "Walk the line from sale price to what actually lands in your account, after taxes, fees, debt payoff, and working-capital adjustments." },
-      { "icon": "🛡️", "title": "Value Up, Risk Down", "body": "Fix the gaps buyers discount — owner dependency, customer concentration, weak financials — so your offer holds up under diligence." },
-      { "icon": "👪", "title": "A Fair Succession Plan", "body": "Map a transition for a child or key employee while protecting non-business children, your spouse, and long-term care needs." }
+      { "icon": "📊", "title": "A Defendable Valuation Range", "body": "Know what your company is worth in today's market — and the specific drivers moving that number — using the Value Builder System." },
+      { "icon": "🧭", "title": "Your Full Financial Picture", "body": "Connect business value to your personal net worth, income needs, and goals — so the company and your future finally line up on one page." },
+      { "icon": "🔑", "title": "Leverage the Asset", "body": "Use your value with confidence — access financing or growth capital, reward key people, fund retirement income, or strengthen your estate." },
+      { "icon": "🌅", "title": "Options, Not Pressure", "body": "Grow it, hold it, transition to a child or key employee, or sell — and choose the path that fits your life, on your timeline." }
     ],
     "stats": [
-      { "num": "$3M–$10M", "label": "Revenue Range We Serve", "desc": "Established owners with roughly $600K–$2.5M EBITDA and 50%+ of net worth tied up in the business." },
-      { "num": "8 Drivers", "label": "Value Builder System", "desc": "The eight drivers buyers actually pay for — measured, prioritized, and improved." },
-      { "num": "12–36 mo", "label": "Exit Roadmap", "desc": "A milestone-based plan with owners, deadlines, and quarterly reviews." }
+      { "num": "$3M–$10M", "label": "Revenue Range We Serve", "desc": "Established owners with roughly $600K–$2.5M EBITDA and much of their net worth tied up in the business." },
+      { "num": "8 Drivers", "label": "Value Builder System", "desc": "The eight drivers that determine what your company is worth — measured, prioritized, and improved." },
+      { "num": "Your Call", "label": "Grow · Leverage · Transition · Sell", "desc": "A clear number opens every option — and you decide which one is right." }
     ]
   },
 
   "distinction": {
     "eyebrow": "The Core Distinction",
-    "title": "Siloed Advice vs *One Coordinated Plan*",
+    "title": "Guessing at Value vs *Knowing Your Number*",
     "left": {
-      "label": "Siloed Advisors",
+      "label": "Without Clarity",
       "heading": "A Folder of Opinions",
-      "points": ["Each advisor stays in their lane", "Nobody owns the combined outcome", "“You'll be fine” instead of numbers", "Surprises in taxes and diligence", "You're the project manager of your own exit"]
+      "points": ["No real sense of what it's worth", "Business value disconnected from personal finances", "Big decisions made on gut feel", "Leverage and options left on the table", "Advisors each working their own lane"]
     },
     "right": {
-      "label": "Certainty System",
+      "label": "Value & Certainty System",
       "heading": "One Quarterback, One Plan",
-      "points": ["A defendable valuation range", "Clear after-tax net proceeds", "Value drivers and risk gaps prioritized", "Succession and family fairness mapped", "CPA, attorney, banker & FA aligned"]
+      "points": ["A defendable valuation range", "Business value tied to your full financial picture", "Confident decisions backed by numbers", "Financing, growth, and legacy options unlocked", "CPA, attorney, banker & FA aligned"]
     },
-    "close": "You don't need another opinion. *You need one integrated plan* — with numbers, milestones, and someone accountable for the result."
+    "close": "You don't need another opinion. *You need to know your number — and what it makes possible* — with a plan to act on it."
   },
 
   "audience": {
     "eyebrow": "Is This Right For You?",
     "title": "Who This Is *Built For*",
     "items": [
-      { "icon": "🏢", "title": "Founders & CEOs (52–67)", "body": "Owners of a stable, well-known company in a second-act planning window — sell in 12–36 months or transition to a successor." },
-      { "icon": "💼", "title": "$3M–$10M in Revenue", "body": "Roughly $600K–$2.5M EBITDA, with most of your net worth still tied up in the business." },
-      { "icon": "👨‍👩‍👧", "title": "Family on the Line", "body": "A potential successor child plus others who aren't in the business — creating fairness, estate, and cash-flow pressure." },
+      { "icon": "🏢", "title": "Founders & CEOs (52–67)", "body": "Owners of a stable, well-known company who want clarity on what they've built and what it can do for them." },
+      { "icon": "💼", "title": "$3M–$10M in Revenue", "body": "Roughly $600K–$2.5M EBITDA, with much of your net worth still tied up in the business." },
+      { "icon": "🧩", "title": "Weighing Your Options", "body": "Thinking about growth, financing, rewarding key people, family transition, or a future sale — and want the numbers before you choose." },
       { "icon": "🧭", "title": "Ready for a Real Plan", "body": "Decisive once you trust the process; you want numbers you can defend and a coordinated team — not guesswork." }
     ],
-    "notFor": "This isn't for early-stage owners with no real enterprise value yet, or owners who already have one cohesive, tax-smart exit plan with a quarterback in place."
+    "notFor": "This isn't for early-stage owners with no real enterprise value yet, or owners who already have a current valuation tied to a clear, coordinated financial plan."
   },
 
   "offer": {
     "eyebrow": "The System",
-    "title": "The Tax-Smart Exit & Retirement *Certainty System*",
-    "intro": "A practical 7-step blueprint that turns exit guesswork into a defendable, tax-smart plan you can execute while still running the business.",
+    "title": "The Tax-Smart Value & *Certainty System*",
+    "intro": "A practical 7-step blueprint that turns a clear valuation into a coordinated financial plan — so you can act on your options with confidence while still running the business.",
     "tag": "7-Step Blueprint",
-    "offerTitle": "Your Exit, Mapped and Protected",
-    "offerDesc": "From assessments and a soft valuation range to succession and team coordination, every step is built to raise value, clarify net proceeds, and protect your lifestyle and legacy.",
+    "offerTitle": "Your Value, Clarified and Put to Work",
+    "offerDesc": "From assessments and a defendable valuation to leverage, succession, and team coordination, every step is built to raise value, connect it to your personal finances, and open your options.",
     "deliverables": [
-      { "title": "1 · Assessments & Baseline", "desc": "Three Value Builder assessments (PreScore, Freedom Score, Personal Value) plus a retirement gap snapshot to see the full picture fast." },
-      { "title": "2 · Exit & Lifestyle Targets", "desc": "Define your 12–36 month timeline, lifestyle numbers, and non-negotiables for spouse security and long-term care." },
+      { "title": "1 · Assessments & Baseline", "desc": "Three Value Builder assessments (PreScore, Freedom Score, Personal Value) plus a financial snapshot to see the full picture fast." },
+      { "title": "2 · Goals & Lifestyle Targets", "desc": "Define what you want the business to do for you — growth, income, leverage, family transition, or a future sale." },
       { "title": "3 · 90-Day Action Plan", "desc": "Turn the gaps into a focused first sprint with owners, deadlines, and weekly priorities." },
-      { "title": "4 · Value Builder Upgrades", "desc": "Work the 8 value drivers to make the company more buyer-ready and less owner-dependent." },
-      { "title": "5 · Tax-Smart Net Proceeds Plan", "desc": "Map likely deal structures and tax outcomes so you can estimate what you'll truly net." },
-      { "title": "6 · Succession & Fairness Map", "desc": "Design the transition path while protecting non-active children and cash flow." },
+      { "title": "4 · Value Builder Upgrades", "desc": "Work the 8 value drivers to raise what the company is worth and make it less owner-dependent — useful whether you grow, borrow, or sell." },
+      { "title": "5 · Tax-Smart Wealth Plan", "desc": "Connect business value to your personal finances, with tax-smart moves for income, financing, transition, or proceeds." },
+      { "title": "6 · Succession & Fairness Map", "desc": "If a family or key-employee transition is on the table, design the path while protecting non-active children and cash flow." },
       { "title": "7 · Team Coordination & Execution", "desc": "Quarterback your CPA, attorney, banker, FA, and insurance on one plan with quarterly reviews." }
     ],
     "stepsTitle": "How It Works",
     "steps": [
-      { "title": "Book Your Clarity Call", "body": "Grab a time for your free Tax-Smart Exit Clarity Call." },
-      { "title": "Run the Assessments", "body": "See your valuation range and where value is leaking." },
-      { "title": "Get Your 90-Day Plan", "body": "Receive a prioritized, tax-smart roadmap with clear owners." },
-      { "title": "Execute With a Quarterback", "body": "Coordinate the team through monthly check-ins and quarterly reviews." }
+      { "title": "Book Your Clarity Call", "body": "Grab a time for your free Business Value & Clarity Call." },
+      { "title": "Run the Assessments", "body": "See your valuation range and where value is leaking or hiding." },
+      { "title": "Get Your Plan", "body": "Receive a prioritized, tax-smart roadmap that ties value to your goals." },
+      { "title": "Act With a Quarterback", "body": "Move on your options with a coordinated team and quarterly reviews." }
     ]
   },
 
   "faqs": [
-    { "q": "I already have advisors — why do I need this?", "a": "Most owners do. The issue isn't whether you have people; it's whether anyone is responsible for the combined outcome, with dates and accountability. This aligns your existing team around one plan." },
-    { "q": "I'm too busy to start a big project.", "a": "That's exactly why we work in 90-day sprints — small, high-impact moves that reduce chaos instead of adding to it." },
-    { "q": "Is this a pitch for a financial product?", "a": "No. We start with a clarity call and assessments to find the gaps and map a plan. Any strategy is built around your business, taxes, and family — never a cookie-cutter product." },
-    { "q": "What if my child takes over and the others feel shorted?", "a": "Naming that early is how you prevent a permanent family fracture. We map fairness on paper — estate equalization, governance, and cash-flow protection — before it becomes personal." },
-    { "q": "I'm not ready to sell yet — is it too early?", "a": "12–36 months out is the ideal window. The earlier you start, the more options you keep around taxes, successor planning, and value drivers." },
-    { "q": "What does the clarity call cost?", "a": "The initial Tax-Smart Exit Clarity Call is complimentary, with no obligation." }
+    { "q": "Do I have to be planning to sell?", "a": "Not at all. A valuation is for clarity first — it tells you what you've built and what it makes possible: growth, financing, rewarding key people, retirement income, family transition, or a future sale. Selling is just one option among many." },
+    { "q": "I already have advisors — why do I need this?", "a": "Most owners do. The issue isn't whether you have people; it's whether anyone is connecting your business value to your personal financial picture, with one accountable plan." },
+    { "q": "How can knowing my value help me right now?", "a": "A defendable number strengthens financing and lending conversations, informs whether to grow or hold, guides how you reward and retain key people, and makes your personal retirement and estate planning real instead of theoretical." },
+    { "q": "I'm too busy for a big project.", "a": "That's exactly why we work in 90-day sprints — small, high-impact moves that create clarity and leverage instead of adding chaos." },
+    { "q": "Is this a pitch for a financial product?", "a": "No. We start with a clarity call and assessments to establish your number and your options. Any strategy is built around your business, taxes, and family — never a cookie-cutter product." },
+    { "q": "What does the clarity call cost?", "a": "The initial Business Value & Clarity Call is complimentary, with no obligation." }
   ],
 
   "finalCta": {
     "eyebrow": "One Step Away",
-    "headline": "Stop Guessing What Your Business Is *Worth*",
-    "subhead": "If you're a US owner 12–36 months from selling or transitioning, one clarity call shows you what matters most in the next 90 days — and whether your current advisor setup is helping or quietly costing you options.",
+    "headline": "Know What Your Business Is *Worth* — and What It Can Do for You",
+    "subhead": "Whether you want to grow it, leverage it, transition it, or one day sell, it starts with one clear number. In a single clarity call you'll see what matters most in the next 90 days — and the options your value opens up.",
     "scarcity": "Only a limited number of new planning engagements open each month"
   },
 
   "lead": {
     "mode": "ghl-form",
     "ghlFormEmbed": "<div style=\"border:2px dashed var(--line);border-radius:10px;padding:44px 24px;text-align:center;color:var(--ink3);background:var(--off)\"><strong style=\"display:block;color:var(--ink);font-size:16px;margin-bottom:6px\">⟶ Your GHL Opt-In Form Embeds Here</strong>Build the lead opt-in form in GoHighLevel, copy its inline embed code, and paste it into <code>lead.ghlFormEmbed</code> in this config — then re-run the generator.</div>",
-    "successMessage": "Thanks! Check your email to book your Tax-Smart Exit Clarity Call.",
+    "successMessage": "Thanks! Check your email to book your Business Value & Clarity Call.",
     "formEyebrow": "Take the First Step",
-    "formTitle": "Book Your *Free Tax-Smart Exit Clarity Call*",
-    "formIntro": "Share a few details and we'll prepare before your session — so the call is specific to your business, timeline, and goals.",
+    "formTitle": "Book Your *Free Business Value & Clarity Call*",
+    "formIntro": "Share a few details and we'll prepare before your session — so the call is specific to your business, your numbers, and your goals.",
     "includes": [
-      "A defendable valuation range to work toward",
-      "Your real after-tax net-proceeds picture",
-      "The top value and risk gaps buyers scrutinize",
+      "A defendable valuation range for your company",
+      "How that value fits your full financial picture",
+      "The options your value opens — growth, leverage, transition, or sale",
       "No cost and no obligation"
     ]
   },
 
   "seo": {
-    "title": "Dianne Kelley — Free Tax-Smart Exit Clarity Call for Business Owners",
-    "description": "Tax-smart exit and retirement planning for US business owners ($3M–$10M revenue). Know your real valuation range, after-tax net proceeds, and a coordinated exit plan."
+    "title": "Dianne Kelley — Free Business Value & Clarity Call for Owners",
+    "description": "Business valuation and tax-smart financial planning for US owners ($3M–$10M revenue). Know what your company is worth and the options it opens — clarity, leverage, growth, transition, or sale."
   }
 }
