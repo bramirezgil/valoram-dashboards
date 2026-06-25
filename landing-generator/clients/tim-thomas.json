@@ -1,0 +1,12 @@
+{
+  "slug": "tim-thomas",
+  "brand": "valoram",
+  "business": {
+    "name": "Tim Thomas",
+    "ghlUserId": "hj7lkIHVVR9x9GdgA80l",
+    "ghlCalendar": {
+      "slug": "tim-thomas-consult"
+    },
+    "bookingUrl": "https://api.leadconnectorhq.com/widget/booking/tim-thomas-consult"
+  }
+}
