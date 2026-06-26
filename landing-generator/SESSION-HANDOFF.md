@@ -31,7 +31,7 @@ Pick-up doc for the next session. Covers what's built, where it lives, the stand
 ## The standard / playbook (also in memory: `valoram-funnel-page-standard`)
 - **Branding:** Valoram orange **`#FF7428`** + near-black **`#0B0D0D`**, white/slate neutrals. Logo from `landing-generator/assets/valoram-logo-datauri.txt` → header + **white-chip footer**. (Exception: **Dianne** still uses the alt orange `#F8964C`/`#101820` — on-brand, optionally migrate.)
 - **CTA** = each agent's own lead-magnet name. **Survey-first** "How It Works." **Bios** = "a financial strategist with Valoram Solutions" (never "founder").
-- **Results pages:** read `?score=` (GHL sends the **raw 0–295** total), normalize `raw/295*100`, tier bands **0–39 Strong Foundation / 40–69 Gaps to Close / 70–100 Action Needed Now**. Booking calendar embedded.
+- **Results pages:** read `?score=` (GHL sends the **raw 0–295** total). The score **ring still displays the normalized `raw/295*100` value out of 100**, but **tier selection keys off the raw score directly**: **0–116 Strong Foundation / 117–205 Gaps to Close / 206–295 Action Needed Now** (matches `GHL-SURVEY-BUILD.md`). Missing/NaN `score` → Strong Foundation. Booking calendar embedded.
 - Page section order: hero → problem(3) → results+stats → distinction(vs) → audience(4)+not-for → 7-step system → survey-first How-It-Works(4) → opt-in(survey embed) → bio → testimonials(3) → FAQ(5) → final CTA → footer.
 
 ## GHL
@@ -46,8 +46,14 @@ Pick-up doc for the next session. Covers what's built, where it lives, the stand
 2. **Headshots:** replace the placeholder box in each bio with the agent's hosted image URL (Jill's `…/699cf342…svg` is the worked example).
 3. **Host the pages** + finalize the redirect domain.
 4. **Theresa:** reassign her calendar to her own login once created.
-5. **Optional:** full line-by-line copy QA across all 11 pages; migrate Dianne to `#FF7428`/`#0B0D0D`.
+5. **Add bios to Danna & Dianne** — both legacy pages have **no "Your Specialist" bio section** and never mention "Valoram Solutions" in the body (every other page does). Needs each agent's real background to write (don't fabricate). *Optional:* migrate Dianne to `#FF7428`/`#0B0D0D`.
 6. **Commit** uncommitted repo files (calendar configs `clients/*.json` + `GHL-SURVEYS-TO-BUILD-2.md` + this handoff).
+
+## Changes — 2026-06-25 (QA pass + raw-based tiers)
+- **QA pass on all 11 agents (22 pages).** Verified clean: scoring math (`raw/295*100`, clamp), calendar slugs (all correct incl. `-consult` + `theresa-guevarra`), no cross-agent name-bleed, lead-magnet name present per page, header+white-chip-footer logo on every page, no stray `{{ }}` tokens. "founder" only appears as the legit "Founders & CEOs" audience phrase (except the Gregory bio, fixed below).
+- **Fixed Gregory's bio** — removed fabricated credentials *"the author of Indexed Annuity Secrets and founder of Annuity University"* (violated the "financial strategist with Valoram Solutions / never founder" standard; compliance risk). Re-add with proper wording **only if those credentials are real**. File: `gregorystevenson.html`.
+- **Found: Danna & Dianne lack a bio section** → now Outstanding task 5.
+- **Tier logic → raw-based** on all 11 results pages. Ring still shows the 0–100 value; tiers now select on raw thresholds **≤116 / 117–205 / ≥206**. Template B (9 pages) = `raw>=206/117` ternaries; Template A (Jill, Danna) = raw `data-min/max` bands + new `sval` (clamped raw) comparison. Verified boundary-exact vs the build doc; NaN→Strong Foundation.
 
 ## Gotchas
 - **Stale preview:** logos/calendars/surveys are injected with a Python script (via Bash), which does **not** refresh the Launch preview panel — the files are correct on disk; reopen the file (or make any Edit-tool change) to refresh.
