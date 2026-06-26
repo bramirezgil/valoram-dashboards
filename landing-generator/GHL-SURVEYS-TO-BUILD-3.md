@@ -83,7 +83,7 @@ https://YOUR-DOMAIN/<results-page>?score={{contact.score}}
 ---
 
 # 2) SHARON WEBSTER
-- **Survey name:** `Sharon Webster — Retirement Paycheck Snapshot`
+- **Survey name:** `Sharon Webster — Financial Certainty Snapshot`
 - **Results page:** `sharonwebsterresults.html`
 
 **Q1. How soon do you want a fully coordinated plan in place (taxes, cash flow, protection)?**

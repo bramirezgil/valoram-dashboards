@@ -26,7 +26,7 @@ Pick-up doc for the next session. Covers what's built, where it lives, the stand
 | Gary Guan | `garyguan.html` | `garyguanresults.html` | RMD Tax Shock Scorecard | Roth Conversion Strategy Call | gary-guan-consult | live |
 | Futaba Takashima | `futabatakashima.html` | `futabatakashimaresults.html` | Retirement Paycheck Snapshot | Retirement Strategy Call | futaba-takashima | live |
 | Harley Palaganas | `harleypalaganas.html` | `harleypalaganasresults.html` | Retirement Paycheck Snapshot | Retirement Confidence Review | harley-palaganas | **not provisioned**† |
-| Sharon Webster | `sharonwebster.html` | `sharonwebsterresults.html` | Retirement Paycheck Snapshot | Legacy Blueprint Consultation | sharon-webster | **not provisioned**† |
+| Sharon Webster | `sharonwebster.html` | `sharonwebsterresults.html` | Financial Certainty Snapshot | Legacy Blueprint Consultation | sharon-webster | **not provisioned**† |
 
 \* Theresa's calendar is on the **default user (Bryan)** — reassign to her when she gets a GHL login. **Theresa's survey is already built + embedded** (GHL survey id `tc2lbJI2cKbj5PdsHEfv`).
 † Harley & Sharon (built 2026-06-25) — pages done to standard; **calendars not yet provisioned** (their `clients/*.json` have `ghlUserId: "REPLACE_WITH_GHL_USER_ID"` — fill in each agent's GHL user id, then `npm run provision`). Booking iframes 404 until provisioned. Surveys in `GHL-SURVEYS-TO-BUILD-3.md`. Slugs may need a `-consult` suffix if GHL reserves the agent's name (see Tim/Gary).
