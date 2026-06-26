@@ -18,18 +18,16 @@ body{font-family:'Poppins',system-ui,sans-serif;background:#000}
   radial-gradient(55% 50% at 10% 92%, rgba(255,116,40,.10), transparent 60%),
   var(--bg);color:var(--ink)}
 .clip{position:absolute;inset:0;opacity:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:120px 110px}
-.eyebrow{font-size:24px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--accent)}
 .logo-chip{background:#fff;border-radius:18px;padding:18px 26px;display:inline-flex}
 .logo-chip img{height:58px;display:block}
 .badge{width:118px;height:118px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(255,116,40,.16);color:var(--accent);margin-bottom:30px;box-shadow:0 0 0 12px rgba(255,116,40,.10)}
 .badge svg{width:62px;height:62px}
 h1{font-size:78px;line-height:1.08;font-weight:800;letter-spacing:-.02em}
 h1 .o{color:var(--accent)}
-.sub{font-size:30px;color:var(--mut);margin-top:24px;max-width:760px;line-height:1.45}
-.kicker{font-size:26px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:18px}
+.sub{font-size:30px;color:var(--mut);margin-top:24px;max-width:780px;line-height:1.45}
 .bignum{width:96px;height:96px;border-radius:50%;background:var(--accent);color:#0b0d0d;font-weight:800;font-size:46px;display:flex;align-items:center;justify-content:center;margin-bottom:30px}
 .ic{font-size:90px;margin-bottom:24px;line-height:1}
-h2{font-size:68px;font-weight:800;line-height:1.1;letter-spacing:-.02em;max-width:840px}
+h2{font-size:66px;font-weight:800;line-height:1.1;letter-spacing:-.02em;max-width:860px}
 h2 .o{color:var(--accent)}
 .foot{margin-top:36px;display:flex;flex-direction:column;align-items:center;gap:16px}
 .foot .em{font-size:26px;color:var(--mut)}
@@ -40,38 +38,38 @@ h2 .o{color:var(--accent)}
 <div id="root" data-composition-id="main" data-start="0" data-width="1080" data-height="1080" data-duration="26">
   <audio id="vo" src="final_audio.wav" data-start="0" data-duration="26" data-volume="1"></audio>
 
-  <section class="clip" id="sc1" data-start="0.5" data-duration="3.572" data-track-index="1">
+  <section class="clip" id="sc1" data-start="0.5" data-duration="3.636" data-track-index="1">
     <div class="badge ns1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg></div>
     <h1 class="ns1">You're <span class="o">Booked!</span></h1>
-    <p class="sub ns1">Your strategy session is confirmed.</p>
+    <p class="sub ns1">Your tax strategy call is confirmed.</p>
   </section>
 
-  <section class="clip" id="sc2" data-start="4.072" data-duration="2.441" data-track-index="1">
+  <section class="clip" id="sc2" data-start="4.136" data-duration="2.441" data-track-index="1">
     <h2 class="ns2">Here's What <span class="o">Happens Next</span></h2>
   </section>
 
-  <section class="clip" id="sc3" data-start="6.513" data-duration="5.791" data-track-index="1">
+  <section class="clip" id="sc3" data-start="6.577" data-duration="5.791" data-track-index="1">
     <div class="bignum ns3">1</div>
     <div class="ic ns3">📧</div>
     <h2 class="ns3">Check Your Email</h2>
     <p class="sub ns3">Your confirmation and calendar invite are on the way — add it to your calendar.</p>
   </section>
 
-  <section class="clip" id="sc4" data-start="12.304" data-duration="6.132" data-track-index="1">
+  <section class="clip" id="sc4" data-start="12.368" data-duration="5.513" data-track-index="1">
     <div class="bignum ns4">2</div>
     <div class="ic ns4">📄</div>
-    <h2 class="ns4">Gather a Few Details</h2>
-    <p class="sub ns4">Recent statements or benefit estimates, if handy. No prep required.</p>
+    <h2 class="ns4">Have Your Return Handy</h2>
+    <p class="sub ns4">Your most recent tax return and any K-1s — that's where we find the leaks.</p>
   </section>
 
-  <section class="clip" id="sc5" data-start="18.436" data-duration="4.233" data-track-index="1">
+  <section class="clip" id="sc5" data-start="17.881" data-duration="4.724" data-track-index="1">
     <div class="bignum ns5">3</div>
     <div class="ic ns5">🎯</div>
     <h2 class="ns5">Show Up Ready</h2>
-    <p class="sub ns5">We'll map out your personalized plan — live.</p>
+    <p class="sub ns5">We'll surface your top opportunities and map your <span class="o">R.I.S.E.</span> plan.</p>
   </section>
 
-  <section class="clip" id="sc6" data-start="22.669" data-duration="3.331" data-track-index="1">
+  <section class="clip" id="sc6" data-start="22.605" data-duration="3.395" data-track-index="1">
     <h1 class="ns6">We'll See You <span class="o">Soon</span></h1>
     <div class="foot ns6">
       <span class="logo-chip"><img src="valoram-logo.png" alt="Valoram"></span>
@@ -83,8 +81,8 @@ h2 .o{color:var(--accent)}
   window.__timelines = window.__timelines || {};
   const tl = gsap.timeline({ paused: true });
   const E="power3.out";
-  const S=[0.5,4.072,6.513,12.304,18.436,22.669];
-  const L=[3.572,2.441,5.791,6.132,4.233,3.331];
+  const S=[0.5,4.136,6.577,12.368,17.881,22.605];
+  const L=[3.636,2.441,5.791,5.513,4.724,3.395];
   S.forEach((st,i)=>{
     tl.fromTo("#sc"+(i+1),{opacity:0},{opacity:1,duration:.4,ease:"none"},st);
     if(i<S.length-1) tl.to("#sc"+(i+1),{opacity:0,duration:.4,ease:"none"},st+L[i]-0.4);

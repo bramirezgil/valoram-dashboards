@@ -9,21 +9,33 @@
   },
   "nextSteps": {
     "eyebrow": "You're Booked",
-    "headline": "Your Strategy Session Is *Confirmed*",
-    "subhead": "You've taken the most important step. Watch the short video below for exactly what happens next.",
+    "headline": "Your Tax Strategy Call Is *Confirmed*",
+    "subhead": "You’ve taken the first step toward plugging your tax leaks. Watch the short video below for exactly what happens next.",
     "videoEyebrow": "Watch This First",
     "videoUrl": "",
     "stepsTitle": "What Happens Next",
     "steps": [
-      { "title": "Check Your Email", "body": "Your confirmation and calendar invite are on the way. Add the appointment to your calendar so it doesn't slip by." },
-      { "title": "Watch the Short Video", "body": "Press play above — it walks you through how to get the most out of your session." },
-      { "title": "Gather a Few Details", "body": "If it's handy, have recent statements or benefit estimates nearby. No prep is required — we'll guide you through it." },
-      { "title": "Show Up Ready", "body": "We'll review your situation live, map out your personalized plan, and answer every question." }
+      {
+        "title": "Check Your Email",
+        "body": "Your confirmation and calendar invite are on the way. Add the appointment to your calendar so it doesn’t slip by."
+      },
+      {
+        "title": "Watch the Short Video",
+        "body": "Press play above — it walks you through how to get the most out of your call."
+      },
+      {
+        "title": "Have Your Last Return Handy",
+        "body": "Bring your most recent tax return and any K-1s — that’s where we find the leaks. No other prep required."
+      },
+      {
+        "title": "Show Up Ready",
+        "body": "We’ll review your return like a diagnostic, surface your top 2–3 opportunities, and map out your R.I.S.E. plan."
+      }
     ],
-    "note": "Need to reschedule or have a question before your session? Email *lubaldo@valoramsolutions.com* and we'll take care of you."
+    "note": "Need to reschedule or have a question before your call? Email *lubaldo@valoramsolutions.com* and we’ll take care of you."
   },
   "seo": {
-    "title": "You're Booked — Valoram Solutions",
-    "description": "Your strategy session is confirmed. Here's what happens next."
+    "title": "You’re Booked — Valoram Solutions",
+    "description": "Your tax strategy call is confirmed. Here’s what happens next."
   }
 }
