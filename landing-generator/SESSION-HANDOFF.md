@@ -10,7 +10,7 @@ Pick-up doc for the next session. Covers what's built, where it lives, the stand
 - **Agent landing/results pages = standalone HTML in `C:\Users\TheMe\Downloads`** (NOT in the repo). Naming: `<slug>.html` + `<slug>results.html`. Some older agents have ` (N)` copies — **newest mtime wins** (e.g. `jillteachers (4).html`).
 - **Repo `landing-generator/`** holds: survey build docs, calendar configs (`clients/*.json`), playbook docs, the generator (`generate.js`, `ghl-calendars.js`).
 
-## Agents built so far (11)
+## Agents built so far (13)
 
 | Agent | Landing file | Results file | Lead-magnet / CTA | Books a… | Calendar slug | Calendar |
 |---|---|---|---|---|---|---|
@@ -25,8 +25,11 @@ Pick-up doc for the next session. Covers what's built, where it lives, the stand
 | Gregory Stevenson | `gregorystevenson.html` | `gregorystevensonresults.html` | IRS Jail Exit Timeline | Retirement Strategy Call | gregory-stevenson | live |
 | Gary Guan | `garyguan.html` | `garyguanresults.html` | RMD Tax Shock Scorecard | Roth Conversion Strategy Call | gary-guan-consult | live |
 | Futaba Takashima | `futabatakashima.html` | `futabatakashimaresults.html` | Retirement Paycheck Snapshot | Retirement Strategy Call | futaba-takashima | live |
+| Harley Palaganas | `harleypalaganas.html` | `harleypalaganasresults.html` | Retirement Paycheck Snapshot | Retirement Confidence Review | harley-palaganas | **not provisioned**† |
+| Sharon Webster | `sharonwebster.html` | `sharonwebsterresults.html` | Retirement Paycheck Snapshot | Legacy Blueprint Consultation | sharon-webster | **not provisioned**† |
 
 \* Theresa's calendar is on the **default user (Bryan)** — reassign to her when she gets a GHL login. **Theresa's survey is already built + embedded** (GHL survey id `tc2lbJI2cKbj5PdsHEfv`).
+† Harley & Sharon (built 2026-06-25) — pages done to standard; **calendars not yet provisioned** (their `clients/*.json` have `ghlUserId: "REPLACE_WITH_GHL_USER_ID"` — fill in each agent's GHL user id, then `npm run provision`). Booking iframes 404 until provisioned. Surveys in `GHL-SURVEYS-TO-BUILD-3.md`. Slugs may need a `-consult` suffix if GHL reserves the agent's name (see Tim/Gary).
 
 ## The standard / playbook (also in memory: `valoram-funnel-page-standard`)
 - **Branding:** Valoram orange **`#FF7428`** + near-black **`#0B0D0D`**, white/slate neutrals. Logo from `landing-generator/assets/valoram-logo-datauri.txt` → header + **white-chip footer**. (Exception: **Dianne** still uses the alt orange `#F8964C`/`#101820` — on-brand, optionally migrate.)
@@ -54,6 +57,7 @@ Pick-up doc for the next session. Covers what's built, where it lives, the stand
 - **Fixed Gregory's bio** — removed fabricated credentials *"the author of Indexed Annuity Secrets and founder of Annuity University"* (violated the "financial strategist with Valoram Solutions / never founder" standard; compliance risk). Re-add with proper wording **only if those credentials are real**. File: `gregorystevenson.html`.
 - **Found: Danna & Dianne lack a bio section** → now Outstanding task 5.
 - **Tier logic → raw-based** on all 11 results pages. Ring still shows the 0–100 value; tiers now select on raw thresholds **≤116 / 117–205 / ≥206**. Template B (9 pages) = `raw>=206/117` ternaries; Template A (Jill, Danna) = raw `data-min/max` bands + new `sval` (clamped raw) comparison. Verified boundary-exact vs the build doc; NaN→Strong Foundation.
+- **Built 2 new agents — Harley Palaganas & Sharon Webster** (from their Phase-1/2 briefs). Each: landing + results page in `Downloads` (Futaba "Template B" scaffold, standard `#FF7428`/`#0B0D0D`, raw-based tiers, real 410×80 logo), `clients/*.json` calendar config (ghlUserId placeholder), and survey spec in `GHL-SURVEYS-TO-BUILD-3.md`. Bios adapted to the "financial strategist with Valoram Solutions" standard (briefs said "founder" — not used). Agent brief colors (Harley navy, Sharon purple) intentionally overridden with the Valoram standard for brand consistency. **Pending:** provision calendars (need real ghlUserIds), build the 2 surveys, headshots, host.
 
 ## Gotchas
 - **Stale preview:** logos/calendars/surveys are injected with a Python script (via Bash), which does **not** refresh the Launch preview panel — the files are correct on disk; reopen the file (or make any Edit-tool change) to refresh.

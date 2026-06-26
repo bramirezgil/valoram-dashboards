@@ -1,0 +1,9 @@
+{
+  "slug": "harley-palaganas",
+  "brand": "valoram",
+  "business": {
+    "name": "Harley Palaganas",
+    "ghlUserId": "REPLACE_WITH_GHL_USER_ID",
+    "bookingUrl": "https://api.leadconnectorhq.com/widget/booking/harley-palaganas"
+  }
+}
