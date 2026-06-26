@@ -1,0 +1,12 @@
+{
+  "slug": "cindy-johnson",
+  "brand": "valoram",
+  "business": {
+    "name": "Cindy Johnson",
+    "ghlUserId": "TCo08x7Ov3YwoTrGHmEx",
+    "ghlCalendar": {
+      "slug": "cindy-johnson-consult"
+    },
+    "bookingUrl": "https://api.leadconnectorhq.com/widget/booking/cindy-johnson-consult"
+  }
+}

@@ -10,7 +10,7 @@ Pick-up doc for the next session. Covers what's built, where it lives, the stand
 - **Agent landing/results pages = standalone HTML in `C:\Users\TheMe\Downloads`** (NOT in the repo). Naming: `<slug>.html` + `<slug>results.html`. Some older agents have ` (N)` copies — **newest mtime wins** (e.g. `jillteachers (4).html`).
 - **Repo `landing-generator/`** holds: survey build docs, calendar configs (`clients/*.json`), playbook docs, the generator (`generate.js`, `ghl-calendars.js`).
 
-## Agents built so far (13)
+## Agents built so far (18)
 
 | Agent | Landing file | Results file | Lead-magnet / CTA | Books a… | Calendar slug | Calendar |
 |---|---|---|---|---|---|---|
@@ -27,9 +27,16 @@ Pick-up doc for the next session. Covers what's built, where it lives, the stand
 | Futaba Takashima | `futabatakashima.html` | `futabatakashimaresults.html` | Retirement Paycheck Snapshot | Retirement Strategy Call | futaba-takashima | live |
 | Harley Palaganas | `harleypalaganas.html` | `harleypalaganasresults.html` | Retirement Paycheck Snapshot | Retirement Confidence Review | harley-palaganas | live† |
 | Sharon Webster | `sharonwebster.html` | `sharonwebsterresults.html` | Financial Certainty Snapshot | Legacy Blueprint Consultation | sharon-webster | live† |
+| Donnis Hiskett | `donnis-hiskett.html` | `donnis-hiskettresults.html` | Retirement Lever Readiness Scorecard | Benefits Strategy Session | donnis-hiskett | live‡ |
+| Cindy Johnson | `cindy-johnson.html` | `cindy-johnsonresults.html` | Retirement Paycheck Snapshot | (snapshot call) | cindy-johnson-consult | live‡ |
+| Dawn Szugyi | `dawn-szugyi.html` | `dawn-szugyiresults.html` | Retirement Paycheck Snapshot | Faith-First Certainty Call | dawn-szugyi | live‡ |
+| Dial Dace | `dial-dace.html` | `dial-daceresults.html` | Retirement Lever Readiness Scorecard | Clarity Call | dial-dace | live‡ |
+| Ejay Cruz | `ejay-cruz.html` | `ejay-cruzresults.html` | Retirement Paycheck Snapshot | KP Clarity Call | ejay-cruz | live‡ |
 
 \* Theresa's calendar is on the **default user (Bryan)** — reassign to her when she gets a GHL login. **Theresa's survey is already built + embedded** (GHL survey id `tc2lbJI2cKbj5PdsHEfv`).
 † Harley & Sharon (built 2026-06-25) — pages done to standard; **calendars provisioned + live** (round-robin, `isActive`). GHL user ids: Harley `w9oEXB69Hj2T56uY1MWA` (cal `J3Ibu4aE0T3G2KM6lCu6`), Sharon `J391xYDlLfQJynS0Brba` (cal `HdXumEf3oawgy2xmGm72`). Clean `harley-palaganas` / `sharon-webster` slugs (no `-consult` collision). **Still pending:** build the 2 surveys (`GHL-SURVEYS-TO-BUILD-3.md`), headshots, host. *(Note: the GHL booking-widget URL returns 404 to plain `curl` — that's expected even for live calendars; it only renders in an iframe/browser.)*
+
+‡ Batch 4 — Donnis / Cindy / Dawn / Dial / Ejay (built 2026-06-26, via parallel build agents from the Harley skeleton; full QA passed: logo md5-identical, raw-based tiers, no name-bleed, bios use "financial strategist with Valoram Solutions"). **Calendars provisioned + live** (round-robin). GHL user ids → cal ids: Donnis `1zOZmwPQpsZ9dU0YE9DA`→`Qhxs5wE9YkkBzMNEw1Ks`; Cindy `TCo08x7Ov3YwoTrGHmEx`→`2DxV9gkxtMlzZTwZiDmY`; Dawn `WStZUp1iP3p5LTIqnBvt`→`bobnXZQRs5k3RfUA7psq`; Dial `0GD38bvuQbNEJqbC1bgg`→`HnXJKMJ2NQe3xce9zqRX`; Ejay `ASZIYwpFYfIPwakf3tZC`→`cpoPHKmzMRYhonWSSrq5`. **Cindy needed a `-consult` slug** (`cindy-johnson` was reserved by her personal calendar, like Tim/Gary) — her results-page iframe uses `cindy-johnson-consult`. **Dawn has two GHL users** (`DawnSzugcrm@gmail.com` and `dszugyi@valoramsolutions.com`) — used the `@valoramsolutions.com` one (`WStZUp1iP3p5LTIqnBvt`); confirm that's correct. Surveys for all 5 in `GHL-SURVEYS-TO-BUILD-4.md` (each 7 Q, max 295). **Still pending:** build the 5 surveys, headshots, host.
 
 ## The standard / playbook (also in memory: `valoram-funnel-page-standard`)
 - **Branding:** Valoram orange **`#FF7428`** + near-black **`#0B0D0D`**, white/slate neutrals. Logo from `landing-generator/assets/valoram-logo-datauri.txt` → header + **white-chip footer**. (Exception: **Dianne** still uses the alt orange `#F8964C`/`#101820` — on-brand, optionally migrate.)
