@@ -25,11 +25,11 @@ Pick-up doc for the next session. Covers what's built, where it lives, the stand
 | Gregory Stevenson | `gregorystevenson.html` | `gregorystevensonresults.html` | IRS Jail Exit Timeline | Retirement Strategy Call | gregory-stevenson | live |
 | Gary Guan | `garyguan.html` | `garyguanresults.html` | RMD Tax Shock Scorecard | Roth Conversion Strategy Call | gary-guan-consult | live |
 | Futaba Takashima | `futabatakashima.html` | `futabatakashimaresults.html` | Retirement Paycheck Snapshot | Retirement Strategy Call | futaba-takashima | live |
-| Harley Palaganas | `harleypalaganas.html` | `harleypalaganasresults.html` | Retirement Paycheck Snapshot | Retirement Confidence Review | harley-palaganas | **not provisioned**† |
-| Sharon Webster | `sharonwebster.html` | `sharonwebsterresults.html` | Financial Certainty Snapshot | Legacy Blueprint Consultation | sharon-webster | **not provisioned**† |
+| Harley Palaganas | `harleypalaganas.html` | `harleypalaganasresults.html` | Retirement Paycheck Snapshot | Retirement Confidence Review | harley-palaganas | live† |
+| Sharon Webster | `sharonwebster.html` | `sharonwebsterresults.html` | Financial Certainty Snapshot | Legacy Blueprint Consultation | sharon-webster | live† |
 
 \* Theresa's calendar is on the **default user (Bryan)** — reassign to her when she gets a GHL login. **Theresa's survey is already built + embedded** (GHL survey id `tc2lbJI2cKbj5PdsHEfv`).
-† Harley & Sharon (built 2026-06-25) — pages done to standard; **calendars not yet provisioned** (their `clients/*.json` have `ghlUserId: "REPLACE_WITH_GHL_USER_ID"` — fill in each agent's GHL user id, then `npm run provision`). Booking iframes 404 until provisioned. Surveys in `GHL-SURVEYS-TO-BUILD-3.md`. Slugs may need a `-consult` suffix if GHL reserves the agent's name (see Tim/Gary).
+† Harley & Sharon (built 2026-06-25) — pages done to standard; **calendars provisioned + live** (round-robin, `isActive`). GHL user ids: Harley `w9oEXB69Hj2T56uY1MWA` (cal `J3Ibu4aE0T3G2KM6lCu6`), Sharon `J391xYDlLfQJynS0Brba` (cal `HdXumEf3oawgy2xmGm72`). Clean `harley-palaganas` / `sharon-webster` slugs (no `-consult` collision). **Still pending:** build the 2 surveys (`GHL-SURVEYS-TO-BUILD-3.md`), headshots, host. *(Note: the GHL booking-widget URL returns 404 to plain `curl` — that's expected even for live calendars; it only renders in an iframe/browser.)*
 
 ## The standard / playbook (also in memory: `valoram-funnel-page-standard`)
 - **Branding:** Valoram orange **`#FF7428`** + near-black **`#0B0D0D`**, white/slate neutrals. Logo from `landing-generator/assets/valoram-logo-datauri.txt` → header + **white-chip footer**. (Exception: **Dianne** still uses the alt orange `#F8964C`/`#101820` — on-brand, optionally migrate.)
