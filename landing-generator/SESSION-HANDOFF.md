@@ -49,10 +49,10 @@ Pick-up doc for the next session. Covers what's built, where it lives, the stand
 - **Token rotation:** the Private Integration Token used this session was exposed in chat — rotate it (GHL → Settings → Private Integrations). See memory `valoram-ghl-token`.
 - **Calendars** provisioned via `ghl-calendars.js` (`npm run provision` / `provision:commit`) using `clients/<slug>.json` with `business.ghlUserId`. Slug collisions: GHL reserves an agent's name for their personal calendar → Tim & Gary needed a `-consult` slug.
 - **GHL API CANNOT create surveys** (`POST /surveys/` → 401). Build surveys in the UI from the build docs.
-- Survey build docs: `GHL-SURVEYS-TO-BUILD.md` (Jill/Danna/Dianne/Tim/Victor), `GHL-SURVEYS-TO-BUILD-2.md` (Lisa/Joshua/Gregory/Gary/Futaba). Each survey = 7 questions, 4 single-select scored answers, **max 295**.
+- Survey build docs: `GHL-SURVEYS-TO-BUILD.md` (Jill/Danna/Dianne/Tim/Victor), `GHL-SURVEYS-TO-BUILD-2.md` (Lisa/Joshua/Gregory/Gary/Futaba), `GHL-SURVEYS-TO-BUILD-3.md` (Harley/Sharon), `GHL-SURVEYS-TO-BUILD-4.md` (Donnis/Cindy/Dawn/Dial/Ejay). Each survey = 7 questions, 4 single-select scored answers, **max 295**.
 
 ## Outstanding tasks
-1. **Build the surveys in GHL** (all except Theresa's) from the build docs → copy each inline embed → paste into the landing-page opt-in placeholder (replaces the dashed "⟶ Your GHL … Survey Embeds Here" box) → set the survey's On-Submit **redirect** to `<results-page>?score={{contact.score}}`.
+1. **Surveys: built in GHL + embedded for ALL 18 agents** (2026-06-26) — each landing page has its agent's survey iframe + `form_embed.js` (verified ID-matched, no leftover placeholders). **Remaining:** set each survey's On-Submit **redirect** to `<results-page>?score={{contact.score}}` (GHL UI; `{{contact.score}}` must be the raw 0–295 total). To re-map a survey id → agent, list `GET /surveys/?locationId=…&limit=50&skip=…` (survey names are the agent names).
 2. **Headshots:** replace the placeholder box in each bio with the agent's hosted image URL (Jill's `…/699cf342…svg` is the worked example).
 3. **Host the pages** + finalize the redirect domain.
 4. **Theresa:** reassign her calendar to her own login once created.
