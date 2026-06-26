@@ -20,6 +20,7 @@ const path = require('path');
 const ROOT = __dirname;
 const TEMPLATE = path.join(ROOT, 'template', 'landing.html');
 const RESULTS_TEMPLATE = path.join(ROOT, 'template', 'results.html');
+const NEXTSTEPS_TEMPLATE = path.join(ROOT, 'template', 'next-steps.html');
 const CLIENTS = path.join(ROOT, 'clients');
 const DIST = path.join(ROOT, 'dist');
 
@@ -241,6 +242,18 @@ function normalize(cfg) {
   c.hasBio = !!(c.bio.text || c.bio.photo);
   c.bio.nameHtml = markEm(c.bio.name);
 
+  // optional post-booking "next steps" page (separate page: dist/<slug>-next-steps.html)
+  c.nextSteps = c.nextSteps || {};
+  c.hasNextStepsPage = !!(c.nextSteps.steps && c.nextSteps.steps.length);
+  if (c.hasNextStepsPage) {
+    c.nextSteps.eyebrow = c.nextSteps.eyebrow || "You're Booked";
+    c.nextSteps.headlineHtml = markEm(c.nextSteps.headline || 'Your Session Is *Confirmed*');
+    c.nextSteps.videoEyebrow = c.nextSteps.videoEyebrow || 'Watch This First';
+    c.nextSteps.hasVideo = !!c.nextSteps.videoUrl;
+    c.nextSteps.noteHtml = markEm(c.nextSteps.note);
+    c.nextSteps.steps.forEach((s, i) => { s.n = i + 1; });
+  }
+
   // section flags
   c.year = new Date().getFullYear();
   c.offer.stepsTitle = c.offer.stepsTitle || 'How It Works';
@@ -287,16 +300,27 @@ function build(configPath) {
   const slug = cfg.slug || path.basename(configPath, '.json');
   if (!fs.existsSync(DIST)) fs.mkdirSync(DIST, { recursive: true });
 
-  const landing = path.join(DIST, `${slug}.html`);
-  const html = renderTemplate(TEMPLATE, cfg);
-  fs.writeFileSync(landing, html);
-  console.log(`✓ ${path.relative(ROOT, landing)}  (${(html.length / 1024).toFixed(1)} KB)  ← ${path.basename(configPath)}`);
+  // Render the landing page only when the config actually has hero content.
+  // (Results-only / next-steps-only configs skip it.)
+  let landing = null;
+  if (cfg.hero && cfg.hero.headline) {
+    landing = path.join(DIST, `${slug}.html`);
+    const html = renderTemplate(TEMPLATE, cfg);
+    fs.writeFileSync(landing, html);
+    console.log(`✓ ${path.relative(ROOT, landing)}  (${(html.length / 1024).toFixed(1)} KB)  ← ${path.basename(configPath)}`);
+  }
 
   if (cfg.hasResultsPage) {
     const resultsOut = path.join(DIST, `${slug}-results.html`);
     const rhtml = renderTemplate(RESULTS_TEMPLATE, cfg);
     fs.writeFileSync(resultsOut, rhtml);
     console.log(`✓ ${path.relative(ROOT, resultsOut)}  (${(rhtml.length / 1024).toFixed(1)} KB)  ← results page`);
+  }
+  if (cfg.hasNextStepsPage) {
+    const nsOut = path.join(DIST, `${slug}-next-steps.html`);
+    const nhtml = renderTemplate(NEXTSTEPS_TEMPLATE, cfg);
+    fs.writeFileSync(nsOut, nhtml);
+    console.log(`✓ ${path.relative(ROOT, nsOut)}  (${(nhtml.length / 1024).toFixed(1)} KB)  ← next-steps page`);
   }
   return landing;
 }
