@@ -1,0 +1,12 @@
+{
+  "slug": "gary-guan",
+  "brand": "valoram",
+  "business": {
+    "name": "Gary Guan",
+    "ghlUserId": "RDVNbnRuRXi1Nei516EG",
+    "ghlCalendar": {
+      "slug": "gary-guan-consult"
+    },
+    "bookingUrl": "https://api.leadconnectorhq.com/widget/booking/gary-guan-consult"
+  }
+}
