@@ -56,7 +56,7 @@ Pick-up doc for the next session. Covers what's built, where it lives, the stand
 2. **Headshots:** replace the placeholder box in each bio with the agent's hosted image URL (Jill's `…/699cf342…svg` is the worked example).
 3. **Host the pages** + finalize the redirect domain.
 4. ~~**Theresa:** reassign her calendar to her own login.~~ ✅ Done 2026-06-26 (user `ty0aUHS0BK52SUJ5YWR7`).
-5. **Add bios to Danna & Dianne** — both legacy pages have **no "Your Specialist" bio section** and never mention "Valoram Solutions" in the body (every other page does). Needs each agent's real background to write (don't fabricate). *Optional:* migrate Dianne to `#FF7428`/`#0B0D0D`.
+5. ~~**Add bios to Danna & Dianne**~~ ✅ Done 2026-06-26 — added "Your Specialist" bio sections (inline-styled, self-contained, since these legacy pages lack the `.bio` CSS) between opt-in and FAQ, enriched from their docx briefs (federal/military + 2025 early-retirement story for Danna; 30+ yrs owner-operator + Value Builder System for Dianne). "Financial strategist with Valoram Solutions," she/her, no fabricated facts. Headshot placeholders pending (task 2). *Optional:* migrate Dianne to `#FF7428`/`#0B0D0D`.
 6. **Commit** uncommitted repo files (calendar configs `clients/*.json` + `GHL-SURVEYS-TO-BUILD-2.md` + this handoff).
 
 ## Changes — 2026-06-25 (QA pass + raw-based tiers)
