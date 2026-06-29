@@ -10,7 +10,7 @@ Pick-up doc for the next session. Covers what's built, where it lives, the stand
 - **Agent landing/results pages = standalone HTML in `C:\Users\TheMe\Downloads`** (NOT in the repo). Naming: `<slug>.html` + `<slug>results.html`. Some older agents have ` (N)` copies — **newest mtime wins** (e.g. `jillteachers (4).html`).
 - **Repo `landing-generator/`** holds: survey build docs, calendar configs (`clients/*.json`), playbook docs, the generator (`generate.js`, `ghl-calendars.js`).
 
-## Agents built so far (19)
+## Agents built so far (24)
 
 | Agent | Landing file | Results file | Lead-magnet / CTA | Books a… | Calendar slug | Calendar |
 |---|---|---|---|---|---|---|
@@ -33,9 +33,16 @@ Pick-up doc for the next session. Covers what's built, where it lives, the stand
 | Dial Dace | `dial-dace.html` | `dial-daceresults.html` | Retirement Lever Readiness Scorecard | Clarity Call | dial-dace | live‡ |
 | Ejay Cruz | `ejay-cruz.html` | `ejay-cruzresults.html` | Retirement Paycheck Snapshot | KP Clarity Call | ejay-cruz | live‡ |
 | Brenen Riggs | `brenen-riggs.html` | `brenen-riggsresults.html` | Wheel-Down Retirement Scorecard | Discovery Call | brenen-riggs | live¶ |
+| Isaiah Ellison | `isaiah-ellison.html` | `isaiah-ellisonresults.html` | Retirement Lever Readiness Scorecard | Discovery Call | isaiah-ellison | **not provisioned**◇ |
+| Gley Cisneros | `gley-cisneros.html` | `gley-cisnerosresults.html` | Retirement Paycheck Snapshot | Retirement Clarity Session | gley-cisneros | live◇ |
+| Galia Alonso | `galia-alonso.html` | `galia-alonsoresults.html` | Retirement Paycheck Snapshot | Discovery Call | galia-alonso | live◇ |
+| Elmer Manuel | `elmer-manuel.html` | `elmer-manuelresults.html` | Retirement Paycheck Snapshot | Discovery Call | elmer-manuel | live◇ |
+| Elia Juarez | `elia-juarez.html` | `elia-juarezresults.html` | Retirement Paycheck Snapshot | Discovery Call | elia-juarez | live◇ |
 
 \* Theresa's calendar is now assigned to **her own user** — `ty0aUHS0BK52SUJ5YWR7` (Theresa Sulit, Theresasulitcrm1@gmail.com), reassigned 2026-06-26 (was on default user Bryan). NOTE: her account is **agency-level** — it does NOT appear in the location `/users/?locationId=` list; fetch it directly via `/users/ty0aUHS0BK52SUJ5YWR7`. Survey built + embedded (id `tc2lbJI2cKbj5PdsHEfv`).
 † Harley & Sharon (built 2026-06-25) — pages done to standard; **calendars provisioned + live** (round-robin, `isActive`). GHL user ids: Harley `w9oEXB69Hj2T56uY1MWA` (cal `J3Ibu4aE0T3G2KM6lCu6`), Sharon `J391xYDlLfQJynS0Brba` (cal `HdXumEf3oawgy2xmGm72`). Clean `harley-palaganas` / `sharon-webster` slugs (no `-consult` collision). **Still pending:** build the 2 surveys (`GHL-SURVEYS-TO-BUILD-3.md`), headshots, host. *(Note: the GHL booking-widget URL returns 404 to plain `curl` — that's expected even for live calendars; it only renders in an iframe/browser.)*
+
+◇ Batch 5 — Isaiah / Gley / Galia / Elmer / Elia (built 2026-06-29, parallel build agents from Harley skeleton; full QA passed incl. footer-name fix on Elia). **Calendars provisioned + live** for 4: Gley `qtOUmhjtAozodWs1aFeW` (user `UOBXj5YZMUmlFFkBwptP`), Galia `VYodCk6wa6tyBMqSi9p6` (`76AnNMSOjlV5URKO7WRL`), Elmer `IbTxOcwXemCGd5fijmLJ` (`zYEag7CspMNb6vbijIpt`), Elia `LN7UrkSaqAtKCsqQGIWT` (`GXvI2aHLDCVjpxLprf9V`). **Isaiah Ellison NOT provisioned** — he's not in the location `/users/` list (agency-level like Theresa); his `clients/isaiah-ellison.json` has `ghlUserId: REPLACE_WITH_GHL_USER_ID` — get his id, then `node ghl-calendars.js --client isaiah-ellison.json --commit --write-config`. Surveys for all 5 in `GHL-SURVEYS-TO-BUILD-5.md` (each 7 Q, max 295). Headshots pending for all 5.
 
 ¶ Brenen Riggs — built 2026-06-26 (CDL-A owner-operator/trucker niche). Pages done to standard + emotional; calendar provisioned + live (round-robin, cal `bfnabqlHBXAXJyWlOmou`, clean `brenen-riggs` slug). GHL user `FuA2TOlUwfLKFmOor8K0` (briggs@valoramsolutions.com) — **NOTE two "Bren(n)en Riggs" users exist** (also `1ObRDyZv9l9HsZrx6i77` brenenriggscrm@gmail.com); used the @valoramsolutions.com one — confirm. Survey `GHL-SURVEY-BRENEN-RIGGS.md` (7 Q, max 295) — build + embed in GHL. Opt-in is the dashed placeholder; headshot pending.
 
