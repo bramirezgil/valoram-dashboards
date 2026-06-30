@@ -10,7 +10,7 @@ Pick-up doc for the next session. Covers what's built, where it lives, the stand
 - **Agent landing/results pages = standalone HTML in `C:\Users\TheMe\Downloads`** (NOT in the repo). Naming: `<slug>.html` + `<slug>results.html`. Some older agents have ` (N)` copies — **newest mtime wins** (e.g. `jillteachers (4).html`).
 - **Repo `landing-generator/`** holds: survey build docs, calendar configs (`clients/*.json`), playbook docs, the generator (`generate.js`, `ghl-calendars.js`).
 
-## Agents built so far (33)
+## Agents built so far (38)
 
 | Agent | Landing file | Results file | Lead-magnet / CTA | Books a… | Calendar slug | Calendar |
 |---|---|---|---|---|---|---|
@@ -47,11 +47,18 @@ Pick-up doc for the next session. Covers what's built, where it lives, the stand
 | Maricarmen Munoz | `maricarmen-munoz.html` | `maricarmen-munozresults.html` | Retirement Paycheck Snapshot | Financial Certainty Review | maricarmen-munoz | live★ |
 | Leslie Dowtin | `leslie-dowtin.html` | `leslie-dowtinresults.html` | Retirement Paycheck Snapshot | Clarity Call | leslie-dowtin | live★ |
 | Jennifer Battad | `jennifer-battad.html` | `jennifer-battadresults.html` | Protection Gap Scorecard | Discovery Call | jennifer-battad | live★ |
+| Vanessa Lucero | `vanessa-lucero.html` | `vanessa-luceroresults.html` | Retirement Paycheck Snapshot | Fresh-Start Clarity Call | vanessa-lucero | **not provisioned**☆ |
+| Susan Fran | `susan-fran.html` | `susan-franresults.html` | Retirement Paycheck Snapshot | Discovery Call | susan-fran | live☆ |
+| Sonja Huff | `sonja-huff.html` | `sonja-huffresults.html` | Retirement Paycheck Snapshot | Legacy Clarity Call | sonja-huff | live☆ |
+| Segg Tan | `segg-tan.html` | `segg-tanresults.html` | Retirement Paycheck Snapshot | Discovery Call | segg-tan | **not provisioned**☆ |
+| Sana Lopes | `sana-lopes.html` | `sana-lopesresults.html` | Retirement Paycheck Snapshot | Discovery Call | sana-lopes | live☆ |
 
 \* Theresa's calendar is now assigned to **her own user** — `ty0aUHS0BK52SUJ5YWR7` (Theresa Sulit, Theresasulitcrm1@gmail.com), reassigned 2026-06-26 (was on default user Bryan). NOTE: her account is **agency-level** — it does NOT appear in the location `/users/?locationId=` list; fetch it directly via `/users/ty0aUHS0BK52SUJ5YWR7`. Survey built + embedded (id `tc2lbJI2cKbj5PdsHEfv`).
 † Harley & Sharon (built 2026-06-25) — pages done to standard; **calendars provisioned + live** (round-robin, `isActive`). GHL user ids: Harley `w9oEXB69Hj2T56uY1MWA` (cal `J3Ibu4aE0T3G2KM6lCu6`), Sharon `J391xYDlLfQJynS0Brba` (cal `HdXumEf3oawgy2xmGm72`). Clean `harley-palaganas` / `sharon-webster` slugs (no `-consult` collision). **Still pending:** build the 2 surveys (`GHL-SURVEYS-TO-BUILD-3.md`), headshots, host. *(Note: the GHL booking-widget URL returns 404 to plain `curl` — that's expected even for live calendars; it only renders in an iframe/browser.)*
 
 ◆4 Batch 6 — Josephine / Jon / Jay / Jasmine (built 2026-06-29, parallel build agents; full QA passed). **Calendars provisioned + live**: Josephine `DhNRVzwvEiuagCmid2Bk` (user `azdknZ7jhrHpXR124VwX`), Jon `eoM6bFY7ErZhlYEvHmVj` (`TttczMtWdbvPmT7XW7ra`), Jay `aLelv3Cg3VRimq0DvjUe` (`n7QRpporu1ylmQeR1I0R`), Jasmine `CZPpadxzlyPMu7QQnL1p` (`PllGaCTsqn0FyLkgtydM`). **NAME NOTE: page/slug use "Jasmine Goodridge" (per her docx) but her GHL user is "Jasmine Goodrich"** — same person/ID; confirm preferred spelling. Surveys in `GHL-SURVEYS-TO-BUILD-6.md` (7 Q, max 295). Headshots pending. **Joey Nava NOT built** — his doc is a strength/movement-coaching offer ("Movement Paycheck"), not financial; flagged with user for direction before building.
+
+☆ Batch 8 — Vanessa / Susan / Sonja / Segg / Sana (built 2026-06-29, parallel agents; QA passed). **Calendars provisioned + live for 3:** Susan `qCviT5G8WZnGeWQpKiaK` (`2X4u9tZ216dMqM5W9EjS`), Sonja `vIKWockiNEMATMQ5WelM` (`ZakrtIRo8ovdcULxJFi4`), Sana `M9TW4daY3gZ2wGDuTHSf` (`r6Y5sybuVl4jYIwvp5eU`). **Vanessa Lucero & Segg Tan NOT provisioned** — not in the location `/users/` list (agency-level/new); their configs have `REPLACE_WITH_GHL_USER_ID` — get ids, then provision. **Susan Fran magnet note:** her brief's free-gift said "RMD Tax Shock Scorecard" (a wrong leftover — RMD is a retiree concept); built as **Retirement Paycheck Snapshot** instead. Surveys in `GHL-SURVEYS-TO-BUILD-8.md` (7 Q, max 295). Headshots pending.
 
 ★ Batch 7 — Raj / Mich / Maricarmen / Leslie / Jennifer (built 2026-06-29, parallel agents; QA passed). **Calendars provisioned + live:** Raj `dVpIcjaGoCIBE1S6j1iC` (`yk7D7RW1gzcTQKjcwU5J`), Mich `gT9wzGHvR1k6kdyVOX0c` (`ltzhuyhSIrdh73g22INX`), Maricarmen `hfmMuz5IrawFLU5gphW1`, Leslie `4PLb4QQw9hDIvDXl1k5Q` (`BEr3I30DFBq74gjDEpST`), Jennifer `wAeLWOAVK896lQ12oMyX` (`baIocvW0kIBn4kIM60nB`). **Maricarmen — two "Munoz" GHL users:** used `i5gMSFRq80ZraEx1mg9a` (Mary Carmen Munoz, mcmunoz@valoramsolutions.com); other is `o5HgIkwSAEVY8ArzXIZV` (mcmunozcrm@gmail.com) — confirm. **Mich's** brief left the gift title blank → defaulted magnet to Retirement Paycheck Snapshot. Surveys in `GHL-SURVEYS-TO-BUILD-7.md` (7 Q, max 295). Headshots pending.
 
