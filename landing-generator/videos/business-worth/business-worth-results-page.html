@@ -634,7 +634,13 @@ function init() {
   renderOpps(tier);
 }
 
-document.addEventListener('DOMContentLoaded', init);
+// Run now if the DOM is already parsed (e.g. injected by a page builder after load),
+// otherwise wait for DOMContentLoaded. Ensures the VSL src always gets set.
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', init);
+} else {
+  init();
+}
 
 // Fit the VSL frame to the video's real dimensions (narrow it if the video is portrait)
 (function () {
