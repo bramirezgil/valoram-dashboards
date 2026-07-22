@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <title>Josh &amp; Robin — Tax Strategy Recap</title>
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body {
+        width: 1920px; height: 1080px; overflow: hidden;
+        background: #eef2f7;
+        font-family: "Inter", system-ui, sans-serif;
+        color: #0b1f3a;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      :root {
+        --navy: #0b1f3a;
+        --navy-2: #16324f;
+        --slate: #33404f;
+        --slate-2: #5a6472;
+        --gold: #b6924f;
+        --gold-ink: #8a6d2c;
+        --line: #d7dee7;
+        --panel: #ffffff;
+      }
+
+      #root { position: relative; }
+
+      /* ---- persistent stage ---- */
+      #stage-bg {
+        position: absolute; inset: 0;
+        background: linear-gradient(180deg, #ffffff 0%, #e9eef5 100%);
+      }
+      #stage-bg::before {
+        content: ""; position: absolute; top: 0; left: 0; right: 0; height: 6px;
+        background: linear-gradient(90deg, var(--navy) 0%, var(--navy-2) 60%, var(--gold) 100%);
+      }
+      #watermark {
+        position: absolute; right: -60px; bottom: -140px;
+        font-size: 640px; font-weight: 800; line-height: 1;
+        color: #0b1f3a; opacity: 0.035; letter-spacing: -20px; user-select: none;
+      }
+      #brand-bug { position: absolute; top: 46px; left: 96px; z-index: 5; }
+      #brand-bug .mark { font-size: 26px; font-weight: 800; letter-spacing: 3px; color: var(--navy); }
+      #brand-bug .sub { font-size: 13px; font-weight: 600; letter-spacing: 6px; color: var(--slate-2); margin-top: 3px; }
+
+      /* ---- scenes ---- */
+      .scene {
+        position: absolute; inset: 0;
+        display: flex; flex-direction: column; justify-content: center;
+        padding: 150px 160px 190px;
+      }
+      .scene-inner { width: 100%; }
+
+      .eyebrow {
+        font-size: 20px; font-weight: 700; letter-spacing: 6px; text-transform: uppercase;
+        color: var(--gold-ink); margin-bottom: 22px;
+      }
+      .rule { height: 3px; width: 96px; background: var(--gold); border-radius: 2px; transform-origin: left center; margin: 26px 0 30px; }
+      h1 { font-size: 84px; font-weight: 800; letter-spacing: -1.5px; line-height: 1.04; color: var(--navy); }
+      h2 { font-size: 62px; font-weight: 800; letter-spacing: -1px; line-height: 1.06; color: var(--navy); }
+      .subhead { font-size: 40px; font-weight: 600; color: var(--slate); margin-top: 18px; }
+      .lead { font-size: 30px; font-weight: 500; color: var(--slate); line-height: 1.5; max-width: 1200px; margin-top: 8px; }
+
+      /* caption (burned-in narration line) */
+      .caption {
+        position: absolute; left: 160px; right: 160px; bottom: 72px;
+        text-align: center; font-size: 27px; font-weight: 600; line-height: 1.4;
+        color: var(--slate); letter-spacing: 0.2px;
+      }
+
+      /* list */
+      .list { margin-top: 40px; display: flex; flex-direction: column; gap: 22px; }
+      .item { display: flex; align-items: center; gap: 22px; font-size: 34px; font-weight: 600; color: var(--navy); }
+      .item .dot { flex: 0 0 auto; width: 16px; height: 16px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 0 6px rgba(182,146,79,0.14); }
+      .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 64px; margin-top: 40px; }
+      .grid2 .item { font-size: 31px; }
+
+      /* numbered steps */
+      .steps { margin-top: 40px; display: flex; flex-direction: column; gap: 20px; }
+      .step { display: flex; align-items: center; gap: 26px; font-size: 32px; font-weight: 600; color: var(--navy); }
+      .step .num { flex: 0 0 auto; width: 54px; height: 54px; border-radius: 50%; display: grid; place-items: center; font-size: 24px; font-weight: 800; color: #fff; background: var(--navy); }
+
+      /* two-column action layout */
+      .cols { display: flex; align-items: center; gap: 90px; }
+      .cols .left { flex: 1 1 auto; }
+      .cols .right { flex: 0 0 auto; display: flex; flex-direction: column; align-items: center; gap: 22px; }
+
+      .btn { display: inline-flex; align-items: center; gap: 16px; background: var(--navy); color: #fff; font-size: 30px; font-weight: 700; letter-spacing: 0.5px; padding: 24px 44px; border-radius: 14px; box-shadow: 0 18px 40px rgba(11,31,58,0.20); }
+      .btn.gold { background: linear-gradient(180deg,#c7a361,#b6924f); color: var(--navy); }
+      .btn .arrow { font-size: 26px; }
+
+      .qr-card { background: #fff; padding: 22px; border-radius: 18px; border: 1px solid var(--line); box-shadow: 0 20px 50px rgba(11,31,58,0.12); }
+      .qr-card img { display: block; width: 250px; height: 250px; }
+      .qr-label { font-size: 20px; font-weight: 600; color: var(--slate-2); letter-spacing: 0.5px; }
+
+      /* meeting card */
+      .card { margin-top: 40px; background: var(--panel); border: 1px solid var(--line); border-left: 6px solid var(--gold); border-radius: 16px; padding: 40px 48px; max-width: 1180px; box-shadow: 0 20px 50px rgba(11,31,58,0.08); }
+      .card .big { font-size: 56px; font-weight: 800; color: var(--navy); letter-spacing: -0.5px; }
+      .card .med { font-size: 34px; font-weight: 700; color: var(--navy-2); margin-top: 6px; }
+      .card .note { font-size: 27px; font-weight: 500; color: var(--slate); margin-top: 16px; line-height: 1.45; }
+
+      /* presenter tag (lower third) */
+      .presenter { position: absolute; left: 160px; bottom: 150px; display: flex; align-items: center; gap: 20px; }
+      .presenter .bar { width: 5px; height: 62px; background: var(--gold); border-radius: 3px; }
+      .presenter .who { font-size: 32px; font-weight: 800; color: var(--navy); }
+      .presenter .role { font-size: 22px; font-weight: 600; color: var(--slate-2); letter-spacing: 1px; margin-top: 4px; }
+
+      /* closing */
+      #s11 { align-items: center; text-align: center; }
+      #s11 .scene-inner { display: flex; flex-direction: column; align-items: center; }
+      .closing-line { font-size: 40px; font-weight: 600; color: var(--slate); max-width: 1200px; line-height: 1.4; }
+      .final-brand { font-size: 72px; font-weight: 800; letter-spacing: 1px; color: var(--navy); margin-top: 44px; }
+      .final-when { font-size: 34px; font-weight: 700; color: var(--navy-2); margin-top: 16px; }
+      .final-tag { font-size: 26px; font-weight: 600; color: var(--gold-ink); letter-spacing: 2px; margin-top: 26px; }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="198"
+      data-width="1920"
+      data-height="1080"
+      data-fps="30"
+    >
+      <!-- persistent stage (non-clip: visible entire composition) -->
+      <div id="stage-bg"><div id="watermark">V</div></div>
+      <div id="brand-bug">
+        <div class="mark">VALORAM</div>
+        <div class="sub">TAX&nbsp;&nbsp;STRATEGY</div>
+      </div>
+
+      <!-- SCENE 1 — Welcome -->
+      <section id="s1" class="scene clip" data-start="0" data-duration="14" data-track-index="1">
+        <div class="scene-inner">
+          <div class="eyebrow s1-el">Welcome to Valoram Tax Strategy</div>
+          <h1 class="s1-el">Welcome, Josh &amp; Robin.</h1>
+          <div class="rule s1-rule"></div>
+          <div class="subhead s1-el">A personal recap of your consultation and next steps.</div>
+        </div>
+        <div class="presenter s1-el">
+          <div class="bar"></div>
+          <div>
+            <div class="who">Alvin Ubaldo</div>
+            <div class="role">VALORAM TAX STRATEGY</div>
+          </div>
+        </div>
+        <div class="caption s1-cap">Thank you both for meeting with us — and welcome to Valoram Tax Strategy.</div>
+      </section>
+
+      <!-- SCENE 2 — Recognizing Their Growth -->
+      <section id="s2" class="scene clip" data-start="14" data-duration="18" data-track-index="1">
+        <div class="scene-inner">
+          <div class="eyebrow s2-el">Congratulations on your growth</div>
+          <h2 class="s2-el">Your financial picture has evolved.</h2>
+          <div class="rule s2-rule"></div>
+          <div class="grid2">
+            <div class="item s2-item"><span class="dot"></span>Increased investment income</div>
+            <div class="item s2-item"><span class="dot"></span>Multiple entities and accounts</div>
+            <div class="item s2-item"><span class="dot"></span>Trust and insurance planning</div>
+            <div class="item s2-item"><span class="dot"></span>New real-estate activity</div>
+          </div>
+        </div>
+        <div class="caption s2-cap">As your income, entities, investments, and real estate grow, coordination matters more than ever.</div>
+      </section>
+
+      <!-- SCENE 3 — Primary Objectives -->
+      <section id="s3" class="scene clip" data-start="32" data-duration="24" data-track-index="1">
+        <div class="scene-inner">
+          <div class="eyebrow s3-el">Your primary objectives</div>
+          <h2 class="s3-el">What we heard matters most to you.</h2>
+          <div class="rule s3-rule"></div>
+          <div class="list">
+            <div class="item s3-item"><span class="dot"></span>Keep more of what you earn</div>
+            <div class="item s3-item"><span class="dot"></span>Reduce unnecessary tax exposure</div>
+            <div class="item s3-item"><span class="dot"></span>Coordinate businesses, trusts, and investments</div>
+            <div class="item s3-item"><span class="dot"></span>Integrate real estate and insurance planning</div>
+            <div class="item s3-item"><span class="dot"></span>Build a compliant, long-term strategy</div>
+          </div>
+        </div>
+        <div class="caption s3-cap">Your goal is clear: build wealth while keeping every piece structured intentionally and compliantly.</div>
+      </section>
+
+      <!-- SCENE 4 — The Assessment -->
+      <section id="s4" class="scene clip" data-start="56" data-duration="22" data-track-index="1">
+        <div class="scene-inner">
+          <div class="eyebrow s4-el">Your Tax Strategy Assessment</div>
+          <h2 class="s4-el">A proactive review — not just tax prep.</h2>
+          <div class="rule s4-rule"></div>
+          <div class="steps">
+            <div class="step s4-step"><span class="num">1</span>Review prior tax filings</div>
+            <div class="step s4-step"><span class="num">2</span>Analyze current income &amp; entity structure</div>
+            <div class="step s4-step"><span class="num">3</span>Review trust, investment &amp; real-estate activity</div>
+            <div class="step s4-step"><span class="num">4</span>Identify potential planning opportunities</div>
+            <div class="step s4-step"><span class="num">5</span>Prepare clear, actionable recommendations</div>
+          </div>
+        </div>
+        <div class="caption s4-cap">We'll identify potential opportunities and strategies that may be appropriate for your complete picture.</div>
+      </section>
+
+      <!-- SCENE 5 — Documents to Upload -->
+      <section id="s5" class="scene clip" data-start="78" data-duration="18" data-track-index="1">
+        <div class="scene-inner">
+          <div class="eyebrow s5-el">Before our next meeting</div>
+          <h2 class="s5-el">Documents to upload.</h2>
+          <div class="rule s5-rule"></div>
+          <div class="grid2">
+            <div class="item s5-item"><span class="dot"></span>Last two years of tax returns</div>
+            <div class="item s5-item"><span class="dot"></span>Business returns &amp; schedules</div>
+            <div class="item s5-item"><span class="dot"></span>Relevant entity documents</div>
+            <div class="item s5-item"><span class="dot"></span>Relevant trust documents</div>
+            <div class="item s5-item"><span class="dot"></span>Investment-income information</div>
+            <div class="item s5-item"><span class="dot"></span>Real-estate documentation</div>
+          </div>
+        </div>
+        <div class="caption s5-cap">The more complete the information, the more productive our review and upcoming meetings can be.</div>
+      </section>
+
+      <!-- SCENE 6 — Privacy Note -->
+      <section id="s6" class="scene clip" data-start="96" data-duration="12" data-track-index="1">
+        <div class="scene-inner">
+          <div class="eyebrow s6-el">A note on privacy</div>
+          <h2 class="s6-el">Sensitive information may be redacted for the initial review.</h2>
+          <div class="rule s6-rule"></div>
+          <div class="lead s6-el">Please leave the relevant income, deduction, entity, and filing information visible so our advisors can understand your overall tax position.</div>
+        </div>
+        <div class="caption s6-cap">Redact what isn't needed — just keep enough visible for our advisors to understand your position.</div>
+      </section>
+
+      <!-- SCENE 7 — Secure Upload (Dropbox) -->
+      <section id="s7" class="scene clip" data-start="108" data-duration="18" data-track-index="1">
+        <div class="scene-inner">
+          <div class="cols">
+            <div class="left">
+              <div class="eyebrow s7-el">Secure document upload</div>
+              <h2 class="s7-el">Upload your tax documents securely.</h2>
+              <div class="rule s7-rule"></div>
+              <div class="lead s7-el">Use the secure Dropbox folder included with this video. Scan the code or tap the button.</div>
+              <div style="margin-top:34px;" class="s7-el"><span class="btn gold">UPLOAD DOCUMENTS <span class="arrow">→</span></span></div>
+            </div>
+            <div class="right s7-qr">
+              <div class="qr-card"><img src="assets/qr-dropbox.png" alt="Dropbox upload QR code" /></div>
+              <div class="qr-label">Scan to open the secure folder</div>
+            </div>
+          </div>
+        </div>
+        <div class="caption s7-cap">The secure upload link is included with this video and shown here on screen.</div>
+      </section>
+
+      <!-- SCENE 8 — Friday Onboarding Meeting -->
+      <section id="s8" class="scene clip" data-start="126" data-duration="18" data-track-index="1">
+        <div class="scene-inner">
+          <div class="cols">
+            <div class="left">
+              <div class="eyebrow s8-el">Your onboarding meeting</div>
+              <h2 class="s8-el">Let's get started on Friday.</h2>
+              <div class="rule s8-rule"></div>
+              <div class="card s8-el">
+                <div class="big">Friday, July 24</div>
+                <div class="med">10:00 a.m. Eastern Time</div>
+                <div class="note">We'll begin onboarding and start entering your financial and tax information into our software system.</div>
+              </div>
+              <div style="margin-top:30px;" class="s8-el"><span class="btn">JOIN THE FRIDAY MEETING <span class="arrow">→</span></span></div>
+            </div>
+            <div class="right s8-qr">
+              <div class="qr-card"><img src="assets/qr-zoom.png" alt="Friday meeting Zoom QR code" /></div>
+              <div class="qr-label">Scan to join on Zoom</div>
+            </div>
+          </div>
+        </div>
+        <div class="caption s8-cap">The Zoom link is included with this video and displayed on screen.</div>
+      </section>
+
+      <!-- SCENE 9 — Meeting with Anjali Srivastava -->
+      <section id="s9" class="scene clip" data-start="144" data-duration="18" data-track-index="1">
+        <div class="scene-inner">
+          <div class="eyebrow s9-el">Tax review with our Enrolled Agent</div>
+          <h2 class="s9-el">Next: a detailed review with Anjali Srivastava.</h2>
+          <div class="rule s9-rule"></div>
+          <div class="card s9-el" style="border-left-color: var(--navy);">
+            <div class="big">Anjali Srivastava</div>
+            <div class="med">Enrolled Agent &nbsp;·&nbsp; Tuesday, July 28</div>
+            <div class="note">Time to be selected based on your availability.</div>
+          </div>
+          <div class="grid2" style="margin-top:30px;">
+            <div class="item s9-item"><span class="dot"></span>Detailed review of your situation</div>
+            <div class="item s9-item"><span class="dot"></span>Any follow-up questions</div>
+            <div class="item s9-item"><span class="dot"></span>Clarify entities &amp; income</div>
+            <div class="item s9-item"><span class="dot"></span>Complete the analysis</div>
+          </div>
+        </div>
+        <div class="caption s9-cap">We'll choose a time that's most convenient for you — no specific time is set yet.</div>
+      </section>
+
+      <!-- SCENE 10 — Final Assessment Delivery -->
+      <section id="s10" class="scene clip" data-start="162" data-duration="20" data-track-index="1">
+        <div class="scene-inner">
+          <div class="eyebrow s10-el">Before the end of the week</div>
+          <h2 class="s10-el">Your complete assessment &amp; consultation.</h2>
+          <div class="rule s10-rule"></div>
+          <div class="grid2">
+            <div class="item s10-item"><span class="dot"></span>Complete Tax Strategy Assessment</div>
+            <div class="item s10-item"><span class="dot"></span>One-hour consultation</div>
+            <div class="item s10-item"><span class="dot"></span>Review of our findings</div>
+            <div class="item s10-item"><span class="dot"></span>Potential planning opportunities</div>
+            <div class="item s10-item"><span class="dot"></span>Your questions, answered</div>
+            <div class="item s10-item"><span class="dot"></span>Recommended next steps</div>
+          </div>
+        </div>
+        <div class="caption s10-cap">We'll walk you through our findings and outline next steps based on your complete situation.</div>
+      </section>
+
+      <!-- SCENE 11 — Closing -->
+      <section id="s11" class="scene clip" data-start="182" data-duration="16" data-track-index="1">
+        <div class="scene-inner">
+          <div class="eyebrow s11-el" style="text-align:center;">Thank you for trusting Valoram Tax Strategy</div>
+          <div class="closing-line s11-el">Building a coordinated strategy for your continued growth.</div>
+          <div class="final-brand s11-el">Valoram Tax Strategy</div>
+          <div class="final-when s11-el">See you Friday, July 24 · 10:00 a.m. Eastern Time</div>
+          <div class="final-tag s11-el">KEEP MORE OF WHAT YOU EARN · PLAN WITH GREATER INTENTION</div>
+        </div>
+        <div class="caption s11-cap">We look forward to speaking with you both on Friday and beginning the onboarding process.</div>
+      </section>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      // Per-scene entrance choreography. `at` = absolute master-timeline time and
+      // must match each section's data-start.
+      const scenes = [
+        { at: 0,   els: ".s1-el", rule: ".s1-rule", cap: ".s1-cap" },
+        { at: 14,  els: ".s2-el", rule: ".s2-rule", cap: ".s2-cap", items: ".s2-item" },
+        { at: 32,  els: ".s3-el", rule: ".s3-rule", cap: ".s3-cap", items: ".s3-item" },
+        { at: 56,  els: ".s4-el", rule: ".s4-rule", cap: ".s4-cap", items: ".s4-step" },
+        { at: 78,  els: ".s5-el", rule: ".s5-rule", cap: ".s5-cap", items: ".s5-item" },
+        { at: 96,  els: ".s6-el", rule: ".s6-rule", cap: ".s6-cap" },
+        { at: 108, els: ".s7-el", rule: ".s7-rule", cap: ".s7-cap", qr: ".s7-qr" },
+        { at: 126, els: ".s8-el", rule: ".s8-rule", cap: ".s8-cap", qr: ".s8-qr" },
+        { at: 144, els: ".s9-el", rule: ".s9-rule", cap: ".s9-cap", items: ".s9-item" },
+        { at: 162, els: ".s10-el", rule: ".s10-rule", cap: ".s10-cap", items: ".s10-item" },
+        { at: 182, els: ".s11-el", cap: ".s11-cap" },
+      ];
+
+      scenes.forEach((s) => {
+        tl.from(s.els, { opacity: 0, y: 34, duration: 0.7, stagger: 0.12, ease: "power3.out" }, s.at + 0.1);
+        if (s.rule) tl.from(s.rule, { scaleX: 0, duration: 0.6, ease: "power2.out" }, s.at + 0.35);
+        if (s.items) tl.from(s.items, { opacity: 0, x: -24, duration: 0.5, stagger: 0.16, ease: "power2.out" }, s.at + 0.6);
+        if (s.qr) tl.from(s.qr, { opacity: 0, scale: 0.9, duration: 0.7, ease: "back.out(1.4)" }, s.at + 0.5);
+        if (s.cap) tl.from(s.cap, { opacity: 0, y: 14, duration: 0.5, ease: "power2.out" }, s.at + 0.5);
+      });
+
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

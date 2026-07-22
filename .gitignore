@@ -1,0 +1,15 @@
+# HyperFrames / skills tooling — reproducible via `npx skills add heygen-com/hyperframes`
+# (installation is recorded in skills-lock.json; the vendored skill files are large
+#  and are not committed)
+.agents/
+.claude/
+
+# Node
+node_modules/
+npm-debug.log*
+
+# HyperFrames build/render artifacts
+**/snapshots/
+**/renders/
+**/out/
+.cache/
