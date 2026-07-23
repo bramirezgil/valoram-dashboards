@@ -6,7 +6,7 @@
 
 ## Message
 
-Welcome Josh & Robin to Valoram Tax Strategy, recap the goals from their
+Welcome Josh & Robin to Valoram Strategic Tax Advisors, recap the goals from their
 consultation, confirm what the Tax Strategy Assessment covers, tell them exactly
 which documents to upload and where, and confirm the sequence of next-step
 meetings — all in a warm, professional, high-end tone that reassures without
@@ -14,7 +14,7 @@ selling.
 
 ## Speaker / Audience
 
-- **Presenter:** Alvin Ubaldo — Valoram Tax Strategy
+- **Presenter:** Alvin Ubaldo — Valoram Strategic Tax Advisors
 - **Audience:** Josh & Robin (new enrolled clients)
 
 ## Format
@@ -68,7 +68,7 @@ Approved hedged phrasing: "potential opportunities", "may be appropriate",
 
 ## Correct spellings
 
-Valoram Tax Strategy · Alvin Ubaldo · Josh · Robin · Anjali Srivastava ·
+Valoram Strategic Tax Advisors · Alvin Ubaldo · Josh · Robin · Anjali Srivastava ·
 Enrolled Agent · Eastern Time
 
 ## Open items (need Valoram to supply / approve)

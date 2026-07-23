@@ -1,6 +1,6 @@
 # SCRIPT — Josh & Robin Tax Strategy Recap (approved, locked)
 
-Speaker: Alvin Ubaldo, Valoram Tax Strategy. ~560 words, ~3–4 min.
+Speaker: Alvin Ubaldo, Valoram Strategic Tax Advisors. ~560 words, ~3–4 min.
 Captions in `index.html` track this narration line-for-line.
 
 ---
@@ -8,7 +8,7 @@ Captions in `index.html` track this narration line-for-line.
 Hi Josh and Robin,
 
 I wanted to personally thank you both again for taking the time to meet with us
-and officially welcome you to Valoram Tax Strategy.
+and officially welcome you to Valoram Strategic Tax Advisors.
 
 First, congratulations on the tremendous growth you've experienced. Moving from
 the income generated through the chiropractic practice into a much larger and
@@ -73,7 +73,7 @@ your income and expanding your investments. Our goal now is to help you build a
 coordinated strategy that supports that continued growth while helping you keep
 more of what you've worked so hard to earn.
 
-Thank you again for trusting Valoram Tax Strategy.
+Thank you again for trusting Valoram Strategic Tax Advisors.
 
 We look forward to speaking with you both on Friday at 10:00 a.m. Eastern Time
 and beginning the onboarding process.
