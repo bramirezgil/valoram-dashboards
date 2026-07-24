@@ -76,8 +76,8 @@ const CONTENT: Content[] = [
   },
   {
     kind: "card",
-    vo: "On average, we identify over forty-four thousand dollars in potential tax savings for the people we work with.",
-    card: { type: "stat", number: "$44,000", label: "Avg. Tax Savings Identified*" },
+    vo: "For the people we work with, we typically identify between fifteen and forty-four thousand dollars — or more — in potential tax savings.",
+    card: { type: "stat", number: "$15K–$44K+", label: "In Tax Savings Identified*" },
   },
   {
     kind: "card",

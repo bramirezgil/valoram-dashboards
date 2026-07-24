@@ -52,7 +52,7 @@ SEG = [
     ("card", False, 5.0, "There's a difference between preparing a return and building a tax strategy.", None),
     ("broll", True, 4.5, "When we look at someone's return — really look at it — we almost never see just a tax return. We see a story.", None),
     ("broll", True, 4.5, "We see credits never claimed. Contributions not optimized. Prior years where someone overpaid — money that can still be recovered.", None),
-    ("card", False, 6.0, "On average, we identify over forty-four thousand dollars in potential tax savings for the people we work with.", None),
+    ("card", False, 6.0, "For the people we work with, we typically identify between fifteen and forty-four thousand dollars — or more — in potential tax savings.", None),
     ("card", False, 5.0, "That's not a loophole. That's money that was always yours.", None),
     ("card", False, 5.5, "That's exactly what we built our approach to do.", None),
     ("broll", True, 4.5, "We find what was missed. We recover what's still recoverable. And we build a forward strategy so you stop leaving money behind.", None),

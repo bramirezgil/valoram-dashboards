@@ -1,6 +1,6 @@
 {
   "fps": 30,
-  "durationFrames": 3539,
+  "durationFrames": 3582,
   "segments": [
     {
       "from": 0,
@@ -46,51 +46,51 @@
     },
     {
       "from": 1616,
-      "durFrames": 289,
+      "durFrames": 332,
       "voFrom": 1625,
-      "voTo": 1859
+      "voTo": 1901
     },
     {
-      "from": 1905,
+      "from": 1948,
       "durFrames": 165,
-      "voFrom": 1914,
-      "voTo": 2023
+      "voFrom": 1957,
+      "voTo": 2066
     },
     {
-      "from": 2070,
+      "from": 2113,
       "durFrames": 165,
-      "voFrom": 2079,
-      "voTo": 2163
+      "voFrom": 2122,
+      "voTo": 2206
     },
     {
-      "from": 2235,
+      "from": 2278,
       "durFrames": 292,
-      "voFrom": 2244,
-      "voTo": 2488
+      "voFrom": 2287,
+      "voTo": 2531
     },
     {
-      "from": 2527,
+      "from": 2570,
       "durFrames": 260,
-      "voFrom": 2536,
-      "voTo": 2740
+      "voFrom": 2579,
+      "voTo": 2783
     },
     {
-      "from": 2787,
+      "from": 2830,
       "durFrames": 365,
-      "voFrom": 2796,
-      "voTo": 3113
+      "voFrom": 2839,
+      "voTo": 3156
     },
     {
-      "from": 3152,
+      "from": 3195,
       "durFrames": 207,
-      "voFrom": 3161,
-      "voTo": 3320
+      "voFrom": 3204,
+      "voTo": 3363
     },
     {
-      "from": 3359,
+      "from": 3402,
       "durFrames": 180,
-      "voFrom": 3368,
-      "voTo": 3428
+      "voFrom": 3411,
+      "voTo": 3471
     }
   ],
   "captions": [
@@ -616,23 +616,23 @@
       "words": [
         {
           "text": "We",
-          "start": 2244,
-          "end": 2255
+          "start": 2287,
+          "end": 2298
         },
         {
           "text": "find",
-          "start": 2255,
-          "end": 2266
+          "start": 2298,
+          "end": 2309
         },
         {
           "text": "what",
-          "start": 2266,
-          "end": 2277
+          "start": 2309,
+          "end": 2320
         },
         {
           "text": "was",
-          "start": 2277,
-          "end": 2288
+          "start": 2320,
+          "end": 2331
         }
       ]
     },
@@ -640,23 +640,23 @@
       "words": [
         {
           "text": "missed.",
-          "start": 2288,
-          "end": 2299
+          "start": 2331,
+          "end": 2342
         },
         {
           "text": "We",
-          "start": 2299,
-          "end": 2311
+          "start": 2342,
+          "end": 2354
         },
         {
           "text": "recover",
-          "start": 2311,
-          "end": 2322
+          "start": 2354,
+          "end": 2365
         },
         {
           "text": "what's",
-          "start": 2322,
-          "end": 2333
+          "start": 2365,
+          "end": 2376
         }
       ]
     },
@@ -664,23 +664,23 @@
       "words": [
         {
           "text": "still",
-          "start": 2333,
-          "end": 2344
+          "start": 2376,
+          "end": 2387
         },
         {
           "text": "recoverable.",
-          "start": 2344,
-          "end": 2355
+          "start": 2387,
+          "end": 2398
         },
         {
           "text": "And",
-          "start": 2355,
-          "end": 2366
+          "start": 2398,
+          "end": 2409
         },
         {
           "text": "we",
-          "start": 2366,
-          "end": 2377
+          "start": 2409,
+          "end": 2420
         }
       ]
     },
@@ -688,23 +688,23 @@
       "words": [
         {
           "text": "build",
-          "start": 2377,
-          "end": 2388
+          "start": 2420,
+          "end": 2431
         },
         {
           "text": "a",
-          "start": 2388,
-          "end": 2399
+          "start": 2431,
+          "end": 2442
         },
         {
           "text": "forward",
-          "start": 2399,
-          "end": 2410
+          "start": 2442,
+          "end": 2453
         },
         {
           "text": "strategy",
-          "start": 2410,
-          "end": 2421
+          "start": 2453,
+          "end": 2464
         }
       ]
     },
@@ -712,23 +712,23 @@
       "words": [
         {
           "text": "so",
-          "start": 2421,
-          "end": 2433
+          "start": 2464,
+          "end": 2476
         },
         {
           "text": "you",
-          "start": 2433,
-          "end": 2444
+          "start": 2476,
+          "end": 2487
         },
         {
           "text": "stop",
-          "start": 2444,
-          "end": 2455
+          "start": 2487,
+          "end": 2498
         },
         {
           "text": "leaving",
-          "start": 2455,
-          "end": 2466
+          "start": 2498,
+          "end": 2509
         }
       ]
     },
@@ -736,13 +736,13 @@
       "words": [
         {
           "text": "money",
-          "start": 2466,
-          "end": 2477
+          "start": 2509,
+          "end": 2520
         },
         {
           "text": "behind.",
-          "start": 2477,
-          "end": 2488
+          "start": 2520,
+          "end": 2531
         }
       ]
     },
@@ -750,23 +750,23 @@
       "words": [
         {
           "text": "It",
-          "start": 2796,
-          "end": 2809
+          "start": 2839,
+          "end": 2852
         },
         {
           "text": "doesn't",
-          "start": 2809,
-          "end": 2821
+          "start": 2852,
+          "end": 2864
         },
         {
           "text": "matter",
-          "start": 2821,
-          "end": 2834
+          "start": 2864,
+          "end": 2877
         },
         {
           "text": "if",
-          "start": 2834,
-          "end": 2847
+          "start": 2877,
+          "end": 2890
         }
       ]
     },
@@ -774,23 +774,23 @@
       "words": [
         {
           "text": "you're",
-          "start": 2847,
-          "end": 2859
+          "start": 2890,
+          "end": 2902
         },
         {
           "text": "a",
-          "start": 2859,
-          "end": 2872
+          "start": 2902,
+          "end": 2915
         },
         {
           "text": "W-2",
-          "start": 2872,
-          "end": 2885
+          "start": 2915,
+          "end": 2928
         },
         {
           "text": "earner,",
-          "start": 2885,
-          "end": 2897
+          "start": 2928,
+          "end": 2940
         }
       ]
     },
@@ -798,23 +798,23 @@
       "words": [
         {
           "text": "self-employed,",
-          "start": 2897,
-          "end": 2910
+          "start": 2940,
+          "end": 2953
         },
         {
           "text": "or",
-          "start": 2910,
-          "end": 2923
+          "start": 2953,
+          "end": 2966
         },
         {
           "text": "running",
-          "start": 2923,
-          "end": 2935
+          "start": 2966,
+          "end": 2978
         },
         {
           "text": "a",
-          "start": 2935,
-          "end": 2948
+          "start": 2978,
+          "end": 2991
         }
       ]
     },
@@ -822,23 +822,23 @@
       "words": [
         {
           "text": "business.",
-          "start": 2948,
-          "end": 2961
+          "start": 2991,
+          "end": 3004
         },
         {
           "text": "If",
-          "start": 2961,
-          "end": 2974
+          "start": 3004,
+          "end": 3017
         },
         {
           "text": "you're",
-          "start": 2974,
-          "end": 2986
+          "start": 3017,
+          "end": 3029
         },
         {
           "text": "paying",
-          "start": 2986,
-          "end": 2999
+          "start": 3029,
+          "end": 3042
         }
       ]
     },
@@ -846,23 +846,23 @@
       "words": [
         {
           "text": "income",
-          "start": 2999,
-          "end": 3012
+          "start": 3042,
+          "end": 3055
         },
         {
           "text": "taxes,",
-          "start": 3012,
-          "end": 3024
+          "start": 3055,
+          "end": 3067
         },
         {
           "text": "there's",
-          "start": 3024,
-          "end": 3037
+          "start": 3067,
+          "end": 3080
         },
         {
           "text": "more",
-          "start": 3037,
-          "end": 3050
+          "start": 3080,
+          "end": 3093
         }
       ]
     },
@@ -870,23 +870,23 @@
       "words": [
         {
           "text": "opportunity",
-          "start": 3050,
-          "end": 3062
+          "start": 3093,
+          "end": 3105
         },
         {
           "text": "than",
-          "start": 3062,
-          "end": 3075
+          "start": 3105,
+          "end": 3118
         },
         {
           "text": "you've",
-          "start": 3075,
-          "end": 3088
+          "start": 3118,
+          "end": 3131
         },
         {
           "text": "been",
-          "start": 3088,
-          "end": 3100
+          "start": 3131,
+          "end": 3143
         }
       ]
     },
@@ -894,8 +894,8 @@
       "words": [
         {
           "text": "shown.",
-          "start": 3100,
-          "end": 3113
+          "start": 3143,
+          "end": 3156
         }
       ]
     }
