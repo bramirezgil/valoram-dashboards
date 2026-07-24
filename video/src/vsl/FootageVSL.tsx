@@ -78,8 +78,26 @@ export const FootageVSL: React.FC = () => {
 
       {/* captions + persistent brand mark, timed on the absolute timeline */}
       <CaptionBar lines={CAPTION_LINES} />
-      <div style={{ position: "absolute", left: 56, bottom: 46, opacity: 0.95 }}>
-        <Logo size={34} />
+      {/* brand watermark: soft dark scrim + drop-shadow so the white logo reads on any footage */}
+      <div style={{ position: "absolute", left: 0, top: 0, width: 520, height: 170 }}>
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            background:
+              "radial-gradient(120% 120% at 0% 0%, rgba(6,12,22,0.6) 0%, rgba(6,12,22,0) 70%)",
+          }}
+        />
+        <div
+          style={{
+            position: "absolute",
+            left: 56,
+            top: 48,
+            filter: "drop-shadow(0 2px 10px rgba(0,0,0,0.9))",
+          }}
+        >
+          <Logo size={50} />
+        </div>
       </div>
 
       {/* audio: original narration at full, music bed ducked underneath */}
