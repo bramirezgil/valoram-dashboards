@@ -1,7 +1,7 @@
 // R.I.S.E. VSL timeline, transcribed from the production package (Pacific
 // Ridgeway rebrand). Times are in seconds; the composition runs at 30fps.
-// Each b-roll segment carries the VO line as karaoke captions; card segments
-// show their designed on-screen text instead.
+// B-roll segments carry the VO as karaoke captions and use one or more clips
+// (multiple clips = montage). Card segments show designed on-screen text.
 
 export const RISE_FPS = 30;
 export const sec = (s: number) => Math.round(s * RISE_FPS);
@@ -16,14 +16,26 @@ export const RISE_COLORS = {
   dim: "#6B7E92",
 };
 
+// Source clip durations (seconds) — used to stretch each clip to fill its slot
+// exactly once (no looping).
+export const CLIP_DUR: Record<string, number> = {
+  "c0.mp4": 13.63,
+  "c1.mp4": 14.4,
+  "c2.mp4": 10.17,
+  "c3.mp4": 7.4,
+  "c4.mp4": 6.73,
+  "c5.mp4": 11.43,
+  "c6.mp4": 10.67,
+};
+
 export type Segment =
   | {
       kind: "broll";
       start: number; // seconds
       end: number;
-      clip: string;
+      clips: string[]; // one clip, or several for a montage
       vo?: string; // becomes karaoke captions
-      overlay?: "form"; // optional lower overlay
+      overlay?: "form";
     }
   | {
       kind: "card";
@@ -40,12 +52,12 @@ export type Segment =
     };
 
 export const SEGMENTS: Segment[] = [
-  { kind: "broll", start: 0, end: 7, clip: "c4.mp4" }, // quiet open — tax forms
+  { kind: "broll", start: 0, end: 7, clips: ["c4.mp4"] }, // quiet open — tax forms
   {
     kind: "broll",
     start: 7,
     end: 22,
-    clip: "c5.mp4",
+    clips: ["c5.mp4"],
     vo: "If you earned a good income this year and still felt like you paid too much — you're probably right.",
   },
   {
@@ -55,17 +67,14 @@ export const SEGMENTS: Segment[] = [
     vo: "Most people who earn well don't have a tax problem. They have a planning problem.",
     card: {
       type: "text",
-      lines: [
-        { t: "A tax problem." },
-        { t: "Or a planning problem?", gold: true },
-      ],
+      lines: [{ t: "A tax problem." }, { t: "Or a planning problem?", gold: true }],
     },
   },
   {
     kind: "broll",
     start: 32,
     end: 65,
-    clip: "c2.mp4",
+    clips: ["c2.mp4", "c6.mp4", "c3.mp4"], // montage of earner types
     vo: "Every year, millions of Americans hand their information to a preparer, get a number back, and pay it. No questions. No strategy.",
   },
   {
@@ -79,14 +88,14 @@ export const SEGMENTS: Segment[] = [
     kind: "broll",
     start: 80,
     end: 92,
-    clip: "c6.mp4",
+    clips: ["c1.mp4"],
     vo: "When we look at someone's return — really look at it — we almost never see just a tax return. We see a story.",
   },
   {
     kind: "broll",
     start: 92,
     end: 105,
-    clip: "c1.mp4",
+    clips: ["c4.mp4"],
     vo: "We see credits never claimed. Contributions not optimized. Prior years where someone overpaid — money that can still be recovered.",
   },
   {
@@ -120,7 +129,7 @@ export const SEGMENTS: Segment[] = [
     kind: "broll",
     start: 135,
     end: 150,
-    clip: "c3.mp4",
+    clips: ["c2.mp4"],
     vo: "We find what was missed. We recover what's still recoverable. And we build a forward strategy so you stop leaving money behind.",
   },
   {
@@ -134,14 +143,14 @@ export const SEGMENTS: Segment[] = [
     kind: "broll",
     start: 160,
     end: 172,
-    clip: "c0.mp4",
+    clips: ["c0.mp4"],
     vo: "It doesn't matter if you're a W-2 earner, self-employed, or running a business. If you're paying income taxes, there's more opportunity than you've been shown.",
   },
   {
     kind: "broll",
     start: 172,
     end: 180,
-    clip: "c6.mp4",
+    clips: ["c6.mp4"],
     overlay: "form",
     vo: "Right below this video, fill out the form. Let's find out what's been left on the table.",
   },
@@ -171,7 +180,6 @@ const chunk = (words: string[], size: number): string[][] => {
 export const RISE_CAPTIONS: CaptionLine[] = (() => {
   const lines: CaptionLine[] = [];
   for (const s of SEGMENTS) {
-    // Skip cards (they show their own text) and the form-overlay shot.
     if (s.kind !== "broll" || !s.vo || s.overlay) continue;
     const startF = sec(s.start) + 8;
     const endF = sec(s.end) - 8;

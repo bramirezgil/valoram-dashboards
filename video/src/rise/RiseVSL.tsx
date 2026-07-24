@@ -3,14 +3,14 @@ import {
   AbsoluteFill,
   Audio,
   interpolate,
-  Loop,
   OffthreadVideo,
   Sequence,
   staticFile,
   useCurrentFrame,
+  useVideoConfig,
 } from "remotion";
 import "../vsl/fonts";
-import { SEGMENTS, sec } from "./script";
+import { SEGMENTS, sec, CLIP_DUR } from "./script";
 import {
   TextCard,
   SplitCard,
@@ -25,22 +25,12 @@ import { Logo } from "../vsl/Logo";
 
 export { RISE_DURATION, RISE_FPS } from "./script";
 
-const LOOP: Record<string, number> = {
-  "c0.mp4": 409,
-  "c1.mp4": 432,
-  "c2.mp4": 305,
-  "c3.mp4": 222,
-  "c4.mp4": 202,
-  "c5.mp4": 343,
-  "c6.mp4": 320,
-};
-
-const Footage: React.FC<{ clip: string; dur: number; overlay?: "form" }> = ({
-  clip,
-  dur,
-  overlay,
-}) => {
+// A single clip stretched to play exactly once across `dur` frames (no loop).
+const Clip: React.FC<{ clip: string; dur: number }> = ({ clip, dur }) => {
   const frame = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  const clipFrames = (CLIP_DUR[clip] ?? 10) * fps;
+  const rate = Math.max(0.4, Math.min(1.6, clipFrames / dur)); // stretch to fill, no repeat
   const zoom = interpolate(frame, [0, dur], [1.05, 1.12]);
   const fade = Math.min(
     interpolate(frame, [0, 12], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }),
@@ -52,10 +42,31 @@ const Footage: React.FC<{ clip: string; dur: number; overlay?: "form" }> = ({
   return (
     <AbsoluteFill style={{ opacity: fade, backgroundColor: "#000" }}>
       <AbsoluteFill style={{ transform: `scale(${zoom})` }}>
-        <Loop durationInFrames={LOOP[clip] ?? 300}>
-          <OffthreadVideo src={staticFile(`broll/${clip}`)} muted />
-        </Loop>
+        <OffthreadVideo src={staticFile(`broll/${clip}`)} muted playbackRate={rate} />
       </AbsoluteFill>
+    </AbsoluteFill>
+  );
+};
+
+const Footage: React.FC<{ clips: string[]; dur: number; overlay?: "form" }> = ({
+  clips,
+  dur,
+  overlay,
+}) => {
+  const OVL = 10; // crossfade between montage clips
+  const per = dur / clips.length;
+  return (
+    <AbsoluteFill style={{ backgroundColor: "#000" }}>
+      {clips.map((c, i) => {
+        const from = Math.round(i * per);
+        const last = i === clips.length - 1;
+        const len = Math.round(per) + (last ? 0 : OVL);
+        return (
+          <Sequence key={i} from={from} durationInFrames={len} name={`clip-${c}-${i}`}>
+            <Clip clip={c} dur={len} />
+          </Sequence>
+        );
+      })}
       {/* warm, slightly desaturated feel + legibility grade */}
       <AbsoluteFill
         style={{
@@ -64,17 +75,17 @@ const Footage: React.FC<{ clip: string; dur: number; overlay?: "form" }> = ({
         }}
       />
       {/* brand watermark top-left */}
-      <div style={{ position: "absolute", left: 0, top: 0, width: 520, height: 170 }}>
+      <div style={{ position: "absolute", left: 0, top: 0, width: 640, height: 210 }}>
         <div
           style={{
             position: "absolute",
             inset: 0,
             background:
-              "radial-gradient(120% 120% at 0% 0%, rgba(6,12,22,0.6) 0%, rgba(6,12,22,0) 70%)",
+              "radial-gradient(120% 120% at 0% 0%, rgba(6,12,22,0.62) 0%, rgba(6,12,22,0) 70%)",
           }}
         />
-        <div style={{ position: "absolute", left: 56, top: 46, filter: "drop-shadow(0 2px 10px rgba(0,0,0,0.9))" }}>
-          <Logo size={46} />
+        <div style={{ position: "absolute", left: 62, top: 52, filter: "drop-shadow(0 2px 12px rgba(0,0,0,0.9))" }}>
+          <Logo size={66} />
         </div>
       </div>
       {overlay === "form" && <FormOverlay />}
@@ -112,7 +123,7 @@ export const RiseVSL: React.FC = () => {
         return (
           <Sequence key={i} from={from} durationInFrames={withTail} name={`${s.kind}-${i}`}>
             {s.kind === "broll" ? (
-              <Footage clip={s.clip} dur={withTail} overlay={s.overlay} />
+              <Footage clips={s.clips} dur={withTail} overlay={s.overlay} />
             ) : (
               renderCard(s.card, withTail)
             )}

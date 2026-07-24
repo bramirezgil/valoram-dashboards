@@ -162,7 +162,7 @@ export const RiseCard: React.FC<{ dur: number }> = ({ dur }) => (
   <CardBase dur={dur}>
     <div style={{ textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center" }}>
       <RiseIn delay={4} dy={18} style={{ filter: "drop-shadow(0 4px 20px rgba(0,0,0,0.5))" }}>
-        <Logo size={92} />
+        <Logo size={128} />
       </RiseIn>
       <RiseIn
         delay={18}
@@ -243,8 +243,8 @@ export const EndCard: React.FC<{ dur: number }> = ({ dur }) => {
         <div style={{ fontSize: 84, color: C.gold, marginTop: 20, opacity: a, transform: `translateY(${bob}px)` }}>
           ↓
         </div>
-        <RiseIn delay={34} dy={10} style={{ marginTop: 30, filter: "drop-shadow(0 2px 8px rgba(0,0,0,0.6))" }}>
-          <Logo size={46} />
+        <RiseIn delay={34} dy={10} style={{ marginTop: 34, filter: "drop-shadow(0 2px 8px rgba(0,0,0,0.6))" }}>
+          <Logo size={72} />
         </RiseIn>
       </div>
     </CardBase>
