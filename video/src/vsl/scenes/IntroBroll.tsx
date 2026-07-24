@@ -37,7 +37,7 @@ export const IntroBroll: React.FC<{ dur: number }> = ({ dur }) => {
         }}
       >
         <div style={{ opacity: logo, transform: `translateY(${(1 - logo) * 18}px)` }}>
-          <Logo size={58} />
+          <Logo size={66} />
         </div>
         <div
           style={{

@@ -75,7 +75,7 @@ export const Scene05Meet: React.FC<{ dur: number }> = ({ dur }) => {
         }}
       >
         <Rise delay={4}>
-          <Logo size={46} />
+          <Logo size={54} />
         </Rise>
         <Headline
           delay={14}
