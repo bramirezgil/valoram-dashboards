@@ -10,7 +10,7 @@ import {
   useCurrentFrame,
 } from "remotion";
 import "../vsl/fonts";
-import { SEGMENTS, sec } from "./script";
+import { SEGMENTS, RISE_DURATION, VO_RANGES } from "./script";
 import {
   TextCard,
   SplitCard,
@@ -82,6 +82,30 @@ const Footage: React.FC<{ clip: string; dur: number; overlay?: "form" }> = ({
   );
 };
 
+// Music bed: sits at a gentle level and ducks under the voiceover, lifting
+// back up in the beats between lines. Ramped edges keep the dip musical.
+const musicVolume = (f: number): number => {
+  const base = 0.3;
+  const duck = 0.12;
+  const ramp = 10;
+  let vol = base;
+  for (const [a, b] of VO_RANGES) {
+    const dip = interpolate(f, [a - ramp, a, b, b + ramp], [base, duck, duck, base], {
+      extrapolateLeft: "clamp",
+      extrapolateRight: "clamp",
+    });
+    vol = Math.min(vol, dip);
+  }
+  const fade = Math.min(
+    interpolate(f, [0, 20], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }),
+    interpolate(f, [RISE_DURATION - 30, RISE_DURATION - 1], [1, 0], {
+      extrapolateLeft: "clamp",
+      extrapolateRight: "clamp",
+    }),
+  );
+  return vol * fade;
+};
+
 const renderCard = (
   card: Extract<(typeof SEGMENTS)[number], { kind: "card" }>["card"],
   dur: number,
@@ -106,8 +130,8 @@ export const RiseVSL: React.FC = () => {
   return (
     <AbsoluteFill style={{ backgroundColor: "#000" }}>
       {SEGMENTS.map((s, i) => {
-        const from = sec(s.start);
-        const dur = sec(s.end) - sec(s.start);
+        const from = s.from;
+        const dur = s.durFrames;
         const withTail = dur + 10; // small dissolve overlap
         return (
           <Sequence key={i} from={from} durationInFrames={withTail} name={`${s.kind}-${i}`}>
@@ -123,13 +147,11 @@ export const RiseVSL: React.FC = () => {
       {/* karaoke captions on the absolute timeline (B-roll only) */}
       <RiseCaptions />
 
-      {/* music bed — moderate now (no VO yet); drop to ~0.15 once a voiceover is added */}
-      <Audio
-        src={staticFile("music-rise.mp3")}
-        volume={(f) =>
-          interpolate(f, [0, 24], [0, 0.45], { extrapolateLeft: "clamp", extrapolateRight: "clamp" })
-        }
-      />
+      {/* voiceover (offline neural TTS), normalized ~ -3 dBFS */}
+      <Audio src={staticFile("narration-rise.mp3")} />
+
+      {/* music bed — ducks under the voiceover, lifts between lines */}
+      <Audio src={staticFile("music-rise.mp3")} volume={musicVolume} />
     </AbsoluteFill>
   );
 };

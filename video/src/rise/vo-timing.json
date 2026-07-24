@@ -1,0 +1,904 @@
+{
+  "fps": 30,
+  "durationFrames": 3539,
+  "segments": [
+    {
+      "from": 0,
+      "durFrames": 120,
+      "voFrom": null,
+      "voTo": null
+    },
+    {
+      "from": 120,
+      "durFrames": 219,
+      "voFrom": 129,
+      "voTo": 300
+    },
+    {
+      "from": 339,
+      "durFrames": 199,
+      "voFrom": 348,
+      "voTo": 492
+    },
+    {
+      "from": 538,
+      "durFrames": 310,
+      "voFrom": 547,
+      "voTo": 809
+    },
+    {
+      "from": 848,
+      "durFrames": 191,
+      "voFrom": 857,
+      "voTo": 993
+    },
+    {
+      "from": 1039,
+      "durFrames": 261,
+      "voFrom": 1048,
+      "voTo": 1261
+    },
+    {
+      "from": 1300,
+      "durFrames": 316,
+      "voFrom": 1309,
+      "voTo": 1577
+    },
+    {
+      "from": 1616,
+      "durFrames": 289,
+      "voFrom": 1625,
+      "voTo": 1859
+    },
+    {
+      "from": 1905,
+      "durFrames": 165,
+      "voFrom": 1914,
+      "voTo": 2023
+    },
+    {
+      "from": 2070,
+      "durFrames": 165,
+      "voFrom": 2079,
+      "voTo": 2163
+    },
+    {
+      "from": 2235,
+      "durFrames": 292,
+      "voFrom": 2244,
+      "voTo": 2488
+    },
+    {
+      "from": 2527,
+      "durFrames": 260,
+      "voFrom": 2536,
+      "voTo": 2740
+    },
+    {
+      "from": 2787,
+      "durFrames": 365,
+      "voFrom": 2796,
+      "voTo": 3113
+    },
+    {
+      "from": 3152,
+      "durFrames": 207,
+      "voFrom": 3161,
+      "voTo": 3320
+    },
+    {
+      "from": 3359,
+      "durFrames": 180,
+      "voFrom": 3368,
+      "voTo": 3428
+    }
+  ],
+  "captions": [
+    {
+      "words": [
+        {
+          "text": "If",
+          "start": 129,
+          "end": 138
+        },
+        {
+          "text": "you",
+          "start": 138,
+          "end": 146
+        },
+        {
+          "text": "earned",
+          "start": 146,
+          "end": 155
+        },
+        {
+          "text": "a",
+          "start": 155,
+          "end": 163
+        }
+      ]
+    },
+    {
+      "words": [
+        {
+          "text": "good",
+          "start": 163,
+          "end": 172
+        },
+        {
+          "text": "income",
+          "start": 172,
+          "end": 180
+        },
+        {
+          "text": "this",
+          "start": 180,
+          "end": 189
+        },
+        {
+          "text": "year",
+          "start": 189,
+          "end": 197
+        }
+      ]
+    },
+    {
+      "words": [
+        {
+          "text": "and",
+          "start": 197,
+          "end": 206
+        },
+        {
+          "text": "still",
+          "start": 206,
+          "end": 214
+        },
+        {
+          "text": "felt",
+          "start": 214,
+          "end": 223
+        },
+        {
+          "text": "like",
+          "start": 223,
+          "end": 232
+        }
+      ]
+    },
+    {
+      "words": [
+        {
+          "text": "you",
+          "start": 232,
+          "end": 240
+        },
+        {
+          "text": "paid",
+          "start": 240,
+          "end": 249
+        },
+        {
+          "text": "too",
+          "start": 249,
+          "end": 257
+        },
+        {
+          "text": "much",
+          "start": 257,
+          "end": 266
+        }
+      ]
+    },
+    {
+      "words": [
+        {
+          "text": "\u2014",
+          "start": 266,
+          "end": 274
+        },
+        {
+          "text": "you're",
+          "start": 274,
+          "end": 283
+        },
+        {
+          "text": "probably",
+          "start": 283,
+          "end": 291
+        },
+        {
+          "text": "right.",
+          "start": 291,
+          "end": 300
+        }
+      ]
+    },
+    {
+      "words": [
+        {
+          "text": "Every",
+          "start": 547,
+          "end": 559
+        },
+        {
+          "text": "year,",
+          "start": 559,
+          "end": 571
+        },
+        {
+          "text": "millions",
+          "start": 571,
+          "end": 583
+        },
+        {
+          "text": "of",
+          "start": 583,
+          "end": 595
+        }
+      ]
+    },
+    {
+      "words": [
+        {
+          "text": "Americans",
+          "start": 595,
+          "end": 607
+        },
+        {
+          "text": "hand",
+          "start": 607,
+          "end": 618
+        },
+        {
+          "text": "their",
+          "start": 618,
+          "end": 630
+        },
+        {
+          "text": "information",
+          "start": 630,
+          "end": 642
+        }
+      ]
+    },
+    {
+      "words": [
+        {
+          "text": "to",
+          "start": 642,
+          "end": 654
+        },
+        {
+          "text": "a",
+          "start": 654,
+          "end": 666
+        },
+        {
+          "text": "preparer,",
+          "start": 666,
+          "end": 678
+        },
+        {
+          "text": "get",
+          "start": 678,
+          "end": 690
+        }
+      ]
+    },
+    {
+      "words": [
+        {
+          "text": "a",
+          "start": 690,
+          "end": 702
+        },
+        {
+          "text": "number",
+          "start": 702,
+          "end": 714
+        },
+        {
+          "text": "back,",
+          "start": 714,
+          "end": 726
+        },
+        {
+          "text": "and",
+          "start": 726,
+          "end": 738
+        }
+      ]
+    },
+    {
+      "words": [
+        {
+          "text": "pay",
+          "start": 738,
+          "end": 749
+        },
+        {
+          "text": "it.",
+          "start": 749,
+          "end": 761
+        },
+        {
+          "text": "No",
+          "start": 761,
+          "end": 773
+        },
+        {
+          "text": "questions.",
+          "start": 773,
+          "end": 785
+        }
+      ]
+    },
+    {
+      "words": [
+        {
+          "text": "No",
+          "start": 785,
+          "end": 797
+        },
+        {
+          "text": "strategy.",
+          "start": 797,
+          "end": 809
+        }
+      ]
+    },
+    {
+      "words": [
+        {
+          "text": "When",
+          "start": 1048,
+          "end": 1057
+        },
+        {
+          "text": "we",
+          "start": 1057,
+          "end": 1066
+        },
+        {
+          "text": "look",
+          "start": 1066,
+          "end": 1075
+        },
+        {
+          "text": "at",
+          "start": 1075,
+          "end": 1084
+        }
+      ]
+    },
+    {
+      "words": [
+        {
+          "text": "someone's",
+          "start": 1084,
+          "end": 1092
+        },
+        {
+          "text": "return",
+          "start": 1092,
+          "end": 1101
+        },
+        {
+          "text": "\u2014",
+          "start": 1101,
+          "end": 1110
+        },
+        {
+          "text": "really",
+          "start": 1110,
+          "end": 1119
+        }
+      ]
+    },
+    {
+      "words": [
+        {
+          "text": "look",
+          "start": 1119,
+          "end": 1128
+        },
+        {
+          "text": "at",
+          "start": 1128,
+          "end": 1137
+        },
+        {
+          "text": "it",
+          "start": 1137,
+          "end": 1146
+        },
+        {
+          "text": "\u2014",
+          "start": 1146,
+          "end": 1154
+        }
+      ]
+    },
+    {
+      "words": [
+        {
+          "text": "we",
+          "start": 1154,
+          "end": 1163
+        },
+        {
+          "text": "almost",
+          "start": 1163,
+          "end": 1172
+        },
+        {
+          "text": "never",
+          "start": 1172,
+          "end": 1181
+        },
+        {
+          "text": "see",
+          "start": 1181,
+          "end": 1190
+        }
+      ]
+    },
+    {
+      "words": [
+        {
+          "text": "just",
+          "start": 1190,
+          "end": 1199
+        },
+        {
+          "text": "a",
+          "start": 1199,
+          "end": 1208
+        },
+        {
+          "text": "tax",
+          "start": 1208,
+          "end": 1217
+        },
+        {
+          "text": "return.",
+          "start": 1217,
+          "end": 1226
+        }
+      ]
+    },
+    {
+      "words": [
+        {
+          "text": "We",
+          "start": 1226,
+          "end": 1234
+        },
+        {
+          "text": "see",
+          "start": 1234,
+          "end": 1243
+        },
+        {
+          "text": "a",
+          "start": 1243,
+          "end": 1252
+        },
+        {
+          "text": "story.",
+          "start": 1252,
+          "end": 1261
+        }
+      ]
+    },
+    {
+      "words": [
+        {
+          "text": "We",
+          "start": 1309,
+          "end": 1322
+        },
+        {
+          "text": "see",
+          "start": 1322,
+          "end": 1336
+        },
+        {
+          "text": "credits",
+          "start": 1336,
+          "end": 1349
+        },
+        {
+          "text": "never",
+          "start": 1349,
+          "end": 1363
+        }
+      ]
+    },
+    {
+      "words": [
+        {
+          "text": "claimed.",
+          "start": 1363,
+          "end": 1376
+        },
+        {
+          "text": "Contributions",
+          "start": 1376,
+          "end": 1389
+        },
+        {
+          "text": "not",
+          "start": 1389,
+          "end": 1403
+        },
+        {
+          "text": "optimized.",
+          "start": 1403,
+          "end": 1416
+        }
+      ]
+    },
+    {
+      "words": [
+        {
+          "text": "Prior",
+          "start": 1416,
+          "end": 1430
+        },
+        {
+          "text": "years",
+          "start": 1430,
+          "end": 1443
+        },
+        {
+          "text": "where",
+          "start": 1443,
+          "end": 1456
+        },
+        {
+          "text": "someone",
+          "start": 1456,
+          "end": 1470
+        }
+      ]
+    },
+    {
+      "words": [
+        {
+          "text": "overpaid",
+          "start": 1470,
+          "end": 1483
+        },
+        {
+          "text": "\u2014",
+          "start": 1483,
+          "end": 1497
+        },
+        {
+          "text": "money",
+          "start": 1497,
+          "end": 1510
+        },
+        {
+          "text": "that",
+          "start": 1510,
+          "end": 1523
+        }
+      ]
+    },
+    {
+      "words": [
+        {
+          "text": "can",
+          "start": 1523,
+          "end": 1537
+        },
+        {
+          "text": "still",
+          "start": 1537,
+          "end": 1550
+        },
+        {
+          "text": "be",
+          "start": 1550,
+          "end": 1564
+        },
+        {
+          "text": "recovered.",
+          "start": 1564,
+          "end": 1577
+        }
+      ]
+    },
+    {
+      "words": [
+        {
+          "text": "We",
+          "start": 2244,
+          "end": 2255
+        },
+        {
+          "text": "find",
+          "start": 2255,
+          "end": 2266
+        },
+        {
+          "text": "what",
+          "start": 2266,
+          "end": 2277
+        },
+        {
+          "text": "was",
+          "start": 2277,
+          "end": 2288
+        }
+      ]
+    },
+    {
+      "words": [
+        {
+          "text": "missed.",
+          "start": 2288,
+          "end": 2299
+        },
+        {
+          "text": "We",
+          "start": 2299,
+          "end": 2311
+        },
+        {
+          "text": "recover",
+          "start": 2311,
+          "end": 2322
+        },
+        {
+          "text": "what's",
+          "start": 2322,
+          "end": 2333
+        }
+      ]
+    },
+    {
+      "words": [
+        {
+          "text": "still",
+          "start": 2333,
+          "end": 2344
+        },
+        {
+          "text": "recoverable.",
+          "start": 2344,
+          "end": 2355
+        },
+        {
+          "text": "And",
+          "start": 2355,
+          "end": 2366
+        },
+        {
+          "text": "we",
+          "start": 2366,
+          "end": 2377
+        }
+      ]
+    },
+    {
+      "words": [
+        {
+          "text": "build",
+          "start": 2377,
+          "end": 2388
+        },
+        {
+          "text": "a",
+          "start": 2388,
+          "end": 2399
+        },
+        {
+          "text": "forward",
+          "start": 2399,
+          "end": 2410
+        },
+        {
+          "text": "strategy",
+          "start": 2410,
+          "end": 2421
+        }
+      ]
+    },
+    {
+      "words": [
+        {
+          "text": "so",
+          "start": 2421,
+          "end": 2433
+        },
+        {
+          "text": "you",
+          "start": 2433,
+          "end": 2444
+        },
+        {
+          "text": "stop",
+          "start": 2444,
+          "end": 2455
+        },
+        {
+          "text": "leaving",
+          "start": 2455,
+          "end": 2466
+        }
+      ]
+    },
+    {
+      "words": [
+        {
+          "text": "money",
+          "start": 2466,
+          "end": 2477
+        },
+        {
+          "text": "behind.",
+          "start": 2477,
+          "end": 2488
+        }
+      ]
+    },
+    {
+      "words": [
+        {
+          "text": "It",
+          "start": 2796,
+          "end": 2809
+        },
+        {
+          "text": "doesn't",
+          "start": 2809,
+          "end": 2821
+        },
+        {
+          "text": "matter",
+          "start": 2821,
+          "end": 2834
+        },
+        {
+          "text": "if",
+          "start": 2834,
+          "end": 2847
+        }
+      ]
+    },
+    {
+      "words": [
+        {
+          "text": "you're",
+          "start": 2847,
+          "end": 2859
+        },
+        {
+          "text": "a",
+          "start": 2859,
+          "end": 2872
+        },
+        {
+          "text": "W-2",
+          "start": 2872,
+          "end": 2885
+        },
+        {
+          "text": "earner,",
+          "start": 2885,
+          "end": 2897
+        }
+      ]
+    },
+    {
+      "words": [
+        {
+          "text": "self-employed,",
+          "start": 2897,
+          "end": 2910
+        },
+        {
+          "text": "or",
+          "start": 2910,
+          "end": 2923
+        },
+        {
+          "text": "running",
+          "start": 2923,
+          "end": 2935
+        },
+        {
+          "text": "a",
+          "start": 2935,
+          "end": 2948
+        }
+      ]
+    },
+    {
+      "words": [
+        {
+          "text": "business.",
+          "start": 2948,
+          "end": 2961
+        },
+        {
+          "text": "If",
+          "start": 2961,
+          "end": 2974
+        },
+        {
+          "text": "you're",
+          "start": 2974,
+          "end": 2986
+        },
+        {
+          "text": "paying",
+          "start": 2986,
+          "end": 2999
+        }
+      ]
+    },
+    {
+      "words": [
+        {
+          "text": "income",
+          "start": 2999,
+          "end": 3012
+        },
+        {
+          "text": "taxes,",
+          "start": 3012,
+          "end": 3024
+        },
+        {
+          "text": "there's",
+          "start": 3024,
+          "end": 3037
+        },
+        {
+          "text": "more",
+          "start": 3037,
+          "end": 3050
+        }
+      ]
+    },
+    {
+      "words": [
+        {
+          "text": "opportunity",
+          "start": 3050,
+          "end": 3062
+        },
+        {
+          "text": "than",
+          "start": 3062,
+          "end": 3075
+        },
+        {
+          "text": "you've",
+          "start": 3075,
+          "end": 3088
+        },
+        {
+          "text": "been",
+          "start": 3088,
+          "end": 3100
+        }
+      ]
+    },
+    {
+      "words": [
+        {
+          "text": "shown.",
+          "start": 3100,
+          "end": 3113
+        }
+      ]
+    }
+  ],
+  "captionHold": 10
+}
