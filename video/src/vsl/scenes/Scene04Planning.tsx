@@ -1,6 +1,7 @@
 import React from "react";
 import { COLORS, FONTS } from "../theme";
 import { Headline, Panel, Stage, useSceneFade } from "../primitives";
+import { FxPaths } from "../SceneFX";
 
 const Card: React.FC<{
   mark: "x" | "check";
@@ -48,7 +49,7 @@ const Card: React.FC<{
 export const Scene04Planning: React.FC<{ dur: number }> = ({ dur }) => {
   const fade = useSceneFade(dur);
   return (
-    <Stage fade={fade} justify="center" align="center">
+    <Stage fade={fade} justify="center" align="center" fx={<FxPaths />}>
       <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 44, width: "100%" }}>
         <Headline
           delay={6}

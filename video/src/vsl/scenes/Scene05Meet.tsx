@@ -9,6 +9,7 @@ import {
   useEnter,
 } from "../primitives";
 import { Logo } from "../Logo";
+import { FxBuckets } from "../SceneFX";
 
 const steps = [
   { n: 1, title: "Sequence withdrawals", body: "Across all three tax buckets." },
@@ -63,7 +64,7 @@ export const Scene05Meet: React.FC<{ dur: number }> = ({ dur }) => {
   const fade = useSceneFade(dur);
   const badge = useEnter(40);
   return (
-    <Stage fade={fade} justify="center" align="center">
+    <Stage fade={fade} justify="center" align="center" fx={<FxBuckets />}>
       <div
         style={{
           display: "flex",

@@ -9,6 +9,7 @@ import {
   useSceneFade,
   useEnter,
 } from "../primitives";
+import { FxGauge } from "../SceneFX";
 
 const rows = [
   { label: "Your score", value: "0–285" },
@@ -53,7 +54,7 @@ const ScoreRow: React.FC<{ label: string; value: string; gold?: boolean; delay: 
 export const Scene06Score: React.FC<{ dur: number }> = ({ dur }) => {
   const fade = useSceneFade(dur);
   return (
-    <Stage fade={fade} justify="center" align="center">
+    <Stage fade={fade} justify="center" align="center" fx={<FxGauge />}>
       <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 26 }}>
         <Eyebrow delay={4}>Your free Tax Elimination Score</Eyebrow>
         <GoldRule delay={8} />

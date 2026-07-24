@@ -9,7 +9,7 @@ import {
   useSceneFade,
   useEnter,
 } from "../primitives";
-import { BrollShowcase } from "../Broll";
+import { FxIncome } from "../SceneFX";
 import { Logo } from "../Logo";
 
 export const Scene07CTA: React.FC<{ dur: number }> = ({ dur }) => {
@@ -27,11 +27,10 @@ export const Scene07CTA: React.FC<{ dur: number }> = ({ dur }) => {
 
   return (
     <Stage fade={fade} justify="center" align="center">
-      {/* Featured full-screen b-roll bloom opening the final scene */}
+      {/* Featured income-stream bloom opening the final scene */}
       <AbsoluteFill style={{ opacity: bloom }}>
-        <BrollShowcase mood="warm" />
+        <FxIncome veil={0.2} />
       </AbsoluteFill>
-      <AbsoluteFill style={{ background: "rgba(6,12,22,0.34)" }} />
       <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 26 }}>
         <Eyebrow delay={30}>One step away</Eyebrow>
         <Headline

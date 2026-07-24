@@ -9,6 +9,7 @@ import {
   useSceneFade,
   useEnter,
 } from "../primitives";
+import { FxAccumulation } from "../SceneFX";
 
 const rows = [
   { label: "What you saved", value: "thirty years" },
@@ -55,7 +56,7 @@ const Row: React.FC<{ label: string; value: string; gold?: boolean; delay: numbe
 export const Scene01Hook: React.FC<{ dur: number }> = ({ dur }) => {
   const fade = useSceneFade(dur);
   return (
-    <Stage fade={fade} justify="center">
+    <Stage fade={fade} justify="center" fx={<FxAccumulation />}>
       <div style={{ display: "flex", flexDirection: "column", gap: 22 }}>
         <Eyebrow delay={4}>For savers ages 58–67</Eyebrow>
         <GoldRule delay={8} />

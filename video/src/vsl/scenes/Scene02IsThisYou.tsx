@@ -9,13 +9,14 @@ import {
   Stage,
   useSceneFade,
 } from "../primitives";
+import { FxAccounts } from "../SceneFX";
 
 const pills = ["Pre-Retiree", "401(k)", "IRA Rollover", "RMDs Ahead"];
 
 export const Scene02IsThisYou: React.FC<{ dur: number }> = ({ dur }) => {
   const fade = useSceneFade(dur);
   return (
-    <Stage fade={fade} justify="center">
+    <Stage fade={fade} justify="center" fx={<FxAccounts />}>
       <div style={{ display: "flex", flexDirection: "column", gap: 22, maxWidth: 1180 }}>
         <Eyebrow delay={4}>Is this you?</Eyebrow>
         <GoldRule delay={8} />

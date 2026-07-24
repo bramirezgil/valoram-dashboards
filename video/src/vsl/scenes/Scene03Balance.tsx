@@ -2,6 +2,7 @@ import React from "react";
 import { interpolate, useCurrentFrame } from "remotion";
 import { COLORS, FONTS } from "../theme";
 import { Eyebrow, GoldRule, Pill, Rise, Stage, useSceneFade } from "../primitives";
+import { FxErosion } from "../SceneFX";
 
 const risks = ["Rising taxes", "Market drops", "No income floor", "Risk of outliving it"];
 
@@ -23,7 +24,7 @@ export const Scene03Balance: React.FC<{ dur: number }> = ({ dur }) => {
   const taxedH = H * taxed * fill;
 
   return (
-    <Stage fade={fade} justify="center" align="center">
+    <Stage fade={fade} justify="center" align="center" fx={<FxErosion />}>
       <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 26 }}>
         <Eyebrow delay={4}>Your balance vs. what you actually keep</Eyebrow>
         <GoldRule delay={8} />

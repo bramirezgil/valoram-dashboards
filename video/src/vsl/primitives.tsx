@@ -211,13 +211,15 @@ export const Pill: React.FC<{ children: React.ReactNode; delay?: number }> = ({
   );
 };
 
-/** Full-bleed scene wrapper with consistent 120px side padding. */
+/** Full-bleed scene wrapper with consistent 120px side padding.
+ *  `fx` renders a full-bleed animated layer behind the content (shares the fade). */
 export const Stage: React.FC<{
   children: React.ReactNode;
   fade: number;
   justify?: React.CSSProperties["justifyContent"];
   align?: React.CSSProperties["alignItems"];
-}> = ({ children, fade, justify = "center", align = "flex-start" }) => (
+  fx?: React.ReactNode;
+}> = ({ children, fade, justify = "center", align = "flex-start", fx }) => (
   <AbsoluteFill
     style={{
       opacity: fade,
@@ -226,6 +228,7 @@ export const Stage: React.FC<{
       alignItems: align,
     }}
   >
+    {fx ? <AbsoluteFill style={{ padding: 0 }}>{fx}</AbsoluteFill> : null}
     {children}
   </AbsoluteFill>
 );
