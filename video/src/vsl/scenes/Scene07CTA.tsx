@@ -9,7 +9,7 @@ import {
   useSceneFade,
   useEnter,
 } from "../primitives";
-import { BrollField } from "../Broll";
+import { BrollShowcase } from "../Broll";
 import { Logo } from "../Logo";
 
 export const Scene07CTA: React.FC<{ dur: number }> = ({ dur }) => {
@@ -29,7 +29,7 @@ export const Scene07CTA: React.FC<{ dur: number }> = ({ dur }) => {
     <Stage fade={fade} justify="center" align="center">
       {/* Featured full-screen b-roll bloom opening the final scene */}
       <AbsoluteFill style={{ opacity: bloom }}>
-        <BrollField mood="warm" opacity={1} showCurve showRings />
+        <BrollShowcase mood="warm" />
       </AbsoluteFill>
       <AbsoluteFill style={{ background: "rgba(6,12,22,0.34)" }} />
       <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 26 }}>

@@ -1,7 +1,7 @@
 import React from "react";
 import { AbsoluteFill, interpolate, useCurrentFrame } from "remotion";
 import { COLORS, FONTS } from "../theme";
-import { BrollField } from "../Broll";
+import { BrollShowcase } from "../Broll";
 import { Logo } from "../Logo";
 import { useEnter } from "../primitives";
 
@@ -24,7 +24,7 @@ export const IntroBroll: React.FC<{ dur: number }> = ({ dur }) => {
   return (
     <AbsoluteFill>
       <AbsoluteFill style={{ transform: `scale(${zoom})`, opacity: fieldOpacity }}>
-        <BrollField mood="warm" opacity={1} showCurve showRings />
+        <BrollShowcase mood="warm" />
       </AbsoluteFill>
       <AbsoluteFill style={{ background: "rgba(6,12,22,0.28)" }} />
       <AbsoluteFill
