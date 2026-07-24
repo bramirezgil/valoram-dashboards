@@ -21,7 +21,7 @@ type Section = { start: number; end: number; clip: string; loop: number };
 // Section timing (matches narration) + the b-roll clip behind each.
 const SECTIONS: Section[] = [
   { start: 0, end: 345, clip: "c5.mp4", loop: 343 }, // Hook — counting money
-  { start: 345, end: 660, clip: "c3.mp4", loop: 222 }, // Is this you — couple + advisor
+  { start: 345, end: 660, clip: "c6.mp4", loop: 320 }, // Is this you — couple reviewing finances
   { start: 660, end: 930, clip: "c4.mp4", loop: 202 }, // Balance — tax forms
   { start: 930, end: 1410, clip: "c3.mp4", loop: 222 }, // Planning — advisor meeting
   { start: 1410, end: 2070, clip: "c2.mp4", loop: 305 }, // Meet Gregory — businessman
