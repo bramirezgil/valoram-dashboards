@@ -9,7 +9,7 @@ export const Logo: React.FC<{ size?: number }> = ({ size = 46 }) => {
         display: "inline-flex",
         alignItems: "center",
         justifyContent: "center",
-        background: "#FBFDFD",
+        background: "#FBFBFC",
         padding: `${size * 0.34}px ${size * 0.5}px`,
         borderRadius: size * 0.42,
         boxShadow: "0 14px 40px rgba(0,0,0,0.35)",
