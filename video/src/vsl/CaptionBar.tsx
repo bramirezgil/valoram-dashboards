@@ -1,21 +1,31 @@
 import React from "react";
 import { interpolate, useCurrentFrame } from "remotion";
 import { COLORS } from "./theme";
-
-export type CaptionWord = { text: string; start: number; end: number };
+import { CaptionLine, CAPTION_HOLD } from "./captions";
 
 // Brand highlight (gold), not the reference's orange.
 const HIGHLIGHT = COLORS.gold;
 
 /**
- * Karaoke-style caption row like the reference: bold words on black rounded
- * chips, the currently-spoken word highlighted orange, words popping in on cue.
+ * Karaoke captions like the reference: one short phrase at a time, bold words on
+ * black rounded chips, the current word highlighted gold, words popping in on cue.
+ * Times are absolute composition frames.
  */
-export const CaptionBar: React.FC<{ words: CaptionWord[]; bottom?: number }> = ({
-  words,
-  bottom = 150,
+export const CaptionBar: React.FC<{ lines: CaptionLine[]; bottom?: number }> = ({
+  lines,
+  bottom = 140,
 }) => {
   const frame = useCurrentFrame();
+
+  // Active line = the latest line whose display window contains the frame.
+  let active: CaptionLine | null = null;
+  for (const line of lines) {
+    const s = line.words[0].start;
+    const e = line.words[line.words.length - 1].end + CAPTION_HOLD;
+    if (frame >= s && frame < e) active = line;
+  }
+  if (!active) return null;
+
   return (
     <div
       style={{
@@ -27,14 +37,13 @@ export const CaptionBar: React.FC<{ words: CaptionWord[]; bottom?: number }> = (
         flexWrap: "wrap",
         justifyContent: "center",
         gap: "10px 12px",
-        padding: "0 200px",
+        padding: "0 220px",
       }}
     >
-      {words.map((w, i) => {
-        const appeared = frame >= w.start;
-        if (!appeared) return null;
-        const active = frame >= w.start && frame < w.end;
-        const pop = interpolate(frame, [w.start, w.start + 5], [0.7, 1], {
+      {active.words.map((w, i) => {
+        if (frame < w.start) return null;
+        const isActive = frame >= w.start && frame < w.end;
+        const pop = interpolate(frame, [w.start, w.start + 5], [0.72, 1], {
           extrapolateLeft: "clamp",
           extrapolateRight: "clamp",
         });
@@ -44,14 +53,13 @@ export const CaptionBar: React.FC<{ words: CaptionWord[]; bottom?: number }> = (
             style={{
               fontFamily: "'Poppins', sans-serif",
               fontWeight: 800,
-              fontSize: 62,
+              fontSize: 60,
               lineHeight: 1,
-              color: active ? HIGHLIGHT : "#FFFFFF",
+              color: isActive ? HIGHLIGHT : "#FFFFFF",
               background: "rgba(0,0,0,0.72)",
               borderRadius: 10,
               padding: "8px 16px",
               transform: `scale(${pop})`,
-              textTransform: "lowercase",
               letterSpacing: "-0.01em",
               boxShadow: "0 6px 20px rgba(0,0,0,0.4)",
             }}
