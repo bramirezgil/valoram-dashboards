@@ -3,6 +3,7 @@ import { Composition } from "remotion";
 import { HelloWorld, myCompSchema } from "./HelloWorld";
 import { Logo, myCompSchema2 } from "./HelloWorld/Logo";
 import { VSL } from "./vsl/VSL";
+import { FootageProof } from "./vsl/FootageProof";
 import { FPS, TOTAL_FRAMES } from "./vsl/theme";
 
 // Each <Composition> is an entry in the sidebar!
@@ -14,6 +15,14 @@ export const RemotionRoot: React.FC = () => {
         id="GregoryVSL"
         component={VSL}
         durationInFrames={TOTAL_FRAMES}
+        fps={FPS}
+        width={1920}
+        height={1080}
+      />
+      <Composition
+        id="FootageProof"
+        component={FootageProof}
+        durationInFrames={150}
         fps={FPS}
         width={1920}
         height={1080}
