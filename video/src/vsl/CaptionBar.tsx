@@ -1,9 +1,11 @@
 import React from "react";
 import { interpolate, useCurrentFrame } from "remotion";
+import { COLORS } from "./theme";
 
 export type CaptionWord = { text: string; start: number; end: number };
 
-const ORANGE = "#F5811F";
+// Brand highlight (gold), not the reference's orange.
+const HIGHLIGHT = COLORS.gold;
 
 /**
  * Karaoke-style caption row like the reference: bold words on black rounded
@@ -44,7 +46,7 @@ export const CaptionBar: React.FC<{ words: CaptionWord[]; bottom?: number }> = (
               fontWeight: 800,
               fontSize: 62,
               lineHeight: 1,
-              color: active ? ORANGE : "#FFFFFF",
+              color: active ? HIGHLIGHT : "#FFFFFF",
               background: "rgba(0,0,0,0.72)",
               borderRadius: 10,
               padding: "8px 16px",
