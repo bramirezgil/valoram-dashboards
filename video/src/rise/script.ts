@@ -113,7 +113,7 @@ export const SEGMENTS: Segment[] = [
     kind: "card",
     start: 125,
     end: 135,
-    vo: "That's exactly what the R.I.S.E. program was built for.",
+    vo: "That's exactly what we built our approach to do.",
     card: { type: "rise" },
   },
   {

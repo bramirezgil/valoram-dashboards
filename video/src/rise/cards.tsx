@@ -157,42 +157,32 @@ export const StatCard: React.FC<{ dur: number; number: string; label: string }> 
   );
 };
 
+// Pacific Ridgeway brand reveal (replaces Valoram's R.I.S.E. name card).
 export const RiseCard: React.FC<{ dur: number }> = ({ dur }) => (
   <CardBase dur={dur}>
-    <div style={{ textAlign: "center" }}>
+    <div style={{ textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center" }}>
+      <RiseIn delay={4} dy={18} style={{ filter: "drop-shadow(0 4px 20px rgba(0,0,0,0.5))" }}>
+        <Logo size={92} />
+      </RiseIn>
       <RiseIn
-        delay={4}
+        delay={18}
+        dy={16}
+        style={{ fontFamily: DISPLAY, fontWeight: 700, fontSize: 46, color: C.white, marginTop: 42 }}
+      >
+        A proactive tax strategy
+      </RiseIn>
+      <RiseIn
+        delay={28}
+        dy={16}
         style={{
           fontFamily: DISPLAY,
           fontWeight: 800,
-          fontSize: 96,
-          letterSpacing: "0.06em",
+          fontSize: 46,
           color: C.gold,
-          textShadow: `0 0 40px rgba(201,168,76,0.4)`,
+          textShadow: `0 0 30px rgba(201,168,76,0.3)`,
         }}
       >
-        R.I.S.E.
-      </RiseIn>
-      <RiseIn
-        delay={4}
-        style={{
-          fontFamily: BODY,
-          fontWeight: 600,
-          fontSize: 26,
-          letterSpacing: "0.34em",
-          textTransform: "uppercase",
-          color: C.sub,
-          marginTop: 6,
-          marginBottom: 30,
-        }}
-      >
-        Program
-      </RiseIn>
-      <RiseIn delay={16} dy={16} style={{ fontFamily: DISPLAY, fontWeight: 700, fontSize: 46, color: C.white }}>
-        Reduce Income Tax
-      </RiseIn>
-      <RiseIn delay={26} dy={16} style={{ fontFamily: DISPLAY, fontWeight: 700, fontSize: 46, color: C.white }}>
-        &amp; Supercharge Earnings
+        built around you.
       </RiseIn>
     </div>
   </CardBase>
