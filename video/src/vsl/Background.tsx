@@ -1,6 +1,7 @@
 import React from "react";
 import { AbsoluteFill, interpolate, useCurrentFrame } from "remotion";
 import { COLORS } from "./theme";
+import { BrollField } from "./Broll";
 
 /**
  * Continuous, subtle background shared across every scene: a deep-navy base with
@@ -54,6 +55,10 @@ export const Background: React.FC = () => {
             "radial-gradient(70% 70% at 50% 45%, black 0%, transparent 82%)",
         }}
       />
+      {/* subtle abstract b-roll motion behind everything */}
+      <BrollField mood="warm" opacity={0.5} />
+      {/* darken so b-roll stays behind the copy and text stays legible */}
+      <AbsoluteFill style={{ background: "rgba(6,12,22,0.34)" }} />
       {/* vignette */}
       <AbsoluteFill
         style={{

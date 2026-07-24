@@ -1,8 +1,15 @@
 import React from "react";
 import { AbsoluteFill, Audio, Sequence, staticFile } from "remotion";
 import "./fonts";
-import { COLORS, SCENES, OVERLAP, TOTAL_FRAMES } from "./theme";
+import {
+  COLORS,
+  SCENES,
+  OVERLAP,
+  INTRO_LEN,
+  NARRATION_FRAMES,
+} from "./theme";
 import { Background } from "./Background";
+import { IntroBroll } from "./scenes/IntroBroll";
 import { Scene01Hook } from "./scenes/Scene01Hook";
 import { Scene02IsThisYou } from "./scenes/Scene02IsThisYou";
 import { Scene03Balance } from "./scenes/Scene03Balance";
@@ -25,11 +32,23 @@ export const VSL: React.FC = () => {
   return (
     <AbsoluteFill style={{ backgroundColor: COLORS.bgCore }}>
       <Background />
-      <Audio src={staticFile("narration.mp3")} />
+
+      {/* Narration begins after the featured b-roll intro so nothing desyncs. */}
+      <Sequence from={INTRO_LEN}>
+        <Audio src={staticFile("narration.mp3")} />
+      </Sequence>
+
+      {/* Featured full-screen b-roll open */}
+      <Sequence durationInFrames={INTRO_LEN + OVERLAP} name="intro">
+        <IntroBroll dur={INTRO_LEN + OVERLAP} />
+      </Sequence>
+
       {SCENES.map((scene, i) => {
-        const start = scene.start;
-        const nextStart = i < SCENES.length - 1 ? SCENES[i + 1].start : TOTAL_FRAMES;
-        // Extend each scene past the next start so content crossfades.
+        const start = INTRO_LEN + scene.start;
+        const nextStart =
+          i < SCENES.length - 1
+            ? INTRO_LEN + SCENES[i + 1].start
+            : INTRO_LEN + NARRATION_FRAMES;
         const dur = nextStart - start + (i < SCENES.length - 1 ? OVERLAP : 0);
         const Scene = COMPONENTS[i];
         return (

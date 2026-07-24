@@ -27,9 +27,12 @@ export const FONTS = {
   body: "'Inter', system-ui, -apple-system, sans-serif",
 } as const;
 
-// Frame at which each scene begins (30fps, total 2655 frames ≈ 88.5s).
+// Frame at which each scene begins (30fps, narration is 2655 frames ≈ 88.5s).
 export const FPS = 30;
-export const TOTAL_FRAMES = 2655;
+export const NARRATION_FRAMES = 2655;
+// Featured full-screen b-roll intro, prepended before the narration begins.
+export const INTRO_LEN = 84;
+export const TOTAL_FRAMES = INTRO_LEN + NARRATION_FRAMES;
 
 export const SCENES = [
   { key: "hook", start: 0 },
