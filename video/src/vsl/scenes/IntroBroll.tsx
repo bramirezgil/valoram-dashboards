@@ -37,18 +37,19 @@ export const IntroBroll: React.FC<{ dur: number }> = ({ dur }) => {
         }}
       >
         <div style={{ opacity: logo, transform: `translateY(${(1 - logo) * 18}px)` }}>
-          <Logo size={66} />
+          <Logo size={112} />
         </div>
         <div
           style={{
             fontFamily: FONTS.body,
             fontWeight: 600,
-            fontSize: 22,
-            letterSpacing: "0.34em",
+            fontSize: 34,
+            letterSpacing: "0.28em",
             textTransform: "uppercase",
             color: COLORS.gold,
             opacity: kicker,
             transform: `translateY(${(1 - kicker) * 14}px)`,
+            marginTop: 8,
           }}
         >
           A message for savers 58–67

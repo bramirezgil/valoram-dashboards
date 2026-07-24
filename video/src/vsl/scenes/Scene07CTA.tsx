@@ -72,7 +72,7 @@ export const Scene07CTA: React.FC<{ dur: number }> = ({ dur }) => {
           </div>
         </Rise>
         <Rise delay={84} style={{ marginTop: 18 }}>
-          <Logo size={46} />
+          <Logo size={60} />
         </Rise>
       </div>
     </Stage>
