@@ -11,7 +11,7 @@ import {
 } from "../primitives";
 
 const rows = [
-  { label: "Your score", value: "0–220" },
+  { label: "Your score", value: "0–285" },
   { label: "Where you stand", value: "5 tiers" },
   { label: "Your biggest exposure", value: "revealed", gold: true },
 ];
