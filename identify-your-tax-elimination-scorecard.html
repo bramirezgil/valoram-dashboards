@@ -1,0 +1,1370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+<title>Identify Your Tax Elimination Score Card | Pacific Ridgeway Insurance Solutions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet"></noscript>
+<style>
+/* ═══════════════════════════════════════════
+   TOKENS
+═══════════════════════════════════════════ */
+:root {
+  --black:      #0C1E33;
+  --black-mid:  #0F2238;
+  --black-card: #13273F;
+  --white:      #ffffff;
+  --off-white:  #F6F2EA;
+  --orange:     #C6A15B;
+  --orange-w:   #A67C2E;
+  --orange-d:   #8C6A24;
+  --og:         rgba(198,161,91,0.10);
+  --ob:         rgba(198,161,91,0.22);
+  --td:         #12233A;
+  --tb:         #3D4A5A;
+  --tm:         #666;
+  --tl:         rgba(255,255,255,0.74);
+  --tdim:       rgba(255,255,255,0.42);
+  --rl:         rgba(0,0,0,0.08);
+  --rd:         rgba(198,161,91,0.14);
+}
+
+/* ═══════════════════════════════════════════
+   RESET
+═══════════════════════════════════════════ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--white);
+  color: var(--td);
+  overflow-x: hidden;
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; height: auto; display: block; }
+a   { -webkit-tap-highlight-color: transparent; }
+
+/* ═══════════════════════════════════════════
+   TYPOGRAPHY
+═══════════════════════════════════════════ */
+h1, h2, h3, h4 { font-family: 'Marcellus', serif; font-weight: 400; line-height: 1.1; letter-spacing: -0.01em; }
+
+.eyebrow {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px; font-weight: 700;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--orange-w); display: block; margin-bottom: 16px;
+}
+.dark .eyebrow, .dark-mid .eyebrow { color: var(--orange); }
+
+.section-title {
+  font-size: clamp(26px, 5.5vw, 50px);
+  line-height: 1.1; margin-bottom: 20px;
+  display: block; width: 100%;
+}
+.section-title em { font-style: italic; color: var(--orange-w); }
+.dark  .section-title    { color: var(--white); }
+.dark  .section-title em { color: var(--orange); }
+
+/* ═══════════════════════════════════════════
+   LAYOUT
+═══════════════════════════════════════════ */
+.wrap   { width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+.wrap-sm{ width: 100%; max-width: 800px;  margin: 0 auto; padding: 0 20px; }
+.centered { text-align: center; display: block; width: 100%; }
+
+/* Mobile-first section padding */
+section { padding: 64px 20px; }
+
+/* Hero centered layout */
+.hero-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.hero-center .hero-sub { max-width: 640px; margin-left: auto; margin-right: auto; }
+
+.light    { background: var(--white);     color: var(--td); }
+.dark     { background: var(--black);     color: var(--white); }
+.dark-mid { background: var(--black-mid); color: var(--white); }
+
+/* ═══════════════════════════════════════════
+   BUTTONS
+═══════════════════════════════════════════ */
+.btn {
+  display: inline-block;
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px; font-weight: 700;
+  letter-spacing: 0.09em; text-transform: uppercase;
+  padding: 16px 32px;
+  text-decoration: none; border: none; cursor: pointer;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  /* full-width on mobile */
+  width: 100%; max-width: 440px;
+  text-align: center;
+}
+.btn-orange { background: var(--orange); color: var(--black); }
+.btn-orange:hover {
+  background: var(--orange-w);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(198,161,91,0.28);
+}
+
+/* ═══════════════════════════════════════════
+   HEADER
+═══════════════════════════════════════════ */
+.site-header {
+  position: sticky; top: 0; left: 0; right: 0; z-index: 200;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 12px 20px;
+  background: rgba(255,255,255,0.97);
+  border-bottom: 1px solid rgba(0,0,0,0.07);
+  transition: box-shadow 0.3s;
+  min-height: 56px;
+}
+.logo-wrap { display: flex; align-items: center; text-decoration: none; }
+.logo-img-file  { height: 34px; width: auto; display: block; }
+.logo-svg-fallback { display: flex; align-items: center; gap: 9px; }
+.logo-mark-svg  { width: 34px; height: 34px; flex-shrink: 0; }
+.logo-text-col  { display: flex; flex-direction: column; line-height: 1.18; }
+.logo-name { font-family: 'Marcellus', serif; font-size: 16px; color: var(--black); letter-spacing: 0.04em; }
+.logo-sub  { font-size: 9px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--orange); }
+
+/* Desktop header CTA — hidden on mobile */
+.hdr-cta {
+  display: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--black); background: var(--orange);
+  border: none; padding: 10px 20px;
+  cursor: pointer; text-decoration: none;
+  transition: background 0.2s; white-space: nowrap;
+}
+.hdr-cta:hover { background: var(--orange-w); }
+
+/* ═══════════════════════════════════════════
+   HERO — mobile: stacked, desktop: 2-col
+═══════════════════════════════════════════ */
+.hero {
+  background: var(--white);
+  padding-top: 60px;
+  padding-bottom: 32px;
+  padding-left: 20px; padding-right: 20px;
+  position: relative; overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute; inset: 0; pointer-events: none;
+  background-image:
+    linear-gradient(rgba(198,161,91,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(198,161,91,0.025) 1px, transparent 1px);
+  background-size: 72px 72px;
+}
+.hero::after {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, var(--orange), var(--orange-d), transparent);
+}
+
+.hero-inner {
+  max-width: 1100px; margin: 0 auto;
+  position: relative; z-index: 1;
+  display: flex; flex-direction: column; gap: 22px;
+}
+
+.hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px; font-weight: 700;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--orange-w);
+  border: 1px solid rgba(166,124,46,0.22);
+  background: rgba(166,124,46,0.05);
+  padding: 6px 14px; margin-bottom: 18px;
+}
+
+.hero h1 {
+  font-size: clamp(28px, 6.5vw, 62px);
+  color: var(--black);
+  margin-bottom: 0;
+  letter-spacing: -0.015em;
+  line-height: 1.12;
+  text-wrap: balance;
+  text-align: center;
+}
+.hero h1 em { font-style: italic; color: var(--orange-w); }
+
+.hero-sub {
+  font-size: clamp(15px, 3.2vw, 18px);
+  font-weight: 400; line-height: 1.7;
+  color: var(--tb); margin-bottom: 0;
+}
+.hero-sub strong { color: var(--td); font-weight: 600; }
+
+/* ═══════════════════════════════════════════
+   OPTIN CARD
+═══════════════════════════════════════════ */
+.optin-card {
+  background: var(--black);
+  border: 1px solid var(--ob);
+  position: relative; overflow: hidden;
+}
+.optin-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, var(--orange), var(--orange-d));
+  z-index: 1;
+}
+.optin-inner { padding: 24px 20px; }
+
+.optin-headline {
+  font-family: 'Marcellus', serif;
+  font-size: clamp(18px, 4vw, 22px);
+  color: var(--white); line-height: 1.2; margin-bottom: 8px;
+}
+.optin-sub { font-size: 14px; color: var(--tl); line-height: 1.6; margin-bottom: 16px; }
+
+.optin-includes { list-style: none; margin-bottom: 20px; display: flex; flex-direction: column; gap: 8px; }
+.optin-includes li {
+  font-size: 13px; color: rgba(255,255,255,0.55); line-height: 1.45;
+  display: flex; align-items: flex-start; gap: 8px;
+}
+.optin-includes li::before { content: '→'; color: var(--orange); flex-shrink: 0; }
+
+/* GHL form zone */
+.ghl-form-zone { width: 100%; }
+.ghl-form-zone iframe { width: 100% !important; border: none !important; }
+
+/* ═══════════════════════════════════════════
+   PROBLEM CARDS
+═══════════════════════════════════════════ */
+.problem-grid {
+  display: flex; flex-direction: column;
+  gap: 1px; background: var(--rd);
+  margin: 44px 0;
+}
+.p-card { background: var(--black); padding: 32px 24px; transition: background 0.25s; }
+.p-card:hover { background: rgba(198,161,91,0.04); }
+.p-num {
+  font-family: 'Marcellus', serif;
+  font-size: 60px; color: var(--orange);
+  line-height: 1; margin-bottom: 16px;
+}
+.p-card h3 { font-size: clamp(17px, 3.5vw, 21px); color: var(--white); margin-bottom: 12px; }
+.p-card p  { font-size: clamp(14px, 2.8vw, 16px); color: var(--tl); line-height: 1.72; }
+
+.transition-quote { border-top: 1px solid var(--rd); padding-top: 40px; text-align: center; }
+.transition-quote p {
+  font-family: 'Marcellus', serif;
+  font-size: clamp(17px, 3.8vw, 28px); font-style: italic;
+  color: var(--tl); line-height: 1.5; max-width: 700px; margin: 0 auto;
+}
+.transition-quote p strong { color: var(--white); font-style: normal; }
+
+/* ═══════════════════════════════════════════
+   STORY / WHY THIS MATTERS
+═══════════════════════════════════════════ */
+.story-grid { display: flex; flex-direction: column; gap: 40px; }
+.story-content h2 { font-size: clamp(24px, 5vw, 44px); color: var(--black); margin-bottom: 22px; }
+.story-content p  { font-size: clamp(14px, 2.8vw, 17px); color: var(--tb); line-height: 1.78; margin-bottom: 16px; }
+.story-content p em { font-style: italic; color: var(--td); }
+
+.story-pullquote {
+  border-left: 2px solid var(--orange-w);
+  background: rgba(166,124,46,0.05);
+  padding: 18px 20px; margin-top: 24px;
+  font-family: 'Marcellus', serif;
+  font-size: clamp(17px, 3.5vw, 22px); font-style: italic;
+  line-height: 1.45; color: var(--black);
+}
+
+.stat-col { display: flex; flex-direction: column; gap: 16px; }
+.stat-card {
+  border: 1px solid var(--rl);
+  padding: 26px 22px; position: relative;
+  background: var(--white);
+  transition: border-color 0.25s;
+}
+.stat-card:hover { border-color: rgba(166,124,46,0.3); }
+.stat-card::before {
+  content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 100%;
+  background: var(--orange-w); opacity: 0.6;
+}
+.stat-num { font-family: 'Marcellus', serif; font-size: 52px; color: var(--orange-w); line-height: 1; display: block; margin-bottom: 6px; }
+.stat-lbl { font-size: 10px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--tm); }
+.stat-desc { font-size: 13px; color: var(--tb); margin-top: 8px; line-height: 1.6; }
+
+/* ═══════════════════════════════════════════
+   COMPARISON TABLE
+═══════════════════════════════════════════ */
+.compare-wrap {
+  display: flex; flex-direction: column;
+  max-width: 880px; margin: 40px auto 44px;
+  gap: 2px;
+}
+
+/* Traditional CPA col — clearly readable but visually "lesser" */
+.c-col {
+  padding: 32px 28px;
+  border: 1px solid rgba(255,255,255,0.1);
+  position: relative;
+}
+.c-trad {
+  background: #1C3350;
+  opacity: 1;
+}
+/* Red-ish top bar signals "problem" */
+.c-trad::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: rgba(180,60,60,0.7);
+}
+
+/* Coordinated col — orange accent, elevated */
+.c-coord {
+  background: #16233A;
+  border-color: rgba(198,161,91,0.35);
+}
+.c-coord::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: var(--orange);
+}
+
+.c-vs { display: none; }
+
+.c-lbl {
+  font-size: 10px; font-weight: 700;
+  letter-spacing: 0.22em; text-transform: uppercase;
+  margin-bottom: 14px; display: block;
+}
+.c-trad  .c-lbl { color: rgba(255,120,120,0.95); }
+.c-coord .c-lbl { color: var(--orange); }
+
+.c-col h3 {
+  font-size: clamp(20px, 3.5vw, 26px);
+  font-weight: 400; margin-bottom: 22px;
+}
+.c-trad  h3 { color: rgba(255,255,255,0.9); }
+.c-coord h3 { color: var(--white); }
+
+.c-list { list-style: none; display: flex; flex-direction: column; gap: 13px; }
+.c-list li {
+  font-size: clamp(14px, 2.5vw, 16px);
+  line-height: 1.5; display: flex; align-items: flex-start; gap: 12px;
+}
+.c-trad  .c-list li { color: rgba(255,255,255,0.85); }
+.c-trad  .c-list li::before {
+  content: '✕'; color: rgba(200,80,80,0.6);
+  flex-shrink: 0; font-size: 11px; margin-top: 2px;
+}
+.c-coord .c-list li { color: #ffffff; }
+.c-coord .c-list li::before {
+  content: '✓'; color: var(--orange);
+  flex-shrink: 0; font-size: 13px; margin-top: 1px;
+}
+
+.bigidea-close {
+  max-width: 700px; margin: 0 auto; text-align: center;
+  border-top: 1px solid var(--rd); padding-top: 40px;
+}
+.bigidea-close p {
+  font-family: 'Marcellus', serif;
+  font-size: clamp(17px, 3.5vw, 26px);
+  color: var(--tl); line-height: 1.5;
+}
+.bigidea-close strong { color: var(--white); }
+
+/* ═══════════════════════════════════════════
+   OFFER CARD
+═══════════════════════════════════════════ */
+.offer-card {
+  border: 1px solid var(--ob);
+  max-width: 960px; margin: 40px auto 52px;
+  position: relative; overflow: hidden;
+}
+.offer-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, var(--orange), var(--orange-d));
+}
+.offer-card-inner { padding: 28px 22px; }
+.offer-grid { display: flex; flex-direction: column; gap: 32px; }
+
+.offer-tag {
+  display: inline-block; font-size: 13px; font-weight: 700;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--orange); border: 1px solid var(--ob);
+  background: var(--og); padding: 5px 12px; margin-bottom: 14px;
+}
+.offer-title { font-size: clamp(20px, 4vw, 28px); line-height: 1.2; margin-bottom: 14px; }
+.offer-desc  { font-size: clamp(14px, 2.8vw, 16px); line-height: 1.72; margin-bottom: 24px; }
+.offer-right { border-top: 1px solid var(--ob); padding-top: 28px; }
+
+.deliverable-list { list-style: none; display: flex; flex-direction: column; gap: 16px; }
+.deliverable-list li { display: flex; align-items: flex-start; gap: 12px; }
+.d-icon {
+  width: 32px; height: 32px; flex-shrink: 0;
+  background: var(--og); border: 1px solid var(--ob);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px;
+}
+.d-title { font-size: clamp(14px, 2.8vw, 15px); font-weight: 600; margin-bottom: 2px; }
+.d-desc  { font-size: 13px; line-height: 1.5; }
+
+/* Process steps — 2-col on mobile, 4-col on desktop */
+.process-row {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 28px 16px; max-width: 960px; margin: 0 auto;
+}
+.proc-step { text-align: center; padding: 0 8px; }
+.proc-circle {
+  width: 52px; height: 52px; border-radius: 50%;
+  background: var(--og); border: 1px solid var(--ob);
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 14px;
+  font-family: 'Marcellus', serif; font-size: 22px;
+  transition: background 0.25s;
+}
+.proc-step:hover .proc-circle { background: rgba(198,161,91,0.18); }
+.proc-step h3 { font-size: clamp(14px, 2.8vw, 17px); line-height: 1.3; margin-bottom: 6px; }
+.proc-step p  { font-size: 13px; line-height: 1.55; color: var(--tm); }
+
+/* ═══════════════════════════════════════════
+   KIT GRID
+═══════════════════════════════════════════ */
+.kit-grid {
+  display: grid; grid-template-columns: 1fr;
+  gap: 14px; max-width: 1060px; margin: 40px auto 0;
+}
+.kit-card {
+  background: var(--black-card);
+  border: 1px solid var(--rd); padding: 26px 22px;
+  transition: border-color 0.25s, background 0.25s;
+}
+.kit-card:hover { border-color: var(--ob); background: rgba(198,161,91,0.03); }
+.kit-num  { font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--orange); margin-bottom: 12px; display: block; }
+.kit-card h3 { font-size: clamp(16px, 3vw, 19px); color: var(--white); margin-bottom: 10px; }
+.kit-card p  { font-size: clamp(13px, 2.5vw, 15px); color: var(--tl); line-height: 1.7; }
+
+/* ═══════════════════════════════════════════
+   WHO GRID
+═══════════════════════════════════════════ */
+.who-grid { display: grid; grid-template-columns: 1fr; gap: 14px; max-width: 1000px; margin: 40px auto 28px; }
+.who-card { border: 1px solid; padding: 24px 20px; transition: box-shadow 0.2s; }
+.who-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+.who-icon { font-size: 20px; margin-bottom: 10px; }
+.who-card h3 { font-size: clamp(16px, 3vw, 19px); margin-bottom: 8px; }
+.who-card p  { font-size: clamp(13px, 2.5vw, 15px); line-height: 1.65; }
+
+.not-for-box { max-width: 600px; margin: 0 auto; border: 1px solid; padding: 22px 20px; text-align: center; }
+.not-for-lbl { font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 10px; display: block; }
+.not-for-box p { font-size: clamp(13px, 2.5vw, 15px); line-height: 1.65; }
+
+/* ═══════════════════════════════════════════
+   FAQ
+═══════════════════════════════════════════ */
+.faq-list { max-width: 840px; margin: 40px auto 0; display: flex; flex-direction: column; gap: 1px; background: var(--rl); }
+.faq-item { background: var(--white); padding: 24px 20px; transition: background 0.2s; }
+.faq-item:hover { background: var(--off-white); }
+.faq-item h3 { font-size: clamp(16px, 3vw, 20px); margin-bottom: 10px; }
+.faq-item p  { font-size: clamp(14px, 2.8vw, 16px); line-height: 1.72; color: var(--tb); }
+
+/* ═══════════════════════════════════════════
+   FINAL CTA
+═══════════════════════════════════════════ */
+.final-cta {
+  background: var(--black-mid);
+  padding: 72px 20px 88px;
+  text-align: center;
+  border-top: 1px solid var(--rd);
+  position: relative; overflow: hidden;
+}
+.final-cta::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(198,161,91,0.07) 0%, transparent 65%);
+  pointer-events: none;
+}
+.final-cta > *:not(style) { position: relative; z-index: 1; }
+
+.final-cta h2 {
+  font-size: clamp(26px, 6.5vw, 56px);
+  color: var(--white); max-width: 720px; margin: 0 auto 18px;
+}
+.final-cta h2 em { font-style: italic; color: var(--orange); }
+.final-cta .sub {
+  font-size: clamp(14px, 3vw, 17px); color: var(--tl);
+  max-width: 520px; margin: 0 auto 32px; line-height: 1.72;
+}
+
+.scarcity-line {
+  font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+  display: flex; align-items: center; justify-content: center; gap: 12px;
+  white-space: nowrap; margin-top: 0;
+}
+.scarcity-line::before, .scarcity-line::after {
+  content: ''; display: block; width: 32px; height: 1px;
+  background: rgba(198,161,91,0.4); flex-shrink: 0;
+}
+
+/* ═══════════════════════════════════════════
+   FOOTER
+═══════════════════════════════════════════ */
+.site-footer {
+  background: #081422;
+  border-top: 1px solid rgba(198,161,91,0.12);
+  padding: 48px 20px 40px; text-align: center;
+}
+.footer-logo-wrap { margin-bottom: 20px; display: flex; justify-content: center; }
+.footer-disc {
+  font-size: 13px;
+  color: rgba(255,255,255,1);
+  max-width: 780px; margin: 0 auto;
+  line-height: 1.8;
+  text-align: left;
+  border-top: 1px solid rgba(198,161,91,0.1);
+  padding-top: 24px;
+}
+.footer-disc strong {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 14px;
+}
+.footer-disc br + br { display: block; content: ''; margin-top: 12px; }
+
+@media (min-width: 640px) {
+  .footer-disc { font-size: 13px; }
+}
+
+/* ═══════════════════════════════════════════
+   STICKY MOBILE BAR
+═══════════════════════════════════════════ */
+.mob-sticky {
+  display: block;
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 100;
+  background: var(--black);
+  border-top: 1px solid rgba(198,161,91,0.22);
+  padding: 10px 16px 14px;
+  /* GHL safe z-index */
+}
+.mob-sticky a {
+  display: block; text-align: center;
+  background: var(--orange); color: var(--black);
+  font-family: 'Poppins', sans-serif; font-size: 13px; font-weight: 700;
+  letter-spacing: 0.09em; text-transform: uppercase;
+  padding: 14px; text-decoration: none;
+}
+
+/* ═══════════════════════════════════════════
+   ANIMATIONS
+═══════════════════════════════════════════ */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fu  { animation: fadeUp 0.6s ease forwards; opacity: 0; }
+.fu1 { animation-delay: 0.06s; } .fu2 { animation-delay: 0.17s; }
+.fu3 { animation-delay: 0.28s; } .fu4 { animation-delay: 0.40s; }
+
+/* ═══════════════════════════════════════════
+   TABLET — 640px+
+═══════════════════════════════════════════ */
+@media (min-width: 640px) {
+  section { padding: 80px 28px; }
+  .wrap, .wrap-sm { padding: 0 28px; }
+
+  .problem-grid  { display: grid; grid-template-columns: 1fr; }
+  .kit-grid      { grid-template-columns: 1fr 1fr; }
+  .who-grid      { grid-template-columns: 1fr 1fr; }
+  .form-row2     { grid-template-columns: 1fr 1fr; }
+
+  .optin-inner   { padding: 28px 26px; }
+  .offer-card-inner { padding: 32px 28px; }
+}
+
+/* ═══════════════════════════════════════════
+   DESKTOP — 960px+
+═══════════════════════════════════════════ */
+@media (min-width: 960px) {
+  body { font-size: 17px; }
+  section { padding: 100px 36px; }
+  .wrap, .wrap-sm { padding: 0 36px; }
+
+  /* Header */
+  .hdr-cta    { display: block; }
+  .mob-sticky { display: none; }
+  .site-header { padding: 14px 36px; }
+
+  /* Hero — centered single column */
+  .hero { padding: 100px 36px 40px; }
+  .hero-inner { flex-direction: column; align-items: center; }
+
+  /* Problem — 3 col */
+  .problem-grid { grid-template-columns: repeat(3, 1fr); }
+
+  /* Story — 2 col */
+  .story-grid { flex-direction: row; gap: 72px; align-items: center; }
+  .story-content { flex: 1; min-width: 0; }
+  .stat-col      { flex: 0 0 340px; }
+
+  /* Compare — side by side with VS */
+  .compare-wrap { display: grid; grid-template-columns: 1fr 68px 1fr; }
+  .c-vs {
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Marcellus', serif; font-size: 20px; font-style: italic;
+    color: var(--tdim);
+    border-top: 1px solid var(--rd); border-bottom: 1px solid var(--rd);
+  }
+  .c-col { padding: 40px 36px; }
+
+  /* Offer — 2 col */
+  .offer-card-inner { padding: 40px; }
+  .offer-grid { flex-direction: row; gap: 40px; align-items: start; }
+  .offer-left  { flex: 1; min-width: 0; }
+  .offer-right { flex: 1; min-width: 0; border-top: none; border-left: 1px solid var(--ob); padding-top: 0; padding-left: 36px; }
+
+  /* Process — 4 col */
+  .process-row { grid-template-columns: repeat(4, 1fr); gap: 20px; }
+
+  /* Kit — 3 col */
+  .kit-grid { grid-template-columns: repeat(3, 1fr); }
+
+  /* Who — 2 col stays */
+
+  /* FAQ padding */
+  .faq-item { padding: 28px 32px; }
+}
+
+/* ═══════════════════════════════════════════
+   LARGE DESKTOP — 1200px+
+═══════════════════════════════════════════ */
+@media (min-width: 1200px) {
+  .hero { padding: 110px 36px 44px; }
+  section { padding: 110px 36px; }
+}
+
+/* ── FAQ Accordion ── */
+.faq-accordion {
+  max-width: 800px;
+  margin: 44px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.faq-ac-item {
+  background: var(--black-card);
+  border: 1px solid var(--rd);
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+
+.faq-ac-item.open {
+  border-color: rgba(198,161,91,0.35);
+}
+
+.faq-ac-q {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 22px 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.2s;
+}
+
+.faq-ac-q:hover { background: rgba(198,161,91,0.04); }
+
+.faq-ac-q span:first-child {
+  font-family: 'Marcellus', serif;
+  font-size: clamp(16px, 3vw, 19px);
+  color: #ffffff;
+  line-height: 1.3;
+  flex: 1;
+}
+
+.faq-icon {
+  font-size: 22px;
+  font-weight: 300;
+  color: var(--orange);
+  flex-shrink: 0;
+  line-height: 1;
+  transition: transform 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.faq-ac-item.open .faq-icon {
+  transform: rotate(45deg);
+}
+
+.faq-ac-a {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.3s ease;
+  padding: 0 24px;
+}
+
+.faq-ac-item.open .faq-ac-a {
+  max-height: 300px;
+  padding: 0 24px 22px;
+}
+
+.faq-ac-a p {
+  font-size: clamp(14px, 2.8vw, 16px);
+  color: rgba(255,255,255,0.82);
+  line-height: 1.75;
+  border-top: 1px solid var(--rd);
+  padding-top: 16px;
+}
+
+/* ── Results grid (What You Can Achieve) ── */
+.results-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  max-width: 960px;
+  margin: 0 auto 48px;
+}
+.result-card {
+  border: 1px solid var(--rl);
+  background: var(--off-white);
+  padding: 28px 24px;
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+.result-card:hover {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  border-color: rgba(166,124,46,0.2);
+}
+.result-icon {
+  font-size: 22px;
+  color: var(--orange-w);
+  margin-bottom: 12px;
+}
+.result-card h3 {
+  font-size: clamp(17px, 3vw, 20px);
+  color: var(--td);
+  margin-bottom: 10px;
+}
+.result-card p {
+  font-size: clamp(13px, 2.5vw, 15px);
+  color: var(--tb);
+  line-height: 1.68;
+}
+
+/* ── Stat row (3-col horizontal) ── */
+.stat-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+@media (min-width: 640px) {
+  .stat-row { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 639px) {
+  .results-grid { grid-template-columns: 1fr; }
+}
+
+.offer-intro {
+  font-size: clamp(14px, 2.8vw, 17px);
+  color: var(--tl); max-width: 620px;
+  margin: 0 auto 44px; line-height: 1.7; text-align: center;
+}
+.dark .offer-card {
+  background: var(--black-card);
+  border-color: var(--ob);
+}
+.dark .offer-title { color: var(--white); }
+.dark .offer-desc  { color: var(--tl); }
+.dark .offer-right { border-top-color: var(--rd); border-left-color: var(--rd); }
+.dark .d-title { color: var(--white); }
+.dark .d-desc  { color: rgba(255,255,255,0.52); }
+.dark .d-icon  { color: var(--orange); }
+.dark .proc-step h3 { color: var(--white); }
+.dark .proc-step p  { color: var(--tl); }
+.dark .proc-circle  { color: var(--orange); }
+
+
+/* ── Meet Gregory Stevenson bio ── */
+.greg-photo { display:flex; justify-content:center; margin:0 auto 22px; }
+.greg-photo img {
+  width:150px; height:150px; border-radius:50%;
+  object-fit:cover; display:block;
+  border:3px solid var(--orange);
+  box-shadow:0 0 0 6px rgba(198,161,91,0.10), 0 14px 40px rgba(0,0,0,0.45);
+  background:#223A57;
+}
+.greg-name {
+  font-family:'Marcellus', serif; font-weight:400;
+  font-size:clamp(22px,4vw,28px); color:var(--white);
+  line-height:1.2; margin-bottom:8px;
+}
+.greg-role {
+  font-family:'Poppins', sans-serif; font-size:13px; font-weight:600;
+  letter-spacing:0.12em; text-transform:uppercase; color:var(--orange);
+  margin-bottom:22px;
+}
+/* Pacific Ridgeway logo on a light chip so the dark logo reads on navy */
+.pr-firm {
+  display:inline-flex; margin:0 auto 26px;
+  background:#ffffff; padding:9px 18px; border-radius:12px;
+  box-shadow:0 10px 26px rgba(0,0,0,0.35);
+}
+.pr-firm img { height:40px; width:auto; display:block; }
+.greg-bio {
+  font-size:clamp(15px,2.8vw,17px); line-height:1.85;
+  color:rgba(255,255,255,0.72); max-width:640px;
+  margin:0 auto 34px;
+}
+#meet-greg .btn-orange { width:auto; min-width:300px; }
+
+/* ── VSL video (matches tax page — video only, no copy) ── */
+.video-section { padding-top:8px; padding-bottom:44px; }
+.video-wrap {
+  position:relative; width:100%; max-width:1000px; margin:0 auto;
+  aspect-ratio:16 / 9; overflow:hidden; border-radius:2px;
+  box-shadow:0 22px 55px rgba(0,0,0,0.18);
+  background:#000;
+}
+.video-wrap video { position:absolute; inset:0; width:100%; height:100%; object-fit:contain; background:#000; }
+
+</style>
+<body>
+
+<!-- ══ HEADER ══════════════════════════════════════════ -->
+<header class="site-header" id="hdr">
+
+  <!-- Pacific Ridgeway logo (official asset) -->
+  <a class="logo-wrap" href="#top" aria-label="Pacific Ridgeway Insurance Solutions">
+    <img src="https://assets.cdn.filesafe.space/NPH9fcfnGaTAH4Xqh2dM/media/6a63dc6772d046cc143a56eb.jpg" alt="Pacific Ridgeway Insurance Solutions" style="height:42px;width:auto;display:block;">
+  </a>
+  <a href="#optin" class="hdr-cta">Identify My Savings Number</a>
+</header>
+
+<!-- ══ HERO — WHITE ════════════════════════════════════ -->
+<section class="hero light" id="top">
+  <div class="hero-inner hero-center">
+    <div class="hero-eyebrow fu fu1"><span>◆</span> Identify Your Tax Elimination Score Card</div>
+
+    <h1 class="fu fu2">
+      Discover How We've Helped <em>High Income Earners &amp; Business Owners</em> Identify 5-Figure Leaks Causing Them to Overpay on Their Taxes
+    </h1>
+
+    <p class="hero-sub fu fu3">
+      Through our Tax Eliminator Scorecard we uncover missing deductions &amp; tax strategies—allowing us to identify on average <strong>$44,000 in potential tax savings</strong> for our clients.
+    </p>
+  </div>
+</section>
+
+<!-- ══ VSL VIDEO (matches tax page — video only) ═════════ -->
+<section class="light video-section">
+  <div class="video-wrap">
+    <video controls playsinline preload="metadata">
+      <source src="https://assets.cdn.filesafe.space/NPH9fcfnGaTAH4Xqh2dM/media/6a63f50f8b6b8f1ce0e4cc13.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <div class="centered" style="margin-top:22px;"><a href="#optin" class="btn btn-orange">Identify My Savings Number</a></div>
+</section>
+
+<!-- ══ SECTION 1 — WHY THIS EXISTS (BLACK) ══════════════ -->
+<section class="dark">
+  <div class="wrap">
+    <div class="centered">
+      <span class="eyebrow">Why This Exists</span>
+      <h2 class="section-title">Most High Earners Don't Have A Tax Problem.<br>They Have A <em>Planning Problem.</em></h2>
+    </div>
+    <div class="problem-grid">
+      <div class="p-card">
+        <div class="p-num">01</div>
+        <h3>Your CPA Is Reactive</h3>
+        <p>CPAs file returns accurately—but rarely bring proactive strategies unless you specifically ask. Their job is compliance. Not optimization. Not year-round coordination.</p>
+      </div>
+      <div class="p-card">
+        <div class="p-num">02</div>
+        <h3>You're Paying More Than Necessary</h3>
+        <p>Business profits, rental income, RSUs, bonuses, capital gains, and property sales each carry tax exposure that coordinated strategy can reduce. Most households never know what's being left behind.</p>
+      </div>
+      <div class="p-card">
+        <div class="p-num">03</div>
+        <h3>Nobody Is Connecting The Dots</h3>
+        <p>Business decisions, investments, retirement accounts, and charitable giving operate in silos. Without coordination, each creates unnecessary tax exposure that nobody is engineering away.</p>
+      </div>
+    </div>
+    <div class="transition-quote">
+      <p>The biggest tax-saving opportunities happen throughout the year—<strong>not at filing time.</strong></p>
+
+    <div class="centered" style="margin-top:44px;"><a href="#optin" class="btn btn-orange">Identify My Savings Number</a></div>
+  </div>
+</section>
+
+<!-- ══ SECTION 2 — WHAT YOU CAN ACHIEVE (WHITE) ══════════ -->
+<section class="light">
+  <div class="wrap">
+    <div class="centered" style="max-width:680px;margin-left:auto;margin-right:auto;">
+      <span class="eyebrow" style="color:var(--orange-w)">What You Can Achieve</span>
+      <h2 class="section-title" style="color:var(--black);margin-bottom:20px;">You Can Keep More,<br><em>Owe Less,</em> and Finally<br>Have a Plan That Works</h2>
+      <p style="font-size:clamp(15px,2.8vw,18px);color:var(--tb);line-height:1.72;margin-bottom:52px;">Here's what our clients consistently walk away with after going through the Tax Elimination Scorecard process.</p>
+    </div>
+
+    <!-- Results grid -->
+    <div class="results-grid">
+      <div class="result-card">
+        <div class="result-icon">◈</div>
+        <h3>More Cash In Your Pocket</h3>
+        <p>Reduce unnecessary tax exposure and increase your after-tax income without changing how you live or run your business.</p>
+      </div>
+      <div class="result-card">
+        <div class="result-icon">◎</div>
+        <h3>A Clear Year-Round Strategy</h3>
+        <p>Stop scrambling at tax time. Know exactly what moves to make before quarterly deadlines and year-end so nothing is left on the table.</p>
+      </div>
+      <div class="result-card">
+        <div class="result-icon">⬡</div>
+        <h3>Everything Working Together</h3>
+        <p>Your business, investments, retirement accounts, and charitable giving finally coordinated as one unified tax strategy—not five separate pieces.</p>
+      </div>
+      <div class="result-card">
+        <div class="result-icon">◇</div>
+        <h3>Confidence in Every Decision</h3>
+        <p>No more guessing whether you're doing it right. Operate from a documented plan built around your specific income, structure, and goals.</p>
+      </div>
+    </div>
+
+    <!-- Stat row -->
+    <div class="stat-row">
+      <div class="stat-card">
+        <span class="stat-num">$44K</span>
+        <span class="stat-lbl">Average Annual Tax Savings Identified</span>
+        <p class="stat-desc">What clients typically discover once someone reviews their returns as a diagnostic—not just a compliance document.*</p>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">30 Min</span>
+        <span class="stat-lbl">Time to Surface Your Top 3 Moves</span>
+        <p class="stat-desc">The scorecard and forensic review are designed to surface your highest-impact opportunities fast—before the next quarterly deadline.</p>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">$200K+</span>
+        <span class="stat-lbl">Income Range Where This Matters Most</span>
+        <p class="stat-desc">The planning gap grows with income. Business owners, real estate investors, and high W-2 earners have the most to recover.</p>
+      </div>
+    </div>
+
+    <div class="centered" style="margin-top:44px;"><a href="#optin" class="btn btn-orange">Identify My Savings Number</a></div>
+  </div>
+</section>
+
+<!-- ══ SECTION 3 — CORE DISTINCTION (BLACK) ════════════ -->
+<section class="dark">
+  <div class="wrap">
+    <div class="centered">
+      <span class="eyebrow">The Core Distinction</span>
+      <h2 class="section-title">The Biggest Tax Myth <em>High Earners Believe</em></h2>
+    </div>
+    <div class="compare-wrap">
+      <div class="c-col c-trad">
+        <div class="c-lbl">Traditional CPA</div>
+        <h3>Tax Preparation</h3>
+        <ul class="c-list">
+          <li>Files returns accurately</li>
+          <li>Reactive to what's already happened</li>
+          <li>Compliance-driven, not strategy-driven</li>
+          <li>Engagement ends at tax season</li>
+          <li>Avoids anything that might raise questions</li>
+        </ul>
+      </div>
+      <div class="c-vs">vs</div>
+      <div class="c-col c-coord">
+        <div class="c-lbl">Coordinated Tax Strategy</div>
+        <h3>Tax Engineering</h3>
+        <ul class="c-list">
+          <li>Year-round proactive planning</li>
+          <li>Decisions structured before income hits</li>
+          <li>Strategy tied to business, investments, retirement</li>
+          <li>Defensible, documented, and implementable</li>
+          <li>Coordination across all advisors and accounts</li>
+        </ul>
+      </div>
+    </div>
+    <div class="bigidea-close">
+      <p>You don't need more write-offs. <strong>You need a coordinated strategy</strong> connecting taxes, investments, retirement planning, charitable giving, and business decisions—so nothing is optimized in isolation.</p>
+
+    <div class="centered" style="margin-top:44px;"><a href="#optin" class="btn btn-orange">Identify My Savings Number</a></div>
+  </div>
+</section>
+
+<!-- ══ SECTION 4 — IS THIS RIGHT FOR YOU? (WHITE) ══════ -->
+<section class="light">
+  <div class="wrap">
+    <div class="centered">
+      <span class="eyebrow" style="color:var(--orange-w)">Is This Right For You?</span>
+      <h2 class="section-title" style="color:var(--black)">Who This Analysis <em>Is Built For</em></h2>
+    </div>
+    <div class="who-grid" style="max-width:1000px;margin:44px auto 32px;">
+      <div class="who-card" style="background:var(--off-white);border-color:var(--rl);">
+        <div class="who-icon">◈</div>
+        <h3 style="color:var(--black)">Married High Earners ($200k–$500k+)</h3>
+        <p style="color:var(--tb)">Households with complex income profiles—salary, bonus, RSUs, business distributions—writing large tax checks but who've never had someone map the full picture.</p>
+      </div>
+      <div class="who-card" style="background:var(--off-white);border-color:var(--rl);">
+        <div class="who-icon">◎</div>
+        <h3 style="color:var(--black)">Business Owners &amp; Self-Employed</h3>
+        <p style="color:var(--tb)">Owners with a CPA handling returns but who feel there are strategies nobody is implementing—entity structure, payroll optimization, retirement planning coordination.</p>
+      </div>
+      <div class="who-card" style="background:var(--off-white);border-color:var(--rl);">
+        <div class="who-icon">⬡</div>
+        <h3 style="color:var(--black)">Real Estate Investors</h3>
+        <p style="color:var(--tb)">Investors with rental income, property sales, or growing portfolios who aren't sure they're capturing all available depreciation, 1031 opportunities, or passive loss strategies.</p>
+      </div>
+      <div class="who-card" style="background:var(--off-white);border-color:var(--rl);">
+        <div class="who-icon">◇</div>
+        <h3 style="color:var(--black)">Retired &amp; Pre-Retired Families</h3>
+        <p style="color:var(--tb)">Households approaching or in retirement with investment income, RMDs, Social Security decisions, and estate planning considerations that all carry significant tax implications.</p>
+      </div>
+    </div>
+    <div class="not-for-box" style="border-color:var(--rl);">
+      <span class="not-for-lbl" style="color:var(--tm)">Not The Right Fit If</span>
+      <p style="color:var(--tb)">Your household income is below $150k annually, you have no business or investment activity, or you're fully satisfied your current advisor is running a proactive, coordinated tax strategy on your behalf.</p>
+    </div>
+
+</section>
+
+<!-- ══ SECTION 5 — THE FREE ANALYSIS (BLACK) ════════════ -->
+<section class="dark">
+  <div class="wrap">
+    <div class="centered">
+      <span class="eyebrow">The Free Analysis</span>
+      <h2 class="section-title">What You Get When You<br><em>Submit Your Information</em></h2>
+      <p class="offer-intro">This isn't a generic checklist. It's a personalized forensic review of your tax situation—built around how you earn, where you live, and what's actually been filed.</p>
+    </div>
+    <div class="offer-card">
+      <div class="offer-card-inner">
+        <div class="offer-grid">
+          <div class="offer-left">
+            <span class="offer-tag">Primary Offer</span>
+            <div class="offer-title">Tax Elimination Scorecard + Specialist Review</div>
+            <p class="offer-desc">A 30-minute Tax Elimination Scorecard surfaces where high-income households typically overpay—based on how you earn. You finish with a ranked "Top 3 Moves" list and a scheduled session with a tax strategy specialist who conducts a forensic analysis of your returns to identify missed credits, unclaimed strategies, and recoverable tax dollars.</p>
+            <a href="#optin" class="btn btn-orange">Identify My Savings Number</a>
+          </div>
+          <div class="offer-right">
+            <ul class="deliverable-list">
+              <li><div class="d-icon">◈</div><div><div class="d-title">Tax Elimination Scorecard</div><div class="d-desc">Ranked Top 3 highest-impact moves based on your income type and structure</div></div></li>
+              <li><div class="d-icon">◎</div><div><div class="d-title">State-Specific Decision Map</div><div class="d-desc">Planning opportunities specific to your metro—not generic national advice</div></div></li>
+              <li><div class="d-icon">⬡</div><div><div class="d-title">Business Owner Quarterly Playbook</div><div class="d-desc">Highest-leverage checkpoints before each quarterly estimate payment</div></div></li>
+              <li><div class="d-icon">◇</div><div><div class="d-title">Liquidity Event Planner</div><div class="d-desc">90/60/30-day checklist for RSUs, bonuses, business exits, real estate sales</div></div></li>
+              <li><div class="d-icon">✦</div><div><div class="d-title">CPA Proactivity Test + Agenda</div><div class="d-desc">Ready-to-send email revealing whether your CPA is planning or just filing</div></div></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="centered" style="margin-bottom:32px"><span class="eyebrow">How It Works</span></div>
+    <div class="process-row">
+      <div class="proc-step"><div class="proc-circle">1</div><h3>Submit Your Information</h3><p>Fill out the short form with your income profile</p></div>
+      <div class="proc-step"><div class="proc-circle">2</div><h3>Schedule Your Review</h3><p>Book your 30-minute forensic review with a specialist</p></div>
+      <div class="proc-step"><div class="proc-circle">3</div><h3>Receive Your Scorecard</h3><p>Get your personalized Tax Elimination Scorecard and resource kit</p></div>
+      <div class="proc-step"><div class="proc-circle">4</div><h3>Leave With A Plan</h3><p>Walk away with ranked, implementable next steps</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SECTION 6 — WHAT YOU UNLOCK (WHITE) ══════════════════ -->
+<section class="light">
+  <div class="wrap">
+    <div class="centered">
+      <span class="eyebrow" style="color:var(--orange-w)">What You Unlock</span>
+      <h2 class="section-title" style="color:var(--black)">Before &amp; During Your <em>Advisor Session</em></h2>
+      <p style="font-size:clamp(14px,2.8vw,17px);color:var(--tb);max-width:620px;margin:0 auto 48px;line-height:1.72;">Here's exactly what happens when you submit your information — what you receive immediately and what your advisor walks you through during your session.</p>
+    </div>
+
+    <!-- Before the meeting — scorecard only -->
+    <div style="max-width:620px;margin:0 auto 40px;">
+      <div style="font-size:14px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--orange-w);margin-bottom:20px;display:flex;align-items:center;gap:14px;">
+        <span style="flex:1;height:1px;background:var(--rl);display:block;"></span>
+        Before Your Meeting
+        <span style="flex:1;height:1px;background:var(--rl);display:block;"></span>
+      </div>
+      <div class="kit-card" style="background:var(--off-white);border-color:rgba(166,124,46,0.3);border-left:3px solid var(--orange-w);">
+        <span class="kit-num" style="color:var(--orange-w)">You Receive Immediately</span>
+        <h3 style="color:var(--black)">Tax Elimination Score Card</h3>
+        <p style="color:var(--tb)">Complete the short questionnaire and instantly see your Tax Elimination Score — a personalized assessment that identifies where you are most likely overpaying and surfaces your Top 3 highest-impact planning opportunities. This becomes the agenda for your advisor session.</p>
+      </div>
+    </div>
+
+    <!-- During the meeting — advisor delivers these -->
+    <div style="max-width:960px;margin:0 auto;">
+      <div style="font-size:14px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--tb);margin-bottom:20px;display:flex;align-items:center;gap:14px;">
+        <span style="flex:1;height:1px;background:var(--rl);display:block;"></span>
+        Unlocked During Your Advisor Session
+        <span style="flex:1;height:1px;background:var(--rl);display:block;"></span>
+      </div>
+      <div class="kit-grid">
+        <div class="kit-card" style="background:var(--off-white);border-color:var(--rl);"><span class="kit-num" style="color:var(--orange-w)">Resource 01</span><h3 style="color:var(--black)">State-Specific Decision Map</h3><p style="color:var(--tb)">A planning map reflecting real opportunities and traps specific to your state — so you're not relying on generic national advice that ignores where you live and how you're paid.</p></div>
+        <div class="kit-card" style="background:var(--off-white);border-color:var(--rl);"><span class="kit-num" style="color:var(--orange-w)">Resource 02</span><h3 style="color:var(--black)">Business Owner Quarterly Playbook</h3><p style="color:var(--tb)">The highest-leverage checkpoints to review before each quarterly payment — covering entity coordination, payroll structure, and documentation habits that keep strategies defensible.</p></div>
+        <div class="kit-card" style="background:var(--off-white);border-color:var(--rl);"><span class="kit-num" style="color:var(--orange-w)">Resource 03</span><h3 style="color:var(--black)">Liquidity Event Planner</h3><p style="color:var(--tb)">A 90/60/30-day decision checklist for RSUs, bonuses, business exits, and real estate sales — so you know exactly what to do before a taxable event, not after.</p></div>
+        <div class="kit-card" style="background:var(--off-white);border-color:var(--rl);"><span class="kit-num" style="color:var(--orange-w)">Resource 04</span><h3 style="color:var(--black)">CPA Proactivity Test</h3><p style="color:var(--tb)">A ready-to-use email, meeting agenda, and question set that quickly reveals whether your current CPA is running proactive strategy — or only filing forms.</p></div>
+        <div class="kit-card" style="background:var(--off-white);border-color:var(--rl);"><span class="kit-num" style="color:var(--orange-w)">Included</span><h3 style="color:var(--black)">Forensic Return Review</h3><p style="color:var(--tb)">Your advisor reviews your actual returns like a diagnostic — identifying missed credits, unclaimed strategies, and coordination gaps that are costing you money right now.</p></div>
+        <div class="kit-card" style="background:var(--off-white);border-color:var(--rl);"><span class="kit-num" style="color:var(--orange-w)">Walk Away With</span><h3 style="color:var(--black)">A Clear Next Steps Plan</h3><p style="color:var(--tb)">You leave the session with a ranked, prioritized action list — specific moves to make before your next filing deadline, not vague ideas you have to figure out on your own.</p></div>
+      </div>
+    </div>
+
+    <div class="centered" style="margin-top:44px;"><a href="#optin" class="btn btn-orange">Identify My Savings Number</a></div>
+  </div>
+</section>
+
+<!-- ══ FORM SECTION — after Is This Right For You (WHITE) ══ -->
+<section class="light" id="optin" style="padding-top:72px;padding-bottom:72px;">
+  <div class="wrap-sm">
+    <div class="centered" style="margin-bottom:36px;">
+      <span class="eyebrow" style="color:var(--orange-w);">Take The First Step</span>
+      <h2 class="section-title" style="color:var(--black);">Identify Your <em>Tax Elimination Numbers</em></h2>
+      <p style="font-size:clamp(14px,2.8vw,17px);color:var(--tb);max-width:560px;margin:0 auto;line-height:1.72;">Share your current situation with us and we'll give you a score along with a personalized number showing your potential savings — based on our clients' history and your specific circumstances.</p>
+    </div>
+
+    <div class="optin-card" style="max-width:620px;margin:0 auto;">
+      <div class="optin-inner" style="padding:32px 28px;">
+
+        <ul class="optin-includes" style="margin-bottom:24px;">
+          <li>Tax Elimination Scorecard + Top 3 Moves</li>
+          <li>State-Specific Decision Map</li>
+          <li>Business Owner Quarterly Playbook</li>
+          <li>Forensic review session with a specialist</li>
+        </ul>
+
+        <div class="ghl-form-zone" id="ghl-form-zone">
+          <iframe src="https://api.leadconnectorhq.com/widget/survey/0HjpSyuArpv7MIhVfdw4" style="border:none;width:100%;min-height:600px;" scrolling="no" id="0HjpSyuArpv7MIhVfdw4" title="survey"></iframe>
+          <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+        </div>
+
+        <div style="display:flex;align-items:flex-start;gap:10px;margin-top:18px;padding:14px 16px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C6A15B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+          <p style="font-size:12px;color:rgba(255,255,255,0.6);line-height:1.6;margin:0;">Your answers and results are <strong style="color:rgba(255,255,255,0.85);font-weight:600;">100% secure and confidential.</strong> We will never sell, share, or distribute your information to any third party. Your data is used solely to generate your personalized tax opportunity results.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ MEET GREGORY STEVENSON — BIO (NAVY) ═══════════════ -->
+<section class="dark" id="meet-greg" style="padding-top:80px;padding-bottom:80px;">
+  <div class="wrap-sm">
+    <div class="centered" style="margin-bottom:8px;">
+      <span class="eyebrow">Meet Gregory Stevenson</span>
+      <h2 class="section-title" style="margin-bottom:36px;">The Strategist Behind <em>Your Plan</em></h2>
+    </div>
+
+    <div class="greg-photo">
+      <img id="greg-headshot" src="https://assets.cdn.filesafe.space/NPH9fcfnGaTAH4Xqh2dM/media/6a63d87b9eb8e1b1cc088b35.jpeg" alt="Gregory Stevenson" width="150" height="150">
+    </div>
+
+    <div class="centered">
+      <h3 class="greg-name">Gregory Stevenson</h3>
+      <p class="greg-role">Retirement Tax Strategist &middot; Pacific Ridgeway Insurance Solutions</p>
+
+      <!-- Pacific Ridgeway logo (official asset, on a light chip for visibility on navy) -->
+      <div class="pr-firm">
+        <img src="https://assets.cdn.filesafe.space/NPH9fcfnGaTAH4Xqh2dM/media/6a63dc6772d046cc143a56eb.jpg" alt="Pacific Ridgeway Insurance Solutions">
+      </div>
+
+      <p class="greg-bio">
+        Gregory Stevenson is a retirement tax strategist with Pacific Ridgeway
+        Insurance Solutions who helps savers and pre-retirees ages 58&ndash;67 turn
+        oversized retirement tax bills into income they actually keep. He works in the
+        narrow window between the last paycheck and the first required distribution,
+        using a structured review process to align how you withdraw, how you convert,
+        and how you're taxed into one written blueprint. Clients pursue him for clear
+        recommendations, transparent tradeoffs, and execution-focused planning built
+        around them.
+      </p>
+
+      <a href="#optin" class="btn btn-orange" style="margin-top:8px;">Request My Strategy Session</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SECTION 7 — FAQ (BLACK) ════════════════════════════ -->
+<section class="dark">
+  <div class="wrap">
+    <div class="centered">
+      <span class="eyebrow">Common Questions</span>
+      <h2 class="section-title">Frequently Asked <em>Questions</em></h2>
+    </div>
+
+    <div class="faq-accordion" id="faq">
+
+      <div class="faq-ac-item">
+        <button class="faq-ac-q" aria-expanded="false">
+          <span>I already have a CPA. Why do I need this?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-ac-a">
+          <p>Most clients do. A CPA's job is to file accurately and keep you compliant—not to engineer a year-round tax elimination strategy. This review looks specifically at what proactive planning has been missed, regardless of who's currently filing for you.</p>
+        </div>
+      </div>
+
+      <div class="faq-ac-item">
+        <button class="faq-ac-q" aria-expanded="false">
+          <span>Is any of this aggressive or risky?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-ac-a">
+          <p>Every strategy we surface is legal, documented, and defensible. We focus exclusively on strategies high-income households are legally entitled to—most of which are simply never implemented because nobody's job is to bring them up proactively.</p>
+        </div>
+      </div>
+
+      <div class="faq-ac-item">
+        <button class="faq-ac-q" aria-expanded="false">
+          <span>What actually happens in the forensic review session?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-ac-a">
+          <p>A Pacific Ridgeway tax strategy specialist reviews your actual tax situation—income sources, entity structure, investments, giving, and retirement accounts—and walks through exactly where the gaps are and what the highest-impact moves would be before your next deadline.</p>
+        </div>
+      </div>
+
+      <div class="faq-ac-item">
+        <button class="faq-ac-q" aria-expanded="false">
+          <span>What does "forensic review" actually mean?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-ac-a">
+          <p>It means we look at your return the way a diagnostician would—not to verify it's correct, but to identify what's missing. Missed elections, unclaimed credits, structural inefficiencies, and coordination gaps between your advisors. Things that are legal to fix but require someone actively looking for them.</p>
+        </div>
+      </div>
+
+      <div class="faq-ac-item">
+        <button class="faq-ac-q" aria-expanded="false">
+          <span>Is there a cost to the initial analysis?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-ac-a">
+          <p>The Tax Elimination Scorecard, resource kit, and initial specialist review are provided at no cost. Our business is built on long-term client relationships where coordinated tax strategy creates ongoing value—not one-time engagements.</p>
+        </div>
+      </div>
+
+      <div class="faq-ac-item">
+        <button class="faq-ac-q" aria-expanded="false">
+          <span>How quickly will someone follow up?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-ac-a">
+          <p>A specialist will reach out within 1 business day to confirm your information and schedule your review session. Spots are limited each week, so earlier submission typically means faster scheduling.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ FINAL CTA — BLACK ══════════════════════════════════ -->
+<section class="final-cta dark-mid">
+  <span class="eyebrow">One Step Away</span>
+  <h2>Discover What May Be<br><em>Missing From Your Tax Strategy</em></h2>
+  <p class="sub">If you're earning $200,000+ and feel like you're paying more than necessary—this review may uncover $15k to $75k in savings you didn't know were there.</p>
+  <a href="#optin" class="btn btn-orange">Identify My Savings Number</a>
+  <div style="height:48px;"></div>
+  <p class="scarcity-line">Limited forensic review spots available each week</p>
+</section>
+
+<!-- ══ FOOTER ══════════════════════════════════════════ -->
+<footer class="site-footer">
+  <div class="footer-logo-wrap">
+    <span class="pr-firm"><img src="https://assets.cdn.filesafe.space/NPH9fcfnGaTAH4Xqh2dM/media/6a63dc6772d046cc143a56eb.jpg" alt="Pacific Ridgeway Insurance Solutions"></span>
+  </div>
+  <p class="footer-disc">
+    <strong>Disclosure &amp; Legal Notice</strong><br><br>
+    Pacific Ridgeway Insurance Solutions is a financial services and insurance agency (IMO). Pacific Ridgeway Insurance Solutions is not a licensed CPA, tax advisor, or tax consulting firm and does not provide tax preparation or tax filing services. The content on this page is for informational and educational purposes only and does not constitute tax, legal, investment, or financial advice. Nothing on this page should be construed as a guarantee, promise, or projection of specific tax savings or financial outcomes.<br><br>
+    Tax savings figures referenced (including the $44,000 average) are illustrative estimates based on opportunities identified during client review sessions. Actual results vary significantly based on individual income level, filing status, entity structure, investment activity, state of residence, and other financial circumstances. Past identification of tax-saving opportunities does not guarantee future results.<br><br>
+    All tax strategies discussed are legal, documented, and compliant with applicable IRS regulations. However, tax laws change frequently and the applicability of any strategy depends on your specific situation. Always consult with a qualified, licensed tax professional, CPA, or attorney before implementing any tax planning strategy.<br><br>
+    Pacific Ridgeway Insurance Solutions does not provide legal, investment, or securities advice. This page is not an offer to sell or a solicitation of an offer to buy any securities or insurance products. Insurance products are subject to state availability and individual qualification requirements.<br><br>
+    By submitting your information on this page, you consent to being contacted by a Pacific Ridgeway Insurance Solutions representative. Your information is kept confidential and is never sold to third parties. See our Privacy Policy for details.<br><br>
+    &copy; 2025 Pacific Ridgeway Insurance Solutions. All Rights Reserved.
+  </p>
+</footer>
+
+<!-- ══ MOBILE STICKY ══════════════════════════════════ -->
+<div class="mob-sticky">
+  <a href="#optin">Identify My Savings Number</a>
+</div>
+
+<script>
+  // Header shadow on scroll
+  const hdr = document.getElementById('hdr');
+  window.addEventListener('scroll', () => {
+    hdr.style.boxShadow = window.scrollY > 30
+      ? '0 2px 32px rgba(0,0,0,0.1)'
+      : 'none';
+  });
+
+  // Smooth scroll anchors
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const el = document.querySelector(a.getAttribute('href'));
+      if (el) {
+        e.preventDefault();
+        const hdrH = document.getElementById('hdr') ? document.getElementById('hdr').offsetHeight : 0;
+      window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - hdrH - 12, behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Form submit (legacy handler; GHL iframe handles real submission)
+  var submitBtn = document.getElementById('submitBtn');
+  if (submitBtn) submitBtn.addEventListener('click', function () {
+    const fields = document.querySelectorAll('.f-input, .f-select');
+    let ok = true;
+    fields.forEach(f => {
+      if (!f.value) { f.style.borderColor = 'rgba(198,161,91,0.55)'; ok = false; }
+      else { f.style.borderColor = 'rgba(255,255,255,0.1)'; }
+    });
+    if (ok) {
+      this.textContent = '✓ Submitted — A Specialist Will Be In Touch';
+      this.style.background = '#1c1c1c';
+      this.style.color = 'rgba(255,255,255,0.4)';
+      this.style.cursor = 'default';
+      this.disabled = true;
+      // ← Replace or augment with GHL form webhook / redirect
+    }
+  });
+
+/* FAQ Accordion */
+document.querySelectorAll('.faq-ac-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-ac-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-ac-item').forEach(i => {
+      i.classList.remove('open');
+      i.querySelector('.faq-ac-q').setAttribute('aria-expanded', 'false');
+    });
+    if (!isOpen) {
+      item.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  });
+});
+</script>
+</body>
+</html>
