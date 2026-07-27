@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+<title>Your Tax Elimination Score | Pacific Ridgeway Insurance Solutions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet"></noscript>
+<style>
+:root {
+  --black:      #0C1E33;
+  --black-mid:  #0F2238;
+  --black-card: #13273F;
+  --white:      #ffffff;
+  --off-white:  #F6F2EA;
+  --orange:     #C6A15B;
+  --orange-w:   #A67C2E;
+  --orange-d:   #8C6A24;
+  --og:         rgba(198,161,91,0.10);
+  --ob:         rgba(198,161,91,0.22);
+  --td:         #12233A;
+  --tb:         #3D4A5A;
+  --tm:         #6A7686;
+  --tl:         rgba(255,255,255,0.74);
+  --rl:         rgba(0,0,0,0.08);
+  --rd:         rgba(198,161,91,0.14);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--black); color: var(--white);
+  overflow-x: hidden; font-size: 16px; line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { -webkit-tap-highlight-color: transparent; }
+h1, h2, h3, h4 { font-family: 'Marcellus', serif; font-weight: 400; line-height: 1.1; letter-spacing: -0.01em; }
+
+.eyebrow {
+  font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 700;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--orange); display: block; margin-bottom: 16px;
+}
+.section-title { font-size: clamp(26px, 5.5vw, 46px); line-height: 1.12; margin-bottom: 18px; }
+.section-title em { font-style: italic; color: var(--orange); }
+
+.wrap { width: 100%; max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+.wrap-sm { width: 100%; max-width: 760px; margin: 0 auto; padding: 0 20px; }
+.centered { text-align: center; }
+section { padding: 64px 20px; }
+.light { background: var(--white); color: var(--td); }
+.dark  { background: var(--black); color: var(--white); }
+.dark-mid { background: var(--black-mid); color: var(--white); }
+
+.btn {
+  display: inline-block; font-family: 'Poppins', sans-serif;
+  font-size: 13px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase;
+  padding: 16px 34px; text-decoration: none; border: none; cursor: pointer;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s; text-align: center;
+}
+.btn-orange { background: var(--orange); color: var(--black); }
+.btn-orange:hover { background: var(--orange-w); transform: translateY(-2px); box-shadow: 0 8px 28px rgba(198,161,91,0.28); }
+
+/* Header */
+.site-header {
+  position: sticky; top: 0; z-index: 200;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 12px 20px; background: rgba(255,255,255,0.97);
+  border-bottom: 1px solid rgba(0,0,0,0.07); min-height: 56px;
+}
+.logo-wrap { display: flex; align-items: center; text-decoration: none; }
+.hdr-cta {
+  font-family: 'Poppins', sans-serif; font-size: 11px; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--black); background: var(--orange);
+  border: none; padding: 10px 20px; cursor: pointer; text-decoration: none;
+  transition: background 0.2s; white-space: nowrap;
+}
+.hdr-cta:hover { background: var(--orange-w); }
+
+/* Results hero */
+.results-hero {
+  position: relative; overflow: hidden;
+  padding: 72px 20px 64px; text-align: center;
+  border-bottom: 1px solid var(--rd);
+}
+.results-hero::before {
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(ellipse 60% 55% at 50% 30%, rgba(198,161,91,0.10) 0%, transparent 65%);
+}
+.results-hero::after {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, var(--orange), var(--orange-d), transparent);
+}
+.results-hero > * { position: relative; z-index: 1; }
+.results-hero h1 { font-size: clamp(28px, 6vw, 52px); color: var(--white); margin-bottom: 14px; }
+.results-hero h1 em { font-style: italic; color: var(--orange); }
+.results-hero .lead { font-size: clamp(15px,3vw,18px); color: var(--tl); max-width: 620px; margin: 0 auto 40px; line-height: 1.7; }
+#greeting { color: var(--orange); }
+
+/* Score gauge */
+.gauge-wrap { display: flex; justify-content: center; margin: 8px auto 8px; }
+.gauge { position: relative; width: 240px; height: 240px; }
+.gauge svg { transform: rotate(-90deg); width: 100%; height: 100%; }
+.gauge .track { fill: none; stroke: rgba(255,255,255,0.10); stroke-width: 16; }
+.gauge .fill  { fill: none; stroke: url(#goldgrad); stroke-width: 16; stroke-linecap: round;
+  transition: stroke-dashoffset 1.4s cubic-bezier(.22,1,.36,1); }
+.gauge-center {
+  position: absolute; inset: 0; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; text-align: center;
+}
+.gauge-num { font-family: 'Marcellus', serif; font-size: 64px; line-height: 1; color: var(--white); }
+.gauge-den { font-size: 14px; color: var(--tm); letter-spacing: 0.14em; text-transform: uppercase; margin-top: 4px; }
+.score-tier {
+  display: inline-block; margin-top: 22px; font-size: 13px; font-weight: 700;
+  letter-spacing: 0.14em; text-transform: uppercase; color: var(--orange);
+  border: 1px solid var(--ob); background: var(--og); padding: 7px 16px;
+}
+
+/* Savings callout */
+.savings-card {
+  max-width: 620px; margin: 40px auto 0;
+  background: var(--black-card); border: 1px solid var(--ob);
+  padding: 34px 28px; position: relative; overflow: hidden;
+}
+.savings-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, var(--orange), var(--orange-d));
+}
+.savings-label { font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--tm); margin-bottom: 8px; }
+.savings-num { font-family: 'Marcellus', serif; font-size: clamp(44px,10vw,72px); color: var(--orange); line-height: 1; }
+.savings-sub { font-size: 13px; color: var(--tl); margin-top: 12px; line-height: 1.6; }
+
+/* Meaning cards */
+.mean-grid { display: grid; grid-template-columns: 1fr; gap: 16px; max-width: 960px; margin: 40px auto 0; }
+.mean-card { border: 1px solid var(--rl); background: var(--off-white); padding: 26px 24px; }
+.mean-icon { font-size: 22px; color: var(--orange-w); margin-bottom: 12px; }
+.mean-card h3 { font-size: clamp(17px,3vw,20px); color: var(--td); margin-bottom: 10px; }
+.mean-card p { font-size: clamp(13px,2.5vw,15px); color: var(--tb); line-height: 1.68; }
+
+/* Steps */
+.steps { display: grid; grid-template-columns: 1fr; gap: 22px; max-width: 760px; margin: 36px auto 0; }
+.step { display: flex; align-items: flex-start; gap: 16px; text-align: left; }
+.step-num {
+  flex-shrink: 0; width: 42px; height: 42px; border-radius: 50%;
+  background: var(--og); border: 1px solid var(--ob); color: var(--orange);
+  font-family: 'Marcellus', serif; font-size: 19px;
+  display: flex; align-items: center; justify-content: center;
+}
+.step h3 { font-size: clamp(16px,3vw,19px); color: var(--white); margin-bottom: 5px; }
+.step p { font-size: clamp(13px,2.5vw,15px); color: var(--tl); line-height: 1.6; }
+
+/* Booking */
+.booking-card {
+  max-width: 760px; margin: 40px auto 0;
+  background: var(--black-card); border: 1px solid var(--ob); padding: 8px;
+}
+.calendar-zone { width: 100%; min-height: 620px; }
+.calendar-zone iframe { width: 100% !important; border: none !important; min-height: 620px; }
+.calendar-placeholder {
+  min-height: 320px; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center; padding: 40px 24px; color: var(--tl);
+  border: 1px dashed var(--ob);
+}
+.calendar-placeholder strong { color: var(--orange); display: block; margin-bottom: 8px; font-size: 15px; }
+
+/* Footer */
+.site-footer { background: #081422; border-top: 1px solid rgba(198,161,91,0.12); padding: 44px 20px 40px; text-align: center; }
+.footer-logo-wrap { margin-bottom: 20px; display: flex; justify-content: center; }
+.pr-firm { display:inline-flex; background:#ffffff; padding:9px 18px; border-radius:12px; box-shadow:0 10px 26px rgba(0,0,0,0.35); }
+.pr-firm img { height:40px; width:auto; display:block; }
+.footer-disc {
+  font-size: 12.5px; color: rgba(255,255,255,0.9); max-width: 780px; margin: 0 auto;
+  line-height: 1.8; text-align: left; border-top: 1px solid rgba(198,161,91,0.1); padding-top: 22px;
+}
+.footer-disc strong { display: block; font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--orange); margin-bottom: 12px; }
+
+@media (min-width: 640px) {
+  section { padding: 84px 28px; }
+  .mean-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (min-width: 960px) {
+  body { font-size: 17px; }
+  .site-header { padding: 14px 36px; }
+}
+</style>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <a class="logo-wrap" href="#" aria-label="Pacific Ridgeway Insurance Solutions">
+    <img src="https://assets.cdn.filesafe.space/NPH9fcfnGaTAH4Xqh2dM/media/6a63dc6772d046cc143a56eb.jpg" alt="Pacific Ridgeway Insurance Solutions" style="height:42px;width:auto;display:block;">
+  </a>
+  <a href="#book" class="hdr-cta">Book My Review</a>
+</header>
+
+<!-- RESULTS HERO -->
+<section class="results-hero dark">
+  <span class="eyebrow">Your Scorecard Results</span>
+  <h1><span id="greeting">Your</span> Tax Elimination <em>Score</em></h1>
+  <p class="lead">Based on your answers, here's how much of your tax exposure is likely recoverable — and what your highest-impact next move is.</p>
+
+  <div class="gauge-wrap">
+    <div class="gauge">
+      <svg viewBox="0 0 120 120">
+        <defs>
+          <linearGradient id="goldgrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#E3C583"/>
+            <stop offset="100%" stop-color="#A67C2E"/>
+          </linearGradient>
+        </defs>
+        <circle class="track" cx="60" cy="60" r="52"></circle>
+        <circle class="fill" id="gaugeFill" cx="60" cy="60" r="52"></circle>
+      </svg>
+      <div class="gauge-center">
+        <span class="gauge-num"><span id="scoreNum">0</span></span>
+        <span class="gauge-den">Out of 100</span>
+      </div>
+    </div>
+  </div>
+  <span class="score-tier" id="scoreTier">High Opportunity</span>
+
+  <div class="savings-card">
+    <div class="savings-label">Estimated Annual Savings Opportunity</div>
+    <div class="savings-num">$<span id="savingsNum">0</span></div>
+    <p class="savings-sub">An estimate based on households with a similar income and structure profile. Your exact number is confirmed during your forensic review.*</p>
+  </div>
+</section>
+
+<!-- WHAT IT MEANS -->
+<section class="light">
+  <div class="wrap centered">
+    <span class="eyebrow" style="color:var(--orange-w)">What Your Score Means</span>
+    <h2 class="section-title" style="color:var(--black)">A Higher Score Means <em style="color:var(--orange-w)">More To Recover</em></h2>
+    <div class="mean-grid">
+      <div class="mean-card">
+        <div class="mean-icon">◈</div>
+        <h3>Uncaptured Strategy</h3>
+        <p>Your score reflects how much proactive, coordinated tax planning has likely been missed by a returns-only relationship.</p>
+      </div>
+      <div class="mean-card">
+        <div class="mean-icon">◎</div>
+        <h3>Recoverable Dollars</h3>
+        <p>The estimate above is what similar households typically surface once their returns are reviewed as a diagnostic, not just filed.</p>
+      </div>
+      <div class="mean-card">
+        <div class="mean-icon">⬡</div>
+        <h3>Your Top 3 Moves</h3>
+        <p>Your review pinpoints the three highest-impact moves for your specific income, entity structure, and state.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEXT STEPS + BOOKING -->
+<section class="dark-mid" id="book">
+  <div class="wrap-sm centered">
+    <span class="eyebrow">Your Next Step</span>
+    <h2 class="section-title">Claim Your <em>Forensic Review Session</em></h2>
+    <p class="lead" style="color:var(--tl);max-width:600px;margin:0 auto 8px;">Book a complimentary session with a Pacific Ridgeway tax strategy specialist. We'll walk through your results and map your Top 3 moves before your next deadline.</p>
+
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><div><h3>Book Your Time</h3><p>Pick a slot that works for you using the calendar below.</p></div></div>
+      <div class="step"><div class="step-num">2</div><div><h3>Bring Your Last Return</h3><p>We review it like a diagnostic to confirm your real numbers.</p></div></div>
+      <div class="step"><div class="step-num">3</div><div><h3>Leave With A Plan</h3><p>You get a ranked, implementable list of next steps — no obligation.</p></div></div>
+    </div>
+
+    <div class="booking-card">
+      <!-- Paste your GHL calendar embed here (replace the placeholder below).
+           Example:
+           <div class="calendar-zone">
+             <iframe src="https://api.leadconnectorhq.com/widget/booking/XXXXXXXX" scrolling="no" id="XXXXXXXX"></iframe>
+             <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+           </div> -->
+      <div class="calendar-placeholder">
+        <strong>Calendar goes here</strong>
+        Paste your GoHighLevel booking-widget embed in this block to let visitors schedule directly on the page.
+      </div>
+    </div>
+
+    <div style="margin-top:28px;"><a href="#book" class="btn btn-orange">Book My Review</a></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-logo-wrap">
+    <span class="pr-firm"><img src="https://assets.cdn.filesafe.space/NPH9fcfnGaTAH4Xqh2dM/media/6a63dc6772d046cc143a56eb.jpg" alt="Pacific Ridgeway Insurance Solutions"></span>
+  </div>
+  <p class="footer-disc">
+    <strong>Disclosure &amp; Legal Notice</strong>
+    Pacific Ridgeway Insurance Solutions is a financial services and insurance agency (IMO). Pacific Ridgeway Insurance Solutions is not a licensed CPA, tax advisor, or tax consulting firm and does not provide tax preparation or tax filing services. Your Tax Elimination Score and estimated savings are illustrative, based on the answers you provided and outcomes identified during prior client review sessions. They are not a guarantee, promise, or projection of specific tax savings or financial outcomes. Actual results vary based on individual income level, filing status, entity structure, investment activity, state of residence, and other circumstances. Always consult a qualified, licensed tax professional, CPA, or attorney before implementing any tax planning strategy. &copy; 2025 Pacific Ridgeway Insurance Solutions. All Rights Reserved.
+  </p>
+</footer>
+
+<script>
+(function () {
+  // Read personalization from URL params (GHL can pass these on redirect):
+  //   ?score=78&savings=44000&name=Greg
+  var params = new URLSearchParams(window.location.search);
+  var score = parseInt(params.get('score'), 10);
+  if (isNaN(score)) score = 78;                 // default
+  score = Math.max(0, Math.min(100, score));
+  var savings = parseInt((params.get('savings') || '').replace(/[^0-9]/g, ''), 10);
+  if (isNaN(savings)) savings = 44000;          // default
+  var name = params.get('name');
+
+  if (name) {
+    document.getElementById('greeting').textContent = name.trim() + "'s";
+  }
+
+  // Score tier label
+  var tier = 'High Opportunity';
+  if (score < 40) tier = 'Solid Foundation';
+  else if (score < 70) tier = 'Moderate Opportunity';
+  document.getElementById('scoreTier').textContent = tier;
+
+  // Gauge geometry
+  var r = 52, circ = 2 * Math.PI * r;
+  var fill = document.getElementById('gaugeFill');
+  fill.style.strokeDasharray = circ;
+  fill.style.strokeDashoffset = circ;             // start empty
+
+  function easeOut(t){ return 1 - Math.pow(1 - t, 3); }
+
+  function animate(el, to, dur, fmt) {
+    var start = null;
+    function frame(ts){
+      if (!start) start = ts;
+      var p = Math.min((ts - start) / dur, 1);
+      var v = Math.round(easeOut(p) * to);
+      el.textContent = fmt ? v.toLocaleString('en-US') : v;
+      if (p < 1) requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+  }
+
+  function run(){
+    fill.style.strokeDashoffset = circ * (1 - score / 100);
+    animate(document.getElementById('scoreNum'), score, 1400, false);
+    animate(document.getElementById('savingsNum'), savings, 1600, true);
+  }
+
+  // Kick off shortly after load so the transition is visible
+  if ('requestAnimationFrame' in window) setTimeout(run, 250);
+  else {
+    document.getElementById('scoreNum').textContent = score;
+    document.getElementById('savingsNum').textContent = savings.toLocaleString('en-US');
+    fill.style.strokeDashoffset = circ * (1 - score / 100);
+  }
+})();
+</script>
+</body>
+</html>
