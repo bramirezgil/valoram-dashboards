@@ -394,7 +394,7 @@ function silentlyUpdateGHLScore(email, score, tierKey) {
     try {
       const d = iframe.contentDocument || iframe.contentWindow.document;
       if (!d || !d.body || !d.body.innerHTML) { if (attempts > 20) clearInterval(tryFill); return; }
-      const fields = { 'email': email, 'tax_elimination_score': score.toString(), 'contact.tax_elimination_score': score.toString(), 'score_tier': tierNames[tierKey]||tierKey, 'contact.score_tier': tierNames[tierKey]||tierKey, 'score_label': tierLabels[tierKey]||'', 'contact.score_label': tierLabels[tierKey]||'', 'scorecard_date': new Date().toLocaleDateString('en-US'), 'contact.scorecard_date': new Date().toLocaleDateString('en-US') };
+      const fields = { 'email': email, 'greg_tax_score': score.toString(), 'contact.greg_tax_score': score.toString() };
       let filled = false;
       Object.entries(fields).forEach(([name, value]) => {
         const el = d.querySelector(`input[name="${name}"], textarea[name="${name}"]`);
@@ -410,7 +410,7 @@ function silentlyUpdateGHLScore(email, score, tierKey) {
 // ── MAIN ─────────────────────────────────────────────
 window.addEventListener('DOMContentLoaded', () => {
   const params   = new URLSearchParams(window.location.search);
-  let score      = parseInt(params.get('score')) || parseInt(params.get('contact.tax_elimination_score')) || 0;
+  let score      = parseInt(params.get('score')) || parseInt(params.get('greg_tax_score')) || parseInt(params.get('contact.greg_tax_score')) || 0;
   const name     = params.get('name')  || '';
   const email    = params.get('email') || '';
   const answers  = {};
