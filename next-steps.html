@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>You're Registered — Mid-Year Valoram Leadership Retreat</title>
+<meta name="description" content="You're registered for the Mid-Year Valoram Leadership Retreat, August 3 & 4, 2026, San Mateo, CA. Next steps, calendar, and details.">
+<meta name="robots" content="noindex">
+
+<!-- HOLD: CONVERSION TRACKING — the registration conversion event should fire HERE (this is the
+     post-opt-in page), not on the form page. Add the GHL/Google/Meta pixel or event snippet here.
+     See Task 14 note: the form is a GHL-hosted iframe, so the redirect + tracking are configured
+     in the GHL funnel, not in this repo. -->
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=DM+Mono:wght@400;500&display=swap');
+
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+  :root{
+    --orange:#F0891A; --orange-light:#f5a44e; --orange-deep:#d9770c;
+    --blue:#1B3A6B; --navy:#101820; --navy-2:#16212c;
+    --cream:#faf8f4; --cream-2:#f3efe7; --surface:#ffffff;
+    --border:#e7e2d8;
+    --ink:#141b22; --ink-2:#3a4550; --ink-3:#6b7686;
+    --paper-text:#e9ecf1; --paper-text-2:rgba(233,236,241,0.7); --paper-text-3:rgba(233,236,241,0.5);
+    --radius:16px; --radius-sm:10px; --maxw:820px;
+    --shadow:0 10px 40px rgba(16,24,32,0.10);
+  }
+
+  html{scroll-behavior:smooth}
+  body{font-family:'Poppins',sans-serif;background:var(--cream);color:var(--ink);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+  .eyebrow{font-family:'DM Mono',monospace;font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:var(--orange);font-weight:500;display:inline-flex;align-items:center;gap:10px}
+  .eyebrow::before{content:"";width:24px;height:1px;background:var(--orange);display:inline-block;opacity:0.8}
+  h1,h2,h3{font-family:'Fraunces',serif;font-weight:500;line-height:1.1;letter-spacing:-0.01em}
+  .h1{font-size:clamp(2.3rem,6vw,3.6rem)}
+  .h2{font-size:clamp(1.5rem,3.2vw,2.1rem)}
+
+  /* top bar */
+  .topbar{display:flex;justify-content:center;padding:22px}
+  .logo-badge{background:#fff;border-radius:10px;padding:9px 14px;box-shadow:0 4px 14px rgba(16,24,32,0.12);display:inline-flex}
+  .logo-badge img{height:26px;width:auto;display:block}
+
+  /* hero / confirmation */
+  .confirm{
+    background:radial-gradient(700px 380px at 50% -10%, rgba(240,137,26,0.18), transparent 60%),
+      linear-gradient(160deg,var(--navy) 0%, var(--navy-2) 70%);
+    color:#fff;text-align:center;padding:56px 0 60px;
+  }
+  .confirm .check{
+    width:64px;height:64px;border-radius:50%;background:var(--orange);
+    display:flex;align-items:center;justify-content:center;margin:0 auto 22px;
+    box-shadow:0 10px 30px rgba(240,137,26,0.4);
+  }
+  .confirm .check svg{width:32px;height:32px;stroke:#fff}
+  .confirm h1{color:#fff;margin-bottom:14px}
+  .confirm p{color:var(--paper-text-2);font-weight:300;max-width:48ch;margin:0 auto;font-size:1.12rem}
+
+  section{padding:44px 0}
+  .card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:28px 26px;box-shadow:var(--shadow)}
+  .sec-eyebrow{margin-bottom:16px}
+  .section-title{margin-bottom:18px}
+
+  /* next steps (HOLD shell) */
+  .steps{list-style:none;counter-reset:step;display:flex;flex-direction:column;gap:14px}
+  .steps li{counter-increment:step;display:grid;grid-template-columns:40px 1fr;gap:16px;align-items:start;min-height:44px}
+  .steps li::before{content:counter(step);grid-row:1;width:34px;height:34px;border-radius:50%;background:rgba(240,137,26,0.12);color:var(--orange);font-family:'DM Mono',monospace;font-weight:500;display:flex;align-items:center;justify-content:center;font-size:14px}
+  .step-slot{min-height:34px;border:1px dashed var(--border);border-radius:8px}
+
+  /* details block */
+  .details-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .detail{background:var(--cream-2);border-radius:var(--radius-sm);padding:18px 18px}
+  .detail .lbl{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--orange);margin-bottom:6px}
+  .detail .val{font-size:1.02rem;font-weight:600;color:var(--ink)}
+  .detail .val small{display:block;font-weight:400;color:var(--ink-3);font-size:0.85rem;margin-top:3px}
+  @media(max-width:640px){.details-grid{grid-template-columns:1fr}}
+
+  /* buttons */
+  .btn-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:9px;
+    min-height:48px;padding:12px 20px;border-radius:100px;
+    font-family:'Poppins',sans-serif;font-weight:600;font-size:14px;
+    text-decoration:none;cursor:pointer;border:1px solid var(--border);
+    background:var(--surface);color:var(--ink);transition:transform .15s,box-shadow .15s,background .15s;
+    flex:1 1 auto;min-width:140px;
+  }
+  .btn:hover{transform:translateY(-1px);box-shadow:var(--shadow)}
+  .btn svg{width:17px;height:17px}
+  .btn-primary{background:var(--orange);color:#fff;border-color:var(--orange)}
+  .btn-primary:hover{background:var(--orange-deep)}
+
+  /* logistics */
+  .logi-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+  .logi{background:var(--cream-2);border-left:4px solid var(--orange);border-radius:var(--radius-sm);padding:18px 20px}
+  .logi .lbl{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--orange);margin-bottom:5px}
+  .logi .val{font-size:1rem;color:var(--ink)}
+  @media(max-width:560px){.logi-grid{grid-template-columns:1fr}}
+
+  /* share module */
+  .share{background:var(--navy);color:#fff}
+  .share .card{background:rgba(255,255,255,0.04);border-color:rgba(255,255,255,0.12);color:#fff}
+  .share h2{color:#fff}
+  .share .sub{color:var(--paper-text-2);font-weight:300;margin-bottom:20px}
+  .share-field{display:flex;gap:10px;margin-bottom:16px;flex-wrap:wrap}
+  .share-field input{
+    flex:1 1 220px;min-height:48px;border-radius:10px;border:1px solid rgba(255,255,255,0.16);
+    background:rgba(255,255,255,0.06);color:#fff;padding:0 14px;font-size:14px;font-family:'Poppins',sans-serif;
+  }
+  .copy-label{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--paper-text-3);margin:14px 0 8px}
+  .copy-box{
+    display:flex;gap:10px;align-items:flex-start;background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 14px;margin-bottom:6px;
+  }
+  .copy-box p{flex:1;color:var(--paper-text);font-size:0.92rem;font-weight:300;line-height:1.5}
+  .copy-btn{
+    flex-shrink:0;min-height:44px;min-width:44px;padding:0 14px;border-radius:8px;border:none;cursor:pointer;
+    background:var(--orange);color:#fff;font-family:'Poppins',sans-serif;font-weight:600;font-size:12px;
+  }
+  .copy-btn:hover{background:var(--orange-deep)}
+  .share .btn-row .btn{background:rgba(255,255,255,0.06);color:#fff;border-color:rgba(255,255,255,0.16)}
+  .share .btn-row .btn.btn-primary{background:var(--orange);border-color:var(--orange)}
+
+  /* contact / footer */
+  .contact{text-align:center}
+  .contact p{color:var(--ink-2);font-weight:300}
+  .contact a{color:var(--orange);text-decoration:none;font-weight:500}
+  footer{background:var(--navy-2);color:var(--paper-text-3);text-align:center;padding:30px 0;font-size:12px}
+
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <span class="logo-badge"><img src="https://assets.cdn.filesafe.space/wvYaTIjnugkl9xZa86UM/media/698b9ec952c9527e26c9ef8e.jpg" alt="Valoram Solutions"></span>
+</header>
+
+<!-- 1. CONFIRMATION -->
+<section class="confirm">
+  <div class="wrap">
+    <div class="check" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+    </div>
+    <h1 class="h1">You're Registered</h1>
+    <p>Your seat at the Mid-Year Valoram Leadership Retreat is confirmed. Here's everything you need to be ready.</p>
+  </div>
+</section>
+
+<!-- 2. NEXT STEPS FOR THE EVENT (HOLD — client supplying) -->
+<section>
+  <div class="wrap">
+    <div class="card">
+      <span class="eyebrow sec-eyebrow">Next Steps For The Event</span>
+      <h2 class="h2 section-title">What to do now</h2>
+      <!-- HOLD: NEXT STEPS CONTENT — client supplying. Numbered/stepped list; add and reorder items freely. -->
+      <ol class="steps">
+        <li><div class="step-slot"></div></li>
+        <li><div class="step-slot"></div></li>
+        <li><div class="step-slot"></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- 3. DATE / TIME / VENUE -->
+<section>
+  <div class="wrap">
+    <div class="card">
+      <span class="eyebrow sec-eyebrow">The Details</span>
+      <h2 class="h2 section-title">When &amp; where</h2>
+      <div class="details-grid">
+        <div class="detail">
+          <div class="lbl">Date</div>
+          <div class="val">August 3 &amp; 4, 2026</div>
+        </div>
+        <div class="detail">
+          <div class="lbl">Day 1 Start</div>
+          <div class="val">10:00 AM<small>Day 2 time to be announced</small></div>
+        </div>
+        <div class="detail">
+          <div class="lbl">Venue</div>
+          <div class="val">Valoram HQ<small>1810 Gateway Dr #380, San Mateo, CA 94404</small></div>
+        </div>
+      </div>
+
+      <!-- 4. ADD TO CALENDAR -->
+      <div class="btn-row">
+        <a class="btn btn-primary" id="cal-google" href="#" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Google
+        </a>
+        <a class="btn" id="cal-apple" href="#" download="valoram-retreat.ics">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Apple
+        </a>
+        <a class="btn" id="cal-outlook" href="#" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Outlook
+        </a>
+        <a class="btn" id="cal-ics" href="#" download="valoram-retreat.ics">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          .ics Download
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. LOGISTICS REPEAT -->
+<section>
+  <div class="wrap">
+    <div class="card">
+      <span class="eyebrow sec-eyebrow">Logistics</span>
+      <h2 class="h2 section-title">Know before you go</h2>
+      <div class="logi-grid">
+        <div class="logi"><div class="lbl">Food</div><div class="val">Food will be provided.</div></div>
+        <div class="logi"><div class="lbl">Dress</div><div class="val">Dress is business casual.</div></div>
+        <!-- HOLD: venue address -->
+        <!-- HOLD: parking instructions -->
+        <!-- HOLD: arrival window -->
+        <!-- HOLD: hotel recommendation — Crowne Plaza -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. BRING 10 PEOPLE — SHARE MODULE -->
+<section class="share">
+  <div class="wrap">
+    <div class="card">
+      <span class="eyebrow sec-eyebrow">Bring 10 People</span>
+      <h2 class="h2">Fill the room with you.</h2>
+      <p class="sub">This retreat is better with your team in it. Share your registration link and invite 10 people to join you.</p>
+
+      <div class="share-field">
+        <input id="share-url" type="text" readonly aria-label="Registration link">
+        <button class="copy-btn" data-copy="#share-url" style="min-width:96px">Copy Link</button>
+      </div>
+
+      <div class="copy-label">Text message</div>
+      <div class="copy-box">
+        <p id="share-sms"></p>
+        <button class="copy-btn" data-copy="#share-sms">Copy</button>
+      </div>
+
+      <div class="copy-label">Email</div>
+      <div class="copy-box">
+        <p id="share-email"></p>
+        <button class="copy-btn" data-copy="#share-email">Copy</button>
+      </div>
+
+      <div class="btn-row">
+        <a class="btn btn-primary" id="share-sms-link" href="#">Share by Text</a>
+        <a class="btn" id="share-email-link" href="#">Share by Email</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. CONTACT -->
+<section class="contact">
+  <div class="wrap">
+    <p>Questions about the retreat? Reach out to your Valoram team.
+    <!-- HOLD: contact email / phone --></p>
+  </div>
+</section>
+
+<footer>
+  © 2026 Valoram Solutions · Mid-Year Valoram Leadership Retreat · August 3 &amp; 4, 2026
+</footer>
+
+<script>
+  // ---- Event details (single source of truth) ----
+  var EVENT = {
+    title: "Mid-Year Valoram Leadership Retreat — Day 1",
+    // Aug 3, 2026, 10:00 AM–6:30 PM Pacific (PDT, UTC-7) expressed in UTC:
+    startUTC: "20260803T170000Z",
+    endUTC:   "20260804T013000Z",
+    location: "1810 Gateway Dr #380, San Mateo, CA 94404",
+    details:  "Day 1 of the Mid-Year Valoram Leadership Retreat. Welcome 10:00 AM. Day 2 (Aug 4) times to be announced."
+  };
+
+  function enc(s){ return encodeURIComponent(s); }
+
+  // Google Calendar
+  document.getElementById('cal-google').href =
+    "https://calendar.google.com/calendar/render?action=TEMPLATE"
+    + "&text=" + enc(EVENT.title)
+    + "&dates=" + EVENT.startUTC + "/" + EVENT.endUTC
+    + "&details=" + enc(EVENT.details)
+    + "&location=" + enc(EVENT.location);
+
+  // Outlook (web) deep link
+  function toISO(z){ // 20260803T170000Z -> 2026-08-03T17:00:00Z
+    return z.replace(/^(\d{4})(\d{2})(\d{2})T(\d{2})(\d{2})(\d{2})Z$/, "$1-$2-$3T$4:$5:$6Z");
+  }
+  document.getElementById('cal-outlook').href =
+    "https://outlook.live.com/calendar/0/deeplink/compose?path=/calendar/action/compose&rru=addevent"
+    + "&subject=" + enc(EVENT.title)
+    + "&startdt=" + enc(toISO(EVENT.startUTC))
+    + "&enddt=" + enc(toISO(EVENT.endUTC))
+    + "&location=" + enc(EVENT.location)
+    + "&body=" + enc(EVENT.details);
+
+  // .ics data URI (Apple + generic download) — static, works without a server
+  var ics = [
+    "BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//Valoram Solutions//Leadership Retreat//EN",
+    "CALSCALE:GREGORIAN","METHOD:PUBLISH","BEGIN:VEVENT",
+    "UID:valoram-retreat-2026-day1@valoramsolutions.com",
+    "DTSTAMP:20260724T000000Z",
+    "DTSTART:" + EVENT.startUTC,
+    "DTEND:" + EVENT.endUTC,
+    "SUMMARY:" + EVENT.title,
+    "LOCATION:" + EVENT.location.replace(/,/g, "\\,"),
+    "DESCRIPTION:" + EVENT.details.replace(/,/g, "\\,"),
+    "END:VEVENT","END:VCALENDAR"
+  ].join("\r\n");
+  var icsHref = "data:text/calendar;charset=utf-8," + enc(ics);
+  document.getElementById('cal-apple').href = icsHref;
+  document.getElementById('cal-ics').href = icsHref;
+
+  // ---- Share module ----
+  // HOLD: registration URL — replace with the live retreat registration link.
+  var SHARE_URL = "REPLACE-WITH-REGISTRATION-URL";
+  // If this page is reached normally, prefer an explicit ?ref or fall back to same-origin root.
+  try {
+    var params = new URLSearchParams(window.location.search);
+    if (params.get('reg')) SHARE_URL = params.get('reg');
+  } catch(e){}
+
+  var SMS_TEXT = "You're invited to the Mid-Year Valoram Leadership Retreat — Aug 3 & 4 in San Mateo, CA. Seats are limited. Reserve yours: " + SHARE_URL;
+  var EMAIL_SUBJECT = "You're invited: Mid-Year Valoram Leadership Retreat";
+  var EMAIL_BODY = "I wanted to personally invite you to the Mid-Year Valoram Leadership Retreat, August 3 & 4 in San Mateo, CA. Seats are limited — reserve yours here: " + SHARE_URL;
+
+  document.getElementById('share-url').value = SHARE_URL;
+  document.getElementById('share-sms').textContent = SMS_TEXT;
+  document.getElementById('share-email').textContent = EMAIL_BODY;
+  document.getElementById('share-sms-link').href = "sms:?&body=" + enc(SMS_TEXT);
+  document.getElementById('share-email-link').href = "mailto:?subject=" + enc(EMAIL_SUBJECT) + "&body=" + enc(EMAIL_BODY);
+
+  // Click-to-copy (no storage; uses clipboard API with a select() fallback)
+  document.querySelectorAll('.copy-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var el = document.querySelector(btn.getAttribute('data-copy'));
+      var text = (el.value !== undefined && el.tagName === 'INPUT') ? el.value : el.textContent;
+      var done = function(){ var t = btn.textContent; btn.textContent = "Copied!"; setTimeout(function(){ btn.textContent = t; }, 1500); };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(done).catch(function(){ fallback(el, done); });
+      } else { fallback(el, done); }
+    });
+  });
+  function fallback(el, done){
+    if (el.tagName === 'INPUT'){ el.select(); }
+    else { var r = document.createRange(); r.selectNodeContents(el); var s = window.getSelection(); s.removeAllRanges(); s.addRange(r); }
+    try { document.execCommand('copy'); done(); } catch(e){}
+  }
+</script>
+
+</body>
+</html>
