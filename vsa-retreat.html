@@ -253,6 +253,14 @@
   .who-note .dot{width:8px;height:8px;border-radius:50%;background:var(--orange);flex-shrink:0}
   @media(max-width:820px){.who-grid{grid-template-columns:1fr;gap:34px}}
 
+  /* ---------- logistics (Task 11) ---------- */
+  .logistics{background:var(--cream)}
+  .logistics-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;max-width:720px;margin:0 auto}
+  .logistics-item{background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--orange);border-radius:var(--radius-sm);padding:22px 24px}
+  .logistics-lbl{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--orange);margin-bottom:6px}
+  .logistics-val{font-size:1.02rem;color:var(--ink);font-weight:400}
+  @media(max-width:560px){.logistics-grid{grid-template-columns:1fr}}
+
   /* ---------- registration / form placeholder ---------- */
   .register{background:var(--navy);color:#fff}
   .register .sec-head h2{color:#fff}
@@ -616,6 +624,30 @@
           Space is intentionally limited to keep this room high-impact and focused.
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LOGISTICS (Task 11) ============ -->
+<section class="logistics section-pad-sm">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow center">Logistics</span>
+      <h2 class="h2">Know before you go.</h2>
+    </div>
+    <div class="logistics-grid reveal">
+      <div class="logistics-item">
+        <div class="logistics-lbl">Food</div>
+        <div class="logistics-val">Food will be provided.</div>
+      </div>
+      <div class="logistics-item">
+        <div class="logistics-lbl">Dress</div>
+        <div class="logistics-val">Dress is business casual.</div>
+      </div>
+      <!-- HOLD: venue address -->
+      <!-- HOLD: parking instructions -->
+      <!-- HOLD: arrival window -->
+      <!-- HOLD: hotel recommendation — Crowne Plaza -->
     </div>
   </div>
 </section>
