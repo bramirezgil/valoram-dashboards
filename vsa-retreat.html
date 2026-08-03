@@ -188,17 +188,26 @@
 
   /* ---------- agenda ---------- */
   .agenda{background:var(--cream-2)}
+  .agenda-day + .agenda-day{margin-top:44px}
+  .agenda-day-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:4px}
+  .agenda-day-title{font-family:'Fraunces',serif;font-size:1.9rem;font-weight:500;color:var(--ink)}
+  .agenda-day-note{font-family:'DM Mono',monospace;font-size:12px;letter-spacing:0.04em;color:var(--orange)}
   .agenda-list{border-top:1px solid var(--border)}
   .agenda-item{
-    display:grid;grid-template-columns:56px 1fr;gap:28px;align-items:start;
-    padding:30px 8px;border-bottom:1px solid var(--border);
+    display:grid;grid-template-columns:140px 1fr;gap:24px;align-items:start;
+    padding:22px 8px;border-bottom:1px solid var(--border);
     transition:background .2s ease,padding .2s ease;cursor:default;
   }
   .agenda-item:hover{background:rgba(240,137,26,0.05);padding-left:20px}
-  .agenda-num{font-family:'DM Mono',monospace;font-size:14px;color:var(--orange);font-weight:500;padding-top:6px}
-  .agenda-body h3{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:500;color:var(--ink);margin-bottom:6px}
-  .agenda-body p{color:var(--ink-3);font-weight:300;font-size:1.02rem;max-width:62ch}
-  @media(max-width:560px){.agenda-item{grid-template-columns:1fr;gap:6px}.agenda-num{padding-top:0}}
+  .agenda-row--hold{display:none}
+  .agenda-time{font-family:'DM Mono',monospace;font-size:13px;color:var(--orange);font-weight:500;padding-top:6px;white-space:nowrap}
+  .agenda-body h3{font-family:'Fraunces',serif;font-size:1.35rem;font-weight:500;color:var(--ink);margin-bottom:4px;line-height:1.2}
+  .agenda-body p{color:var(--ink-3);font-weight:300;font-size:1rem;max-width:62ch}
+  @media(max-width:560px){.agenda-item{grid-template-columns:1fr;gap:4px}.agenda-time{padding-top:0}}
+  /* Agenda at a Glance (Task 9) — shell only, HOLD */
+  .glance-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:8px}
+  .glance-slot{border:1px dashed var(--border);border-radius:10px;min-height:60px;background:var(--surface)}
+  @media(max-width:560px){.glance-grid{grid-template-columns:1fr}}
 
   /* ---------- living room night ---------- */
   .worship{
@@ -464,68 +473,79 @@
 <section class="agenda section-pad" id="agenda">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="eyebrow">The Agenda at a Glance</span>
-      <h2 class="h2">Seven working sessions. One direction.</h2>
-      <p>A full schedule with times and speakers will be shared with confirmed guests.</p>
+      <span class="eyebrow">The Agenda</span>
+      <h2 class="h2">Two days. One direction.</h2>
     </div>
-    <div class="agenda-list">
 
-      <div class="agenda-item reveal">
-        <div class="agenda-num">01</div>
-        <div class="agenda-body">
-          <h3>Goal Setting &amp; Accountability</h3>
-          <p>Where you are, what's in the way, and the plan to close the gap by October.</p>
-        </div>
+    <!-- ===== DAY 1 ===== -->
+    <div class="agenda-day reveal">
+      <div class="agenda-day-head">
+        <h3 class="agenda-day-title">Day 1</h3>
+        <span class="agenda-day-note">Coffee &amp; Energy Drinks available all day</span>
       </div>
+      <div class="agenda-list">
 
-      <div class="agenda-item reveal">
-        <div class="agenda-num">02</div>
-        <div class="agenda-body">
-          <h3>Tax Strategies</h3>
-          <p>Straight from CPAs and enrolled agents — enough depth to lead the conversation with confidence.</p>
+        <div class="agenda-item">
+          <div class="agenda-time">10:00 – 10:15 AM</div>
+          <div class="agenda-body"><h3>Welcome &amp; Open Prayer</h3></div>
         </div>
-      </div>
 
-      <div class="agenda-item reveal">
-        <div class="agenda-num">03</div>
-        <div class="agenda-body">
-          <h3>Advanced Wealth Strategies</h3>
-          <p>Roth conversions and new offerings to bring to your highest-value clients.</p>
+        <div class="agenda-item">
+          <div class="agenda-time">10:15 – 11:30 AM</div>
+          <div class="agenda-body"><h3>Session 1: The Half a Million Dollar Blueprint Before End of 2026</h3><p>Step-by-step plan to dominate the remainder of 2026</p></div>
         </div>
-      </div>
 
-      <div class="agenda-item reveal">
-        <div class="agenda-num">04</div>
-        <div class="agenda-body">
-          <h3>Recruiting</h3>
-          <p>The campaigns and systems your top leaders are already using to grow.</p>
+        <div class="agenda-item">
+          <div class="agenda-time">11:30 – 12:30 PM</div>
+          <div class="agenda-body"><h3>Session 2: Tax Strategy Blueprint — Mindset</h3></div>
         </div>
-      </div>
 
-      <div class="agenda-item reveal">
-        <div class="agenda-num">05</div>
-        <div class="agenda-body">
-          <h3>AI</h3>
-          <p>Hands-on with Hermes and Val AI — real campaigns, real integration, real results.</p>
+        <div class="agenda-item">
+          <div class="agenda-time">1:00 – 1:30 PM</div>
+          <div class="agenda-body"><h3>Lunch &amp; Work</h3></div>
         </div>
-      </div>
 
-      <div class="agenda-item reveal">
-        <div class="agenda-num">06</div>
-        <div class="agenda-body">
-          <h3>Kingdom Leadership</h3>
-          <p>Expanding your capacity to lead as we head into the biggest push of the year.</p>
+        <div class="agenda-item">
+          <div class="agenda-time">1:30 – 2:30 PM</div>
+          <div class="agenda-body"><h3>Session 3: Tax Strategy Blueprint — Logistics</h3><p>Presentation &amp; SOP</p></div>
         </div>
-      </div>
 
-      <div class="agenda-item reveal">
-        <div class="agenda-num">07</div>
-        <div class="agenda-body">
-          <h3>October Event Strategy</h3>
-          <p>The plan to build momentum and fill the room.</p>
+        <div class="agenda-item">
+          <div class="agenda-time">2:30 – 3:30 PM</div>
+          <div class="agenda-body"><h3>Session 4: Alternative Investments — The Secret Sauce</h3><p>The new strategies to supercharge Roth conversions and income planning</p></div>
         </div>
-      </div>
 
+        <div class="agenda-item">
+          <div class="agenda-time">3:30 – 3:45 PM</div>
+          <div class="agenda-body"><h3>Afternoon Break</h3></div>
+        </div>
+
+        <div class="agenda-item">
+          <div class="agenda-time">3:45 – 4:15 PM</div>
+          <div class="agenda-body"><h3>Panel: Pat · Joe &amp; Shelby Seeley</h3></div>
+        </div>
+
+        <div class="agenda-item">
+          <div class="agenda-time">4:15 – 4:45 PM</div>
+          <div class="agenda-body"><h3>Valoram Software &amp; Systems</h3></div>
+        </div>
+
+        <div class="agenda-item">
+          <div class="agenda-time">4:45 – 5:30 PM</div>
+          <div class="agenda-body"><h3>Dillion</h3></div>
+        </div>
+
+        <div class="agenda-item agenda-row--hold">
+          <div class="agenda-time">5:30 – 6:15 PM</div>
+          <div class="agenda-body"><h3><!-- HOLD: TITLE PENDING --></h3></div>
+        </div>
+
+        <div class="agenda-item">
+          <div class="agenda-time">6:30 PM</div>
+          <div class="agenda-body"><h3>Living Room Experience</h3></div>
+        </div>
+
+      </div>
     </div>
   </div>
 </section>
