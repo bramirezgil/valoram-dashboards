@@ -118,7 +118,10 @@
   .hero .wrap{position:relative;z-index:2}
   .hero .eyebrow{color:var(--orange-light)}
   .hero .eyebrow::before{background:var(--orange-light)}
-  .hero h1{margin:26px 0 24px;max-width:16ch;color:#fff}
+  .hero h1{margin:26px 0 20px;color:#fff;
+    font-size:clamp(2.5rem,8.5vw,6rem);line-height:0.98;
+    text-transform:uppercase;letter-spacing:-0.015em;
+    text-wrap:balance;overflow-wrap:normal;hyphens:none;word-break:normal}
   .hero h1 .accent{font-style:italic;color:var(--orange-light)}
   .hero .lead{color:var(--paper-text);max-width:52ch;font-weight:300}
   .hero-actions{display:flex;align-items:center;gap:18px;margin-top:42px;flex-wrap:wrap}
@@ -352,7 +355,7 @@
 <section class="hero">
   <div class="wrap">
     <span class="eyebrow reveal">Mid-Year Valoram Leadership Retreat · August 2026</span>
-    <h1 class="display reveal">The Room Where 2026<br>Becomes <span class="accent">2027.</span></h1>
+    <h1 class="display reveal">Transformation Retreat</h1>
     <p class="lead reveal">An intimate, invitation-only retreat for our top producers and rising leaders — where strategy meets spirit, and the next 60 days get decided.</p>
     <div class="hero-actions reveal">
       <a href="#register" class="btn btn-primary btn-lg">
