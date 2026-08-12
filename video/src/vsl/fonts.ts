@@ -11,3 +11,5 @@ loadFont({
 loadFont({ family: "Poppins", url: staticFile("fonts/Poppins-600.woff2"), weight: "600" });
 loadFont({ family: "Poppins", url: staticFile("fonts/Poppins-700.woff2"), weight: "700" });
 loadFont({ family: "Poppins", url: staticFile("fonts/Poppins-800.woff2"), weight: "800" });
+// Marcellus — Valoram/GMAX brand display serif (matches the landing page).
+loadFont({ family: "Marcellus", url: staticFile("fonts/Marcellus.woff2"), weight: "400" });

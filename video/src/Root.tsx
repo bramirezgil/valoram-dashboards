@@ -5,6 +5,7 @@ import { Logo, myCompSchema2 } from "./HelloWorld/Logo";
 import { VSL } from "./vsl/VSL";
 import { FootageVSL, FOOTAGE_FRAMES } from "./vsl/FootageVSL";
 import { RiseVSL, RISE_DURATION, RISE_FPS } from "./rise/RiseVSL";
+import { GmaxVSL, GMAX_DURATION, GMAX_FPS } from "./gmax/GmaxVSL";
 import { FPS, TOTAL_FRAMES } from "./vsl/theme";
 
 // Each <Composition> is an entry in the sidebar!
@@ -33,6 +34,14 @@ export const RemotionRoot: React.FC = () => {
         component={RiseVSL}
         durationInFrames={RISE_DURATION}
         fps={RISE_FPS}
+        width={1920}
+        height={1080}
+      />
+      <Composition
+        id="GmaxVSL"
+        component={GmaxVSL}
+        durationInFrames={GMAX_DURATION}
+        fps={GMAX_FPS}
         width={1920}
         height={1080}
       />
