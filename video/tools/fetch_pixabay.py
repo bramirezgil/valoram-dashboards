@@ -66,15 +66,22 @@ BEATS = [
     ("g6", "cta", ["financial planning laptop", "signing financial document", "business person laptop finance"]),
 ]
 
+# Trust the agent-proxy CA when present (managed sandbox); otherwise fall back to
+# the system trust store (a normal machine talking straight to pixabay.com).
 CA = "/root/.ccr/ca-bundle.crt"
 ctx = ssl.create_default_context(cafile=CA if os.path.exists(CA) else None)
-# urllib picks up HTTPS_PROXY from the environment via ProxyHandler defaults.
-opener = urllib.request.build_opener(urllib.request.ProxyHandler())
+# The SSL context must ride on an HTTPSHandler — OpenerDirector.open() takes no
+# `context` kwarg (only urlopen does). ProxyHandler() picks up HTTPS_PROXY from
+# the environment, or connects directly when it's unset.
+opener = urllib.request.build_opener(
+    urllib.request.ProxyHandler(),
+    urllib.request.HTTPSHandler(context=ctx),
+)
 
 
 def get(url):
     req = urllib.request.Request(url, headers={"User-Agent": "valoram-gmax-broll/1.0"})
-    return opener.open(req, timeout=60, context=ctx)
+    return opener.open(req, timeout=60)
 
 
 def api(base, params):
