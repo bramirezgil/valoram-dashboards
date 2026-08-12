@@ -18,7 +18,7 @@ export const BROLL_DIR = "broll";
 // Beat key -> clip filename, in timeline order.
 export const BROLL = {
   open: "cash.mp4", //  0  currency close-up (supplied) — the money open
-  hook: "c3.mp4", //  1  hook — losing your best people (placeholder — needs footage)
+  hook: "emptydesk.mp4", //  1  hook — losing your best people — empty office (supplied)
   door: "walkout.mp4", //  3  the group plan ends at the door — colleagues walking the corridor (supplied)
   cost: "data.mp4", //  5  the hidden cost of turnover — financial data board (supplied)
   portable: "city.mp4", //  8  a benefit that follows the person — city motion (supplied)
@@ -41,6 +41,7 @@ export const BROLL_LOOP: Record<string, number> = {
   "laptop.mp4": 346, // 11.52s @30fps (supplied)
   "team.mp4": 362, // 12.08s @30fps (supplied)
   "walkout.mp4": 374, // 12.46s @30fps (supplied)
+  "emptydesk.mp4": 277, // 9.24s @30fps (supplied)
 };
 
 // Clip filename -> still image (in BROLL_DIR) shown behind the clip as a poster.
