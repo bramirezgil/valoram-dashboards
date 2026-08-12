@@ -14,7 +14,7 @@ import { SEGMENTS, GMAX_DURATION, VO_RANGES, GMAX_COLORS as C } from "./script";
 import {
   TextCard,
   StatCard,
-  CompareCard,
+  SplitCard,
   BrandCard,
   OutcomesCard,
   EndCard,
@@ -49,15 +49,12 @@ const Footage: React.FC<{ clip: string; dur: number; overlay?: "form" }> = ({ cl
           <OffthreadVideo src={staticFile(`broll/${clip}`)} muted />
         </Loop>
       </AbsoluteFill>
-      {/* warm, dark legibility grade (brand-neutral, slight orange lift at base) */}
+      {/* navy legibility grade — same treatment as the R.I.S.E. footage */}
       <AbsoluteFill
         style={{
           background:
-            "linear-gradient(180deg, rgba(6,6,8,0.36) 0%, rgba(6,6,8,0.04) 24%, rgba(6,6,8,0.06) 50%, rgba(4,4,6,0.86) 100%)",
+            "linear-gradient(180deg, rgba(13,31,60,0.32) 0%, rgba(13,31,60,0.05) 24%, rgba(13,31,60,0.05) 52%, rgba(6,12,22,0.82) 100%)",
         }}
-      />
-      <AbsoluteFill
-        style={{ background: "radial-gradient(120% 90% at 50% 42%, rgba(248,150,76,0.05), rgba(0,0,0,0) 60%)" }}
       />
       {/* brand watermark top-left */}
       <div style={{ position: "absolute", left: 0, top: 0, width: 560, height: 180 }}>
@@ -86,8 +83,8 @@ const renderCard = (
       return <TextCard dur={dur} lines={card.lines} />;
     case "stat":
       return <StatCard dur={dur} number={card.number} label={card.label} />;
-    case "compare":
-      return <CompareCard dur={dur} />;
+    case "split":
+      return <SplitCard dur={dur} />;
     case "brand":
       return <BrandCard dur={dur} />;
     case "outcomes":
@@ -122,7 +119,7 @@ const musicVolume = (f: number): number => {
 
 export const GmaxVSL: React.FC = () => {
   return (
-    <AbsoluteFill style={{ backgroundColor: C.bg }}>
+    <AbsoluteFill style={{ backgroundColor: C.navy }}>
       {SEGMENTS.map((s, i) => {
         const withTail = s.durFrames + 10; // small dissolve overlap
         return (

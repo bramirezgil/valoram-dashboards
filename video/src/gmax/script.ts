@@ -11,25 +11,23 @@ import layout from "./vo-timing.json";
 
 export const GMAX_FPS = layout.fps;
 
-// Valoram / GMAX brand palette (from the landing page).
+// Same premium dark stage as the R.I.S.E. VSL (navy + accent glow), with the
+// Valoram/GMAX brand orange standing in for R.I.S.E.'s gold accent.
 export const GMAX_COLORS = {
-  bg: "#0A0A0C",
-  bgDeep: "#050506",
+  navy: "#0D1F3C",
+  navyDeep: "#081428",
   orange: "#F8964C",
-  orangeWarm: "#F97316",
+  orangeBright: "#F9A968",
   orangeDeep: "#E8621A",
-  green: "#128263",
-  greenBright: "#1BA883",
   white: "#FFFFFF",
-  cream: "#F8F5F0",
-  sub: "#A6ADB6",
-  dim: "#6B7280",
+  sub: "#9DB0C4",
+  dim: "#6B7E92",
 };
 
 type Card =
   | { type: "text"; lines: { t: string; accent?: boolean }[] }
   | { type: "stat"; number: string; label: string }
-  | { type: "compare" }
+  | { type: "split" }
   | { type: "brand" }
   | { type: "outcomes" }
   | { type: "end" };
@@ -53,7 +51,7 @@ const CONTENT: Content[] = [
   { kind: "card", card: { type: "stat", number: "50–200%", label: "Of Salary To Replace One Employee" } }, // 4
   { kind: "broll", clip: "c1.mp4" }, // 5 hidden cost
   { kind: "card", card: { type: "stat", number: "$25K–$150K", label: "Avg. Annual Turnover Cost Per SMB" } }, // 6
-  { kind: "card", card: { type: "compare" } }, // 7 traditional vs GMAX
+  { kind: "card", card: { type: "split" } }, // 7 group plan vs portable
   { kind: "broll", clip: "c0.mp4" }, // 8 portable — follows the person
   { kind: "card", card: { type: "brand" } }, // 9 GMAX reveal
   { kind: "card", card: { type: "outcomes" } }, // 10 Retain / Compete / Recruit

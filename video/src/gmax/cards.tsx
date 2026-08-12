@@ -3,7 +3,8 @@ import { AbsoluteFill, interpolate, spring, useCurrentFrame, useVideoConfig } fr
 import { GMAX_COLORS as C, GMAX_CAPTIONS, GMAX_CAPTION_HOLD } from "./script";
 import { ValoramLogo } from "./ValoramLogo";
 
-const SERIF = "'Marcellus', Georgia, serif";
+// Same type system as the R.I.S.E. VSL: Poppins display, Inter body, a navy
+// stage with a single accent-color glow. Accent here is the GMAX brand orange.
 const DISPLAY = "'Poppins', system-ui, sans-serif";
 const BODY = "'Inter', system-ui, sans-serif";
 
@@ -39,14 +40,14 @@ const RiseIn: React.FC<{
 const CardBase: React.FC<{ dur: number; children: React.ReactNode }> = ({ dur, children }) => {
   const fade = useCardFade(dur);
   return (
-    <AbsoluteFill style={{ backgroundColor: C.bg, opacity: fade }}>
+    <AbsoluteFill style={{ backgroundColor: C.navy, opacity: fade }}>
       <AbsoluteFill
-        style={{ background: `radial-gradient(58% 55% at 50% 42%, rgba(248,150,76,0.12), rgba(10,10,12,0) 70%)` }}
+        style={{ background: `radial-gradient(60% 55% at 50% 42%, rgba(248,150,76,0.10), rgba(13,31,60,0) 70%)` }}
       />
       <AbsoluteFill
-        style={{ background: "radial-gradient(120% 120% at 50% 45%, transparent 52%, rgba(3,3,4,0.72) 100%)" }}
+        style={{ background: "radial-gradient(120% 120% at 50% 45%, transparent 55%, rgba(4,10,20,0.6) 100%)" }}
       />
-      <AbsoluteFill style={{ justifyContent: "center", alignItems: "center", padding: "0 150px" }}>
+      <AbsoluteFill style={{ justifyContent: "center", alignItems: "center", padding: "0 160px" }}>
         {children}
       </AbsoluteFill>
     </AbsoluteFill>
@@ -65,17 +66,47 @@ export const TextCard: React.FC<{ dur: number; lines: { t: string; accent?: bool
           delay={6 + i * 8}
           dy={22}
           style={{
-            fontFamily: SERIF,
-            fontWeight: 400,
-            fontSize: 84,
-            lineHeight: 1.16,
+            fontFamily: DISPLAY,
+            fontWeight: 800,
+            fontSize: 78,
+            lineHeight: 1.14,
             color: l.accent ? C.orange : C.white,
-            textShadow: l.accent ? "0 0 34px rgba(248,150,76,0.32)" : "none",
           }}
         >
           {l.t}
         </RiseIn>
       ))}
+    </div>
+  </CardBase>
+);
+
+// Two-word contrast, R.I.S.E.'s "Preparation vs. Strategy" layout.
+export const SplitCard: React.FC<{ dur: number }> = ({ dur }) => (
+  <CardBase dur={dur}>
+    <div style={{ display: "flex", alignItems: "center", gap: 60 }}>
+      <RiseIn
+        delay={6}
+        dx={-26}
+        dy={0}
+        style={{ fontFamily: DISPLAY, fontWeight: 700, fontSize: 60, color: C.dim }}
+      >
+        Group Plan
+      </RiseIn>
+      <div style={{ fontFamily: BODY, fontSize: 34, color: C.sub }}>vs.</div>
+      <RiseIn
+        delay={14}
+        dx={26}
+        dy={0}
+        style={{
+          fontFamily: DISPLAY,
+          fontWeight: 800,
+          fontSize: 68,
+          color: C.orange,
+          textShadow: `0 0 30px rgba(248,150,76,0.35)`,
+        }}
+      >
+        Portable
+      </RiseIn>
     </div>
   </CardBase>
 );
@@ -93,16 +124,12 @@ export const StatCard: React.FC<{ dur: number; number: string; label: string }> 
           style={{
             fontFamily: DISPLAY,
             fontWeight: 800,
-            fontSize: 184,
+            fontSize: 190,
             lineHeight: 1,
-            letterSpacing: "-0.01em",
-            background: `linear-gradient(180deg, ${C.orange}, ${C.orangeDeep})`,
-            WebkitBackgroundClip: "text",
-            backgroundClip: "text",
-            color: "transparent",
+            color: C.orange,
             opacity: e,
             transform: `scale(${0.86 + e * 0.14})`,
-            filter: "drop-shadow(0 0 46px rgba(248,150,76,0.35))",
+            textShadow: `0 0 50px rgba(248,150,76,0.4)`,
           }}
         >
           {number}
@@ -110,13 +137,12 @@ export const StatCard: React.FC<{ dur: number; number: string; label: string }> 
         <RiseIn
           delay={16}
           style={{
-            fontFamily: DISPLAY,
-            fontWeight: 600,
-            fontSize: 32,
-            letterSpacing: "0.16em",
+            fontFamily: BODY,
+            fontSize: 34,
+            letterSpacing: "0.14em",
             textTransform: "uppercase",
             color: C.white,
-            marginTop: 22,
+            marginTop: 18,
           }}
         >
           {label}
@@ -126,106 +152,7 @@ export const StatCard: React.FC<{ dur: number; number: string; label: string }> 
   );
 };
 
-const CMP_TRAD = [
-  "Benefits end the day they leave",
-  "Rising premiums, no retention pull",
-  "Nothing to value — they'll lose it",
-  "Tenure earns them nothing",
-];
-const CMP_GMAX = [
-  "Employees own it — it follows them",
-  "Predictable cost, built for SMBs",
-  "They value what they keep",
-  "Rewards staying — a reason to build",
-];
-
-const CompareCol: React.FC<{
-  title: string;
-  items: string[];
-  good?: boolean;
-  baseDelay: number;
-}> = ({ title, items, good, baseDelay }) => (
-  <div
-    style={{
-      flex: 1,
-      background: good ? "rgba(248,150,76,0.07)" : "rgba(255,255,255,0.02)",
-      border: `1px solid ${good ? "rgba(248,150,76,0.4)" : "rgba(255,255,255,0.08)"}`,
-      borderRadius: 20,
-      padding: "34px 38px",
-    }}
-  >
-    <RiseIn
-      delay={baseDelay}
-      dy={14}
-      style={{
-        fontFamily: DISPLAY,
-        fontWeight: 700,
-        fontSize: 30,
-        letterSpacing: "0.04em",
-        textTransform: "uppercase",
-        color: good ? C.orange : C.dim,
-        marginBottom: 22,
-      }}
-    >
-      {title}
-    </RiseIn>
-    {items.map((it, i) => (
-      <RiseIn
-        key={i}
-        delay={baseDelay + 8 + i * 6}
-        dx={good ? 18 : -18}
-        dy={0}
-        style={{ display: "flex", alignItems: "center", gap: 16, margin: "16px 0" }}
-      >
-        <span
-          style={{
-            flex: "0 0 auto",
-            width: 34,
-            height: 34,
-            borderRadius: 999,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            fontSize: 22,
-            fontWeight: 800,
-            color: good ? "#0A0A0C" : C.dim,
-            background: good ? C.orange : "rgba(255,255,255,0.06)",
-          }}
-        >
-          {good ? "✓" : "✕"}
-        </span>
-        <span style={{ fontFamily: BODY, fontSize: 29, color: good ? C.white : C.sub, lineHeight: 1.25 }}>
-          {it}
-        </span>
-      </RiseIn>
-    ))}
-  </div>
-);
-
-export const CompareCard: React.FC<{ dur: number }> = ({ dur }) => (
-  <CardBase dur={dur}>
-    <div style={{ width: "100%", maxWidth: 1500 }}>
-      <RiseIn
-        delay={2}
-        dy={16}
-        style={{
-          fontFamily: SERIF,
-          fontSize: 52,
-          color: C.white,
-          textAlign: "center",
-          marginBottom: 34,
-        }}
-      >
-        Tied to the job — or built to <span style={{ color: C.orange }}>follow the person</span>
-      </RiseIn>
-      <div style={{ display: "flex", gap: 30, alignItems: "stretch" }}>
-        <CompareCol title="Traditional Benefits" items={CMP_TRAD} baseDelay={8} />
-        <CompareCol title="GMAX Portable Benefit" items={CMP_GMAX} good baseDelay={16} />
-      </div>
-    </div>
-  </CardBase>
-);
-
+// GMAX brand reveal — R.I.S.E.'s logo + two-line tagline composition.
 export const BrandCard: React.FC<{ dur: number }> = ({ dur }) => (
   <CardBase dur={dur}>
     <div style={{ textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center" }}>
@@ -235,14 +162,11 @@ export const BrandCard: React.FC<{ dur: number }> = ({ dur }) => (
         style={{
           fontFamily: DISPLAY,
           fontWeight: 800,
-          fontSize: 150,
+          fontSize: 116,
           letterSpacing: "0.04em",
           lineHeight: 1,
-          background: `linear-gradient(180deg, ${C.orange}, ${C.orangeDeep})`,
-          WebkitBackgroundClip: "text",
-          backgroundClip: "text",
-          color: "transparent",
-          filter: "drop-shadow(0 0 40px rgba(248,150,76,0.3))",
+          color: C.orange,
+          textShadow: `0 0 40px rgba(248,150,76,0.35)`,
         }}
       >
         GMAX
@@ -250,12 +174,25 @@ export const BrandCard: React.FC<{ dur: number }> = ({ dur }) => (
       <RiseIn
         delay={18}
         dy={16}
-        style={{ fontFamily: SERIF, fontSize: 46, color: C.white, marginTop: 26 }}
+        style={{ fontFamily: DISPLAY, fontWeight: 700, fontSize: 46, color: C.white, marginTop: 40 }}
       >
-        A portable benefit built to <span style={{ color: C.orange }}>retain.</span>
+        A portable benefit
       </RiseIn>
-      <RiseIn delay={30} dy={12} style={{ marginTop: 46, opacity: 0.96 }}>
-        <ValoramLogo size={44} />
+      <RiseIn
+        delay={28}
+        dy={16}
+        style={{
+          fontFamily: DISPLAY,
+          fontWeight: 800,
+          fontSize: 46,
+          color: C.orange,
+          textShadow: `0 0 30px rgba(248,150,76,0.3)`,
+        }}
+      >
+        built to retain.
+      </RiseIn>
+      <RiseIn delay={38} dy={12} style={{ marginTop: 44, opacity: 0.96 }}>
+        <ValoramLogo size={40} />
       </RiseIn>
     </div>
   </CardBase>
@@ -265,7 +202,7 @@ export const OutcomesCard: React.FC<{ dur: number }> = ({ dur }) => {
   const items = ["Retain", "Compete", "Recruit"];
   return (
     <CardBase dur={dur}>
-      <div style={{ display: "flex", alignItems: "center", gap: 30 }}>
+      <div style={{ display: "flex", alignItems: "center", gap: 34 }}>
         {items.map((it, i) => (
           <React.Fragment key={it}>
             <RiseIn
@@ -274,18 +211,18 @@ export const OutcomesCard: React.FC<{ dur: number }> = ({ dur }) => {
               style={{
                 fontFamily: DISPLAY,
                 fontWeight: 800,
-                fontSize: 58,
+                fontSize: 56,
                 color: i === 2 ? C.orange : C.white,
-                padding: "20px 40px",
-                border: `1px solid rgba(248,150,76,0.42)`,
-                borderRadius: 18,
+                padding: "18px 34px",
+                border: `1px solid rgba(248,150,76,0.4)`,
+                borderRadius: 16,
                 background: "rgba(248,150,76,0.06)",
               }}
             >
               {it}
             </RiseIn>
             {i < items.length - 1 && (
-              <RiseIn delay={12 + i * 12} dy={0} style={{ fontSize: 52, color: C.orange }}>
+              <RiseIn delay={12 + i * 12} dy={0} style={{ fontSize: 50, color: C.orange }}>
                 →
               </RiseIn>
             )}
@@ -303,13 +240,13 @@ export const EndCard: React.FC<{ dur: number }> = ({ dur }) => {
   return (
     <CardBase dur={dur}>
       <div style={{ textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center" }}>
-        <RiseIn delay={4} style={{ fontFamily: SERIF, fontSize: 78, color: C.white }}>
+        <RiseIn delay={4} style={{ fontFamily: DISPLAY, fontWeight: 800, fontSize: 72, color: C.white }}>
           Score your retention risk
         </RiseIn>
         <RiseIn
           delay={14}
           dy={12}
-          style={{ fontFamily: DISPLAY, fontWeight: 600, fontSize: 32, color: C.orange, marginTop: 18 }}
+          style={{ fontFamily: BODY, fontWeight: 500, fontSize: 32, color: C.orange, marginTop: 16 }}
         >
           Free in 3 minutes — get your Retention Risk Score
         </RiseIn>
@@ -317,13 +254,14 @@ export const EndCard: React.FC<{ dur: number }> = ({ dur }) => {
           ↓
         </div>
         <RiseIn delay={34} dy={10} style={{ marginTop: 30 }}>
-          <ValoramLogo size={44} />
+          <ValoramLogo size={40} />
         </RiseIn>
       </div>
     </CardBase>
   );
 };
 
+// Lower-third "take the assessment" overlay shown over B-roll.
 export const FormOverlay: React.FC = () => {
   const e = useRise(6);
   const frame = useCurrentFrame();
@@ -349,8 +287,8 @@ export const FormOverlay: React.FC = () => {
           fontWeight: 800,
           fontSize: 46,
           color: C.white,
-          background: "rgba(0,0,0,0.68)",
-          padding: "10px 26px",
+          background: "rgba(0,0,0,0.66)",
+          padding: "10px 24px",
           borderRadius: 12,
         }}
       >
