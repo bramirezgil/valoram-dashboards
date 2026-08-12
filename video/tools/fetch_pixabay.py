@@ -43,16 +43,27 @@ REPO = os.path.dirname(os.path.dirname(HERE))
 OUT_DIR = os.path.join(REPO, "video", "public", "broll-gmax")
 BROLL_TS = os.path.join(REPO, "video", "src", "gmax", "broll.ts")
 
-# One query per GMAX beat. `beat` matches the keys of BROLL in src/gmax/broll.ts;
-# `name` is the on-disk basename (g0..g6). Keep this order stable.
+# Queries per GMAX beat, tuned toward a finance aesthetic (documents,
+# spreadsheets, calculators, magnifier, currency) while staying true to the
+# beat. Each beat lists a finance-forward primary plus fallbacks, tried in order
+# until one returns a usable landscape clip/photo. `beat` matches the keys of
+# BROLL in src/gmax/broll.ts; `name` is the on-disk basename (g0..g6). Keep the
+# beat order stable.
 BEATS = [
-    ("g0", "open", "business owner office desk"),      # quiet open
-    ("g1", "hook", "employee leaving office"),          # losing your best people
-    ("g2", "door", "office door walking out"),          # group plan ends at the door
-    ("g3", "cost", "stressed business owner finance"),  # the hidden cost of turnover
-    ("g4", "portable", "professional walking city"),    # a benefit that follows them
-    ("g5", "team", "small team meeting office"),        # built for teams of 10-60
-    ("g6", "cta", "businessman laptop working"),        # CTA
+    # quiet open — reviewing the books
+    ("g0", "open", ["financial documents magnifying glass", "accounting paperwork desk", "financial spreadsheet analysis"]),
+    # hook — losing your best people (the empty seat)
+    ("g1", "hook", ["empty office desk", "employee leaving office", "resignation office"]),
+    # the group plan ends at the door — the exit
+    ("g2", "door", ["business person leaving office", "walking out office building", "office exit door"]),
+    # the hidden cost of turnover — money & numbers
+    ("g3", "cost", ["calculator financial charts", "money cash currency", "magnifying glass financial report"]),
+    # a benefit that follows the person
+    ("g4", "portable", ["businesswoman walking briefcase", "professional walking city", "business person commuting"]),
+    # built for teams of 10-60 — reviewing together
+    ("g5", "team", ["business team meeting documents", "small team office meeting", "financial advisor meeting"]),
+    # CTA — plan and decide
+    ("g6", "cta", ["financial planning laptop", "signing financial document", "business person laptop finance"]),
 ]
 
 CA = "/root/.ccr/ca-bundle.crt"
@@ -114,6 +125,36 @@ def download(url, dst):
     return os.path.getsize(dst)
 
 
+def first_video(queries):
+    """Try each query in order; return (query, (url, page, w, h, dur)) for the
+    first that yields a usable landscape clip, else (None, None)."""
+    for q in queries:
+        try:
+            hits = api(VIDEO_API, {"q": q, "per_page": 40, "video_type": "film"}).get("hits", [])
+        except Exception as e:  # noqa: BLE001
+            print(f"    video query failed ({q}): {e}")
+            continue
+        chosen = pick_video(hits)
+        if chosen:
+            return q, chosen
+    return None, None
+
+
+def first_image(queries):
+    """Try each query in order; return (query, (url, page, w, h)) for the first
+    that yields a usable landscape photo, else (None, None)."""
+    for q in queries:
+        try:
+            hits = api(IMAGE_API, {"q": q, "image_type": "photo", "orientation": "horizontal", "per_page": 30}).get("hits", [])
+        except Exception as e:  # noqa: BLE001
+            print(f"    image query failed ({q}): {e}")
+            continue
+        chosen = pick_image(hits)
+        if chosen:
+            return q, chosen
+    return None, None
+
+
 def render_region(dir_name, wiring):
     """Build the text that goes between the fetch:begin/fetch:end markers."""
     lines = [
@@ -165,41 +206,31 @@ def main():
     os.makedirs(OUT_DIR, exist_ok=True)
     wiring, sources = [], {}
 
-    for name, beat, q in BEATS:
+    for name, beat, queries in BEATS:
         entry = {"clip": None, "frames": None, "still": None}
-        # --- video ---
-        try:
-            hits = api(VIDEO_API, {"q": q, "per_page": 40, "video_type": "film"}).get("hits", [])
-            chosen = pick_video(hits)
-        except Exception as e:  # noqa: BLE001
-            print(f"[{name}] video query failed ({q}): {e}")
-            chosen = None
+        # --- video (finance-forward query, with fallbacks) ---
+        vq, chosen = first_video(queries)
         if chosen:
             url, page, w, h, dur = chosen
             kb = download(url, os.path.join(OUT_DIR, f"{name}.mp4")) // 1024
             entry["clip"] = f"{name}.mp4"
             entry["frames"] = max(1, round(dur * FPS))
-            sources[f"{name}.mp4"] = {"query": q, "src": page, "res": f"{w}x{h}", "dur": dur, "kb": kb}
-            print(f"[{name}] video {q!r:38} -> {w}x{h} {dur}s {kb}KB  {page}")
+            sources[f"{name}.mp4"] = {"query": vq, "src": page, "res": f"{w}x{h}", "dur": dur, "kb": kb}
+            print(f"[{name}] video {vq!r:38} -> {w}x{h} {dur}s {kb}KB  {page}")
         else:
-            print(f"[{name}] no landscape video for {q!r} — keeping default clip")
+            print(f"[{name}] no landscape video for {queries} — keeping default clip")
 
         # --- still image (the "images" half; also a poster behind the clip) ---
-        try:
-            ihits = api(IMAGE_API, {"q": q, "image_type": "photo", "orientation": "horizontal", "per_page": 30}).get("hits", [])
-            ipick = pick_image(ihits)
-        except Exception as e:  # noqa: BLE001
-            print(f"[{name}] image query failed ({q}): {e}")
-            ipick = None
+        iq, ipick = first_image(queries)
         if ipick and entry["clip"]:
             iurl, ipage, iw, ih = ipick
             ikb = download(iurl, os.path.join(OUT_DIR, f"{name}.jpg")) // 1024
             entry["still"] = f"{name}.jpg"
-            sources[f"{name}.jpg"] = {"query": q, "src": ipage, "res": f"{iw}x{ih}", "kb": ikb}
-            print(f"[{name}] photo {q!r:38} -> {iw}x{ih} {ikb}KB  {ipage}")
+            sources[f"{name}.jpg"] = {"query": iq, "src": ipage, "res": f"{iw}x{ih}", "kb": ikb}
+            print(f"[{name}] photo {iq!r:38} -> {iw}x{ih} {ikb}KB  {ipage}")
 
         if entry["clip"]:
-            wiring.append((name, beat, q, entry))
+            wiring.append((name, beat, vq, entry))
 
     if not wiring:
         sys.exit("No clips downloaded — leaving src/gmax/broll.ts untouched.")
