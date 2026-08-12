@@ -141,7 +141,7 @@ export const GmaxVSL: React.FC = () => {
       <Audio src={staticFile("narration-gmax.mp3")} />
 
       {/* music bed — ducks under the voiceover */}
-      <Audio src={staticFile("music.mp3")} volume={musicVolume} />
+      <Audio src={staticFile("music.mp3")} volume={musicVolume} loop />
     </AbsoluteFill>
   );
 };
