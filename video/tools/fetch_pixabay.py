@@ -50,8 +50,8 @@ BROLL_TS = os.path.join(REPO, "video", "src", "gmax", "broll.ts")
 # BROLL in src/gmax/broll.ts; `name` is the on-disk basename (g0..g6). Keep the
 # beat order stable.
 BEATS = [
-    # quiet open — reviewing the books
-    ("g0", "open", ["financial documents magnifying glass", "accounting paperwork desk", "financial spreadsheet analysis"]),
+    # quiet open — reviewing the books (money on the table)
+    ("g0", "open", ["money cash currency counting", "financial documents magnifying glass", "accounting paperwork desk"]),
     # hook — losing your best people (the empty seat)
     ("g1", "hook", ["empty office desk", "employee leaving office", "resignation office"]),
     # the group plan ends at the door — the exit
