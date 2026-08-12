@@ -2,6 +2,7 @@ import React from "react";
 import {
   AbsoluteFill,
   Audio,
+  Img,
   interpolate,
   Loop,
   OffthreadVideo,
@@ -11,6 +12,7 @@ import {
 } from "remotion";
 import "../vsl/fonts";
 import { SEGMENTS, GMAX_DURATION, VO_RANGES, GMAX_COLORS as C } from "./script";
+import { BROLL_DIR, BROLL_LOOP, BROLL_STILL } from "./broll";
 import {
   TextCard,
   StatCard,
@@ -25,16 +27,6 @@ import { ValoramLogo } from "./ValoramLogo";
 
 export { GMAX_DURATION, GMAX_FPS } from "./script";
 
-const LOOP: Record<string, number> = {
-  "c0.mp4": 409,
-  "c1.mp4": 432,
-  "c2.mp4": 305,
-  "c3.mp4": 222,
-  "c4.mp4": 202,
-  "c5.mp4": 343,
-  "c6.mp4": 320,
-};
-
 const Footage: React.FC<{ clip: string; dur: number; overlay?: "form" }> = ({ clip, dur, overlay }) => {
   const frame = useCurrentFrame();
   const zoom = interpolate(frame, [0, dur], [1.05, 1.12]);
@@ -42,11 +34,21 @@ const Footage: React.FC<{ clip: string; dur: number; overlay?: "form" }> = ({ cl
     interpolate(frame, [0, 12], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }),
     interpolate(frame, [dur - 12, dur - 1], [1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }),
   );
+  const still = BROLL_STILL[clip];
   return (
     <AbsoluteFill style={{ opacity: fade, backgroundColor: "#000" }}>
       <AbsoluteFill style={{ transform: `scale(${zoom})` }}>
-        <Loop durationInFrames={LOOP[clip] ?? 300}>
-          <OffthreadVideo src={staticFile(`broll/${clip}`)} muted />
+        {/* poster still (Pixabay photo) behind the clip — shows if the video is
+            slow to decode and gives the beat a matching frame to settle on */}
+        {still && (
+          <Img src={staticFile(`${BROLL_DIR}/${still}`)} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+        )}
+        <Loop durationInFrames={BROLL_LOOP[clip] ?? 300}>
+          <OffthreadVideo
+            src={staticFile(`${BROLL_DIR}/${clip}`)}
+            muted
+            style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
+          />
         </Loop>
       </AbsoluteFill>
       {/* navy legibility grade — same treatment as the R.I.S.E. footage */}

@@ -8,6 +8,7 @@
 // The order of CONTENT MUST match the SEG order in gen_vo_gmax.py.
 
 import layout from "./vo-timing.json";
+import { BROLL } from "./broll";
 
 export const GMAX_FPS = layout.fps;
 
@@ -38,8 +39,8 @@ type Content =
 
 // Authored beats, in timeline order. Timing comes from vo-timing.json.
 const CONTENT: Content[] = [
-  { kind: "broll", clip: "c2.mp4" }, // 0 quiet open — owner at desk
-  { kind: "broll", clip: "c3.mp4" }, // 1 hook — losing people
+  { kind: "broll", clip: BROLL.open }, // 0 quiet open — owner at desk
+  { kind: "broll", clip: BROLL.hook }, // 1 hook — losing people
   {
     kind: "card", // 2
     card: {
@@ -47,17 +48,17 @@ const CONTENT: Content[] = [
       lines: [{ t: "It's not a pay problem." }, { t: "It's a retention problem.", accent: true }],
     },
   },
-  { kind: "broll", clip: "c4.mp4" }, // 3 group plan ends at the door
+  { kind: "broll", clip: BROLL.door }, // 3 group plan ends at the door
   { kind: "card", card: { type: "stat", number: "50–200%", label: "Of Salary To Replace One Employee" } }, // 4
-  { kind: "broll", clip: "c1.mp4" }, // 5 hidden cost
+  { kind: "broll", clip: BROLL.cost }, // 5 hidden cost
   { kind: "card", card: { type: "stat", number: "$25K–$150K", label: "Avg. Annual Turnover Cost Per SMB" } }, // 6
   { kind: "card", card: { type: "split" } }, // 7 group plan vs portable
-  { kind: "broll", clip: "c0.mp4" }, // 8 portable — follows the person
+  { kind: "broll", clip: BROLL.portable }, // 8 portable — follows the person
   { kind: "card", card: { type: "brand" } }, // 9 GMAX reveal
   { kind: "card", card: { type: "outcomes" } }, // 10 Retain / Compete / Recruit
   { kind: "card", card: { type: "stat", number: "67%", label: "Cite Benefits As Key To Staying" } }, // 11
-  { kind: "broll", clip: "c3.mp4" }, // 12 built for 10–60
-  { kind: "broll", clip: "c2.mp4", overlay: "form" }, // 13 CTA over b-roll
+  { kind: "broll", clip: BROLL.team }, // 12 built for 10–60
+  { kind: "broll", clip: BROLL.cta, overlay: "form" }, // 13 CTA over b-roll
   { kind: "card", card: { type: "end" } }, // 14 end CTA
 ];
 
