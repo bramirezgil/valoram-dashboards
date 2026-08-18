@@ -16,6 +16,8 @@ type Card =
   | { type: "silence" }
   | { type: "quote"; text: string; variant?: "pill" | "plain"; italic?: boolean }
   | { type: "typed"; text: string }
+  | { type: "timeline" }
+  | { type: "scorecard" }
   | { type: "end" };
 
 type Content =
@@ -39,14 +41,14 @@ const CONTENT: Content[] = [
   { kind: "broll", beat: "husband_lean", hint: "Advisory scene — husband leaning forward, hesitant" }, // 11
   { kind: "card", card: { type: "quote", text: "“So if we convert to a Roth… we just write a big check to the IRS?”", variant: "plain" } }, // 12
   { kind: "broll", beat: "changes", hint: "Advisor's calm expression / roadmap on a document" }, // 13
-  { kind: "broll", beat: "strategy", hint: "Multi-year timeline graphic — CPA + advisor reviewing" }, // 14
+  { kind: "card", card: { type: "timeline" } }, // 14 — code-drawn multi-year conversion timeline
   { kind: "broll", beat: "cpa", hint: "Two professionals reviewing a shared document — collaborative" }, // 15
   { kind: "broll", beat: "shift", hint: "Advisory scene — couple leaning back, tension released" }, // 16
   { kind: "broll", beat: "quiet_look", hint: "Wife turns to look at husband — grounded moment" }, // 17
   { kind: "card", card: { type: "quote", text: "“I just want to know we're not leaving this to chance.”", variant: "plain" } }, // 18
   { kind: "card", card: { type: "typed", text: "The goal isn't the size of the account. It's how much of it you actually get to keep." } }, // 19
   { kind: "broll", beat: "scorecard_intro", hint: "Clean scorecard UI on a phone/tablet on a warm desk" }, // 20
-  { kind: "broll", beat: "scorecard_detail", hint: "Assessment progress / results score screen", overlay: "cta" }, // 21
+  { kind: "card", card: { type: "scorecard" } }, // 21 — code-drawn scorecard result mockup
   { kind: "broll", beat: "to_camera", hint: "Advisor direct-to-camera — calm and warm", overlay: "cta" }, // 22
   { kind: "card", card: { type: "end" } }, // 23
 ];

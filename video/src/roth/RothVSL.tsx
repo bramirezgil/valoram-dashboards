@@ -25,6 +25,7 @@ import {
   CtaLowerThird,
   RothCaptions,
 } from "./cards";
+import { TimelineGraphic, ScorecardGraphic } from "./graphics";
 
 export { ROTH_DURATION, ROTH_FPS } from "./script";
 
@@ -136,6 +137,10 @@ const renderCard = (card: Extract<(typeof SEGMENTS)[number], { kind: "card" }>["
       return <QuoteCard dur={dur} text={card.text} variant={card.variant} italic={card.italic} />;
     case "typed":
       return <TypedCard dur={dur} text={card.text} />;
+    case "timeline":
+      return <TimelineGraphic dur={dur} />;
+    case "scorecard":
+      return <ScorecardGraphic dur={dur} />;
     case "end":
       return <EndCard dur={dur} />;
   }

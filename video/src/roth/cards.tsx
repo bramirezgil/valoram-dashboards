@@ -1,7 +1,7 @@
 import React from "react";
 import { AbsoluteFill, interpolate, spring, useCurrentFrame, useVideoConfig } from "remotion";
 import { ROTH as C, SERIF, UI, TEXT_SHADOW } from "./theme";
-import { ROTH_CAPTIONS, ROTH_CAPTION_HOLD } from "./script";
+import { ROTH_CAPTIONS, ROTH_CAPTION_HOLD, SEGMENTS } from "./script";
 import { ValoramLogo } from "../gmax/ValoramLogo";
 
 const useFade = (dur: number, inF = 12, outF = 10) => {
@@ -281,6 +281,9 @@ export const EndCard: React.FC<{ dur: number }> = ({ dur }) => {
 // Karaoke captions over b-roll — active word in brand orange.
 export const RothCaptions: React.FC = () => {
   const frame = useCurrentFrame();
+  // Suppress captions during card/graphic beats — they carry their own text.
+  const seg = SEGMENTS.find((s) => frame >= s.from && frame < s.from + s.durFrames + 8);
+  if (seg && seg.kind === "card") return null;
   let active: (typeof ROTH_CAPTIONS)[number] | null = null;
   for (const line of ROTH_CAPTIONS) {
     const s = line.words[0].start;
