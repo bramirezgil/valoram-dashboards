@@ -6,6 +6,7 @@ import { VSL } from "./vsl/VSL";
 import { FootageVSL, FOOTAGE_FRAMES } from "./vsl/FootageVSL";
 import { RiseVSL, RISE_DURATION, RISE_FPS } from "./rise/RiseVSL";
 import { GmaxVSL, GMAX_DURATION, GMAX_FPS } from "./gmax/GmaxVSL";
+import { RothVSL, ROTH_DURATION, ROTH_FPS } from "./roth/RothVSL";
 import { FPS, TOTAL_FRAMES } from "./vsl/theme";
 
 // Each <Composition> is an entry in the sidebar!
@@ -42,6 +43,14 @@ export const RemotionRoot: React.FC = () => {
         component={GmaxVSL}
         durationInFrames={GMAX_DURATION}
         fps={GMAX_FPS}
+        width={1920}
+        height={1080}
+      />
+      <Composition
+        id="RothVSL"
+        component={RothVSL}
+        durationInFrames={ROTH_DURATION}
+        fps={ROTH_FPS}
         width={1920}
         height={1080}
       />
