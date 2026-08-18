@@ -9,3 +9,8 @@ out
 # Python bytecode
 __pycache__/
 *.pyc
+
+# Kokoro TTS model weights (downloaded from GitHub releases; not versioned)
+tools/kokoro-v1.0.onnx
+tools/voices-v1.0.bin
+tools/*.onnx
