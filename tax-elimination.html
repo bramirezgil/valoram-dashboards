@@ -162,6 +162,17 @@
     letter-spacing:.04em;text-transform:uppercase;color:var(--ink);margin-top:4px}
   .iframe-wrapper{width:100%;min-height:465px}
   .iframe-wrapper iframe{width:100%;height:465px;border:none;border-radius:8px}
+  .form-fallback{display:none;min-height:465px;border:2px dashed rgba(242,138,45,.5);border-radius:10px;
+    background:#faf5ea;align-items:center;justify-content:center;text-align:center;padding:30px}
+  .iframe-wrapper.failed{min-height:0}
+  .iframe-wrapper.failed iframe{display:none}
+  .iframe-wrapper.failed + .form-fallback{display:flex}
+  .form-fallback .inner-msg{max-width:340px}
+  .form-fallback svg{width:44px;height:44px;stroke:var(--orange);fill:none;stroke-width:1.6;
+    stroke-linecap:round;stroke-linejoin:round;margin-bottom:14px}
+  .form-fallback h4{font-family:"Oswald",sans-serif;font-weight:600;font-size:16px;letter-spacing:.08em;
+    text-transform:uppercase;color:var(--ink)}
+  .form-fallback p{margin-top:8px;font-size:13.5px;line-height:1.6;color:var(--ink-soft)}
   .fineprint{margin-top:14px;text-align:center;font-size:12.5px;line-height:1.55;color:var(--ink-soft)}
   .fineprint b{color:var(--ink)}
 
@@ -429,6 +440,13 @@
           ></iframe>
           <script src="https://link.msgsndr.com/js/form_embed.js"></script>
         </div>
+        <div class="form-fallback" aria-hidden="true">
+          <div class="inner-msg">
+            <svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>
+            <h4>Registration Form Loads Here</h4>
+            <p>This preview can't reach the form server. The live "Tax Webinar" form appears in this space on the published funnel page.</p>
+          </div>
+        </div>
         <p class="fineprint"><b>Your information is 100% secure.</b><br>We never share or sell your data.</p>
       </div>
     </div>
@@ -637,6 +655,13 @@
             title="Tax Webinar "
           ></iframe>
         </div>
+        <div class="form-fallback" aria-hidden="true">
+          <div class="inner-msg">
+            <svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>
+            <h4>Registration Form Loads Here</h4>
+            <p>This preview can't reach the form server. The live "Tax Webinar" form appears in this space on the published funnel page.</p>
+          </div>
+        </div>
         <p class="fineprint"><b>Completely free to attend.</b><br>Your information is always protected.</p>
       </div>
       <p class="cta-when" style="margin-top:22px"><span data-date="final">This Saturday</span> · 8:00 AM PST · 11:00 AM EST</p>
@@ -717,6 +742,13 @@
   }
   tick();
   setInterval(tick,1000);
+
+  /* If the form host is unreachable (e.g. sandboxed previews), swap the
+     embeds for a styled placeholder instead of a broken-frame icon. */
+  fetch("https://api.leadconnectorhq.com/widget/form/qvez7IGJtN33AMmyHiPr",{mode:"no-cors"})
+    .catch(function(){
+      document.querySelectorAll(".iframe-wrapper").forEach(function(w){ w.classList.add("failed"); });
+    });
 
   if ("IntersectionObserver" in window){
     var io = new IntersectionObserver(function(entries){
